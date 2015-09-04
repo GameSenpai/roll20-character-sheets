@@ -443,7 +443,7 @@
 
 	<div class="sheet-tab-content sheet-tab2 sheet-tab99">
 		<!--Weapons-->
-		<input type="checkbox" class="sheet-pc-weapons-show sheet-arrow" title="weapons-show" name="attr_weapons-show" value="1" checked /><span style="text-align: left;">Weapons</span>
+		<input type="checkbox" class="sheet-pc-weapons-show sheet-arrow" title="weapons-show" name="attr_weapons-show" value="1" checked /><span style="text-align: left;">Armes</span>
 		<div class="sheet-pc-weapons">
 			<div class="sheet-table">
 				<div class="sheet-table-data-center" style="vertical-align:top;">
@@ -453,24 +453,24 @@
 								 <td class="sheet-table-data-left">
 									<table cellpadding="10" cellspacing="0">
 										<tr>
-											<td colspan="6" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;">Weapons</td>
+											<td colspan="6" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;">Armes</td>
 										</tr>
 									</table>
-									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Weapon1</span>
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme1</span>
 									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
 												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
@@ -482,24 +482,24 @@
 												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
 												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
 												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
 												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
 												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
 												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
 												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
 													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
 												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
 												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
 												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
@@ -507,461 +507,461 @@
 										</table>
 									</div>
 							<br>
-									<input type="checkbox" class="sheet-pc-weapon2-show sheet-arrow" title="weapon2-show" name="attr_weapon2-show" value="1" checked /><span style="text-align: left;">Weapon2</span>
-									<div class="sheet-pc-weapon2">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme2</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon2name" title="weapon2name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2type" title="weapon2type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2enh" title="weapon2enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2focus" title="weapon2focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2specialize" title="weapon2specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2critmin" title="weapon2critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon2critmult" title="weapon2critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon2critdamage" title='weapon2critdamage' style="width: 17px;" value="@{character_name}'s @{weapon2name} does [[(@{weapon2critmult})*(@{weapon2damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2range" title="weapon2range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon2ammunition" title="weapon2ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon2stat" title="weapon2stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon2damagestat" title="weapon2damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon2specialproperties" title="weapon2specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon2attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon2attackcalc">1d20cs>@{weapon2critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon2stat}]][Ability] +@{size}[size] +@{weapon2enh}[Weapon Enh] +@{weapon2focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon2attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon2attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon2name} }} {{attack1=hitting AC[[@{weapon2attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon2attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon2damage}]] dmg}} {{critdmg1=+[[@{weapon2crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon2attack" text="attack" title='weapon2attack' value="@{weapon2attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon2fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon2fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon2name} }} {{attack1=A1:[[@{weapon2attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon2attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon2damage}]]}} {{critdmg1=+[[@{weapon2crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon2attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon2attackcalc}-5]]}} {{damage2=D2:[[@{weapon2damage}]]}} {{critdmg2=+[[@{weapon2crit}]]}} {{attack3=A3:[[@{weapon2attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon2attackcalc}-10]]}} {{damage3=D3:[[@{weapon2damage}]]}} {{critdmg3=+[[@{weapon2crit}]]}} {{attack4=A4:[[@{weapon2attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon2attackcalc}-15]]}} {{damage4=D4:[[@{weapon2damage}]]}} {{critdmg4=+[[@{weapon2crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon2fullattack" text="Full Attack" title='weapon2fullattack' value="@{weapon2fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon2damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon2damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon2damagestat}]][Weapon Dmg Ability] +@{weapon2enh}[Weapon Enh] +@{weapon2specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon2crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon2crit (Edit this to adjust the critical calculation.)">[[(@{weapon2critmult}-1)]]d6 +[[(@{weapon2critmult}-1)]]*([[@{weapon2damagestat}]][Weapon Dmg Ability] +@{weapon2enh}[Weapon Enh] +@{weapon2specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon2damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon2damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon2name} }} {{damage1=does [[@{weapon2damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon2damageroll" title='weapon2damageroll' style="width: 20px;" value="@{weapon2damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-									<input type="checkbox" class="sheet-pc-weapon3-show sheet-arrow" title="weapon3-show" name="attr_weapon3-show" value="1" checked /><span style="text-align: left;">Weapon3</span>
-									<div class="sheet-pc-weapon3">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme3</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon3name" title="weapon3name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3type" title="weapon3type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3enh" title="weapon3enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3focus" title="weapon3focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3specialize" title="weapon3specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3critmin" title="weapon3critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon3critmult" title="weapon3critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon3critdamage" title='weapon3critdamage' style="width: 17px;" value="@{character_name}'s @{weapon3name} does [[(@{weapon3critmult})*(@{weapon3damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3range" title="weapon3range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon3ammunition" title="weapon3ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon3stat" title="weapon3stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon3damagestat" title="weapon3damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon3specialproperties" title="weapon3specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon3attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon3attackcalc">1d20cs>@{weapon3critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon3stat}]][Ability] +@{size}[size] +@{weapon3enh}[Weapon Enh] +@{weapon3focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon3attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon3attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon3name} }} {{attack1=hitting AC[[@{weapon3attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon3attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon3damage}]] dmg}} {{critdmg1=+[[@{weapon3crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon3attack" text="attack" title='weapon3attack' value="@{weapon3attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon3fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon3fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon3name} }} {{attack1=A1:[[@{weapon3attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon3attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon3damage}]]}} {{critdmg1=+[[@{weapon3crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon3attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon3attackcalc}-5]]}} {{damage2=D2:[[@{weapon3damage}]]}} {{critdmg2=+[[@{weapon3crit}]]}} {{attack3=A3:[[@{weapon3attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon3attackcalc}-10]]}} {{damage3=D3:[[@{weapon3damage}]]}} {{critdmg3=+[[@{weapon3crit}]]}} {{attack4=A4:[[@{weapon3attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon3attackcalc}-15]]}} {{damage4=D4:[[@{weapon3damage}]]}} {{critdmg4=+[[@{weapon3crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon3fullattack" text="Full Attack" title='weapon3fullattack' value="@{weapon3fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon3damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon3damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon3damagestat}]][Weapon Dmg Ability] +@{weapon3enh}[Weapon Enh] +@{weapon3specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon3crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon3crit (Edit this to adjust the critical calculation.)">[[(@{weapon3critmult}-1)]]d6 +[[(@{weapon3critmult}-1)]]*([[@{weapon3damagestat}]][Weapon Dmg Ability] +@{weapon3enh}[Weapon Enh] +@{weapon3specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon3damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon3damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon3name} }} {{damage1=does [[@{weapon3damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon3damageroll" title='weapon3damageroll' style="width: 20px;" value="@{weapon3damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-									<input type="checkbox" class="sheet-pc-weapon4-show sheet-arrow" title="weapon4-show" name="attr_weapon4-show" value="1" checked /><span style="text-align: left;">Weapon4</span>
-									<div class="sheet-pc-weapon4">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme4</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon4name" title="weapon4name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4type" title="weapon4type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4enh" title="weapon4enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4focus" title="weapon4focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4specialize" title="weapon4specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4critmin" title="weapon4critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon4critmult" title="weapon4critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon4critdamage" title='weapon4critdamage' style="width: 17px;" value="@{character_name}'s @{weapon4name} does [[(@{weapon4critmult})*(@{weapon4damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4range" title="weapon4range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon4ammunition" title="weapon4ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon4stat" title="weapon4stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon4damagestat" title="weapon4damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon4specialproperties" title="weapon4specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon4attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon4attackcalc">1d20cs>@{weapon4critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon4stat}]][Ability] +@{size}[size] +@{weapon4enh}[Weapon Enh] +@{weapon4focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon4attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon4attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon4name} }} {{attack1=hitting AC[[@{weapon4attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon4attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon4damage}]] dmg}} {{critdmg1=+[[@{weapon4crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon4attack" text="attack" title='weapon4attack' value="@{weapon4attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon4fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon4fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon4name} }} {{attack1=A1:[[@{weapon4attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon4attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon4damage}]]}} {{critdmg1=+[[@{weapon4crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon4attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon4attackcalc}-5]]}} {{damage2=D2:[[@{weapon4damage}]]}} {{critdmg2=+[[@{weapon4crit}]]}} {{attack3=A3:[[@{weapon4attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon4attackcalc}-10]]}} {{damage3=D3:[[@{weapon4damage}]]}} {{critdmg3=+[[@{weapon4crit}]]}} {{attack4=A4:[[@{weapon4attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon4attackcalc}-15]]}} {{damage4=D4:[[@{weapon4damage}]]}} {{critdmg4=+[[@{weapon4crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon4fullattack" text="Full Attack" title='weapon4fullattack' value="@{weapon4fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon4damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon4damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon4damagestat}]][Weapon Dmg Ability] +@{weapon4enh}[Weapon Enh] +@{weapon4specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon4crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon4crit (Edit this to adjust the critical calculation.)">[[(@{weapon4critmult}-1)]]d6 +[[(@{weapon4critmult}-1)]]*([[@{weapon4damagestat}]][Weapon Dmg Ability] +@{weapon4enh}[Weapon Enh] +@{weapon4specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon4damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon4damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon4name} }} {{damage1=does [[@{weapon4damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon4damageroll" title='weapon4damageroll' style="width: 20px;" value="@{weapon4damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-									<input type="checkbox" class="sheet-pc-weapon5-show sheet-arrow" title="weapon5-show" name="attr_weapon5-show" value="1" checked /><span style="text-align: left;">Weapon5</span>
-									<div class="sheet-pc-weapon5">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme5</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon5name" title="weapon5name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5type" title="weapon5type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5enh" title="weapon5enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5focus" title="weapon5focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5specialize" title="weapon5specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5critmin" title="weapon5critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon5critmult" title="weapon5critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon5critdamage" title='weapon5critdamage' style="width: 17px;" value="@{character_name}'s @{weapon5name} does [[(@{weapon5critmult})*(@{weapon5damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5range" title="weapon5range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon5ammunition" title="weapon5ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon5stat" title="weapon5stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon5damagestat" title="weapon5damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon5specialproperties" title="weapon5specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon5attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon5attackcalc">1d20cs>@{weapon5critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon5stat}]][Ability] +@{size}[size] +@{weapon5enh}[Weapon Enh] +@{weapon5focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon5attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon5attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon5name} }} {{attack1=hitting AC[[@{weapon5attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon5attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon5damage}]] dmg}} {{critdmg1=+[[@{weapon5crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon5attack" text="attack" title='weapon5attack' value="@{weapon5attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon5fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon5fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon5name} }} {{attack1=A1:[[@{weapon5attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon5attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon5damage}]]}} {{critdmg1=+[[@{weapon5crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon5attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon5attackcalc}-5]]}} {{damage2=D2:[[@{weapon5damage}]]}} {{critdmg2=+[[@{weapon5crit}]]}} {{attack3=A3:[[@{weapon5attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon5attackcalc}-10]]}} {{damage3=D3:[[@{weapon5damage}]]}} {{critdmg3=+[[@{weapon5crit}]]}} {{attack4=A4:[[@{weapon5attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon5attackcalc}-15]]}} {{damage4=D4:[[@{weapon5damage}]]}} {{critdmg4=+[[@{weapon5crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon5fullattack" text="Full Attack" title='weapon5fullattack' value="@{weapon5fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon5damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon5damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon5damagestat}]][Weapon Dmg Ability] +@{weapon5enh}[Weapon Enh] +@{weapon5specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon5crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon5crit (Edit this to adjust the critical calculation.)">[[(@{weapon5critmult}-1)]]d6 +[[(@{weapon5critmult}-1)]]*([[@{weapon5damagestat}]][Weapon Dmg Ability] +@{weapon5enh}[Weapon Enh] +@{weapon5specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon5damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon5damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon5name} }} {{damage1=does [[@{weapon5damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon5damageroll" title='weapon5damageroll' style="width: 20px;" value="@{weapon5damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-									<input type="checkbox" class="sheet-pc-weapon6-show sheet-arrow" title="weapon6-show" name="attr_weapon6-show" value="1" checked /><span style="text-align: left;">Weapon6</span>
-									<div class="sheet-pc-weapon6">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme6</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon6name" title="weapon6name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6type" title="weapon6type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6enh" title="weapon6enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6focus" title="weapon6focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6specialize" title="weapon6specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6critmin" title="weapon6critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon6critmult" title="weapon6critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon6critdamage" title='weapon6critdamage' style="width: 17px;" value="@{character_name}'s @{weapon6name} does [[(@{weapon6critmult})*(@{weapon6damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6range" title="weapon6range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon6ammunition" title="weapon6ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon6stat" title="weapon6stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon6damagestat" title="weapon6damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon6specialproperties" title="weapon6specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon6attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon6attackcalc">1d20cs>@{weapon6critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon6stat}]][Ability] +@{size}[size] +@{weapon6enh}[Weapon Enh] +@{weapon6focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon6attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon6attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon6name} }} {{attack1=hitting AC[[@{weapon6attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon6attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon6damage}]] dmg}} {{critdmg1=+[[@{weapon6crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon6attack" text="attack" title='weapon6attack' value="@{weapon6attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon6fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon6fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon6name} }} {{attack1=A1:[[@{weapon6attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon6attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon6damage}]]}} {{critdmg1=+[[@{weapon6crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon6attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon6attackcalc}-5]]}} {{damage2=D2:[[@{weapon6damage}]]}} {{critdmg2=+[[@{weapon6crit}]]}} {{attack3=A3:[[@{weapon6attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon6attackcalc}-10]]}} {{damage3=D3:[[@{weapon6damage}]]}} {{critdmg3=+[[@{weapon6crit}]]}} {{attack4=A4:[[@{weapon6attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon6attackcalc}-15]]}} {{damage4=D4:[[@{weapon6damage}]]}} {{critdmg4=+[[@{weapon6crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon6fullattack" text="Full Attack" title='weapon6fullattack' value="@{weapon6fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon6damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon6damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon6damagestat}]][Weapon Dmg Ability] +@{weapon6enh}[Weapon Enh] +@{weapon6specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon6crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon6crit (Edit this to adjust the critical calculation.)">[[(@{weapon6critmult}-1)]]d6 +[[(@{weapon6critmult}-1)]]*([[@{weapon6damagestat}]][Weapon Dmg Ability] +@{weapon6enh}[Weapon Enh] +@{weapon6specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon6damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon6damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon6name} }} {{damage1=does [[@{weapon6damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon6damageroll" title='weapon6damageroll' style="width: 20px;" value="@{weapon6damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-									<input type="checkbox" class="sheet-pc-weapon7-show sheet-arrow" title="weapon7-show" name="attr_weapon7-show" value="1" checked /><span style="text-align: left;">Weapon7</span>
-									<div class="sheet-pc-weapon7">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme7</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon7name" title="weapon7name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7type" title="weapon7type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7enh" title="weapon7enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7focus" title="weapon7focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7specialize" title="weapon7specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7critmin" title="weapon7critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon7critmult" title="weapon7critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon7critdamage" title='weapon7critdamage' style="width: 17px;" value="@{character_name}'s @{weapon7name} does [[(@{weapon7critmult})*(@{weapon7damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7range" title="weapon7range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon7ammunition" title="weapon7ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon7stat" title="weapon7stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon7damagestat" title="weapon7damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon7specialproperties" title="weapon7specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon7attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon7attackcalc">1d20cs>@{weapon7critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon7stat}]][Ability] +@{size}[size] +@{weapon7enh}[Weapon Enh] +@{weapon7focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon7attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon7attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon7name} }} {{attack1=hitting AC[[@{weapon7attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon7attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon7damage}]] dmg}} {{critdmg1=+[[@{weapon7crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon7attack" text="attack" title='weapon7attack' value="@{weapon7attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon7fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon7fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon7name} }} {{attack1=A1:[[@{weapon7attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon7attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon7damage}]]}} {{critdmg1=+[[@{weapon7crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon7attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon7attackcalc}-5]]}} {{damage2=D2:[[@{weapon7damage}]]}} {{critdmg2=+[[@{weapon7crit}]]}} {{attack3=A3:[[@{weapon7attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon7attackcalc}-10]]}} {{damage3=D3:[[@{weapon7damage}]]}} {{critdmg3=+[[@{weapon7crit}]]}} {{attack4=A4:[[@{weapon7attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon7attackcalc}-15]]}} {{damage4=D4:[[@{weapon7damage}]]}} {{critdmg4=+[[@{weapon7crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon7fullattack" text="Full Attack" title='weapon7fullattack' value="@{weapon7fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon7damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon7damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon7damagestat}]][Weapon Dmg Ability] +@{weapon7enh}[Weapon Enh] +@{weapon7specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon7crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon7crit (Edit this to adjust the critical calculation.)">[[(@{weapon7critmult}-1)]]d6 +[[(@{weapon7critmult}-1)]]*([[@{weapon7damagestat}]][Weapon Dmg Ability] +@{weapon7enh}[Weapon Enh] +@{weapon7specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon7damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon7damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon7name} }} {{damage1=does [[@{weapon7damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon7damageroll" title='weapon7damageroll' style="width: 20px;" value="@{weapon7damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-										<input type="checkbox" class="sheet-pc-weapon8-show sheet-arrow" title="weapon8-show" name="attr_weapon8-show" value="1" checked /><span style="text-align: left;">Weapon8</span>
-									<div class="sheet-pc-weapon8">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme8</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon8name" title="weapon8name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8type" title="weapon8type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8enh" title="weapon8enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8focus" title="weapon8focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8specialize" title="weapon8specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8critmin" title="weapon8critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon8critmult" title="weapon8critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon8critdamage" title='weapon8critdamage' style="width: 17px;" value="@{character_name}'s @{weapon8name} does [[(@{weapon8critmult})*(@{weapon8damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8range" title="weapon8range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon8ammunition" title="weapon8ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon8stat" title="weapon8stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon8damagestat" title="weapon8damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon8specialproperties" title="weapon8specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon8attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon8attackcalc">1d20cs>@{weapon8critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon8stat}]][Ability] +@{size}[size] +@{weapon8enh}[Weapon Enh] +@{weapon8focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon8attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon8attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon8name} }} {{attack1=hitting AC[[@{weapon8attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon8attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon8damage}]] dmg}} {{critdmg1=+[[@{weapon8crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon8attack" text="attack" title='weapon8attack' value="@{weapon8attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon8fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon8fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon8name} }} {{attack1=A1:[[@{weapon8attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon8attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon8damage}]]}} {{critdmg1=+[[@{weapon8crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon8attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon8attackcalc}-5]]}} {{damage2=D2:[[@{weapon8damage}]]}} {{critdmg2=+[[@{weapon8crit}]]}} {{attack3=A3:[[@{weapon8attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon8attackcalc}-10]]}} {{damage3=D3:[[@{weapon8damage}]]}} {{critdmg3=+[[@{weapon8crit}]]}} {{attack4=A4:[[@{weapon8attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon8attackcalc}-15]]}} {{damage4=D4:[[@{weapon8damage}]]}} {{critdmg4=+[[@{weapon8crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon8fullattack" text="Full Attack" title='weapon8fullattack' value="@{weapon8fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon8damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon8damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon8damagestat}]][Weapon Dmg Ability] +@{weapon8enh}[Weapon Enh] +@{weapon8specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon8crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon8crit (Edit this to adjust the critical calculation.)">[[(@{weapon8critmult}-1)]]d6 +[[(@{weapon8critmult}-1)]]*([[@{weapon8damagestat}]][Weapon Dmg Ability] +@{weapon8enh}[Weapon Enh] +@{weapon8specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon8damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon8damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon8name} }} {{damage1=does [[@{weapon8damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon8damageroll" title='weapon8damageroll' style="width: 20px;" value="@{weapon8damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-										<input type="checkbox" class="sheet-pc-weapon9-show sheet-arrow" title="weapon9-show" name="attr_weapon9-show" value="1" checked /><span style="text-align: left;">Weapon9</span>
-									<div class="sheet-pc-weapon9">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme9</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon9name" title="weapon9name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9type" title="weapon9type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9enh" title="weapon9enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9focus" title="weapon9focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9specialize" title="weapon9specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9critmin" title="weapon9critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon9critmult" title="weapon9critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon9critdamage" title='weapon9critdamage' style="width: 17px;" value="@{character_name}'s @{weapon9name} does [[(@{weapon9critmult})*(@{weapon9damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9range" title="weapon9range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon9ammunition" title="weapon9ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon9stat" title="weapon9stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon9damagestat" title="weapon9damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon9specialproperties" title="weapon9specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon9attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon9attackcalc">1d20cs>@{weapon9critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon9stat}]][Ability] +@{size}[size] +@{weapon9enh}[Weapon Enh] +@{weapon9focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon9attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon9attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon9name} }} {{attack1=hitting AC[[@{weapon9attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon9attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon9damage}]] dmg}} {{critdmg1=+[[@{weapon9crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon9attack" text="attack" title='weapon9attack' value="@{weapon9attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon9fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon9fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon9name} }} {{attack1=A1:[[@{weapon9attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon9attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon9damage}]]}} {{critdmg1=+[[@{weapon9crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon9attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon9attackcalc}-5]]}} {{damage2=D2:[[@{weapon9damage}]]}} {{critdmg2=+[[@{weapon9crit}]]}} {{attack3=A3:[[@{weapon9attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon9attackcalc}-10]]}} {{damage3=D3:[[@{weapon9damage}]]}} {{critdmg3=+[[@{weapon9crit}]]}} {{attack4=A4:[[@{weapon9attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon9attackcalc}-15]]}} {{damage4=D4:[[@{weapon9damage}]]}} {{critdmg4=+[[@{weapon9crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon9fullattack" text="Full Attack" title='weapon9fullattack' value="@{weapon9fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon9damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon9damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon9damagestat}]][Weapon Dmg Ability] +@{weapon9enh}[Weapon Enh] +@{weapon9specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon9crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon9crit (Edit this to adjust the critical calculation.)">[[(@{weapon9critmult}-1)]]d6 +[[(@{weapon9critmult}-1)]]*([[@{weapon9damagestat}]][Weapon Dmg Ability] +@{weapon9enh}[Weapon Enh] +@{weapon9specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon9damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon9damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon9name} }} {{damage1=does [[@{weapon9damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon9damageroll" title='weapon9damageroll' style="width: 20px;" value="@{weapon9damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
 							<br>
-										<input type="checkbox" class="sheet-pc-weapon10-show sheet-arrow" title="weapon10-show" name="attr_weapon10-show" value="1" checked /><span style="text-align: left;">Weapon10</span>
-									<div class="sheet-pc-weapon10">
+									<input type="checkbox" class="sheet-pc-weapon1-show sheet-arrow" title="weapon1-show" name="attr_weapon1-show" value="1" checked /><span style="text-align: left;">Arme10</span>
+									<div class="sheet-pc-weapon1">
 										<table cellpadding="0" cellspacing="0">
 											<tr>
-												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Weapon</td>
+												<td colspan="2" class="sheet-statlabel-big" style="font-size: 1.5em; width: 120px;">Arme</td>
 												<td class="sheet-statlabel" style="width: 44px;">Type</td>
-												<td class="sheet-statlabel" style="width: 44px;">Weapon Enh</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Focus</td>
-												<td class="sheet-statlabel" style="width: 41px;">Weapon<br>Specialize</td>
-												<td class="sheet-statlabel" style="width: 79px;">Critical</td>
-												<td class="sheet-statlabel" style="width: 59px;">Range</td>
-												<td class="sheet-statlabel" style="width: 59px;">Ammunition</td>
-												<td class="sheet-statlabel" style="width: 44px;">Attack Ability</td>
-												<td class="sheet-statlabel" style="width: 44px;">Damage Ability</td>
-												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Special Properties</td>
+												<td class="sheet-statlabel" style="width: 44px;">Amélioration</td>
+												<td class="sheet-statlabel" style="width: 41px;">Attaque</td>
+												<td class="sheet-statlabel" style="width: 41px;">Dommage</td>
+												<td class="sheet-statlabel" style="width: 79px;">Critique</td>
+												<td class="sheet-statlabel" style="width: 59px;">Portée</td>
+												<td class="sheet-statlabel" style="width: 59px;">Munitions</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur d'attaque</td>
+												<td class="sheet-statlabel" style="width: 44px;">Modificateur de dommages</td>
+												<td colspan="3" class="sheet-statlabel" style="width: 205px;">Propriétés spéciales</td>
 											</tr>
 											<tr>
-												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon10name" title="weapon10name" style="height: 24px; width: 120px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10type" title="weapon10type" style="height: 24px; width: 44px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10enh" title="weapon10enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10focus" title="weapon10focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10specialize" title="weapon10specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10critmin" title="weapon10critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon10critmult" title="weapon10critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon10critdamage" title='weapon10critdamage' style="width: 17px;" value="@{character_name}'s @{weapon10name} does [[(@{weapon10critmult})*(@{weapon10damage})]] critical damage"></button--></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10range" title="weapon10range" style="height: 24px; width: 59px;"></td>
-												<td><input class="sheet-inputbox" type="text" name="attr_weapon10ammunition" title="weapon10ammunition" style="height: 24px; width: 59px;"></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon10stat" title="weapon10stat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+												<td colspan="2"><input class="sheet-inputbox" type="text" name="attr_weapon1name" title="weapon1name" style="height: 24px; width: 120px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1type" title="weapon1type" style="height: 24px; width: 44px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1enh" title="weapon1enh (affects both attack and damage)" style="height: 24px; width: 44px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1focus" title="weapon1focus (affects only attack)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1specialize" title="weapon1specialize (affects only damage)" style="height: 24px; width: 41px;" value="0"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1critmin" title="weapon1critmin" style="height: 24px; width: 25px;" value="20">-20/x<input class="sheet-inputbox" type="text" name="attr_weapon1critmult" title="weapon1critmult" style="height: 24px; width: 19px;" value="2"><!--button type="roll" name="attr_weapon1critdamage" title='weapon1critdamage' style="width: 17px;" value="@{character_name}'s @{weapon1name} does [[(@{weapon1critmult})*(@{weapon1damage})]] critical damage"></button--></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1range" title="weapon1range" style="height: 24px; width: 59px;"></td>
+												<td><input class="sheet-inputbox" type="text" name="attr_weapon1ammunition" title="weapon1ammunition" style="height: 24px; width: 59px;"></td>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1stat" title="weapon1stat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
 												</select></td>
-												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon10damagestat" title="weapon10damagestat">
-													<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">Str+1/2Str</option>
-													<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-													<option type="text" style="width: 45px;" value="0">None</option>
+												<td><select class="sheet-inputbox" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_weapon1damagestat" title="weapon1damagestat">
+													<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+													<option type="text" style="width: 45px;" value="(@{str-mod} +floor(@{str-mod}/2))">FOR+1/2FOR</option>
+													<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+													<option type="text" style="width: 45px;" value="0">Aucun</option>
 												</select></td>
-												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon10specialproperties" title="weapon10specialproperties">0</textarea></td>
+												<td colspan="3"><textarea input class="sheet-inputbox" rows="1" cols="45" style="height: 20px; width: 200px;" name="attr_weapon1specialproperties" title="weapon1specialproperties">0</textarea></td>
 											</tr>
 											<tr>
-												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Attack Calc / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon10attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon10attackcalc">1d20cs>@{weapon10critmin} +@{bab} +@{epicattackbonus} [BAB] +[[@{weapon10stat}]][Ability] +@{size}[size] +@{weapon10enh}[Weapon Enh] +@{weapon10focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
-												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon10attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon10attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon10name} }} {{attack1=hitting AC[[@{weapon10attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon10attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon10damage}]] dmg}} {{critdmg1=+[[@{weapon10crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
-												<button type="roll" name="attr_weapon10attack" text="attack" title='weapon10attack' value="@{weapon10attackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Full Attack Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon10fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon10fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon10name} }} {{attack1=A1:[[@{weapon10attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon10attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon10damage}]]}} {{critdmg1=+[[@{weapon10crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon10attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon10attackcalc}-5]]}} {{damage2=D2:[[@{weapon10damage}]]}} {{critdmg2=+[[@{weapon10crit}]]}} {{attack3=A3:[[@{weapon10attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon10attackcalc}-10]]}} {{damage3=D3:[[@{weapon10damage}]]}} {{critdmg3=+[[@{weapon10crit}]]}} {{attack4=A4:[[@{weapon10attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon10attackcalc}-15]]}} {{damage4=D4:[[@{weapon10damage}]]}} {{critdmg4=+[[@{weapon10crit}]]}} </textarea>
-													<button type="roll"name="attr_weapon10fullattack" text="Full Attack" title='weapon10fullattack' value="@{weapon10fullattackmacro}" style="width: 20px;" ></button></td>
-												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Damage Calc / Crit Calc / Damage Macro:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon10damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon10damage (Edit this to adjust the damage calculation. Ie add +floor(@{str-mod} /2) if wielding 2h weapon for 1.5str on damage.)">1d6 +[[@{weapon10damagestat}]][Weapon Dmg Ability] +@{weapon10enh}[Weapon Enh] +@{weapon10specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon10crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon10crit (Edit this to adjust the critical calculation.)">[[(@{weapon10critmult}-1)]]d6 +[[(@{weapon10critmult}-1)]]*([[@{weapon10damagestat}]][Weapon Dmg Ability] +@{weapon10enh}[Weapon Enh] +@{weapon10specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
-												<textarea class="sheet-inputbox" type="text" name="attr_weapon10damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon10damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon10name} }} {{damage1=does [[@{weapon10damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
-												<button type="roll" name="attr_weapon10damageroll" title='weapon10damageroll' style="width: 20px;" value="@{weapon10damagemacro}"></button></td>
+												<td colspan="6"><div style="font-size: 0.5em; text-align: left;">Calc Attaque / Macro:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackcalc (Edit this to adjust the attack calculation)" name="attr_weapon1attackcalc">1d20cs>@{weapon1critmin} +@{bab}[BAB] +@{epicattackbonus}[Epic AB] +[[@{weapon1stat}]][Ability] +@{size}[size] +@{weapon1enh}[Weapon Enh] +@{weapon1focus}[Weapon Focus] + ?{Flank (1=yes)|0}*2[Flank] +?{Power Attack? (put in penalty with negative sign ie -3)|0}[Pwr Attk] +?{Additional Attack Bonus?|0}[Ad'l Atk Bon] </textarea>
+												<textarea rows="1" cols="45" style="height: 18px; width: 120px;" title="weapon1attackmacro (Modify this macro to modify your attack macro)" name="attr_weapon1attackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=hitting AC[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=for [[@{weapon1damage}]] dmg}} {{critdmg1=+[[@{weapon1crit}]] crit dmg}} {{fullattackflag=[[0d1]]}} </textarea>
+												<button type="roll" name="attr_weapon1attack" text="attack" title='weapon1attack' value="@{weapon1attackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro complète d'attaque:<br></div><textarea rows="1" cols="45" style="height: 18px; width: 155px;" title="weapon1fullattackmacro (Modify this macro to modify your full round attack macro)" name="attr_weapon1fullattackmacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=attacks with a @{weapon1name} }} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit?:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}} </textarea>
+													<button type="roll"name="attr_weapon1fullattack" text="Full Attack" title='weapon1fullattack' value="@{weapon1fullattackmacro}" style="width: 20px;" > </button></td>
+												<td colspan="3"><div style="font-size: 0.5em; text-align: left;">Macro Dommage / Crit:<br></div><textarea class="sheet-inputbox" type="text" name="attr_weapon1damage" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1damage (Edit this to adjust the damage calculation.)">1d6 +[[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon] </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1crit" rows="1" cols="45" style="height: 20px; width: 65px;" title="weapon1crit (Edit this to adjust the critical calculation.)">[[(@{weapon1critmult}-1)]]d6 +[[(@{weapon1critmult}-1)]]*([[@{weapon1damagestat}]][Weapon Dmg Ability] +@{weapon1enh}[Weapon Enh] +@{weapon1specialize}[Weapon Spec] +?{Power Attack Bonus?|0}[Pwr Attk] +?{Additional Damage Bonus?|0}[Ad'l Dmg Bon]) </textarea>
+												<textarea class="sheet-inputbox" type="text" name="attr_weapon1damagemacro" rows="1" cols="45" style="height: 20px; width: 100px;" title="weapon1damagemacro">&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}'s @{weapon1name} }} {{damage1=does [[@{weapon1damage}]] damage}} {{fullattackflag=[[0d1]]}}</textarea>
+												<button type="roll" name="attr_weapon1damageroll" title='weapon1damageroll' style="width: 20px;" value="@{weapon1damagemacro}"></button></td>
 											</tr>
 										</table>
 									</div>
@@ -1034,48 +1034,48 @@
 		Dex (constrained) + Dodge in AC and Touch AC  Not FF AC  (dex pen in FF AC)<br> -->
 		<table>
 			<tr>
-				<td style="width: 38px;" class="sheet-statlabel">AC<br><div style="font-size: 0.65em;">Armor Class</div></td>
+				<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td><input class="sheet-inputbox" type="text" name="attr_armorclass" title="armorclass" value="(10+@{armorclassbonus}+@{totalabilityacbonus}+@{armorclasssizemod}+@{acdodgemod}+@{acnaturalarmor}+@{acdeflectionmod}+@{acmiscmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 				<td>=10<br><br></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassdexmod" title="armorclassdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Ability Mod</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassbonus" title="armorclassbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armor Bns</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclasssizemod" title="armorclasssizemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Size Mod</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Dodge</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_acnaturalarmor" title="acnaturalarmor" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Nat. Armor</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_acdeflectionmod" title="acdeflectionmod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Deflection</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_acmiscmod" title="acmiscmod" value="@{totalmiscacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Misc Mod</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassdexmod" title="armorclassdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassbonus" title="armorclassbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclasssizemod" title="armorclasssizemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_acnaturalarmor" title="acnaturalarmor" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_acdeflectionmod" title="acdeflectionmod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_acmiscmod" title="acmiscmod" value="@{totalmiscacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 				<td> &nbsp; &nbsp; &nbsp; </td>
-				<td style="width: 35px; height: 24px;" class="sheet-statlabel">TOUCH<br><div style="font-size: 0.65em;">Armor Class</div></td>
+				<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{armorclasssizemod} +@{acdodgemod} +@{acdeflectionmod} +@{totalmisctouchacbonus})" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
-				<td style="width: 70px;" class="sheet-statlabel">FLAT-FOOTED<br><div style="font-size: 0.65em;">Armor Class</div></td>
+				<td style="width: 70px;" class="sheet-statlabel">Pris au dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscffacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
-				<td style="width: 70px;" class="sheet-statlabel">Immobilized<br><div style="font-size: 0.65em;">Armor Class</div></td>
+				<td style="width: 70px;" class="sheet-statlabel">Immobilisé<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscimmoblacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Damage Reduction</div></td-->
 				<td valign="top"> &nbsp;<input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/> &nbsp; 
-					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Armor Check Pen</div></td>
+					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
 			</tr>
 		</table>
 		<hr/>
-		<input type="checkbox" class="sheet-pc-acequipment-show sheet-arrow" title="acequipment-show" name="attr_acequipment-show" value="1" checked /><span style="text-align: left;">Armor </span>
+		<input type="checkbox" class="sheet-pc-acequipment-show sheet-arrow" title="acequipment-show" name="attr_acequipment-show" value="1" checked /><span style="text-align: left;">Armure</span>
 		<div class="sheet-pc-acequipment">
 			<div style="float: left">
 				<table cellpadding="10" cellspacing="0">
 					<tr>
-						<td colspan="3" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;">AC Items</td>
+						<td colspan="3" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;">Equipement</td>
 					</tr>
 				</table>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_armorworn" title="armorworn (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armor Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_armorworn" title="armorworn (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 58px;">Type</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Max Dex</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Check Penalty</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Spell Failure</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 70px;">Speed</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Weight</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 223px;" colspan="4">Special Properties</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">DEX Max</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Pénalité</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Echec des sorts</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 70px;">Vitese</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Poids</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 223px;" colspan="4">Propriétés spéciales</td>
 					</tr>
 					<tr>
 						<td colspan="3"><input class="sheet-inputbox" type="text" name="attr_acitem" title="acitem" style="height: 24px; width: 180px;" /></td>
@@ -1092,12 +1092,12 @@
 				<br>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-					<td class="sheet-statlabel" style="font-size: 1em; width: 184px;"><input type="checkbox" name="attr_shieldworn" title="shieldworn" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shield &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Armor Bonus</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Check Penalty</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Spell Failure</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Weight</td>
-						<td class="sheet-statlabel" style="font-size: 0.65em; width: 404px;" colspan="5">Properties</td>
+					<td class="sheet-statlabel" style="font-size: 1em; width: 184px;"><input type="checkbox" name="attr_shieldworn" title="shieldworn" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bouclier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Pénalité</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Echec des sorts</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Poids</td>
+						<td class="sheet-statlabel" style="font-size: 0.65em; width: 404px;" colspan="5">Propriétés spéciales</td>
 					</tr>
 					<tr>
 						<td><input class="sheet-inputbox" type="text" name="attr_shield" title="shield" style="height: 24px; width: 184px;" /></td>
@@ -1112,32 +1112,32 @@
 		</div>
 		<hr/>
 		<br>
-		<input type="checkbox" class="sheet-pc-acother-show sheet-arrow" title="acother-show" name="attr_acother-show" value="1" checked /><span style="text-align: left;">Other Armor Class</span>
+		<input type="checkbox" class="sheet-pc-acother-show sheet-arrow" title="acother-show" name="attr_acother-show" value="1" checked /><span style="text-align: left;">Autres Classes d'armures</span>
 		<div class="sheet-pc-acother">
 			<div style="float: left">
 				<table cellpadding="5" cellspacing="0">
 					<tr>
-						<td class="sheet-statlabel-big-gray" style="font-size: 1em; width: 795px;">Other AC</td>
+						<td class="sheet-statlabel-big-gray" style="font-size: 1em; width: 795px;">Autres CA</td>
 					</tr>
 				</table>
-				<input type="checkbox" class="sheet-pc-abilityaccalc-show sheet-arrow" title="abilityaccalc-show" name="attr_abilityaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Ability Bonuses &nbsp; &nbsp; &nbsp; </span>
-				<span> Bonus for AC:<input type="text" name="attr_totalabilityacbonus" title="totalabilityacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span>
-				<span> Touch AC:<input type="text" name="attr_totalabilitytouchacbonus" title="totalabilitytouchacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1touchac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2touchac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3touchac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
-				<span> FF AC:<input type="text" name="attr_totalabilityffacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty}*(1-@{dexffac}) +@{dexacbonusinuse}*@{dexffac}*@{dexacbonus} +@{abilityac1ffac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2ffac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3ffac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
-				<span> Immobilized AC:<input type="text" name="attr_totalabilityimmoblacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty} )" disabled="true" /></span>
+				<input type="checkbox" class="sheet-pc-abilityaccalc-show sheet-arrow" title="abilityaccalc-show" name="attr_abilityaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Bonus de carac. &nbsp; &nbsp; &nbsp; </span>
+				<span> Bonus CA:<input type="text" name="attr_totalabilityacbonus" title="totalabilityacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span>
+				<span> CA Contact:<input type="text" name="attr_totalabilitytouchacbonus" title="totalabilitytouchacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1touchac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2touchac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3touchac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
+				<span> CA PaD:<input type="text" name="attr_totalabilityffacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty}*(1-@{dexffac}) +@{dexacbonusinuse}*@{dexffac}*@{dexacbonus} +@{abilityac1ffac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2ffac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3ffac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
+				<span> CA Immobilisation:<input type="text" name="attr_totalabilityimmoblacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty} )" disabled="true" /></span>
 				<br>
-				<span style="font-style: italic; font-size: .6em;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Typically: part of AC and Touch AC.  Penalty is part of FF AC and Immobilized AC, bonus is not.  Capped by Armor and Load.</span>
+				<span style="font-style: italic; font-size: .6em;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Basiquement: Une partie de la CA et de la CA au contact.  La pénalité s'applique à la CA quand PaD et immobilisé, le bonus non.  Capé par l'armure et la charge.</span>
 				<div class="sheet-pc-abilityaccalc">
 					<div style="float: left">
 						<table>
 							<tr>
 								<td class="sheet-table-header2" style="width: 20px;" > &nbsp; </td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Name</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 45px;">AC Bonus</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">Capped?</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 45px;">Capped AC Bonus</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">In Touch AC?</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">In FF AC?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Nom</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 45px;">Bonus CA</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">Capée?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 45px;">Bonus CA Capée</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">CA au contact?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">CA PaD?</td>
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 375px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1197,14 +1197,14 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armor &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalarmorbonus" title="totalarmorbonus" style="width: 54px;" value="(@{armorworn}*@{armorbonus} +@{shieldworn}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Component of AC and FF AC; Not component of Touch AC </span>
+				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalarmorbonus" title="totalarmorbonus" style="width: 54px;" value="(@{armorworn}*@{armorbonus} +@{shieldworn}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-armorbonuscalc">
 					<div style="float: left">
 						<table>
 							<tr>
 								<td class="sheet-table-header2" style="width: 20px;" > &nbsp; </td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Name</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">AC Bonus</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Nom</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">Bonus CA</td>
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1247,14 +1247,14 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-naturalarmorcalc-show sheet-arrow" title="naturalarmorcalc-show" name="attr_naturalarmorcalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Natural Armor &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalnaturalarmorbonus" title="totalnaturalarmorbonus" style="width: 54px;" value="(@{naturalarmor1inuse}*@{naturalarmor1bonus} +@{naturalarmor2inuse}*@{naturalarmor2bonus} +@{naturalarmor3inuse}*@{naturalarmor3bonus} +@{naturalarmor4inuse}*@{naturalarmor4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Component of AC and FF AC; Not component of Touch AC </span>
+				<input type="checkbox" class="sheet-pc-naturalarmorcalc-show sheet-arrow" title="naturalarmorcalc-show" name="attr_naturalarmorcalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure Nat. &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalnaturalarmorbonus" title="totalnaturalarmorbonus" style="width: 54px;" value="(@{naturalarmor1inuse}*@{naturalarmor1bonus} +@{naturalarmor2inuse}*@{naturalarmor2bonus} +@{naturalarmor3inuse}*@{naturalarmor3bonus} +@{naturalarmor4inuse}*@{naturalarmor4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-naturalarmorcalc">
 					<div style="float: left">
 						<table>
 							<tr>
 								<td class="sheet-table-header2" style="width: 20px;" > &nbsp; </td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Name</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">AC Bonus</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Nom</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">Bonus CA</td>
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1285,14 +1285,14 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-dodgecalc-show sheet-arrow" title="dodgecalc-show" name="attr_dodgecalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Dodge &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Total:<input type="text" name="attr_totaldodgebonus" title="totaldodgebonus" style="width: 54px;" value="(@{dodgebonus1inuse}*@{dodgebonus1bonus} +@{dodgebonus2inuse}*@{dodgebonus2bonus} +@{dodgebonus3inuse}*@{dodgebonus3bonus} +@{dodgebonus4inuse}*@{dodgebonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Component of AC and Touch AC; Not a component of FF AC.  </span>
+				<input type="checkbox" class="sheet-pc-dodgecalc-show sheet-arrow" title="dodgecalc-show" name="attr_dodgecalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Esquive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Total:<input type="text" name="attr_totaldodgebonus" title="totaldodgebonus" style="width: 54px;" value="(@{dodgebonus1inuse}*@{dodgebonus1bonus} +@{dodgebonus2inuse}*@{dodgebonus2bonus} +@{dodgebonus3inuse}*@{dodgebonus3bonus} +@{dodgebonus4inuse}*@{dodgebonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact  </span>
 				<div class="sheet-pc-dodgecalc">
 					<div style="float: left">
 						<table>
 							<tr>
 								<td class="sheet-table-header2" style="width: 20px;" > &nbsp; </td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Name</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">AC Bonus</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Nom</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">Bonus CA</td>
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1323,14 +1323,14 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-deflectioncalc-show sheet-arrow" title="deflectioncalc-show" name="attr_deflectioncalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Deflection &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totaldeflectionbonus" title="totaldeflectionbonus" style="width: 54px;" value="(@{deflection1inuse}*@{deflection1bonus} +@{deflection2inuse}*@{deflection2bonus} +@{deflection3inuse}*@{deflection3bonus} +@{deflection4inuse}*@{deflection4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Component of AC, Touch AC, and FF AC. </span>
+				<input type="checkbox" class="sheet-pc-deflectioncalc-show sheet-arrow" title="deflectioncalc-show" name="attr_deflectioncalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Déflexion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totaldeflectionbonus" title="totaldeflectionbonus" style="width: 54px;" value="(@{deflection1inuse}*@{deflection1bonus} +@{deflection2inuse}*@{deflection2bonus} +@{deflection3inuse}*@{deflection3bonus} +@{deflection4inuse}*@{deflection4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD ainsi qu'au contact </span>
 				<div class="sheet-pc-deflectioncalc">
 					<div style="float: left">
 						<table>
 							<tr>
 								<td class="sheet-table-header2" style="width: 20px;" > &nbsp; </td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Name</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">AC Bonus</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Nom</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">Bonus CA</td>
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1361,22 +1361,22 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-miscaccalc-show sheet-arrow" title="miscaccalc-show" name="attr_miscaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Misc AC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Bonus for AC:<input type="text" name="attr_totalmiscacbonus" title="totalmiscacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1stdac}*@{miscac1bonus}*@{miscac1stdac} +@{miscac2inuse}*@{miscac2stdac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3stdac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4stdac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5stdac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6stdac}*@{miscac6bonus})" disabled="true" /></span>
-				<span> Touch AC:<input type="text" name="attr_totalmisctouchacbonus" title="totalmisctouchacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1touchac}*@{miscac1bonus} +@{miscac2inuse}*@{miscac2touchac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3touchac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4touchac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5touchac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6touchac}*@{miscac6bonus})" disabled="true" /></span> 
-				<span> FF AC:<input type="text" name="attr_totalmiscffacbonus" title="totalmiscffacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1ffac}*@{miscac1bonus} +@{miscac2inuse}*@{miscac2ffac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3ffac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4ffac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5ffac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6ffac}*@{miscac6bonus})" disabled="true" /></span> 
-				<span> Immobilized AC:<input type="text" name="attr_totalmiscimmoblacbonus" title="totalmiscffacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1immoblac}*@{miscac1bonus} +@{miscac2inuse}*@{miscac2immoblac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3immoblac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4immoblac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5immoblac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6immoblac}*@{miscac6bonus})" disabled="true" /></span>
-				<span style="font-style: italic; font-size: .6em;"> Potential component of AC, Touch AC, FF or Immobilized AC. </span>
+				<input type="checkbox" class="sheet-pc-miscaccalc-show sheet-arrow" title="miscaccalc-show" name="attr_miscaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Divers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Bonus for AC:<input type="text" name="attr_totalmiscacbonus" title="totalmiscacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1stdac}*@{miscac1bonus}*@{miscac1stdac} +@{miscac2inuse}*@{miscac2stdac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3stdac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4stdac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5stdac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6stdac}*@{miscac6bonus})" disabled="true" /></span>
+				<span> CA au contact:<input type="text" name="attr_totalmisctouchacbonus" title="totalmisctouchacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1touchac}*@{miscac1bonus} +@{miscac2inuse}*@{miscac2touchac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3touchac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4touchac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5touchac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6touchac}*@{miscac6bonus})" disabled="true" /></span> 
+				<span> CA PaD:<input type="text" name="attr_totalmiscffacbonus" title="totalmiscffacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1ffac}*@{miscac1bonus} +@{miscac2inuse}*@{miscac2ffac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3ffac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4ffac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5ffac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6ffac}*@{miscac6bonus})" disabled="true" /></span> 
+				<span> CA Immobilisé:<input type="text" name="attr_totalmiscimmoblacbonus" title="totalmiscffacbonus" style="width: 29px;" value="(@{miscac1inuse}*@{miscac1immoblac}*@{miscac1bonus} +@{miscac2inuse}*@{miscac2immoblac}*@{miscac2bonus} +@{miscac3inuse}*@{miscac3immoblac}*@{miscac3bonus} +@{miscac4inuse}*@{miscac4immoblac}*@{miscac4bonus} +@{miscac5inuse}*@{miscac5immoblac}*@{miscac5bonus} +@{miscac6inuse}*@{miscac6immoblac}*@{miscac6bonus})" disabled="true" /></span>
+				<span style="font-style: italic; font-size: .6em;"> Composant potentiellement la CA, la CA PaD et la CA au contact. </span>
 				<div class="sheet-pc-miscaccalc">
 					<div style="float: left">
 						<table>
 							<tr>
 								<td class="sheet-table-header2" style="width: 20px;" > &nbsp; </td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Name</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">AC Bonus</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">In AC?</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">In Touch AC?</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">In FF AC?</td>
-								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">In Immobl AC?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 205px;">Nom</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 55px;">Bonus CA</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">CA?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">CA au contact?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">CA PaD?</td>
+								<td class="sheet-table-header2" style="font-size: 0.65em; width: 25px;">CA Immobile?</td>
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 390px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1449,23 +1449,23 @@
 
 	<div class="sheet-tab-content sheet-tab4 sheet-tab99">
 		<!--Equipment-->
-		<input type="checkbox" class="sheet-pc-encumbrance-show sheet-arrow" title="encumbrance-show" name="attr_encumbrance-show" value="1" checked /><span style="text-align: left;">Encumbrance/Load</span>
+		<input type="checkbox" class="sheet-pc-encumbrance-show sheet-arrow" title="encumbrance-show" name="attr_encumbrance-show" value="1" checked /><span style="text-align: left;">Encombrement/Charge</span>
 		<div class="sheet-pc-encumbrance">
 			<div style="float: left">
 				<table cellpadding="10" cellspacing="0">
 					<tr>
-						<td colspan="3" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;">Encumbrance and Load</td>
+						<td colspan="3" class="sheet-statlabel-big-gray" style="font-size: 1.5em; width: 790px;">Encombrement et charge</td>
 					</tr>
 				</table>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td class="sheet-statlabel-encumbrance" style="width: 44px;"> Str  </td>
-						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Light Load </td>
-						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Medium Load </td>
-						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Heavy Load </td>
-						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Lift Over </td>
-						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Lift Off Ground </td>
-						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Push/ Drag </td>
+						<td class="sheet-statlabel-encumbrance" style="width: 44px;"> FOR  </td>
+						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Léger </td>
+						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Moyen </td>
+						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Lourd </td>
+						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Lever au dessus de la tête </td>
+						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Lever du sol </td>
+						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Pousser / Tirer </td>
 					</tr>
 					<tr>
 						<td><select class="sheet-inputbox" style="height: 24px; width: 45px; padding: 0px;" name="attr_encumbrstr" title="encumbrstr">
@@ -1499,12 +1499,12 @@
 							<option type="text" value="1200">28</option>
 							<option type="text" value="1400">29</option>
 						</select></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_lightloadmax" title="lightloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(@{encumbrstr}/3)))"/>lbs or less.</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_medloadmin" title="medloadmin" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(@{encumbrstr}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_medloadmax" title="medloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(2*@{encumbrstr}/3)))"/>lbs.</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_heavyloadmin" title="heavyloadmin" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(2*@{encumbrstr}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_heavyloadmax" title="heavyloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(@{encumbrstr}))"/>lbs.</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_liftovermax" title="liftovermax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(@{encumbrstr}))"/>lbs or less.</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_liftoffmax" title="liftoffmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(2*(@{encumbrstr})))"/>lbs or less.</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_pushdragmax" title="pushdragmax" style="height: 24px; width: 55px;" disabled="true" value="floor(@{encumbrsize}*(5*(@{encumbrstr})))"/>lbs or less.</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_lightloadmax" title="lightloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(@{encumbrstr}/3)))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_medloadmin" title="medloadmin" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(@{encumbrstr}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_medloadmax" title="medloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(2*@{encumbrstr}/3)))"/>Kg</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_heavyloadmin" title="heavyloadmin" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(2*@{encumbrstr}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_heavyloadmax" title="heavyloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(@{encumbrstr}))"/>Kg</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_liftovermax" title="liftovermax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(@{encumbrstr}))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_liftoffmax" title="liftoffmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(2*(@{encumbrstr})))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_pushdragmax" title="pushdragmax" style="height: 24px; width: 55px;" disabled="true" value="floor(@{encumbrsize}*(5*(@{encumbrstr})))"/>Kg ou moins</td>
 					</tr>
 				</table>
 				<table cellpadding="0" cellspacing="0">
