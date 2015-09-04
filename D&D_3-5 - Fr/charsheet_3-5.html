@@ -287,17 +287,17 @@
 											<tr><td style="text-align: left;">
 												<input type="checkbox" class="sheet-pc-savemacros-show sheet-arrow" title="savemacros-show" name="attr_savemacros-show" value="1" /><!--span style="text-align: left;"></span-->
 												<div class="sheet-table-row">
-													<span class="sheet-table-header2">Saving<br>Throws</span>
+													<span class="sheet-table-header2">Jets de<br>Sauvegarde</span>
 													<span class="sheet-table-header2">Total</span>
-													<span class="sheet-table-header2">Base<br>Save</span>
-													<span class="sheet-table-header2">Ability<br>Modifier</span>
-													<span class="sheet-table-header2">Epic Save<br>Bonus</span>
-													<span class="sheet-table-header2">Magic<br>Modifier</span>
-													<span class="sheet-table-header2">Misc<br>Modifier</span>
-													<span class="sheet-table-header2">Temp<br>Modifier</span>
+													<span class="sheet-table-header2">Base</span>
+													<span class="sheet-table-header2">Carac.</span>
+													<span class="sheet-table-header2">Bonus<br>Epique</span>
+													<span class="sheet-table-header2">Magie</span>
+													<span class="sheet-table-header2">Divers</span>
+													<span class="sheet-table-header2">Temporaire</span>
 												</div>
 												<div class="sheet-table-row">
-													<span class="sheet-table-row-name" style="width: 60px;">Fortitude<br><div style="font-size: 0.65em;">(Constitution)</div></span>
+													<span class="sheet-table-row-name" style="width: 60px;">Vigueur<br><div style="font-size: 0.65em;">(Constitution)</div></span>
 													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_fortitude" title="fortitude" value="(@{fortitudebase} +@{fortitudeability} +@{fortitudeepicsavemod} +@{fortitudemagicmod} +@{fortitudemiscmod} +@{fortitudetempmod} )" disabled="true"></span>
 													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_fortitudebase" title="fortitudebase" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudeability" title="fortitudeability" value="floor(@{con}/2-5) " disabled="true"></span>
@@ -312,7 +312,7 @@
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_fortitudemacro" title="fortitudemacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=braces against the attack}} {{check=Fortitude check:}} {{checkroll=[[1d20 + [[@{fortitude}]] ]] }} {{notes=@{fortitudenote} }}</textarea></span>
 												</div>
 												<div class="sheet-table-row" style="font-size: 1em;">
-													<span class="sheet-table-row-name" style="width: 60px;">Reflex<br><div style="font-size: 0.65em;">(Dexterity)</div></span>
+													<span class="sheet-table-row-name" style="width: 60px;">Réflexes<br><div style="font-size: 0.65em;">(Dexterité)</div></span>
 													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_reflex" title="reflex" value="(@{reflexbase} +@{reflexability} +@{reflexepicsavemod} +@{reflexmagicmod} +@{reflexmiscmod} +@{reflextempmod} )" disabled="true"></span>
 													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_reflexbase" title="reflexbase" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexability" title="reflexability" value="floor(@{dex}/2-5) " disabled="true"></span>
@@ -327,7 +327,7 @@
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_reflexmacro" title="reflexmacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tries to dodge}} {{check=Reflex check:}} {{checkroll=[[1d20 + [[@{reflex}]] ]] }} {{notes=@{reflexnote} }}</textarea></span>
 												</div>
 												<div class="sheet-table-row">
-													<span class="sheet-table-row-name" style="width: 60px;">Will<br><div style="font-size: 0.65em;">(Wisdom)</div></span>
+													<span class="sheet-table-row-name" style="width: 60px;">Volonté<br><div style="font-size: 0.65em;">(Sagesse)</div></span>
 													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_will" title="will" value="(@{willbase} +@{willability} +@{willepicsavemod} +@{willmagicmod} +@{willmiscmod} +@{willtempmod} )" disabled="true"></span>
 													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_willbase" title="willbase" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willability" title="willability" value="floor(@{wis}/2-5) " disabled="true"></span>
@@ -341,70 +341,70 @@
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_willnote" title="willnote (Enter a note for the notes field.)" placeholder="Note"></textarea></span>
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_willmacro" title="willmacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tries to resist}} {{check=Will check:}} {{checkroll=[[1d20 + [[@{will}]] ]] }} {{notes=@{willnote} }}</textarea></span>
 												</div>
-												<input type="checkbox" class="sheet-pc-savemacros-show sheet-arrow" title="savemacros-show" name="attr_savemacros-show" value="1" /><span style="text-align: left;">Show Save Macros</span>
+												<input type="checkbox" class="sheet-pc-savemacros-show sheet-arrow" title="savemacros-show" name="attr_savemacros-show" value="1" /><span style="text-align: left;">Montrer macros des JdS</span>
 											</td></tr> 
 										</table>
 										<br>
 										<table>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 80px;"><div>Spell Resist</div></td>
+												<td class="sheet-statlabel-big" style="width: 80px;"><div>Résistance aux sorts</div></td>
 												<td style="text-align: left;"><input class="sheet-inputbox" type="text" name="attr_spellresistance" title="spellresistance" style="height: 24px; width: 50px;"></td>
 												<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-												<td class="sheet-statlabel-big" style="width: 110px;"><div>Arcane Spell Failure</div></td>
+												<td class="sheet-statlabel-big" style="width: 110px;"><div>% échec des sorts</div></td>
 												<td><input class="sheet-inputbox" type="text" name="attr_arcanespellfailure" title="arcanespellfailure" style="height: 24px; width: 50px;"></td>
 											</tr>
 										</table>
 									<br>
 										<table>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 80px;">Base Attack</td>
+												<td class="sheet-statlabel-big" style="width: 80px;">Bonus de base à l'attaque</td>
 												<td>&nbsp;<input class="sheet-inputbox" type="text" name="attr_bab" title="bab" value="0" style="height: 24px; width: 50px;"></td>
 												<td>/<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_bab2" title="bab2" value="(((@{bab} -5)+abs(@{bab} -5))/2)" disabled="true" style="height: 24px; width: 50px;"></td>
 												<td>/<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_bab3" title="bab3" value="(((@{bab} -10)+abs(@{bab} -10))/2)" disabled="true" style="height: 24px; width: 50px;"></td>
 												<td>/<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_bab4" title="bab4" value="(((@{bab} -15)+abs(@{bab} -15))/2)" disabled="true" style="height: 24px; width: 50px;"></td>
 											</tr>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 80px;">Grapple</td>
+												<td class="sheet-statlabel-big" style="width: 80px;">Lutte</td>
 												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_grapple" title="grapple" value="(@{bab} +@{epicattackbonus} +@{grapplestrmod}+@{specialattacksizemod}+@{grapplemiscmod})" disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Total</div></td>
-												<td>=<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_grapplebab" title="grapplebab (Base Attack Bonus + Epic Attack Bonus)" style="height: 24px; width: 50px;" disabled="true" value="@{bab} +@{epicattackbonus} "><br><div style="font-size: 0.5em;">BAB + EAB</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_grapplestrmod" title="grapplestrmod" value="floor(@{str}/2-5) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Str mod </div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_specialattacksizemod" title="specialattacksizemod" value="(floor((@{size} + 50) / 58) + floor((@{size} + 50) / 54) + floor((@{size} + 50) / 52) + floor((@{size} + 50) / 51) + floor((@{size} + 50) / 50) + floor((@{size} + 50) / 49) + floor((@{size} + 50) / 47) + floor((@{size} + 50) / 43) -4) * (-4) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Size Mod</div></td>
-												<td>+<input class="sheet-inputbox" type="text" name="attr_grapplemiscmod" title="grapplemiscmod" value="0" style="width: 50px;"><br><div style="font-size: 0.5em;">Misc Mod</div></td>
+												<td>=<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_grapplebab" title="grapplebab (Base Attack Bonus + Epic Attack Bonus)" style="height: 24px; width: 50px;" disabled="true" value="@{bab} +@{epicattackbonus} "><br><div style="font-size: 0.5em;">BBa + BAE</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_grapplestrmod" title="grapplestrmod" value="floor(@{str}/2-5) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">FOR</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_specialattacksizemod" title="specialattacksizemod" value="(floor((@{size} + 50) / 58) + floor((@{size} + 50) / 54) + floor((@{size} + 50) / 52) + floor((@{size} + 50) / 51) + floor((@{size} + 50) / 50) + floor((@{size} + 50) / 49) + floor((@{size} + 50) / 47) + floor((@{size} + 50) / 43) -4) * (-4) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Modif. Taille</div></td>
+												<td>+<input class="sheet-inputbox" type="text" name="attr_grapplemiscmod" title="grapplemiscmod" value="0" style="width: 50px;"><br><div style="font-size: 0.5em;">Divers</div></td>
 												<td><button type='roll' name='attr_Grapplecheck' title='Grapplecheck' value='&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name} }} {{attack1=Grapple check:[[1d20 +[[@{grapple}]] ]]}}'></button><br><div style="font-size: 0.5em;">&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
 										<table>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 50px;">Melee<div style="font-size: 0.65em;">Attack Bonus</div></td>
+												<td class="sheet-statlabel-big" style="width: 50px;">Mêlée<div style="font-size: 0.65em;">Bonus de base</div></td>
 												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_meleeattackbonus" title="meleeattackbonus" value="(@{bab} +@{epicattackbonus} +@{strmodmab}+@{size}+@{mabmiscmod}+@{mabtempmod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
-												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_babmab" title="babmab (Base Attack Bonus + Epic Attack Bonus)" value="@{bab} +@{epicattackbonus} " disabled="true"><br><div style="font-size: 0.5em;">Base AB <br>+ Epic AB</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_strmodmab" title="strmodmab" value="floor(@{str}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Strength<br>Modifier</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_sizemodmab" title="sizemodmab" value="@{size}" disabled="true"><br><div style="font-size: 0.5em;">Size<br>Modifier</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabmiscmod" title="mabmiscmod" value="0"><br><div style="font-size: 0.5em;">Misc<br>Modifiers<br></div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtempmod" title="mabtempmod" value="0"><br><div style="font-size: 0.5em;">Temp<br>Modifiers<br></div></td>
+												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_babmab" title="babmab (Base Attack Bonus + Epic Attack Bonus)" value="@{bab} +@{epicattackbonus} " disabled="true"><br><div style="font-size: 0.5em;">BBa <br>+ BAE</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_strmodmab" title="strmodmab" value="floor(@{str}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Force</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_sizemodmab" title="sizemodmab" value="@{size}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabmiscmod" title="mabmiscmod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtempmod" title="mabtempmod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
 												<td><button type='roll' name='attr_meleeattackcheck' title='meleeattackcheck' value='&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=makes a melee attack }} {{attack1=hitting AC [[1d20 +[[@{meleeattackbonus}]] ]]}}'></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
 										<table>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 50px;">Ranged<div style="font-size: 0.65em;">Attack Bonus</div></td>
+												<td class="sheet-statlabel-big" style="width: 50px;">Distance<div style="font-size: 0.65em;">Bonus de base</div></td>
 												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_rangedattackbonus" title="rangedattackbonus" value="(@{bab} +@{epicattackbonus} +@{dexmodrab}+@{size}+@{rabmiscmod}+@{rabtempmod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
-												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_babrab" title="babrab (Base Attack Bonus + Epic Attack Bonus)" value="@{bab} +@{epicattackbonus} " disabled="true"><br><div style="font-size: 0.5em;">Base AB <br>+ Epic AB</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_dexmodrab" title="dexmodrab" value="floor(@{dex}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Dexterity<br>Modifier</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_sizemodrab" title="sizemodrab" value="@{size}" disabled="true"><br><div style="font-size: 0.5em;">Size<br>Modifier</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabmiscmod" title="rabmiscmod" value="0"><br><div style="font-size: 0.5em;">Misc<br>Modifiers<br></div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtempmod" title="rabtempmod" value="0"><br><div style="font-size: 0.5em;">Temp<br>Modifiers<br></div></td>
+												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_babrab" title="babrab (Base Attack Bonus + Epic Attack Bonus)" value="@{bab} +@{epicattackbonus} " disabled="true"><br><div style="font-size: 0.5em;">BBa <br>+ BAE</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_dexmodrab" title="dexmodrab" value="floor(@{dex}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Dextérité</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_sizemodrab" title="sizemodrab" value="@{size}" disabled="true"><br><div style="font-size: 0.5em;">Taille<br>Modifier</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabmiscmod" title="rabmiscmod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtempmod" title="rabtempmod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
 												<td><button type='roll' name='attr_rangedattackcheck' title='rangedattackcheck' value='&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=makes a ranged attack }} {{attack1=hitting AC [[1d20 +[[@{rangedattackbonus}]] ]]}}'></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
 										<table>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 50px;">Epic Levels:</td>
-												<td>Epic Save Bonus: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_epicsavebonus" title="epicsavebonus" value="0"></td>
-												<td>Epic Attack Bonus: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_epicattackbonus" title="epicattackbonus" value="0"></td>
+												<td class="sheet-statlabel-big" style="width: 50px;">Niveaux épiques:</td>
+												<td>Bonus de sauvegarde épique: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_epicsavebonus" title="epicsavebonus" value="0"></td>
+												<td>Bonus d'attaque épique: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_epicattackbonus" title="epicattackbonus" value="0"></td>
 											</tr>
 										</table>
 									</td>
@@ -417,19 +417,19 @@
 							<div style="float: left">
 								<div style="display:table;width:39%;float:left;">
 									<div class="sheet-table-row">
-										<span class="sheet-table-data-center">Languages<br><textarea rows="2" cols="55" style="width: 380px;" name="attr_languages" title="languages"></textarea></span>
+										<span class="sheet-table-data-center">Langages<br><textarea rows="2" cols="55" style="width: 380px;" name="attr_languages" title="languages"></textarea></span>
 									</div>
 									<div class="sheet-table-row">
-										<span class="sheet-table-data-center">Racial Abilities<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_racialabilities" title="racialabilities"></textarea></span>
+										<span class="sheet-table-data-center">Particularités de race<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_racialabilities" title="racialabilities"></textarea></span>
 									</div>
 									<div class="sheet-table-row">
-										<span class="sheet-table-data-center">Class Abilities<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_classabilities" title="classabilities"></textarea></span>
+										<span class="sheet-table-data-center">Particularités de classe<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_classabilities" title="classabilities"></textarea></span>
 									</div>
 									<div class="sheet-table-row">
-										<span class="sheet-table-data-center">Feats<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_feats" title="feats"></textarea></span>
+										<span class="sheet-table-data-center">Dons<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_feats" title="feats"></textarea></span>
 									</div>
 									<div class="sheet-table-row">
-										<span class="sheet-table-data-center">Other<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_other" title="other"></textarea></span>
+										<span class="sheet-table-data-center">Autres<br><textarea rows="4" cols="55" style="width: 380px;" name="attr_other" title="other"></textarea></span>
 									</div>
 								</div>
 							</div>
