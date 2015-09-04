@@ -99,17 +99,17 @@
 				<tr>
 					<td>
 						<div style="display:table;width:39%;float:left;">
-							<span class="sheet-table-name">Ability Scores</span>
+							<span class="sheet-table-name">Valeurs des caractéristiques</span>
 							<div class="sheet-table-row">
-								<span class="sheet-table-header">Ability</span>
+								<span class="sheet-table-header">Carac</span>
 								<span class="sheet-table-header">Total</span>
-								<span class="sheet-table-header">Mod</span>
+								<span class="sheet-table-header">Modif.</span>
 								<span class="sheet-table-header">Base</span>
-								<span class="sheet-table-header">Misc</span>
+								<span class="sheet-table-header">Divers</span>
 								<span class="sheet-table-header">Temp</span>
 							</div>
 							<div class="sheet-table-row">
-								<span class="sheet-table-row-name">STR</span>
+								<span class="sheet-table-row-name">FOR</span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str" value="(@{str-base} + @{str-misc} + @{str-temp})" title="str" disabled="true"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-mod" value="(floor((@{str}) / 2) - 5)" title="str-mod" disabled="true"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-base" value="10" title="str-base"></span>
@@ -149,7 +149,7 @@
 								<span class="sheet-table-data-center"><button type="roll" name="attr_intcheck" title='intcheck' value="@{int-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
-								<span class="sheet-table-row-name">WIS</span>
+								<span class="sheet-table-row-name">SAG</span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_wis" title="wis" value="(@{wis-base} + @{wis-misc} + @{wis-temp})" disabled="true"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_wis-mod" title="wis-mod" value="(floor((@{wis}) / 2) - 5)" disabled="true"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_wis-base" title="wis-base" value="10"></span>
@@ -177,10 +177,10 @@
 								<td> 
 									<table>
 										<tr>
-											<td class="sheet-statlabel-big" style="width: 70px;">HP<br><div style="font-size: 0.65em;">Hit Points</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints" title="hitpoints" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">Current HP</div></td>
+											<td class="sheet-statlabel-big" style="width: 70px;">PV<br><div style="font-size: 0.65em;">Points de vie</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints" title="hitpoints" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">PV actuels</div></td>
 											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints_max" title="hitpoints_max; use hitpoints|max in macros" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">Max</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_nonlethaldamage" title="nonlethaldamage" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;">Nonlethal Damage</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_nonlethaldamage" title="nonlethaldamage" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;">Temporaires</div></td>
 										</tr>
 										<tr>
 											<td class="sheet-statlabel-big" style="width: 70px;">INITIATIVE</td>
@@ -188,8 +188,8 @@
 												<table>
 													<tr>
 														<td><input class="sheet-inputbox" type="text" name="attr_init" style="height: 24px; width: 30px;" title="init" value="(@{initdexmod}+@{initmiscmod})" disabled="true"> =<br><div style="font-size: 0.5em;">Total</div></td>
-														<td><input class="sheet-inputbox" type="text" name="attr_initdexmod" title="initdexmod" value="floor(@{dex}/2-5)" disabled="true" style="height: 24px; width: 30px;"> +<br><div style="font-size: 0.5em;">Dex Mod</div></td>
-														<td><input class="sheet-inputbox" type="text" name="attr_initmiscmod" title="initmiscmod" value="0" style="height: 24px; width: 30px;"><br><div style="font-size: 0.5em;">Misc Mod</div></td>
+														<td><input class="sheet-inputbox" type="text" name="attr_initdexmod" title="initdexmod" value="floor(@{dex}/2-5)" disabled="true" style="height: 24px; width: 30px;"> +<br><div style="font-size: 0.5em;">DEX</div></td>
+														<td><input class="sheet-inputbox" type="text" name="attr_initmiscmod" title="initmiscmod" value="0" style="height: 24px; width: 30px;"><br><div style="font-size: 0.5em;">Divers</div></td>
 														<td><textarea rows="1" cols="40" style="width: 40px; height: 20px;" title="initmacro (modify to modify initiative roll macro)" name="attr_initmacro">&{template:DnD35Initiative} {{name=@{selected|character_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|init}]] + ([[(@{selected|init})]]/100) &{tracker}]] }}</textarea></td>
 														<td><button class='tokenaction' type='roll' name='attr_initiative' title='initiative' value='@{initmacro}'></button> &nbsp; &nbsp;<br><div style="font-size: 0.5em;"> &nbsp; </div></td>
 													</tr>
@@ -198,8 +198,8 @@
 											<td>
 												<table>
 													<tr>
-														<td class="sheet-statlabel-big" style="width: 50px;">SPEED</td>
-														<td><input class="sheet-inputbox" type="text" name="attr_speed" title="speed" style="height: 24px; width: 85px;"><br><div style="font-size: 0.5em;">Speed</div></td>
+														<td class="sheet-statlabel-big" style="width: 50px;">Vitesse</td>
+														<td><input class="sheet-inputbox" type="text" name="attr_speed" title="speed" style="height: 24px; width: 85px;"><br><div style="font-size: 0.5em;">Vitesse</div></td>
 													</tr>
 												</table>
 											</td>
@@ -207,21 +207,21 @@
 									</table>
 									<table>
 										<tr style="height: 40px;">
-											<td class="sheet-statlabel" style="width: 70px;">Alternate Movement</td>
-											<td><input class="sheet-inputbox" type="text" name="attr_fly-speed" title="fly-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Fly</div></td>
+											<td class="sheet-statlabel" style="width: 70px;">Vitesse de mouvement</td>
+											<td><input class="sheet-inputbox" type="text" name="attr_fly-speed" title="fly-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Vol</div></td>
 											<td align="bottom"><div style="font-size: 0.5em;padding: 0px ;margin: 0px">
 												<select class="sheet-inputbox" style="width: 90px;" name="attr_fly-maneuver" title="fly-maneuver">
-													<option value="Perfect">Perfect</option>
-													<option value="Good">Good</option>
-													<option value="Average">Average</option>
-													<option value="Poor">Poor</option>
-													<option value="Clumsy">Clumsy</option>
-													<option value="None" selected>None</option>
-												</select><br>Maneuverability</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_glide-speed" title="glide-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Glide</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_climb-speed" title="climb-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Climb</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_burrow-speed" title="burrow-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Burrow</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_swim-speed" title="swim-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Swim</div></td>
+													<option value="Perfect">Parfait</option>
+													<option value="Good">Bonne</option>
+													<option value="Average">Moyenne</option>
+													<option value="Poor">Faible</option>
+													<option value="Clumsy">Maladroite</option>
+													<option value="None" selected>Aucune</option>
+												</select><br>Manoeuvrabilité</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_glide-speed" title="glide-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Glisse</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_climb-speed" title="climb-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Escalade</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_burrow-speed" title="burrow-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Creuse</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_swim-speed" title="swim-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Natation</div></td>
 											<td colspan="3"> &nbsp; </td>
 										</tr>
 									</table>
@@ -231,19 +231,19 @@
 								<td colspan="2">
 									<table>
 										<tr>
-											<td style="width: 38px;" class="sheet-statlabel">AC<br><div style="font-size: 0.65em;">Armor Class</div></td>
+											<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 											<td><input class="sheet-inputbox" type="text" name="attr_armorclass" title="armorclass" value="(10+@{armorclassbonus}+@{totalabilityacbonus}+@{armorclasssizemod}+@{acdodgemod}+@{acnaturalarmor}+@{acdeflectionmod}+@{acmiscmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 											<td>=10+<br><br></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_armorclassbonus" title="armorclassbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armor Bns</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassdexmod" title="armorclassdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Ability Mod</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_armorclasssizemod" title="armorclasssizemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Size Mod</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Dodge</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acnaturalarmor" title="acnaturalarmor" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Nat. Armor</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acdeflectionmod" title="acdeflectionmod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Deflection</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acmiscmod" title="acmiscmod" value="@{totalmiscacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Misc Mod</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_armorclassbonus" title="armorclassbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armure</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassdexmod" title="armorclassdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_armorclasssizemod" title="armorclasssizemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_acnaturalarmor" title="acnaturalarmor" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_acdeflectionmod" title="acdeflectionmod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_acmiscmod" title="acmiscmod" value="@{totalmiscacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
 											<td valign="top"><input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
-												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">AC Pen</div></td>
+												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
 										</tr>
 									</table>
 								</td>
@@ -252,13 +252,13 @@
 								<td colspan="2">
 									<table>
 										<tr>
-											<td style="width: 35px; height: 24px;" class="sheet-statlabel">TOUCH<br><div style="font-size: 0.65em;">Armor Class</div></td>
+											<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{armorclasssizemod} +@{acdodgemod} +@{acdeflectionmod} +@{totalmisctouchacbonus})" disabled="true" /> &nbsp; </td>
-											<td style="width: 70px;" class="sheet-statlabel">FLAT-FOOTED<br><div style="font-size: 0.65em;">Armor Class</div></td>
+											<td style="width: 70px;" class="sheet-statlabel">Pris au Dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscffacbonus}" disabled="true" /> &nbsp; </td>
-											<td style="width: 60px;" class="sheet-statlabel">Immobile<br><div style="font-size: 0.65em;">Armor Class</div></td>
+											<td style="width: 60px;" class="sheet-statlabel">Immobile<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscimmoblacbonus}" disabled="true" /> &nbsp; </td>
-											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="width: 120px;" /><br><div style="font-size: 0.65em;">Damage Reduction</div></td>
+											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
 											<td valign="top"><input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
@@ -273,7 +273,7 @@
 			</table>
 		</div>
 		<br>
-		<input type="checkbox" class="sheet-pc-saveblock-show sheet-arrow" title="saveblock-show" name="attr_saveblock-show" value="1" checked /><span style="text-align: left;">Saves, Combat, Notes</span>
+		<input type="checkbox" class="sheet-pc-saveblock-show sheet-arrow" title="saveblock-show" name="attr_saveblock-show" value="1" checked /><span style="text-align: left;">Jets de Sauvegarde, Combat, Notes</span>
 		<div class="sheet-pc-saveblock">
 			<table>
 				<tr>
