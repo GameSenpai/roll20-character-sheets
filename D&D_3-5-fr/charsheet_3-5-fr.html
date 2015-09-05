@@ -4,7 +4,10 @@
 <!-- based on Pathfinder sheets from Barry R., Sam, Brian, and Justin N. -->
 <!-- with lots of help from Toby-->
 <!-- Version 2.6.20 8/10/15 (Tabs, Roll Templates, Inline Rolls, NPC toggle, encumbrance w/ ACP & MaxDex, Trained-Only)-->
-<head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  </head> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+</head>
+ 
 <input type="radio" class="sheet-switch-pc-show sheet-switch" title="npc-show" name="attr_npc-show" value="1" checked /><span style="text-align: left;">PJ &nbsp; &nbsp; &nbsp; &nbsp;</span>
 <input type="radio" class="sheet-switch-npc-show sheet-switch" title="npc-show" name="attr_npc-show" value="2" /><span style="text-align: left;">PNJ</span>
 
@@ -82,7 +85,7 @@
 	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab7" value="7" title="Notes" />
 		<span class="sheet-tab sheet-tab7">Notes</span>
 	<!--input type="radio" name="attr_tab" class="sheet-tab sheet-tab8" value="8" title="Other" />
-		<span class="sheet-tab sheet-tab8">Other</span-->
+		<span class="sheet-tab sheet-tab8">Autres</span-->
 	<!--input type="radio" name="attr_tab" class="sheet-tab sheet-tab9" value="9" title="Notes" />
 		<span class="sheet-tab sheet-tab9">Notes</span-->
 	<!--input type="radio" name="attr_tab" class="sheet-tab sheet-tab10" value="10" title="Notes" />
@@ -103,20 +106,20 @@
 							<div class="sheet-table-row">
 								<span class="sheet-table-header">Carac</span>
 								<span class="sheet-table-header">Total</span>
-								<span class="sheet-table-header">Modif.</span>
+								<span class="sheet-table-header">Modif</span>
 								<span class="sheet-table-header">Base</span>
 								<span class="sheet-table-header">Divers</span>
 								<span class="sheet-table-header">Temp</span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">FOR</span>
-								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str" value="(@{str-base} + @{str-misc} + @{str-temp})" title="str" disabled="true"></span>
-								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-mod" value="(floor((@{str}) / 2) - 5)" title="str-mod" disabled="true"></span>
+								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str" value="(@{for-base} + @{for-misc} + @{for-temp})" title="str" disabled="true"></span>
+								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-mod" value="(floor((@{for}) / 2) - 5)" title="str-mod" disabled="true"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-base" value="10" title="str-base"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-misc" value="0" title="str-misc"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-temp" value="0" title="str-temp"></span>
-								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="str-macro (modify to modify roll macro)" name="attr_str-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{character_name} }} {{check=Strength check:}} {{checkroll=[[1d20 + [[@{str-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="attr_strcheck" title='strcheck' value="@{str-macro}"></button></span>
+								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="str-macro (modify to modify roll macro)" name="attr_str-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{character_name} }} {{check=Test de Force:}} {{checkroll=[[1d20 + [[@{for-mod}]] ]] }}</textarea></span>
+								<span class="sheet-table-data-center"><button type="roll" name="attr_strcheck" title='strcheck' value="@{for-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">DEX</span>
@@ -125,7 +128,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-base" title="dex-base" value="10"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-misc" title="dex-misc" value="0"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-temp" title="dex-temp" value="0"></span>
-								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="dex-macro (modify to modify roll macro)" name="attr_dex-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{character_name} }} {{check=Dexterity check:}} {{checkroll=[[1d20 + [[@{dex-mod}]] ]] }}</textarea></span>
+								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="dex-macro (modify to modify roll macro)" name="attr_dex-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{character_name} }} {{check=Test de Dextérité:}} {{checkroll=[[1d20 + [[@{dex-mod}]] ]] }}</textarea></span>
 								<span class="sheet-table-data-center"><button type="roll" name="attr_dexcheck" title='dexcheck' value="@{dex-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
