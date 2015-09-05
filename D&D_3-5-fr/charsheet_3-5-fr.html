@@ -12,7 +12,7 @@
 <!-- start PC section -->
 
 	<!-- Header / Character Description -->
-	<input type="checkbox" class="sheet-pc-charrpinfo-show sheet-arrow" title="charrpinfo-show" name="attr_charrpinfo-show" value="1" checked /><span style="text-align: left;">En tête</span>
+	<input type="checkbox" class="sheet-pc-charrpinfo-show sheet-arrow" title="montrer_infoperso" name="attr_montrer_infoperso" value="1" checked /><span style="text-align: left;">En tête</span>
 	<div class="sheet-pc-charrpinfo">
 	    <div style="float: left">
 	    	<table border="0">
@@ -22,12 +22,12 @@
 						<td colspan=6>
 							<table>
 								<tr>
-									<td><div style="float: left"><input type="text" name="attr_character_name" title="character_name" style="width: 125px; text-align: right;"><input type="text" name="attr_character-name2" title="character-name2" style="width: 175px;"> &nbsp; <br>Nom du personnage</div></td>
-									<td><div style="float: left"><input type="text" name="attr_playername" title="playername" style="width: 160px;"><br>Nom du joueur</div></td>
+									<td><div style="float: left"><input type="text" name="attr_nom_personnage" title="nom_personnage" style="width: 125px; text-align: right;"><input type="text" name="attr_nom-personnage2" title="nom-personnage2" style="width: 175px;"> &nbsp; <br>Nom du personnage</div></td>
+									<td><div style="float: left"><input type="text" name="attr_nomjoueur" title="nomjoueur" style="width: 160px;"><br>Nom du joueur</div></td>
 								</tr>
 								<tr>
-									<td><div style="float: left"><input type="text" name="attr_expcurrent" title="expcurrent" style="width: 145px; text-align: right;">/<input type="text" name="attr_expgoal" title="expgoal" style="width: 150px;"><br>Points d'expérience</div></td>
-									<td><div style="float: left"><input type="text" name="attr_homeland" title="homeland" style="width: 160px;"><br>Région d'origine</div> </td>
+									<td><div style="float: left"><input type="text" name="attr_expactuelle" title="expactuelle" style="width: 145px; text-align: right;">/<input type="text" name="attr_expnivsup" title="expnivsup" style="width: 150px;"><br>Points d'expérience</div></td>
+									<td><div style="float: left"><input type="text" name="attr_origines" title="origines" style="width: 160px;"><br>Région d'origine</div> </td>
 								</tr>
 							</table>
 						</td>
@@ -35,8 +35,8 @@
 					 </tr>
 					<tr>
 						<td><div style="float: left"><input type="text" name="attr_race" title="race" style="width: 130px;"> <br>Race</div></td>
-						<td colspan="2"><div style="float: left"><input type="text" name="attr_racetype" title="racetype" style="width: 130px;"> <br>Type</div></td>
-						<td><div style="float: left"><select style="width: 90px;" name="attr_size" title="size">
+						<td colspan="2"><div style="float: left"><input type="text" name="attr_typerace" title="typerace" style="width: 130px;"> <br>Type</div></td>
+						<td><div style="float: left"><select style="width: 90px;" name="attr_taille" title="taille">
 								<option value="-8">Colossal</option>
 								<option value="-4">Gigantesque</option>
 								<option value="-2">Très grand</option>
@@ -47,19 +47,19 @@
 								<option value="4">Minuscule</option>
 								<option value="8">Infime</option>
 							</select><br>Taille</div></td>
-						<td><div style="float: left"><input type="text" name="attr_gender" title="gender" style="width: 70px;"> <br>Genre</div></td>
-						<td><div style="float: left"><input type="text" name="attr_alignment" title="alignment" style="width: 70px;"> <br>Alignement</div></td>
-						<td colspan="2"><div style="float: left"><input type="text" name="attr_deity" title="deity" style="width: 220px;"> <br>Religion</div></td>
+						<td><div style="float: left"><input type="text" name="attr_genre" title="genre" style="width: 70px;"> <br>Genre</div></td>
+						<td><div style="float: left"><input type="text" name="attr_alignement" title="alignement" style="width: 70px;"> <br>Alignement</div></td>
+						<td colspan="2"><div style="float: left"><input type="text" name="attr_religion" title="religion" style="width: 220px;"> <br>Religion</div></td>
 					</tr>
 					<tr>
-						<td><div style="float: left"><input type="text" name="attr_class" title="class" style="width: 130px;"> <br>Classe</div></td>
-						<td><div style="float: left"><input type="text" name="attr_level" title="level" style="width: 85px;"> <br>Niveau</div></td>
-						<td><div style="float: left"><input type="text" name="attr_hitdie" title="hitdie" style="width: 43px;"> <br>DV</div></td>
-						<td><div style="float: left"><input type="text" name="attr_age" title="age" style="width: 90px;"> <br>Age</div></td>
-						<td><div style="float: left"><input type="text" name="attr_height" title="height" style="width: 70px;"> <br>Taille</div> </td>
-						<td><div style="float: left"><input type="text" name="attr_weight" title="weight" style="width: 70px;"> <br>Poids</div></td>
-						<td><div style="float: left"><input type="text" name="attr_eyes" title="eyes" style="width: 95px;"> <br>Yeux</div></td>
-						<td><div style="float: left"><input type="text" name="attr_hair" title="hair" style="width: 120px;"> <br>Cheveux</div></td>
+						<td><div style="float: left"><input type="text" name="attr_classe" title="classe" style="width: 130px;"> <br>Classe</div></td>
+						<td><div style="float: left"><input type="text" name="attr_niveau" title="niveau" style="width: 85px;"> <br>Niveau</div></td>
+						<td><div style="float: left"><input type="text" name="attr_dé-de-vie" title="dé-de-vie" style="width: 43px;"> <br>DV</div></td>
+						<td><div style="float: left"><input type="text" name="attr_âge" title="âge" style="width: 90px;"> <br>Age</div></td>
+						<td><div style="float: left"><input type="text" name="attr_taille" title="taille" style="width: 70px;"> <br>Taille</div> </td>
+						<td><div style="float: left"><input type="text" name="attr_poids" title="poids" style="width: 70px;"> <br>Poids</div></td>
+						<td><div style="float: left"><input type="text" name="attr_yeux" title="yeux" style="width: 95px;"> <br>Yeux</div></td>
+						<td><div style="float: left"><input type="text" name="attr_cheveux" title="cheveux" style="width: 120px;"> <br>Cheveux</div></td>
 					</tr>
 				</tbody>
 			</table>
@@ -67,17 +67,17 @@
 		<hr/>
 	</div>
 	<br>
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Stats" checked="checked" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Carac" checked="checked" />
 		<span class="sheet-tab sheet-tab1">Caractéristiques</span>
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Weapons" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Armes" />
 		<span class="sheet-tab sheet-tab2">Armes</span>
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" title="AC" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" title="CA" />
 		<span class="sheet-tab sheet-tab3">CA</span>
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" title="Equipment" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" title="Equipement" />
 		<span class="sheet-tab sheet-tab4">Equipement</span>
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5" title="Skills" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5" title="Compétences" />
 		<span class="sheet-tab sheet-tab5">Compétences</span>
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab6" value="6" title="Spells" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab6" value="6" title="Sorts" />
 		<span class="sheet-tab sheet-tab6">Sorts</span>
 	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab7" value="7" title="Notes" />
 		<span class="sheet-tab sheet-tab7">Notes</span>
@@ -87,12 +87,12 @@
 		<span class="sheet-tab sheet-tab9">Notes</span-->
 	<!--input type="radio" name="attr_tab" class="sheet-tab sheet-tab10" value="10" title="Notes" />
 		<span class="sheet-tab sheet-tab10">Notes</span-->
-	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab99" value="99" title="All" checked="checked" />
+	<input type="radio" name="attr_tab" class="sheet-tab sheet-tab99" value="99" title="Tout" checked="checked" />
 		<span class="sheet-tab sheet-tab99">Tout</span>
 	<br>&nbsp;
 	<div class="sheet-tab-content sheet-tab1 sheet-tab99">
 		<!--Stats-->
-		<input type="checkbox" class="sheet-pc-statblock-show sheet-arrow" title="statblock-show" name="attr_statblock-show" value="1" checked /><span style="text-align: left;">Caractéristiques</span>
+		<input type="checkbox" class="sheet-pc-statblock-show sheet-arrow" title="Afficher-Carac" name="attr_Afficher-Carac" value="1" checked /><span style="text-align: left;">Caractéristiques</span>
 		<div class="sheet-pc-statblock">
 			<!-- Stat block -->
 			<table>
@@ -178,9 +178,9 @@
 									<table>
 										<tr>
 											<td class="sheet-statlabel-big" style="width: 70px;">PV<br><div style="font-size: 0.65em;">Points de vie</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints" title="hitpoints" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">PV actuels</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_hitpoints_max" title="hitpoints_max; use hitpoints|max in macros" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">Max</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_nonlethaldamage" title="nonlethaldamage" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;">Temporaires</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_dé-de-vie" title="dé-de-vie" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">PV actuels</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_dé-de-vie_max" title="dé-de-vie_max; use hitpoints|max in macros" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">Max</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_dégats_temporaires" title="dégats_temporaires" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;">Temporaires</div></td>
 										</tr>
 										<tr>
 											<td class="sheet-statlabel-big" style="width: 70px;">INITIATIVE</td>
@@ -188,9 +188,9 @@
 												<table>
 													<tr>
 														<td><input class="sheet-inputbox" type="text" name="attr_init" style="height: 24px; width: 30px;" title="init" value="(@{initdexmod}+@{initmiscmod})" disabled="true"> =<br><div style="font-size: 0.5em;">Total</div></td>
-														<td><input class="sheet-inputbox" type="text" name="attr_initdexmod" title="initdexmod" value="floor(@{dex}/2-5)" disabled="true" style="height: 24px; width: 30px;"> +<br><div style="font-size: 0.5em;">DEX</div></td>
-														<td><input class="sheet-inputbox" type="text" name="attr_initmiscmod" title="initmiscmod" value="0" style="height: 24px; width: 30px;"><br><div style="font-size: 0.5em;">Divers</div></td>
-														<td><textarea rows="1" cols="40" style="width: 40px; height: 20px;" title="initmacro (modify to modify initiative roll macro)" name="attr_initmacro">&{template:DnD35Initiative} {{name=@{selected|character_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|init}]] + ([[(@{selected|init})]]/100) &{tracker}]] }}</textarea></td>
+														<td><input class="sheet-inputbox" type="text" name="attr_initdexmod" title="modif_DEXinit" value="floor(@{dex}/2-5)" disabled="true" style="height: 24px; width: 30px;"> +<br><div style="font-size: 0.5em;">DEX</div></td>
+														<td><input class="sheet-inputbox" type="text" name="attr_initmiscmod" title="modif_DIVinit" value="0" style="height: 24px; width: 30px;"><br><div style="font-size: 0.5em;">Divers</div></td>
+														<td><textarea rows="1" cols="40" style="width: 40px; height: 20px;" title="macroinit (modifie la macro du jet d'initiative)" name="attr_initmacro">&{template:DnD35Initiative} {{name=@{selected|character_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|init}]] + ([[(@{selected|init})]]/100) &{tracker}]] }}</textarea></td>
 														<td><button class='tokenaction' type='roll' name='attr_initiative' title='initiative' value='@{initmacro}'></button> &nbsp; &nbsp;<br><div style="font-size: 0.5em;"> &nbsp; </div></td>
 													</tr>
 												</table>
@@ -199,7 +199,7 @@
 												<table>
 													<tr>
 														<td class="sheet-statlabel-big" style="width: 50px;">Vitesse</td>
-														<td><input class="sheet-inputbox" type="text" name="attr_speed" title="speed" style="height: 24px; width: 85px;"><br><div style="font-size: 0.5em;">Vitesse</div></td>
+														<td><input class="sheet-inputbox" type="text" name="attr_vitesse" title="vitesse" style="height: 24px; width: 85px;"><br><div style="font-size: 0.5em;">Vitesse</div></td>
 													</tr>
 												</table>
 											</td>
@@ -208,9 +208,9 @@
 									<table>
 										<tr style="height: 40px;">
 											<td class="sheet-statlabel" style="width: 70px;">Vitesse de mouvement</td>
-											<td><input class="sheet-inputbox" type="text" name="attr_fly-speed" title="fly-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Vol</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_vitesse_de_vol" title="vitesse_de_vol" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Vol</div></td>
 											<td align="bottom"><div style="font-size: 0.5em;padding: 0px ;margin: 0px">
-												<select class="sheet-inputbox" style="width: 90px;" name="attr_fly-maneuver" title="fly-maneuver">
+												<select class="sheet-inputbox" style="width: 90px;" name="attr_manoeuvr_vol-carac" title="manoeuvr_vol-carac">
 													<option value="Perfect">Parfait</option>
 													<option value="Good">Bonne</option>
 													<option value="Average">Moyenne</option>
@@ -218,10 +218,10 @@
 													<option value="Clumsy">Maladroite</option>
 													<option value="None" selected>Aucune</option>
 												</select><br>Manoeuvrabilité</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_glide-speed" title="glide-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Glisse</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_climb-speed" title="climb-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Escalade</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_burrow-speed" title="burrow-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Creuse</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_swim-speed" title="swim-speed" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Natation</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_vitesse-glisse" title="vitesse-glisse" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Glisse</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_vitesse-escalade" title="vitesse-escalade" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Escalade</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_vitesse-creuse" title="vitesse-creuse" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Creuse</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_vitesse-natation" title="vitesse-natation" style="height: 24px; width: 40px;"><br><div style="font-size: 0.5em;">Natation</div></td>
 											<td colspan="3"> &nbsp; </td>
 										</tr>
 									</table>
@@ -232,17 +232,17 @@
 									<table>
 										<tr>
 											<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_armorclass" title="armorclass" value="(10+@{armorclassbonus}+@{totalabilityacbonus}+@{armorclasssizemod}+@{acdodgemod}+@{acnaturalarmor}+@{acdeflectionmod}+@{acmiscmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_classedarmure_CA" title="classedarmure_CA" value="(10+@{armorclassbonus}+@{totalabilityacbonus}+@{armorclasssizemod}+@{acdodgemod}+@{acnaturalarmor}+@{acdeflectionmod}+@{acmiscmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 											<td>=10+<br><br></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_armorclassbonus" title="armorclassbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armure</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassdexmod" title="armorclassdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_armorclasssizemod" title="armorclasssizemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acnaturalarmor" title="acnaturalarmor" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acdeflectionmod" title="acdeflectionmod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_acmiscmod" title="acmiscmod" value="@{totalmiscacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_bonus_CA" title="bonus_CA (voir section ci dessous)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armure</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_modifDEX_CA" title="modifDEX_CA (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_modiftaille_CA" title="modiftaille_CA" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_modifesqu_CA" title="modifesqu_CA" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_bonusarmure-nat_CA" title="bonusarmure-nat_CA" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_bonusparade_CA" title="bonusparade_CA" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_modifdiv_CA" title="modifdiv_CA" value="@{totalmiscacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
-											<td valign="top"><input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
+											<td valign="top"><input type="hidden" name="attr_pénalité-d'armure" title="pénalité-d'armure (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
 										</tr>
 									</table>
@@ -253,14 +253,14 @@
 									<table>
 										<tr>
 											<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{armorclasssizemod} +@{acdodgemod} +@{acdeflectionmod} +@{totalmisctouchacbonus})" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CAcontact" title="CAcontact" value="(10+ @{totalabilitytouchacbonus} +@{armorclasssizemod} +@{acdodgemod} +@{acdeflectionmod} +@{totalmisctouchacbonus})" disabled="true" /> &nbsp; </td>
 											<td style="width: 70px;" class="sheet-statlabel">Pris au Dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscffacbonus}" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CAPaD" title="CAPaD" value="10 +@{totalabilityffacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscffacbonus}" disabled="true" /> &nbsp; </td>
 											<td style="width: 60px;" class="sheet-statlabel">Immobile<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscimmoblacbonus}" disabled="true" /> &nbsp; </td>
-											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CAimmo" title="CAimmo" value="10 +@{totalabilityimmoblacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscimmoblacbonus}" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_réductiondommage" title="réductiondommage" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
-											<td valign="top"><input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
+											<td valign="top"><input type="hidden" name="attr_pénalitéd'armure" title="pénalitéd'armure (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
 										</tr>
 									</table>
@@ -273,7 +273,7 @@
 			</table>
 		</div>
 		<br>
-		<input type="checkbox" class="sheet-pc-saveblock-show sheet-arrow" title="saveblock-show" name="attr_saveblock-show" value="1" checked /><span style="text-align: left;">Jets de Sauvegarde, Combat, Notes</span>
+		<input type="checkbox" class="sheet-pc-saveblock-show sheet-arrow" title="afficher-sauvegardes" name="attr_afficher-sauvegardes" value="1" checked /><span style="text-align: left;">Jets de Sauvegarde, Combat, Notes</span>
 		<div class="sheet-pc-saveblock">
 			<table>
 				<tr>
@@ -285,7 +285,7 @@
 										<!--Saving Throws -->
 										<table cellpadding="0" cellspacing="0">
 											<tr><td style="text-align: left;">
-												<input type="checkbox" class="sheet-pc-savemacros-show sheet-arrow" title="savemacros-show" name="attr_savemacros-show" value="1" /><!--span style="text-align: left;"></span-->
+												<input type="checkbox" class="sheet-pc-savemacros-show sheet-arrow" title="afficher-macros" name="attr_afficher-macros" value="1" /><!--span style="text-align: left;"></span-->
 												<div class="sheet-table-row">
 													<span class="sheet-table-header2">Jets de<br>Sauvegarde</span>
 													<span class="sheet-table-header2">Total</span>
@@ -298,40 +298,40 @@
 												</div>
 												<div class="sheet-table-row">
 													<span class="sheet-table-row-name" style="width: 60px;">Vigueur<br><div style="font-size: 0.65em;">(Constitution)</div></span>
-													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_fortitude" title="fortitude" value="(@{fortitudebase} +@{fortitudeability} +@{fortitudeepicsavemod} +@{fortitudemagicmod} +@{fortitudemiscmod} +@{fortitudetempmod} )" disabled="true"></span>
-													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_fortitudebase" title="fortitudebase" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudeability" title="fortitudeability" value="floor(@{con}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudeepicsavemod" title="fortitudeepicsavemod (Epic Level Save Bonus)" value="@{epicsavebonus}" disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudemagicmod" title="fortitudemagicmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudemiscmod" title="fortitudemiscmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudetempmod" title="fortitudetempmod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_fortitudecheck" title='fortitudecheck' value="@{fortitudemacro}"></button></span>
+													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_Vigueur" title="Vigueur" value="(@{fortitudebase} +@{fortitudeability} +@{fortitudeepicsavemod} +@{fortitudemagicmod} +@{fortitudemiscmod} +@{fortitudetempmod} )" disabled="true"></span>
+													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_vigueurdebase" title="vigueurdebase" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_caracvigueur" title="caracvigueur" value="floor(@{con}/2-5) " disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifepiquevigueur" title="modifepiquevigueur (Bonus des niveaux épiques)" value="@{epicsavebonus}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifmagiquevigueur" title="modifmagiquevigueur" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifdivvigueur" title="modifdivvigueur" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modiftempvigueur" title="modiftempvigueur" value="0"></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_checkvigueur" title='checkvigueur' value="@{fortitudemacro}"></button></span>
 												</div>
 												<div class="sheet-pc-savemacros">
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_fortitudenote" title="fortitudenote (Enter a note for the notes field.)" placeholder="Note"></textarea></span>
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_fortitudemacro" title="fortitudemacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=braces against the attack}} {{check=Fortitude check:}} {{checkroll=[[1d20 + [[@{fortitude}]] ]] }} {{notes=@{fortitudenote} }}</textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_notevigueur" title="notevigueur (Entrer une note pour le champ de notes)" placeholder="Note"></textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_macrovigueur" title="macrovigueur">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=braces against the attack}} {{check=Fortitude check:}} {{checkroll=[[1d20 + [[@{fortitude}]] ]] }} {{notes=@{fortitudenote} }}</textarea></span>
 												</div>
 												<div class="sheet-table-row" style="font-size: 1em;">
 													<span class="sheet-table-row-name" style="width: 60px;">Réflexes<br><div style="font-size: 0.65em;">(Dexterité)</div></span>
-													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_reflex" title="reflex" value="(@{reflexbase} +@{reflexability} +@{reflexepicsavemod} +@{reflexmagicmod} +@{reflexmiscmod} +@{reflextempmod} )" disabled="true"></span>
-													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_reflexbase" title="reflexbase" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexability" title="reflexability" value="floor(@{dex}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexepicsavemod" title="reflexepicsavemod (Epic Level Save Bonus)" value="@{epicsavebonus}" disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexmagicmod" title="reflexmagicmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexmiscmod" title="reflexmiscmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflextempmod" title="reflextempmod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_reflexcheck" title='reflexcheck' value="@{reflexmacro}"></button></span>
+													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_reflexes" title="reflexes" value="(@{reflexbase} +@{reflexability} +@{reflexepicsavemod} +@{reflexmagicmod} +@{reflexmiscmod} +@{reflextempmod} )" disabled="true"></span>
+													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_reflexesdebase" title="reflexesdebase" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_caracreflexes" title="caracreflexes" value="floor(@{dex}/2-5) " disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifepiquereflexes " title="modifepiquereflexes (Bonus des niveaux épiques)" value="@{epicsavebonus}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifmagiquereflexes" title="modifmagiquereflexes" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifdivreflexes" title="modifdivreflexes" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modiftempreflexes" title="modiftempreflexes" value="0"></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_checkreflexes" title='checkreflexes' value="@{reflexmacro}"></button></span>
 												</div>											
 												<div class="sheet-pc-savemacros">
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_reflexnote" title="reflexnote (Enter a note for the notes field.)" placeholder="Note"></textarea></span>
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_reflexmacro" title="reflexmacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tries to dodge}} {{check=Reflex check:}} {{checkroll=[[1d20 + [[@{reflex}]] ]] }} {{notes=@{reflexnote} }}</textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_notereflexes" title="notereflexes (Entrer une note pour le champ de notes)" placeholder="Note"></textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_macroreflexes" title="macroreflexes">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tries to dodge}} {{check=Reflex check:}} {{checkroll=[[1d20 + [[@{reflex}]] ]] }} {{notes=@{reflexnote} }}</textarea></span>
 												</div>
 												<div class="sheet-table-row">
 													<span class="sheet-table-row-name" style="width: 60px;">Volonté<br><div style="font-size: 0.65em;">(Sagesse)</div></span>
-													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_will" title="will" value="(@{willbase} +@{willability} +@{willepicsavemod} +@{willmagicmod} +@{willmiscmod} +@{willtempmod} )" disabled="true"></span>
-													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_willbase" title="willbase" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willability" title="willability" value="floor(@{wis}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willepicsavemod" title="willepicsavemod (Epic Level Save Bonus)" value="@{epicsavebonus}" disabled="true"></span>
+													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_Volonté" title="Volonté" value="(@{willbase} +@{willability} +@{willepicsavemod} +@{willmagicmod} +@{willmiscmod} +@{willtempmod} )" disabled="true"></span>
+													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_Volontédebase" title="Volontédebase" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_caracvolonté" title="caracvolonté" value="floor(@{wis}/2-5) " disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_modifepiquevolonté" title="modifepiquevolonté (Bonus des niveaux épiques)" value="@{epicsavebonus}" disabled="true"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willmagicmod" title="willmagicmod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willmiscmod" title="willmiscmod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willtempmod" title="willtempmod" value="0"></span>
