@@ -1,8 +1,8 @@
 <!-- D&D 3.5 Character Sheet -->
 <!-- by Diana P. -->
+<!-- translated in french by Kevin T.F. with lot of help from Antoine R. --> 
 <!-- based on Pathfinder sheets from Barry R., Sam, Brian, and Justin N. -->
 <!-- with lots of help from Toby-->
-<!-- translated in french by Kevin T.F. --> 
 <!-- Version 2.6.20 8/10/15 (Tabs, Roll Templates, Inline Rolls, NPC toggle, encumbrance w/ ACP & MaxDex, Trained-Only)-->
 <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  </head> 
 <input type="radio" class="sheet-switch-pc-show sheet-switch" title="npc-show" name="attr_npc-show" value="1" checked /><span style="text-align: left;">PJ &nbsp; &nbsp; &nbsp; &nbsp;</span>
@@ -1655,33 +1655,33 @@
 
 	<div class="sheet-tab-content sheet-tab5 sheet-tab99">
 		<!--Skills-->
-		<input type="checkbox" class="sheet-pc-skills-show sheet-arrow" title="skills-show" name="attr_skills-show" value="1" checked /><span style="text-align: left;">Skills</span>
+		<input type="checkbox" class="sheet-pc-skills-show sheet-arrow" title="skills-show" name="attr_skills-show" value="1" checked /><span style="text-align: left;">Compétences</span>
 		<div class="sheet-pc-skills">
 			<div style="float: left">
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td colspan="9" class="sheet-statlabel-big-gray" style="height: 35px; width: 790px;"><b style="font-size: 1.5em;">Skills</b></td>
+						<td colspan="9" class="sheet-statlabel-big-gray" style="height: 35px; width: 790px;"><b style="font-size: 1.5em;">Compétences</b></td>
 					</tr><tr>
-						<td colspan="9" class="sheet-statlabel-big" style="width: 790px;">skill points/lvl=<input type="text" name="attr_skillpoints" title="skillpoints" value="@{skillpointsint}+@{skillpointsclass}" style="width: 40px; color: white;" disabled="true">=(<input type="text" name="attr_skillpointsint" value="(floor((@{int-base}) / 2) - 5)[base int bonus]" title="skillpointsint (Skill points/lvl from base int.)" style="width: 35px; color: white;" disabled="true">+<input type="text" name="attr_skillpointsclass" value="2" title="skillpointsclass (Skill points/lvl from class; humans add+1.)" style="width: 35px; color: white;">)</td>
+						<td colspan="9" class="sheet-statlabel-big" style="width: 790px;">Points de comp./Niv.=<input type="text" name="attr_skillpoints" title="skillpoints" value="@{skillpointsint}+@{skillpointsclass}" style="width: 40px; color: white;" disabled="true">=(<input type="text" name="attr_skillpointsint" value="(floor((@{int-base}) / 2) - 5)[base int bonus]" title="skillpointsint (Skill points/lvl from base int.)" style="width: 35px; color: white;" disabled="true">+<input type="text" name="attr_skillpointsclass" value="2" title="skillpointsclass (Skill points/lvl from class; humans add+1.)" style="width: 35px; color: white;">)</td>
 					</tr>
 					<td>
 					<div class="sheet-table-row">
 						<span class="sheet-table-header2">&nbsp;</span>
-						<span class="sheet-table-header2-left">Skill Names</span>
-						<span class="sheet-table-header2">Total<br>Bonus</span>
-						<span class="sheet-table-header2">Stat</span>
-						<span class="sheet-table-header2">Ability<br>Mod.</span>
-						<span class="sheet-table-header2">Ranks</span>
-						<span class="sheet-table-header2">Armor<br>Penalty</span>
-						<span class="sheet-table-header2">Misc<br>Mod.</span>
+						<span class="sheet-table-header2-left">Nom de compétence</span>
+						<span class="sheet-table-header2">Bonus<br>Total</span>
+						<span class="sheet-table-header2">Carac.</span>
+						<span class="sheet-table-header2">Modif.<br>Car.</span>
+						<span class="sheet-table-header2">Rangs</span>
+						<span class="sheet-table-header2">Pénalité<br>D'arm.</span>
+						<span class="sheet-table-header2">Div.</span>
 						<span class="sheet-table-header2">Notes</span>
 						<span class="sheet-table-header2">Macro</span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_appraiseclassskill" title="appraiseclassskill" value="1" style="width: 8px;">
-						<span class="sheet-table-header-left">Appraise</span>
+						<span class="sheet-table-header-left">Acrobaties</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_appraise" title="appraise" value="(@{int-mod} +@{appraiseranks} +@{appraisemiscmod} )" disabled="true"></span>
-						<span class="sheet-table-data-center-sm">= Int</span>
+						<span class="sheet-table-data-center-sm">= DEX</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_intmod" title="intmod" value="@{int-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_appraiseranks" title="appraiseranks" value="0"></span>
 						<span class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </span>
@@ -1692,9 +1692,9 @@
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_balanceclassskill" title="balanceclassskill" value="1" style="width: 8px;">
-						<span class="sheet-table-header-left">Balance</span>
+						<span class="sheet-table-header-left">Art de la magie</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_balance" title="balance" value="(@{dex-mod} +@{balanceranks} +@{balancemiscmod} +@{balancearmorcheckpen} )" disabled="true"></span>
-						<span class="sheet-table-data-center-sm">= Dex</span>
+						<span class="sheet-table-data-center-sm">= INT</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_balanceranks" title="balanceranks" value="0"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_balancearmorcheckpen" title="balancearmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
@@ -1705,9 +1705,9 @@
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_bluffclassskill" title="bluffclassskill" value="1" style="width: 8px;">
-						<span class="sheet-table-header-left">Bluff</span>
+						<span class="sheet-table-header-left">Artisanat</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_bluff" title="bluff" value="(@{cha-mod} +@{bluffranks} +@{bluffmiscmod} )" disabled="true"></span>
-						<span class="sheet-table-data-center-sm">= Cha</span>
+						<span class="sheet-table-data-center-sm">= INT</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_chamod" title="chamod" value="@{cha-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_bluffranks" title="bluffranks" value="0"></span>
 						<span class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </span>
@@ -1718,11 +1718,11 @@
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_climbclassskill" title="climbclassskill" value="1" style="width: 8px;">
-						<span class="sheet-table-header-left">Climb</span>
+						<span class="sheet-table-header-left">Bluff</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_climb" title="climb" value="(@{climbstat} +@{climbranks} +@{climbmiscmod} +@{climbarmorcheckpen} )" disabled="true"></span>
 						<span><select class="sheet-table-data-center-sm" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_climbstat" title="climbstat">
-							<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-							<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
+							<option type="text" style="width: 45px;" value="@{str-mod} " selected>CHA</option>
+							<option type="text" style="width: 45px;" value="@{dex-mod} ">CHA</option>
 						</select></span>
 						<!--span class="sheet-table-data-center-sm">= Str</span-->
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_climbstatmod" title="climbstatmod" value="@{climbstat}" disabled="true"></span>
@@ -1735,9 +1735,9 @@
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_concentrationclassskill" title="concentrationclassskill" value="1" style="width: 8px;">
-						<span class="sheet-table-header-left">Concentration</span>
+						<span class="sheet-table-header-left">Connaissances (Archi./Ing.) </span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_concentration" title="concentration" value="(@{con-mod} +@{concentrationranks} +@{concentrationmiscmod} )" disabled="true"></span>
-						<span class="sheet-table-data-center-sm">= Con</span>
+						<span class="sheet-table-data-center-sm">= INT</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_conmod" title="conmod" value="@{con-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_concentrationranks" title="concentrationranks" value="0"></span>
 						<span class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </span>
@@ -2340,18 +2340,18 @@
 					<br>
 				<table cellpadding="0" cellspacing="0">
 				<tr>
-					<td colspan="9" class="sheet-statlabel-big" style="width: 790px;"><b>Other Skills</b></td>
+					<td colspan="9" class="sheet-statlabel-big" style="width: 790px;"><b>Autres</b></td>
 					</tr>
 					<td></td>
 					<tr class="sheet-table-row">
 						<td class="sheet-table-header2" style="width: 8px;">&nbsp;</td>
-						<td class="sheet-table-header2-left" style="width: 135px;">Skill Names</td>
-						<td class="sheet-table-header2" style="width: 34px;">Total<br>Bonus</td>
-						<td class="sheet-table-header2" style="width: 44px;">Ability<br>Stat</td>
-						<td class="sheet-table-header2" style="width: 34px;">Ability<br>Mod.</td>
-						<td class="sheet-table-header2" style="width: 34px;">Ranks</td>
-						<td class="sheet-table-header2" style="width: 34px;">Armor<br>Penalty</td>
-						<td class="sheet-table-header2" style="width: 34px;">Misc<br>Mod.</td>
+						<td class="sheet-table-header2-left" style="width: 135px;">Compétence</td>
+						<td class="sheet-table-header2" style="width: 34px;">Bonus<br>Total</td>
+						<td class="sheet-table-header2" style="width: 44px;">Carac.</td>
+						<td class="sheet-table-header2" style="width: 34px;">Modif.<br>Car.</td>
+						<td class="sheet-table-header2" style="width: 34px;">Rangs</td>
+						<td class="sheet-table-header2" style="width: 34px;">Pénalité<br>d'armure</td>
+						<td class="sheet-table-header2" style="width: 34px;">Divers</td>
 						<td class="sheet-table-header2" style="width: 395px;">Macro</td>
 					</tr>
 				</table>
@@ -2363,12 +2363,12 @@
 						<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskill" value="@{otherskillstat}+@{otherskillranks} +@{otherskillarmorcheckpen} +@{otherskillmiscmod} " disabled="true"></td>
 						<!--td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskillstat" value="Str" title="Enter the name for the ability stat used for this skill here."></td-->
 						<td>=<select class="sheet-table-data-center-sm" style="height: 24px; width: 44px; font-size: 0.75em;" name="attr_otherskillstat" title="Ability used for skill">
-							<option type="text" style="width: 45px;" value="@{str-mod} " selected>Str</option>
-							<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-							<option type="text" style="width: 45px;" value="@{con-mod} ">Con</option>
-							<option type="text" style="width: 45px;" value="@{int-mod} ">Int</option>
-							<option type="text" style="width: 45px;" value="@{wis-mod} ">Wis</option>
-							<option type="text" style="width: 45px;" value="@{cha-mod} ">Cha</option>
+							<option type="text" style="width: 45px;" value="@{str-mod} " selected>FOR</option>
+							<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+							<option type="text" style="width: 45px;" value="@{con-mod} ">CON</option>
+							<option type="text" style="width: 45px;" value="@{int-mod} ">INT</option>
+							<option type="text" style="width: 45px;" value="@{wis-mod} ">SAG</option>
+							<option type="text" style="width: 45px;" value="@{cha-mod} ">CHA</option>
 						</select></td>
 						<!--td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskillabilitymod" value="0" title="Enter the total modifier for the ability stat used for this skill here."></td-->
 						<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskillabilitymod" value="@{otherskillstat}" disabled="true"></td>
@@ -2387,14 +2387,14 @@
 					</table>
 				</fieldset>
 				<br>
-				<p> <b>*</b> = Trained Only </p>
+				<p> <b>*</b> = Nécéssite un entraînement </p>
 			</div>
 		<hr/>
 		</div>
 	</div>
 
 	<div class="sheet-tab-content sheet-tab6 sheet-tab99">
-		<input type="checkbox" class="sheet-pc-spells-show sheet-arrow" title="spells-show" name="attr_spells-show" value="1" checked /><span style="text-align: left;">Spells</span>
+		<input type="checkbox" class="sheet-pc-spells-show sheet-arrow" title="spells-show" name="attr_spells-show" value="1" checked /><span style="text-align: left;">Sorts</span>
 		<div class="sheet-pc-spells">
 			<!--Spells-->
 			<table style="float: left">
@@ -2403,67 +2403,67 @@
 					<td colspan="3">
 						<table style="width:100%;" class="sheet-table-row" cellpadding="0" cellspacing="0">
 							<tr>
-								<td colspan="3" class="sheet-statlabel-big-gray" style="width: 790px; height: 35px; font-size: 1.5em;">Spells</td>
+								<td colspan="3" class="sheet-statlabel-big-gray" style="width: 790px; height: 35px; font-size: 1.5em;">Sorts</td>
 							</tr>
 							<tr> 
-								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;">Caster Level:<br>
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;">Niveau du lanceur:<br>
 									<input type="text" style="width: 25px;" name="attr_casterlevel" title="casterlevel" value="1" class="sheet-table-row-small">/
 									<input type="text" style="width: 25px;" name="attr_casterlevel2" title="casterlevel2" value="0" class="sheet-table-row-small">
 								</td>
-								<td class="sheet-table-header3" colspan="2" style="width: 90%;">Spells/Day:<br>
+								<td class="sheet-table-header3" colspan="2" style="width: 90%;">Sorts/jour:<br>
 									&nbsp; &nbsp; &nbsp; &nbsp; 0:<input type="text" name="attr_spells0" title="spells0" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 1st:<input type="text" name="attr_spells1" title="spells1" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 1er:<input type="text" name="attr_spells1" title="spells1" value="0" class="sheet-table-row-small">
 									&nbsp; &nbsp; 2nd:<input type="text" name="attr_spells2" title="spells2" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 3rd:<input type="text" name="attr_spells3" title="spells3" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 4th:<input type="text" name="attr_spells4" title="spells4" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 5th:<input type="text" name="attr_spells5" title="spells5" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 6th:<input type="text" name="attr_spells6" title="spells6" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 7th:<input type="text" name="attr_spells7" title="spells7" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 8th:<input type="text" name="attr_spells8" title="spells8" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; 9th:<input type="text" name="attr_spells9" title="spells9" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 3e:<input type="text" name="attr_spells3" title="spells3" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 4e:<input type="text" name="attr_spells4" title="spells4" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 5e:<input type="text" name="attr_spells5" title="spells5" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 6e:<input type="text" name="attr_spells6" title="spells6" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 7e:<input type="text" name="attr_spells7" title="spells7" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 8e:<input type="text" name="attr_spells8" title="spells8" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; 9e:<input type="text" name="attr_spells9" title="spells9" value="0" class="sheet-table-row-small">
 									&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 								</td>
 							</tr>
 							<tr> 
 								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;">Casting Stat:<br>
 									<select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_spellcastingstat" title="spellcastingstat">
-										<option type="text" style="width: 45px;" value="@{str-mod} ">Str</option>
-										<option type="text" style="width: 45px;" value="@{dex-mod} ">Dex</option>
-										<option type="text" style="width: 45px;" value="@{con-mod} ">Con</option>
-										<option type="text" style="width: 45px;" value="@{int-mod} " selected>Int</option>
-										<option type="text" style="width: 45px;" value="@{wis-mod} ">Wis</option>
-										<option type="text" style="width: 45px;" value="@{cha-mod} ">Cha</option>
+										<option type="text" style="width: 45px;" value="@{str-mod} ">FOR</option>
+										<option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
+										<option type="text" style="width: 45px;" value="@{con-mod} ">CON</option>
+										<option type="text" style="width: 45px;" value="@{int-mod} " selected>INT</option>
+										<option type="text" style="width: 45px;" value="@{wis-mod} ">SAG</option>
+										<option type="text" style="width: 45px;" value="@{cha-mod} ">CHA</option>
 									</select>
 								</td>
-								<td class="sheet-table-header3" colspan="2" style="width: 90%;">Spell DC's<br>
+								<td class="sheet-table-header3" colspan="2" style="width: 90%;">DD de sort<br>
 									&nbsp; &nbsp; &nbsp; &nbsp; 0:<input type="text" name="attr_spelldc0" title="spelldc0" value="(10+0+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 1st:<input type="text" name="attr_spelldc1" title="spelldc1" value="(10+1+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 1er:<input type="text" name="attr_spelldc1" title="spelldc1" value="(10+1+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
 									&nbsp; &nbsp; 2nd:<input type="text" name="attr_spelldc2" title="spelldc2" value="(10+2+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 3rd:<input type="text" name="attr_spelldc3" title="spelldc3" value="(10+3+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 4th:<input type="text" name="attr_spelldc4" title="spelldc4" value="(10+4+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 5th:<input type="text" name="attr_spelldc5" title="spelldc5" value="(10+5+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 6th:<input type="text" name="attr_spelldc6" title="spelldc6" value="(10+6+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 7th:<input type="text" name="attr_spelldc7" title="spelldc7" value="(10+7+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 8th:<input type="text" name="attr_spelldc8" title="spelldc8" value="(10+8+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-									&nbsp; &nbsp; 9th:<input type="text" name="attr_spelldc9" title="spelldc9" value="(10+9+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 3e:<input type="text" name="attr_spelldc3" title="spelldc3" value="(10+3+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 4e:<input type="text" name="attr_spelldc4" title="spelldc4" value="(10+4+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 5e:<input type="text" name="attr_spelldc5" title="spelldc5" value="(10+5+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 6e:<input type="text" name="attr_spelldc6" title="spelldc6" value="(10+6+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 7e:<input type="text" name="attr_spelldc7" title="spelldc7" value="(10+7+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 8e:<input type="text" name="attr_spelldc8" title="spelldc8" value="(10+8+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+									&nbsp; &nbsp; 9e:<input type="text" name="attr_spelldc9" title="spelldc9" value="(10+9+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
 									 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 								</td>
 							</tr>
 							<tr> 
-								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;">Spell Pen:<br>
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;">Pénalité:<br>
 									<input type="text" style="width: 25px;" name="attr_spellpen" title="spellpen" value="0" class="sheet-table-row-small">
 								</td>
-								<td class="sheet-table-header3" style="width: 75%;">Spell Focus:<br>
+								<td class="sheet-table-header3" style="width: 75%;">Spécialisation:<br>
 									Abjuration:<input type="text" name="attr_sf-abjuration" title="sf-abjuration" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; &nbsp; Conjuration:<input type="text" name="attr_sf-conjuration" title="sf-conjuration" value="0" class="sheet-table-row-small">
 									&nbsp; &nbsp; &nbsp; Divination:<input type="text" name="attr_sf-divination" title="sf-divination" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; &nbsp; Enchantment:<input type="text" name="attr_sf-enchantment" title="sf-enchantment" value="0" class="sheet-table-row-small"><br>
+									&nbsp; &nbsp; &nbsp; Enchantement:<input type="text" name="attr_sf-enchantment" title="sf-enchantment" value="0" class="sheet-table-row-small"><br>
 									Evocation:<input type="text" name="attr_sf-evocation" title="sf-evocation" value="0" class="sheet-table-row-small">
 									&nbsp; &nbsp; &nbsp; Illusion:<input type="text" name="attr_sf-illusion" title="sf-illusion" value="0" class="sheet-table-row-small">
-									&nbsp; &nbsp; &nbsp; Necromancy:<input type="text" name="attr_sf-necromancy" title="sf-necromancy" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; &nbsp; Invocation:<input type="text" name="attr_sf-conjuration" title="sf-conjuration" value="0" class="sheet-table-row-small">
+									&nbsp; &nbsp; &nbsp; Nécromancie:<input type="text" name="attr_sf-necromancy" title="sf-necromancy" value="0" class="sheet-table-row-small">
 									&nbsp; &nbsp; &nbsp; Transmutation:<input type="text" name="attr_sf-transmutation" title="sf-transmutation" value="0" class="sheet-table-row-small">
 								</td>
-								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><br>Power Points<br>
+								<td class="sheet-table-header3" style="width: 10%; border: 1px solid black;"><br>Points de pouvoir<br>
 									<div><input type="text" name="attr_powerpoints" title="powerpoints" style="width: 30px; text-align: right;">/<input type="text" name="attr_powerpoints_max" title="powerpoints|max" style="width: 30px;"></div>
 								</td>
 							</tr>
@@ -2473,7 +2473,7 @@
 			</table>
 			<br>
 			<hr/>
-			<input type="checkbox" class="sheet-pc-spells0-show sheet-arrow" title="spells0-show" name="attr_spells0-show" value="1" checked /><span style="text-align: left;">Spell Section0</span>
+			<input type="checkbox" class="sheet-pc-spells0-show sheet-arrow" title="spells0-show" name="attr_spells0-show" value="1" checked /><span style="text-align: left;">Section de sorts 0</span>
 			<div class="sheet-pc-spells0">
 				<table>
 					<tr>
@@ -2485,9 +2485,9 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
 										<td style="width: 160px;">Emote/macro</td> 
 								</tr>
 							</table>
@@ -2515,10 +2515,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 							<fieldset class="repeating_spells02">
@@ -2540,7 +2540,7 @@
 				</table>
 			</div>
 			<br>
-			<input type="checkbox" class="sheet-pc-spells1-show sheet-arrow" title="spells1-show" name="attr_spells1-show" value="1" checked /><span style="text-align: left;">Spell Section1</span>
+			<input type="checkbox" class="sheet-pc-spells1-show sheet-arrow" title="spells1-show" name="attr_spells1-show" value="1" checked /><span style="text-align: left;">Section de sorts 1</span>
 			<div class="sheet-pc-spells1">
 				<table>
 					<tr>
@@ -2552,10 +2552,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells">
@@ -2582,9 +2582,9 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
 										<td style="width: 160px;">Emote/macro</td> 
 								</tr>
 							</table>
@@ -2607,7 +2607,7 @@
 				</table>
 			</div>
 			<br>
-			<input type="checkbox" class="sheet-pc-spells2-show sheet-arrow" title="spells2-show" name="attr_spells2-show" value="1" checked /><span style="text-align: left;">Spell Section2</span>
+			<input type="checkbox" class="sheet-pc-spells2-show sheet-arrow" title="spells2-show" name="attr_spells2-show" value="1" checked /><span style="text-align: left;">Section de sorts 2</span>
 			<div class="sheet-pc-spells2">
 				<table>
 					<tr>
@@ -2619,9 +2619,9 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
 										<td style="width: 160px;">Emote/macro</td> 
 								</tr>
 							</table>
@@ -2649,10 +2649,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells22">
@@ -2674,7 +2674,7 @@
 				</table>
 			</div>
 			<br>
-			<input type="checkbox" class="sheet-pc-spells3-show sheet-arrow" title="spells3-show" name="attr_spells3-show" value="1" checked /><span style="text-align: left;">Spell Section3</span>
+			<input type="checkbox" class="sheet-pc-spells3-show sheet-arrow" title="spells3-show" name="attr_spells3-show" value="1" checked /><span style="text-align: left;">Section de sorts 3</span>
 			<div class="sheet-pc-spells3">
 				<table>
 					<tr>
@@ -2686,10 +2686,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells31">
@@ -2716,10 +2716,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells32">
@@ -2741,7 +2741,7 @@
 				</table>
 			</div>
 			<br>
-			<input type="checkbox" class="sheet-pc-spells4-show sheet-arrow" title="spells4-show" name="attr_spells4-show" value="1" checked /><span style="text-align: left;">Spell Section4</span>
+			<input type="checkbox" class="sheet-pc-spells4-show sheet-arrow" title="spells4-show" name="attr_spells4-show" value="1" checked /><span style="text-align: left;">Section de sorts 4</span>
 			<div class="sheet-pc-spells4">
 				<table>
 					<tr>
@@ -2753,10 +2753,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells41">
@@ -2783,9 +2783,9 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
 										<td style="width: 160px;">Emote/macro</td> 
 								</tr>
 							</table>
@@ -2808,7 +2808,7 @@
 				</table>
 			</div>
 			<br>
-			<input type="checkbox" class="sheet-pc-spells5-show sheet-arrow" title="spells5-show" name="attr_spells5-show" value="1" checked /><span style="text-align: left;">Spell Section5</span>
+			<input type="checkbox" class="sheet-pc-spells5-show sheet-arrow" title="spells5-show" name="attr_spells5-show" value="1" checked /><span style="text-align: left;">Section de sorts 5</span>
 			<div class="sheet-pc-spells5">
 				<table>
 					<tr>
@@ -2820,10 +2820,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells51">
@@ -2850,10 +2850,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells52">
@@ -2875,7 +2875,7 @@
 				</table>
 			</div>
 			<br>
-			<input type="checkbox" class="sheet-pc-spells6-show sheet-arrow" title="spells6-show" name="attr_spells6-show" value="1" checked /><span style="text-align: left;">Spell Section6</span>
+			<input type="checkbox" class="sheet-pc-spells6-show sheet-arrow" title="spells6-show" name="attr_spells6-show" value="1" checked /><span style="text-align: left;">Section de sorts 6</span>
 			<div class="sheet-pc-spells6">
 				<table>
 					<tr>
@@ -2887,9 +2887,9 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
 										<td style="width: 160px;">Emote/macro</td> 
 								</tr>
 							</table>
@@ -2917,10 +2917,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells62">
@@ -2941,7 +2941,7 @@
 					</tr>
 				</table>
 			</div><br>
-			<input type="checkbox" class="sheet-pc-spells7-show sheet-arrow" title="spells7-show" name="attr_spells7-show" value="1" checked /><span style="text-align: left;">Spell Section7</span>
+			<input type="checkbox" class="sheet-pc-spells7-show sheet-arrow" title="spells7-show" name="attr_spells7-show" value="1" checked /><span style="text-align: left;">Section de sorts 7</span>
 			<div class="sheet-pc-spells7">
 				<table>
 					<tr>
@@ -2953,10 +2953,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells71">
@@ -2983,10 +2983,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells72">
@@ -3007,7 +3007,7 @@
 					</tr>
 				</table>
 			</div><br>
-			<input type="checkbox" class="sheet-pc-spells8-show sheet-arrow" title="spells8-show" name="attr_spells8-show" value="1" checked /><span style="text-align: left;">Spell Section8</span>
+			<input type="checkbox" class="sheet-pc-spells8-show sheet-arrow" title="spells8-show" name="attr_spells8-show" value="1" checked /><span style="text-align: left;">Section de sorts 8</span>
 			<div class="sheet-pc-spells8">
 				<table>
 					<tr>
@@ -3019,10 +3019,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells81">
@@ -3049,10 +3049,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells82">
@@ -3073,7 +3073,7 @@
 					</tr>
 				</table>
 			</div><br>
-			<input type="checkbox" class="sheet-pc-spells9-show sheet-arrow" title="spells9-show" name="attr_spells9-show" value="1" checked /><span style="text-align: left;">Spell Section9</span>
+			<input type="checkbox" class="sheet-pc-spells9-show sheet-arrow" title="spells9-show" name="attr_spells9-show" value="1" checked /><span style="text-align: left;">Section de sorts 9</span>
 			<div class="sheet-pc-spells9">
 				<table>
 					<tr>
@@ -3085,10 +3085,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells91">
@@ -3115,10 +3115,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells92">
@@ -3139,7 +3139,7 @@
 					</tr>
 				</table>
 			</div><br>
-			<input type="checkbox" class="sheet-pc-spells10-show sheet-arrow" title="spells10-show" name="attr_spells10-show" value="1" checked /><span style="text-align: left;">Spell Section10</span>
+			<input type="checkbox" class="sheet-pc-spells10-show sheet-arrow" title="spells10-show" name="attr_spells10-show" value="1" checked /><span style="text-align: left;">Section de sorts 10</span>
 			<div class="sheet-pc-spells10">
 				<table>
 					<tr>
@@ -3151,10 +3151,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells101">
@@ -3181,10 +3181,10 @@
 							</table>
 							<table>
 								<tr class="sheet-table-header">
-										<td style="width: 55px;">Use/Prep</td>
-										<td style="width: 120px;"> Spell name </td>
-										<td style="width: 20px;">Lvl</td>
-										<td style="width: 160px;">Emote/macro</td> 
+										<td style="width: 55px;">Lancés/Prep.</td>
+										<td style="width: 120px;"> Nom du sort </td>
+										<td style="width: 20px;">Niv</td>
+										<td style="width: 160px;">Emote/macro</td>
 								</tr>
 							</table>
 								<fieldset class="repeating_spells102">
@@ -3209,15 +3209,15 @@
 	</div>
 	
 	<div class="sheet-tab-content sheet-tab8">
-		<input type="checkbox" class="sheet-pc-summons-show sheet-arrow" title="summons-show" name="attr_summons-show" value="1" checked /><span style="text-align: left;">Other</span>
+		<input type="checkbox" class="sheet-pc-summons-show sheet-arrow" title="summons-show" name="attr_summons-show" value="1" checked /><span style="text-align: left;">Autres</span>
 		<div class="sheet-pc-summons">
 			<!--Other-->
 			<table style="width:100%;" class="sheet-table-row" cellpadding="0" cellspacing="0">
 				<tr>
-					<td colspan="2" class="sheet-statlabel-big-gray" style="width:800px; height: 35px; font-size: 1.5em;">Other</td>
+					<td colspan="2" class="sheet-statlabel-big-gray" style="width:800px; height: 35px; font-size: 1.5em;">Autres</td>
 				</tr>
 			</table>
-			<input type="checkbox" class="sheet-pc-other1-show sheet-arrow" title="other1-show" name="attr_other1-show" value="1" checked /><span style="text-align: left;">Show? <input type="text" style="width: 25px;" name="attr_othergroup1used" title="othergroup1used">/<input type="text" style="width: 25px;" name="attr_othergroup1prep" title="othergroup1prep"> &nbsp; <input type="text" style="width: 395px;" name="attr_othergroup1name" title="othergroup1name" placeholder="Wild Shapes or Summons"></span>
+			<input type="checkbox" class="sheet-pc-other1-show sheet-arrow" title="other1-show" name="attr_other1-show" value="1" checked /><span style="text-align: left;">Montrer? <input type="text" style="width: 25px;" name="attr_othergroup1used" title="othergroup1used">/<input type="text" style="width: 25px;" name="attr_othergroup1prep" title="othergroup1prep"> &nbsp; <input type="text" style="width: 395px;" name="attr_othergroup1name" title="othergroup1name" placeholder="Wild Shapes or Summons"></span>
 			<div class="sheet-pc-other1">
 				<table>
 					<tr>
@@ -3230,45 +3230,45 @@
 											<span class="sheet-table-col"><input style="width: 160px;" type="text" name="attr_summontype" title="summontype" placeholder="Type"></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">HD:<input style="width: 50px;" type="text" name="attr_summonhitdie" title="summonhitdie" placeholder="HD">(<input style="width: 30px;" type="text" name="attr_summonhitpoints" title="summonhitpoints" placeholder="Hit Points">) &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">DD:<input style="width: 50px;" type="text" name="attr_summonhitdie" title="summonhitdie" placeholder="HD">(<input style="width: 30px;" type="text" name="attr_summonhitpoints" title="summonhitpoints" placeholder="Hit Points">) &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Init:<input style="width: 40px;" type="text" name="attr_summoninitiative" title="summoninitiative" placeholder="Initiative"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Spd:<input style="width: 70px;" type="text" name="attr_summonspeed" title="summonspeed" placeholder="Speed"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">AC:<input style="width: 30px;" type="text" name="attr_summonarmorclass" title="summonarmorclass" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summonarmorclassinfo" title="summonarmorclassinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 30px;" type="text" name="attr_summontoucharmorclass" title="summontoucharmorclass" placeholder="T AC">, FF:<input style="width: 30px;" type="text" name="attr_summonflatfootarmorclass" title="summonflatfootarmorclass" placeholder="FF AC"> &nbsp; &nbsp;</span>
-											<span class="sheet-table-col">BAB:<input style="width: 50px;" style="width: 30px;" type="text" name="attr_summonbaseatt" title="summonbaseatt" placeholder="Base Attack">/Gr:<input style="width: 30px;" type="text" name="attr_summongrapple" title="summongrapple" placeholder="Grapple"></span>
+											<span class="sheet-table-col">Vit:<input style="width: 70px;" type="text" name="attr_summonspeed" title="summonspeed" placeholder="Speed"> &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">CA:<input style="width: 30px;" type="text" name="attr_summonarmorclass" title="summonarmorclass" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summonarmorclassinfo" title="summonarmorclassinfo" placeholder="Armor Class Mod Info">), Contact:<input style="width: 30px;" type="text" name="attr_summontoucharmorclass" title="summontoucharmorclass" placeholder="T AC">, PaD:<input style="width: 30px;" type="text" name="attr_summonflatfootarmorclass" title="summonflatfootarmorclass" placeholder="FF AC"> &nbsp; &nbsp;</span>
+											<span class="sheet-table-col">BBa:<input style="width: 50px;" style="width: 30px;" type="text" name="attr_summonbaseatt" title="summonbaseatt" placeholder="Base Attack">/Gr:<input style="width: 30px;" type="text" name="attr_summongrapple" title="summongrapple" placeholder="Grapple"></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Att<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 750px;" name="attr_summonattack" title="summonattack" placeholder="Attack"></textarea>
 											<button type="roll" name="attr_summonattackbutton" title='summonattackbutton' placeholder="@{summonattack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">FAtt<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 745px;" name="attr_summonfullattack" title="summonfullattack" placeholder="Full Attack"></textarea>
+											<span class="sheet-table-col">Att+<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 745px;" name="attr_summonfullattack" title="summonfullattack" placeholder="Full Attack"></textarea>
 											<button type="roll" name="attr_summonfullattackbutton" title='summonfullattackbutton' placeholder="@{summonfullattack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">Space/Reach:<input style="width: 40px;" type="text" name="attr_summonspace" title="summonspace" placeholder="Space">/<input style="width: 40px;" type="text" name="attr_summonreach" title="summonreach" placeholder="Reach"> &nbsp; &nbsp;</span>
-											<span class="sheet-table-col">Sp Att:<input style="width: 250px;" type="text" name="attr_summonspecialattacks" title="summonspecialattacks" placeholder="Special Attacks"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Sp Qual:<input style="width: 250px;" type="text" name="attr_summonspecialqualities" title="summonspecialqualities" placeholder="Special Qualities"></span>
+											<span class="sheet-table-col">Espace Occ./Allonge:<input style="width: 40px;" type="text" name="attr_summonspace" title="summonspace" placeholder="Space">/<input style="width: 40px;" type="text" name="attr_summonreach" title="summonreach" placeholder="Reach"> &nbsp; &nbsp;</span>
+											<span class="sheet-table-col">Att Spé:<input style="width: 250px;" type="text" name="attr_summonspecialattacks" title="summonspecialattacks" placeholder="Special Attacks"> &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">Qual Spé:<input style="width: 250px;" type="text" name="attr_summonspecialqualities" title="summonspecialqualities" placeholder="Special Qualities"></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">F:<input style="width: 40px;" type="text" name="attr_summonfortsave" title="summonfortsave" placeholder="Fort">, </span>
-											<span class="sheet-table-col">R:<input style="width: 40px;" type="text" name="attr_summonrefsave" title="summonrefsave" placeholder="Ref">, </span>
-											<span class="sheet-table-col">W:<input style="width: 40px;" type="text" name="attr_summonwillsave" title="summonwillsave" placeholder="Will"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Str:<input style="width: 40px;" type="text" name="attr_summonstr" title="summonstr" placeholder="Str">, </span>
-											<span class="sheet-table-col">Dex:<input style="width: 40px;" type="text" name="attr_summondex" title="summondex" placeholder="Dex">, </span>
-											<span class="sheet-table-col">Con:<input style="width: 40px;" type="text" name="attr_summoncon" title="summoncon" placeholder="Con">, </span>
-											<span class="sheet-table-col">Int:<input style="width: 40px;" type="text" name="attr_summonint" title="summonint" placeholder="Int">, </span>
-											<span class="sheet-table-col">Wis:<input style="width: 40px;" type="text" name="attr_summonwis" title="summonwis" placeholder="Wis">, </span>
-											<span class="sheet-table-col">Cha:<input style="width: 40px;" type="text" name="attr_summoncha" title="summoncha" placeholder="Cha"> </span>
+											<span class="sheet-table-col">Vig:<input style="width: 40px;" type="text" name="attr_summonfortsave" title="summonfortsave" placeholder="Fort">, </span>
+											<span class="sheet-table-col">Ref:<input style="width: 40px;" type="text" name="attr_summonrefsave" title="summonrefsave" placeholder="Ref">, </span>
+											<span class="sheet-table-col">Vol:<input style="width: 40px;" type="text" name="attr_summonwillsave" title="summonwillsave" placeholder="Will"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">FOR:<input style="width: 40px;" type="text" name="attr_summonstr" title="summonstr" placeholder="Str">, </span>
+											<span class="sheet-table-col">DEX:<input style="width: 40px;" type="text" name="attr_summondex" title="summondex" placeholder="Dex">, </span>
+											<span class="sheet-table-col">CON:<input style="width: 40px;" type="text" name="attr_summoncon" title="summoncon" placeholder="Con">, </span>
+											<span class="sheet-table-col">INT:<input style="width: 40px;" type="text" name="attr_summonint" title="summonint" placeholder="Int">, </span>
+											<span class="sheet-table-col">SAG:<input style="width: 40px;" type="text" name="attr_summonwis" title="summonwis" placeholder="Wis">, </span>
+											<span class="sheet-table-col">CHA:<input style="width: 40px;" type="text" name="attr_summoncha" title="summoncha" placeholder="Cha"> </span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">Skills:<input style="width: 350px;" type="text" name="attr_summonskills" title="summonskills" placeholder="Skills"> &nbsp; &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Feats:<input style="width: 350px;" type="text" name="attr_summonfeats" title="summonfeats" placeholder="Feats"></span>
+											<span class="sheet-table-col">Compétences:<input style="width: 350px;" type="text" name="attr_summonskills" title="summonskills" placeholder="Skills"> &nbsp; &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">Dons:<input style="width: 350px;" type="text" name="attr_summonfeats" title="summonfeats" placeholder="Feats"></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Env:<input style="width: 250px;" type="text" name="attr_summonenv" title="summonenv" placeholder="Environment"> &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Org:<input style="width: 250px;" type="text" name="attr_summonorg" title="summonorg" placeholder="Organization"> &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">CR:<input style="width: 50px;" type="text" name="attr_summoncr" title="summoncr" placeholder="CR"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Adv:<input style="width: 90px;" type="text" name="attr_summonadv" title="summonadv" placeholder="Advancement"></span>
+											<span class="sheet-table-col">Evo:<input style="width: 90px;" type="text" name="attr_summonadv" title="summonadv" placeholder="Advancement"></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">								
@@ -3296,45 +3296,45 @@
 											<span class="sheet-table-col"><input style="width: 160px;" type="text" name="attr_summon2type" title="summon2type" placeholder="Type"></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">HD:<input style="width: 50px;" type="text" name="attr_summon2hitdie" title="summon2hitdie" placeholder="HD">(<input style="width: 30px;" type="text" name="attr_summon2hitpoints" title="summon2hitpoints" placeholder="Hit Points">) &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">DD:<input style="width: 50px;" type="text" name="attr_summon2hitdie" title="summon2hitdie" placeholder="HD">(<input style="width: 30px;" type="text" name="attr_summon2hitpoints" title="summon2hitpoints" placeholder="Hit Points">) &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Init:<input style="width: 40px;" type="text" name="attr_summon2initiative" title="summon2initiative" placeholder="Initiative"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Spd:<input style="width: 70px;" type="text" name="attr_summon2speed" title="summon2speed" placeholder="Speed"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">AC:<input style="width: 30px;" type="text" name="attr_summon2armorclass" title="summon2armorclass" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summon2armorclassinfo" title="summon2armorclassinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 30px;" type="text" name="attr_summon2toucharmorclass" title="summon2toucharmorclass" placeholder="T AC">, FF:<input style="width: 30px;" type="text" name="attr_summon2flatfootarmorclass" title="summon2flatfootarmorclass" placeholder="FF AC"> &nbsp; &nbsp;</span>
-											<span class="sheet-table-col">BAB:<input style="width: 50px;" style="width: 30px;" type="text" name="attr_summon2baseatt" title="summon2baseatt" placeholder="Base Attack">/Gr:<input style="width: 30px;" type="text" name="attr_summon2grapple" title="summon2grapple" placeholder="Grapple"></span>
+											<span class="sheet-table-col">Vit:<input style="width: 70px;" type="text" name="attr_summon2speed" title="summon2speed" placeholder="Speed"> &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">CA:<input style="width: 30px;" type="text" name="attr_summon2armorclass" title="summon2armorclass" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summon2armorclassinfo" title="summon2armorclassinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 30px;" type="text" name="attr_summon2toucharmorclass" title="summon2toucharmorclass" placeholder="T AC">, FF:<input style="width: 30px;" type="text" name="attr_summon2flatfootarmorclass" title="summon2flatfootarmorclass" placeholder="FF AC"> &nbsp; &nbsp;</span>
+											<span class="sheet-table-col">BBa:<input style="width: 50px;" style="width: 30px;" type="text" name="attr_summon2baseatt" title="summon2baseatt" placeholder="Base Attack">/Gr:<input style="width: 30px;" type="text" name="attr_summon2grapple" title="summon2grapple" placeholder="Grapple"></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Att<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 750px;" name="attr_summon2attack" title="summon2attack" placeholder="Attack"></textarea>
 											<button type="roll" name="attr_summon2attackbutton" title='summon2attackbutton' placeholder="@{summon2attack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">FAtt<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 745px;" name="attr_summon2fullattack" title="summon2fullattack" placeholder="Full Attack"></textarea>
+											<span class="sheet-table-col">Att+<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 745px;" name="attr_summon2fullattack" title="summon2fullattack" placeholder="Full Attack"></textarea>
 											<button type="roll" name="attr_summon2fullattackbutton" title='summon2fullattackbutton' placeholder="@{summon2fullattack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">Space/Reach:<input style="width: 40px;" type="text" name="attr_summon2space" title="summon2space" placeholder="Space">/<input style="width: 40px;" type="text" name="attr_summon2reach" title="summon2reach" placeholder="Reach"> &nbsp; &nbsp;</span>
-											<span class="sheet-table-col">Sp Att:<input style="width: 250px;" type="text" name="attr_summon2specialattacks" title="summon2specialattacks" placeholder="Special Attacks"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Sp Qual:<input style="width: 250px;" type="text" name="attr_summon2specialqualities" title="summon2specialqualities" placeholder="Special Qualities"></span>
+											<span class="sheet-table-col">Espace Occ./Allonge:<input style="width: 40px;" type="text" name="attr_summon2space" title="summon2space" placeholder="Space">/<input style="width: 40px;" type="text" name="attr_summon2reach" title="summon2reach" placeholder="Reach"> &nbsp; &nbsp;</span>
+											<span class="sheet-table-col">Att Spé:<input style="width: 250px;" type="text" name="attr_summon2specialattacks" title="summon2specialattacks" placeholder="Special Attacks"> &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">Qual Spé:<input style="width: 250px;" type="text" name="attr_summon2specialqualities" title="summon2specialqualities" placeholder="Special Qualities"></span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">F:<input style="width: 40px;" type="text" name="attr_summon2fortsave" title="summon2fortsave" placeholder="Fort">, </span>
-											<span class="sheet-table-col">R:<input style="width: 40px;" type="text" name="attr_summon2refsave" title="summon2refsave" placeholder="Ref">, </span>
-											<span class="sheet-table-col">W:<input style="width: 40px;" type="text" name="attr_summon2willsave" title="summon2willsave" placeholder="Will"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Str:<input style="width: 40px;" type="text" name="attr_summon2str" title="summon2str" placeholder="Str">, </span>
-											<span class="sheet-table-col">Dex:<input style="width: 40px;" type="text" name="attr_summon2dex" title="summon2dex" placeholder="Dex">, </span>
-											<span class="sheet-table-col">Con:<input style="width: 40px;" type="text" name="attr_summon2con" title="summon2con" placeholder="Con">, </span>
-											<span class="sheet-table-col">Int:<input style="width: 40px;" type="text" name="attr_summon2int" title="summon2int" placeholder="Int">, </span>
-											<span class="sheet-table-col">Wis:<input style="width: 40px;" type="text" name="attr_summon2wis" title="summon2wis" placeholder="Wis">, </span>
-											<span class="sheet-table-col">Cha:<input style="width: 40px;" type="text" name="attr_summon2cha" title="summon2cha" placeholder="Cha"> </span>
+											<span class="sheet-table-col">Vig:<input style="width: 40px;" type="text" name="attr_summon2fortsave" title="summon2fortsave" placeholder="Fort">, </span>
+											<span class="sheet-table-col">Ref:<input style="width: 40px;" type="text" name="attr_summon2refsave" title="summon2refsave" placeholder="Ref">, </span>
+											<span class="sheet-table-col">Vol:<input style="width: 40px;" type="text" name="attr_summon2willsave" title="summon2willsave" placeholder="Will"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">FOR:<input style="width: 40px;" type="text" name="attr_summon2str" title="summon2str" placeholder="Str">, </span>
+											<span class="sheet-table-col">DEX:<input style="width: 40px;" type="text" name="attr_summon2dex" title="summon2dex" placeholder="Dex">, </span>
+											<span class="sheet-table-col">CON:<input style="width: 40px;" type="text" name="attr_summon2con" title="summon2con" placeholder="Con">, </span>
+											<span class="sheet-table-col">INT:<input style="width: 40px;" type="text" name="attr_summon2int" title="summon2int" placeholder="Int">, </span>
+											<span class="sheet-table-col">SAG:<input style="width: 40px;" type="text" name="attr_summon2wis" title="summon2wis" placeholder="Wis">, </span>
+											<span class="sheet-table-col">CHA:<input style="width: 40px;" type="text" name="attr_summon2cha" title="summon2cha" placeholder="Cha"> </span>
 										</div>
 										<div class="sheet-table-row">
-											<span class="sheet-table-col">Skills:<input style="width: 350px;" type="text" name="attr_summon2skills" title="summon2skills" placeholder="Skills"> &nbsp; &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Feats:<input style="width: 350px;" type="text" name="attr_summon2feats" title="summon2feats" placeholder="Feats"></span>
+											<span class="sheet-table-col">Compétences:<input style="width: 350px;" type="text" name="attr_summon2skills" title="summon2skills" placeholder="Skills"> &nbsp; &nbsp; &nbsp; </span>
+											<span class="sheet-table-col">Dons:<input style="width: 350px;" type="text" name="attr_summon2feats" title="summon2feats" placeholder="Feats"></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Env:<input style="width: 250px;" type="text" name="attr_summon2env" title="summon2env" placeholder="Environment"> &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Org:<input style="width: 250px;" type="text" name="attr_summon2org" title="summon2org" placeholder="Organization"> &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">CR:<input style="width: 50px;" type="text" name="attr_summon2cr" title="summon2cr" placeholder="CR"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">Adv:<input style="width: 90px;" type="text" name="attr_summon2adv" title="summon2adv" placeholder="Advancement"></span>
+											<span class="sheet-table-col">Evo:<input style="width: 90px;" type="text" name="attr_summon2adv" title="summon2adv" placeholder="Advancement"></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">								
@@ -3361,7 +3361,7 @@
 					<td colspan="2" class="sheet-statlabel-big-gray" style="width:800px; height: 35px; font-size: 1.5em;">Notes</td>
 				</tr>
 			</table>
-			<input type="checkbox" class="sheet-pc-notes1-show sheet-arrow" title="notes1-show" name="attr_notes1-show" value="1" checked /><span style="text-align: left;">Show? <input type="text" style="width: 395px;" name="attr_notes1groupname" title="notes1groupname" value="Notes Section Title (change it to what you want)"></span>
+			<input type="checkbox" class="sheet-pc-notes1-show sheet-arrow" title="notes1-show" name="attr_notes1-show" value="1" checked /><span style="text-align: left;">Montrer? <input type="text" style="width: 395px;" name="attr_notes1groupname" title="notes1groupname" value="Notes Section Title (change it to what you want)"></span>
 			<div class="sheet-pc-notes1">
 				<table>
 					<tr>
@@ -3381,7 +3381,7 @@
 				</table>
 			</div>
 			<hr/>
-			<input type="checkbox" class="sheet-pc-notes2-show sheet-arrow" title="notes2-show" name="attr_notes2-show" value="1" checked /><span style="text-align: left;">Show? <input type="text" style="width: 395px;" name="attr_notes2groupname" title="notes2groupname" value="Notes Section Title (change it to what you want)"></span>
+			<input type="checkbox" class="sheet-pc-notes2-show sheet-arrow" title="notes2-show" name="attr_notes2-show" value="1" checked /><span style="text-align: left;">Montrer? <input type="text" style="width: 395px;" name="attr_notes2groupname" title="notes2groupname" value="Notes Section Title (change it to what you want)"></span>
 			<div class="sheet-pc-notes2">
 				<table>
 					<tr>
@@ -3429,15 +3429,15 @@
 <br>
 	<table style="width: 790px;">
 		<tr>
-			<td class="sheet-table-header-right">Name:</td>
+			<td class="sheet-table-header-right">Nom:</td>
 			<td class="sheet-table-left"><input type="text" style="width: 650px;" name="attr_npcname" title="npcname" placeholder="Name"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Size/Type:</td>
+			<td class="sheet-table-header-right">Taille/Type:</td>
 			<td class="sheet-table-left"><input style="width: 140px;" type="text" name="attr_npcsize" title="npcsize" placeholder="Size">/<input style="width: 180px;" type="text" name="attr_npctype" title="npctype" placeholder="Type"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Hit Dice:</td>
+			<td class="sheet-table-header-right">DD:</td>
 			<td class="sheet-table-left"><input style="width: 100px;" type="text" name="attr_npchitdie" title="npchitdie" placeholder="HD">(<input style="width: 50px;" type="text" name="attr_npchitpoints" title="npchitpoints" placeholder="Hit Points">/<input style="width: 50px;" type="text" name="attr_npchitpoints_max" title="npchitpoints|max" placeholder="Max HP">)</td>
 		</tr>
 		<tr>
@@ -3445,19 +3445,19 @@
 			<td class="sheet-table-left"><input style="width: 40px;" type="text" name="attr_npcinit" title="npcinit" value="0"> <textarea rows="1" cols="40" style="width: 565px; height: 20px;" title="npcinitmacro (modify to modify npc's initiative roll macro)" name="attr_npcinitmacro">/w gm &{template:DnD35Initiative} {{name=@{selected|token_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|npcinit}]] + ([[(@{selected|npcinit})]]/100) &{tracker}]] }}</textarea><button type='roll' name='attr_npcinitiative' title='npcinitiative' value='@{npcinitmacro}'></button></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Speed:</td>
+			<td class="sheet-table-header-right">Vitesse:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcspeed" title="npcspeed" placeholder="Speed"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Armor Class:</td>
+			<td class="sheet-table-header-right">Classe d'armure:</td>
 			<td class="sheet-table-left"><input style="width: 40px;" type="text" name="attr_npcarmorclass" title="npcarmorclass" placeholder="AC">(<input style="width: 290px;" type="text" name="attr_npcarmorclassinfo" title="npcarmorclassinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 40px;" type="text" name="attr_npctoucharmorclass" title="npctoucharmorclass" placeholder="T AC">, FF:<input style="width: 40px;" type="text" name="attr_npcflatfootarmorclass" title="npcflatfootarmorclass" placeholder="FF AC"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Base Attack/Grapple:</td>
+			<td class="sheet-table-header-right">Attaque de base/Lutte:</td>
 			<td class="sheet-table-left"><input style="width: 50px;" type="text" name="attr_npcbaseatt" title="npcbaseatt" placeholder="Base Attack">/<input style="width: 50px;" type="text" name="attr_npcgrapple" title="npcgrapple" placeholder="Grapple"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Attack:</td>
+			<td class="sheet-table-header-right">Attaque:</td>
 			<td class="sheet-table-left"><input type="text" style="width: 650px;" name="attr_npcattack" title="npcattack" placeholder="Attack" /></td>
 		</tr>
 		<tr>
@@ -3465,7 +3465,7 @@
 			<td class="sheet-table-left"><textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 615px;" name="attr_npcattackmacro" title="npcattackmacro" placeholder="Attack Macro"></textarea><button type="roll" name="attr_npcattackbutton" title='npcattackbutton' value="@{npcattackmacro}" style="height: 24px; width: 20px;" ></button></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Full Attack:</td>
+			<td class="sheet-table-header-right">Attaque complète:</td>
 			<td class="sheet-table-left"><input type="text" style="width: 650px;" name="attr_npcfullattack" title="npcfullattack" placeholder="Full Attack" /></td>
 		</tr>
 		<tr>
@@ -3473,31 +3473,31 @@
 			<td class="sheet-table-left"><textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 615px;" name="attr_npcfullattackmacro" title="npcfullattackmacro" placeholder="Full Attack Macro"></textarea><button type="roll" name="attr_npcfullattackbutton" title='npcfullattackbutton' value="@{npcfullattackmacro}" style="height: 24px; width: 20px;" ></button></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Space/Reach:</td>
+			<td class="sheet-table-header-right">Espace Occ./Allonge:</td>
 			<td class="sheet-table-left"><input style="width: 140px;" type="text" name="attr_npcspace" title="npcspace" placeholder="Space">/<input style="width: 140px;" type="text" name="attr_npcreach" title="npcreach" placeholder="Reach"> &nbsp; &nbsp;</td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Special Attacks:</td>
+			<td class="sheet-table-header-right">Attaques spéciales:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcspecialattacks" title="npcspecialattacks" placeholder="Special Attacks"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Special Qualities:</td>
+			<td class="sheet-table-header-right">Qualités spéciales:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcspecialqualities" title="npcspecialqualities" placeholder="Special Qualities"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Saves:</td>
-			<td class="sheet-table-left"> Fort:<input style="width: 40px;" type="text" name="attr_npcfortsave" title="npcfortsave" placeholder="Fort">, &nbsp; &nbsp; Ref:<input style="width: 40px;" type="text" name="attr_npcrefsave" title="npcrefsave" placeholder="Ref">, &nbsp; &nbsp; Will:<input style="width: 40px;" type="text" name="attr_npcwillsave" title="npcwillsave" placeholder="Will"> </td>
+			<td class="sheet-table-header-right">Sauvegardes:</td>
+			<td class="sheet-table-left"> Vig:<input style="width: 40px;" type="text" name="attr_npcfortsave" title="npcfortsave" placeholder="Fort">, &nbsp; &nbsp; Ref:<input style="width: 40px;" type="text" name="attr_npcrefsave" title="npcrefsave" placeholder="Ref">, &nbsp; &nbsp; Vol:<input style="width: 40px;" type="text" name="attr_npcwillsave" title="npcwillsave" placeholder="Will"> </td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Abilities:</td>
-			<td class="sheet-table-left"> Str:<input style="width: 40px;" type="text" name="attr_npcstr" title="npcstr" placeholder="Str">, &nbsp; &nbsp; Dex:<input style="width: 40px;" type="text" name="attr_npcdex" title="npcdex" placeholder="Dex">, &nbsp; &nbsp; Con:<input style="width: 40px;" type="text" name="attr_npccon" title="npccon" placeholder="Con">, &nbsp; &nbsp; Int:<input style="width: 40px;" type="text" name="attr_npcint" title="npcint" placeholder="Int">, &nbsp; &nbsp; Wis:<input style="width: 40px;" type="text" name="attr_npcwis" title="npcwis" placeholder="Wis">, &nbsp; &nbsp; Cha:<input style="width: 40px;" type="text" name="attr_npccha" title="npccha" placeholder="Cha"> </td>
+			<td class="sheet-table-header-right">Caractéristiques:</td>
+			<td class="sheet-table-left"> FOR:<input style="width: 40px;" type="text" name="attr_npcstr" title="npcstr" placeholder="Str">, &nbsp; &nbsp; DEX:<input style="width: 40px;" type="text" name="attr_npcdex" title="npcdex" placeholder="Dex">, &nbsp; &nbsp; CON:<input style="width: 40px;" type="text" name="attr_npccon" title="npccon" placeholder="Con">, &nbsp; &nbsp; INT:<input style="width: 40px;" type="text" name="attr_npcint" title="npcint" placeholder="Int">, &nbsp; &nbsp; SAG:<input style="width: 40px;" type="text" name="attr_npcwis" title="npcwis" placeholder="Wis">, &nbsp; &nbsp; CHA:<input style="width: 40px;" type="text" name="attr_npccha" title="npccha" placeholder="Cha"> </td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Skills:</td>
+			<td class="sheet-table-header-right">Compétences:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcskills" title="npcskills" placeholder="Skills"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Feats:</td>
+			<td class="sheet-table-header-right">Dons:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcfeats" title="npcfeats" placeholder="Feats"></td>
 		</tr>
 		<tr>
@@ -3506,31 +3506,31 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Environment:</td>
+			<td class="sheet-table-header-right">Environnement:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcenv" title="npcenv" placeholder="Environment"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Organization:</td>
+			<td class="sheet-table-header-right">Organisation:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcorg" title="npcorg" placeholder="Organization"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Challenge Rating:</td>
+			<td class="sheet-table-header-right">Facteur de Puiss.:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npccr" title="npccr" placeholder="CR"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Treasure:</td>
+			<td class="sheet-table-header-right">Trésor:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npctreasure" title="npctreasure" placeholder="Treasure"> &nbsp; &nbsp; </td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Alignment:</td>
+			<td class="sheet-table-header-right">Alignement:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcalignment" title="npcalignment" placeholder="Alignment"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Advancement:</td>
+			<td class="sheet-table-header-right">Evolution:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npcadv" title="npcadv" placeholder="Advancement"></td>
 		</tr>
 		<tr>
-			<td class="sheet-table-header-right">Level Adjustment:</td>
+			<td class="sheet-table-header-right">Ajustement de niveau:</td>
 			<td class="sheet-table-left"><input style="width: 650px;" type="text" name="attr_npclvladj" title="npclvladj" placeholder="-"></td>
 		</tr>
 		<tr>
