@@ -301,25 +301,25 @@
 												</div>
 												<div class="sheet-table-row">
 													<span class="sheet-table-row-name" style="width: 60px;">Vigueur<br><div style="font-size: 0.65em;">(Constitution)</div></span>
-													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_fortitude" title="fortitude" value="(@{fortitudebase} +@{fortitudeability} +@{fortitudeepicsavemod} +@{fortitudemagicmod} +@{fortitudedivmod} +@{fortitudetempmod} )" disabled="true"></span>
-													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_fortitudebase" title="fortitudebase" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudeability" title="fortitudeability" value="floor(@{con}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudeepicsavemod" title="fortitudeepicsavemod (Epic Level Save Bonus)" value="@{epicsavebonus}" disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudemagicmod" title="fortitudemagicmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudedivmod" title="fortitudedivmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_fortitudetempmod" title="fortitudetempmod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_fortitudecheck" title='fortitudecheck' value="@{fortitudemacro}"></button></span>
+													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_Vigueur" title="Vigueur" value="(@{Vigueur-base} +@{Vigueur-carac} +@{VigueurEpique-mod} +@{VigueurMagique-mod} +@{VigueurDiv-mod} +@{VigueurTemp-mod} )" disabled="true"></span>
+													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_Vigueur-base" title="Vigueur-base" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_Vigueur-carac" title="Vigueur-carac" value="floor(@{con}/2-5) " disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurEpique-mod" title="VigueurEpique-mod (Bonus de sauvegarde épique)" value="@{bonusEpique}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurMagique-mod" title="VigueurMagique-mod" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurDiv-mod" title="VigueurDiv-mod" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurTempmod" title="VigueurTemp-mod" value="0"></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_Vigueur-check" title='Vigueur-check' value="@{Vigueur-macro}"></button></span>
 												</div>
 												<div class="sheet-pc-savemacros">
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_fortitudenote" title="fortitudenote (Enter a note for the notes field.)" placeholder="Note"></textarea></span>
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_fortitudemacro" title="fortitudemacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=braces against the attack}} {{check=Fortitude check:}} {{checkroll=[[1d20 + [[@{fortitude}]] ]] }} {{notes=@{fortitudenote} }}</textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Vigueurnote" title="Vigueur-note (Entrer une note)" placeholder="Note"></textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Vigueur-macro" title="Vigueur-macro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=se dresse face à l'attaque}} {{check=Test de Vigueur:}} {{checkroll=[[1d20 + [[@{Vigueur}]] ]] }} {{notes=@{Vigueur-note} }}</textarea></span>
 												</div>
 												<div class="sheet-table-row" style="font-size: 1em;">
 													<span class="sheet-table-row-name" style="width: 60px;">Réflexes<br><div style="font-size: 0.65em;">(Dexterité)</div></span>
 													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_reflex" title="reflex" value="(@{reflexbase} +@{reflexability} +@{reflexepicsavemod} +@{reflexmagicmod} +@{reflexdivmod} +@{reflextempmod} )" disabled="true"></span>
 													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_reflexbase" title="reflexbase" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexability" title="reflexability" value="floor(@{dex}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexepicsavemod" title="reflexepicsavemod (Epic Level Save Bonus)" value="@{epicsavebonus}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexepicsavemod" title="reflexepicsavemod (Epic Level Save Bonus)" value="@{bonusepique}" disabled="true"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexmagicmod" title="reflexmagicmod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexdivmod" title="reflexdivmod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflextempmod" title="reflextempmod" value="0"></span>
@@ -334,7 +334,7 @@
 													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_will" title="will" value="(@{willbase} +@{willability} +@{willepicsavemod} +@{willmagicmod} +@{willdivmod} +@{willtempmod} )" disabled="true"></span>
 													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_willbase" title="willbase" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willability" title="willability" value="floor(@{wis}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willepicsavemod" title="willepicsavemod (Epic Level Save Bonus)" value="@{epicsavebonus}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willepicsavemod" title="willepicsavemod (Epic Level Save Bonus)" value="@{bonusepique}" disabled="true"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willmagicmod" title="willmagicmod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willdivmod" title="willdivmod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willtempmod" title="willtempmod" value="0"></span>
@@ -406,7 +406,7 @@
 										<table>
 											<tr>
 												<td class="sheet-statlabel-big" style="width: 50px;">Niveaux épiques:</td>
-												<td>Bonus de sauvegarde épique: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_epicsavebonus" title="epicsavebonus" value="0"></td>
+												<td>Bonus de sauvegarde épique: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_bonusEpique" title="bonusEpique" value="0"></td>
 												<td>Bonus d'attaque épique: <input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_epicattackbonus" title="epicattackbonus" value="0"></td>
 											</tr>
 										</table>
@@ -2665,7 +2665,7 @@
 											<td style="width: 120px;"><input type="text" name="attr_spellname22" value="Bear's Endurance"></td>
 											<td style="width: 20px;"><input type="text" name="attr_spelllevel22" value="2"></td>
 											<td>
-											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro22" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{character_name} }} {{subtags= grants ?{target|@{character_name}} [Bear's Endurance](http://www.dandwiki.com/wiki/SRD:Bear%27s_Endurance )!}} {{School:= Transmutation}} {{Level:= Clr 2, Drd 2, Rgr 2, Sor/Wiz 2}} {{Cmpnts:=V, S, DF}} {{Casting Time:=1 std action}} {{Range:= Touch}} {{Target:= 1 creature touched }} {{Duration:= @{casterlevel2} mins.}} {{Saving Throw:= Will negates(harmless)}} {{Spell Resist.:= Yes}} {{Caster level check: = [[1d20+@{casterlevel2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{check= ?{target|@{character_name}} gains greater vitality and stamina, }} {{checkroll= receiving a +4 enh bonus to Constitution with the usual benefits to hit points(these temp hit points go away when spell ends), fortitude saves, constitution checks, etc. }}</textarea>
+											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro22" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{character_name} }} {{subtags= grants ?{target|@{character_name}} [Bear's Endurance](http://www.dandwiki.com/wiki/SRD:Bear%27s_Endurance )!}} {{School:= Transmutation}} {{Level:= Clr 2, Drd 2, Rgr 2, Sor/Wiz 2}} {{Cmpnts:=V, S, DF}} {{Casting Time:=1 std action}} {{Range:= Touch}} {{Target:= 1 creature touched }} {{Duration:= @{casterlevel2} mins.}} {{Saving Throw:= Will negates(harmless)}} {{Spell Resist.:= Yes}} {{Caster level check: = [[1d20+@{casterlevel2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{check= ?{target|@{character_name}} gains greater vitality and stamina, }} {{checkroll= receiving a +4 enh bonus to Constitution with the usual benefits to hit points(these temp hit points go away when spell ends), Vigueur saves, constitution checks, etc. }}</textarea>
 												</td>
 											<td><button type="roll" name="attr_spellcast22" text="Spell Cast22" title='repeating_spells22_x_spellcast22' value="@{spellmacro22}" style="height: 24px; width: 20px;" ></button>
 											</td>
@@ -3701,7 +3701,7 @@
 						<tr><td class="sheet-table-left" colspan="2">notes</td></tr>
 					</table>
 				</div> </span>
-				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplesave">&{template:DnD35StdRoll} {{name=@{character_name} }} {{saveflag=true}} {{subtags=braces against the attack}} {{check=Fortitude check:}} {{checkroll=[[1d20 + [[@{fortitude}]] ]] }}</textarea>
+				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplesave">&{template:DnD35StdRoll} {{name=@{character_name} }} {{saveflag=true}} {{subtags=braces against the attack}} {{check=Vigueur check:}} {{checkroll=[[1d20 + [[@{Vigueur}]] ]] }}</textarea>
 					<button type="roll" name="attr_examplesaveroll" title="examplesaveroll" value="@{examplesave}"></button>
 					<br> The saveflag sets the name and thick dividing line to be purple.
 			</div>
