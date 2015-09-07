@@ -308,7 +308,7 @@
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurMagique-mod" title="VigueurMagique-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurDiv-mod" title="VigueurDiv-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurTempmod" title="VigueurTemp-mod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_Vigueur-check" title='Vigueur-check' value="@{Vigueur-macro}"></button></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Vigueur-check" title='Vigueur-check' value="@{Vigueur-macro}"></button></span>
 												</div>
 												<div class="sheet-pc-savemacros">
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Vigueurnote" title="Vigueur-note (Entrer une note)" placeholder="Note"></textarea></span>
@@ -316,18 +316,18 @@
 												</div>
 												<div class="sheet-table-row" style="font-size: 1em;">
 													<span class="sheet-table-row-name" style="width: 60px;">Réflexes<br><div style="font-size: 0.65em;">(Dexterité)</div></span>
-													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_reflex" title="reflex" value="(@{reflexbase} +@{reflexability} +@{reflexepicsavemod} +@{reflexmagicmod} +@{reflexdivmod} +@{reflextempmod} )" disabled="true"></span>
-													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_reflexbase" title="reflexbase" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexability" title="reflexability" value="floor(@{dex}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexepicsavemod" title="reflexepicsavemod (Epic Level Save Bonus)" value="@{bonusepique}" disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexmagicmod" title="reflexmagicmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflexdivmod" title="reflexdivmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_reflextempmod" title="reflextempmod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_reflexcheck" title='reflexcheck' value="@{reflexmacro}"></button></span>
+													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_Reflexes" title="Reflexes" value="(@{Reflexes-base} +@{Reflexes-carac} +@{ReflexesEpiques-mod} +@{ReflexesMagiques-mod} +@{ReflexesDiv-mod} +@{ReflexesTemp-mod} )" disabled="true"></span>
+													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_Reflexes-base" title="Reflexes-base" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_Reflexes-carac" title="Reflexes-carac" value="floor(@{dex}/2-5) " disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesEpiques-mod" title="ReflexesEpiques-mod (Bonus de Sauvegarde Epique)" value="@{bonusEpique}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesMagiques-mod" title="ReflexesMagiques-mod" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesDiv-mod" title="ReflexesDiv-mod" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesTemp-mod" title="ReflexesTemp-mod" value="0"></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Reflexes-check" title='Reflexes-check' value="@{Reflexes-macro}"></button></span>
 												</div>											
 												<div class="sheet-pc-savemacros">
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_reflexnote" title="reflexnote (Enter a note for the notes field.)" placeholder="Note"></textarea></span>
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_reflexmacro" title="reflexmacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tries to dodge}} {{check=Reflex check:}} {{checkroll=[[1d20 + [[@{reflex}]] ]] }} {{notes=@{reflexnote} }}</textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Reflexes-note" title="Reflexes-note (Entrer une note)" placeholder="Note"></textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Reflexes-macro" title="Reflexes-macro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tente une esquive}} {{check=Test de Reflexes:}} {{checkroll=[[1d20 + [[@{Reflexes}]] ]] }} {{notes=@{Reflexes-note} }}</textarea></span>
 												</div>
 												<div class="sheet-table-row">
 													<span class="sheet-table-row-name" style="width: 60px;">Volonté<br><div style="font-size: 0.65em;">(Sagesse)</div></span>
