@@ -386,20 +386,20 @@
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modmab" title="taille-modmab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabdiv-mod" title="mabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtemp-mod" title="mabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='roll_melee-check' title='melee-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=fait une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{meleeattackbonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><button type='roll' name='roll_melee-check' title='melee-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{MeleeAttaque-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
 										<table>
 											<tr>
 												<td class="sheet-statlabel-big" style="width: 50px;">Distance<div style="font-size: 0.65em;">Bonus de base</div></td>
-												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_rangedattackbonus" title="rangedattackbonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{dexmodrab}+@{size}+@{rabdivmod}+@{rabtempmod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
-												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_BBArab" title="BBArab (Base Attack Bonus + Epic Attack Bonus)" value="@{BBA} +@{AttaqueEpique-bonus} " disabled="true"><br><div style="font-size: 0.5em;">BBa <br>+ BAE</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_dexmodrab" title="dexmodrab" value="floor(@{dex}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Dextérité</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_sizemodrab" title="sizemodrab" value="@{size}" disabled="true"><br><div style="font-size: 0.5em;">Taille<br>Modifier</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabdivmod" title="rabdivmod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtempmod" title="rabtempmod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='attr_rangedattackcheck' title='rangedattackcheck' value='&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=makes a ranged attack }} {{attack1=hitting AC [[1d20 +[[@{rangedattackbonus}]] ]]}}'></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_DistanceAttaque-bonus" title="DistanceAttaque-bonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{dex-modrab}+@{taille}+@{rabdiv-mod}+@{rabtemp-mod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
+												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_BBArab" title="BBArab (Bonus de base à l'attaque + Bonus d'Attaque Epique)" value="@{BBA} +@{AttaqueEpique-bonus} " disabled="true"><br><div style="font-size: 0.5em;">BBA <br>+ BAE</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_dex-modrab" title="dex-modrab" value="floor(@{dex}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Dextérité</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modrab" title="taille-modrab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Taille<br>Modifier</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabdiv-mod" title="rabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtemp-mod" title="rabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
+												<td><button type='roll' name='roll_DistanceAttaque-check' title='rangedattackcheck' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{DistanceAttaque-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
