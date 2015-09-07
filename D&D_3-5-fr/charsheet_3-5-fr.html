@@ -360,7 +360,7 @@
 									<br>
 										<table>
 											<tr>
-												<td class="sheet-statlabel-big" style="width: 80px;">Bonus de base à l'attaque</td>
+												<td class="sheet-statlabel-big" style="width: 80px;">Bonus de Base à l'Attaque</td>
 												<td>&nbsp;<input class="sheet-inputbox" type="text" name="attr_BBA" title="BBA" value="0" style="height: 24px; width: 50px;"></td>
 												<td>/<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_BBA2" title="BBA2" value="(((@{BBA} -5)+abs(@{BBA} -5))/2)" disabled="true" style="height: 24px; width: 50px;"></td>
 												<td>/<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_BBA3" title="BBA3" value="(((@{BBA} -10)+abs(@{BBA} -10))/2)" disabled="true" style="height: 24px; width: 50px;"></td>
@@ -369,7 +369,7 @@
 											<tr>
 												<td class="sheet-statlabel-big" style="width: 80px;">Lutte</td>
 												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_Lutte" title="Lutte" value="(@{BBA} +@{AttaqueEpique-bonus} +@{LutteFor-mod}+@{taille-mod}+@{LutteDiv-mod})" disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Total</div></td>
-												<td>=<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_LutteBBA" title="LutteBBA (Bonus de base à l'attaque + Bonus d'Attaque Epique)" style="height: 24px; width: 50px;" disabled="true" value="@{BBA} +@{AttaqueEpique-bonus} "><br><div style="font-size: 0.5em;">BBa + BAE</div></td>
+												<td>=<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_LutteBBA" title="LutteBBA (Bonus de base à l'attaque + Bonus d'Attaque Epique)" style="height: 24px; width: 50px;" disabled="true" value="@{BBA} +@{AttaqueEpique-bonus} "><br><div style="font-size: 0.5em;">BBA + BAE</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_LutteFor-mod" title="LutteFor-mod" value="floor(@{for}/2-5) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">FOR</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_taille-mod" title="taille-mod" value="(floor((@{taille} + 50) / 58) + floor((@{taille} + 50) / 54) + floor((@{taille} + 50) / 52) + floor((@{taille} + 50) / 51) + floor((@{taille} + 50) / 50) + floor((@{taille} + 50) / 49) + floor((@{taille} + 50) / 47) + floor((@{taille} + 50) / 43) -4) * (-4) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Modif. Taille</div></td>
 												<td>+<input class="sheet-inputbox" type="text" name="attr_LutteDiv-mod" title="LutteDiv-mod" value="0" style="width: 50px;"><br><div style="font-size: 0.5em;">Divers</div></td>
@@ -380,13 +380,13 @@
 										<table>
 											<tr>
 												<td class="sheet-statlabel-big" style="width: 50px;">Mêlée<div style="font-size: 0.65em;">Bonus de base</div></td>
-												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_meleeattackbonus" title="meleeattackbonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{strmodmab}+@{size}+@{mabdivmod}+@{mabtempmod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
-												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_BBAmab" title="BBAmab (Base Attack Bonus + Epic Attack Bonus)" value="@{BBA} +@{AttaqueEpique-bonus} " disabled="true"><br><div style="font-size: 0.5em;">BBa <br>+ BAE</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_strmodmab" title="strmodmab" value="floor(@{str}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Force</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_sizemodmab" title="sizemodmab" value="@{size}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabdivmod" title="mabdivmod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
-												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtempmod" title="mabtempmod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='attr_meleeattackcheck' title='meleeattackcheck' value='&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=makes a melee attack }} {{attack1=hitting AC [[1d20 +[[@{meleeattackbonus}]] ]]}}'></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_MeleeAttaque-bonus" title="MeleeAttaque-bonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{for-mod}+@{taille}+@{mabdiv-mod}+@{mabtemp-mod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
+												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_BBAmab" title="BBAmab (Bonus de base à l'attaque + Bonus d'Attaque Epique)" value="@{BBA} +@{AttaqueEpique-bonus} " disabled="true"><br><div style="font-size: 0.5em;">BBa <br>+ BAE</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_for-modmab" title="for-modmab" value="floor(@{for}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Force</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modmab" title="taille-modmab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabdiv-mod" title="mabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
+												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtemp-mod" title="mabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
+												<td><button type='roll' name='roll_melee-check' title='melee-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=fait une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{meleeattackbonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
