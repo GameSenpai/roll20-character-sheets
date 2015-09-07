@@ -263,7 +263,7 @@
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblCA" title="immoblCA" value="10 +@{totalCaracImmoblCAbonus} +@{CAbonus} +@{CAtaillemod} +@{CAnat} +@{CAparademod} +@{totalDivImmoblCAbonus}" disabled="true" /> &nbsp; </td>
 											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_reductionDommages" title="reductionDommages" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
-											<td valign="top"><input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/>
+											<td valign="top"><input type="hidden" name="attr_penaliteArmure" title="penaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
 										</tr>
 									</table>
@@ -1055,7 +1055,7 @@
 				<td style="width: 70px;" class="sheet-statlabel">Immobilisé<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{CAbonus} +@{CAtaillemod} +@{CAnat} +@{CAparademod} +@{totaldivimmoblacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Damage Reduction</div></td-->
-				<td valign="top"> &nbsp;<input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armorworn}*@{acitemcheckpenalty}+@{shieldworn}*@{shieldcheckpenalty})" disabled="true"/> &nbsp; 
+				<td valign="top"> &nbsp;<input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/> &nbsp; 
 					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
 			</tr>
 		</table>
@@ -1070,7 +1070,7 @@
 				</table>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_armorworn" title="armorworn (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_armureDurabilite" title="armureDurabilite (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 58px;">Type</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">DEX Max</td>
@@ -1085,7 +1085,7 @@
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemtype" title="acitemtype" style="height: 24px; width: 58px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitembonus" title="acitembonus" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemdex" title="acitemdex" style="height: 24px; width: 54px;" value="20"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitemcheckpenalty" title="acitemcheckpenalty" style="height: 24px; width: 54px;" value="0"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_penaliteObjetCAcheck" title="penaliteObjetCAcheck" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemspellfailure" title="acitemspellfailure" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemspeed" title="acitemspeed" style="height: 24px; width: 70px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemweight" title="acitemweight" value="0" style="height: 24px; width: 54px;" /></td>
@@ -1095,7 +1095,7 @@
 				<br>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-					<td class="sheet-statlabel" style="font-size: 1em; width: 184px;"><input type="checkbox" name="attr_shieldworn" title="shieldworn" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bouclier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+					<td class="sheet-statlabel" style="font-size: 1em; width: 184px;"><input type="checkbox" name="attr_durabiliteBouclier" title="durabiliteBouclier" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bouclier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Pénalité</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Echec des sorts</td>
@@ -1105,7 +1105,7 @@
 					<tr>
 						<td><input class="sheet-inputbox" type="text" name="attr_shield" title="shield" style="height: 24px; width: 184px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_shieldbonus" title="shieldbonus" value="0" style="height: 24px; width: 54px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_shieldcheckpenalty" title="shieldcheckpenalty" value="0" style="height: 24px; width: 54px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_penaliteBouclierCheck" title="penaliteBouclierCheck" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_shieldspellfailure" title="shieldspellfailure" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_shieldweight" title="shieldweight" value="0" style="height: 24px; width: 54px;" /></td>
 						<td colspan="5"><input class="sheet-inputbox" type="text" name="attr_shieldproperties" title="shieldproperties" style="height: 24px; width: 404px;" /></td>
@@ -1150,7 +1150,7 @@
 								<td style="width: 25px;">Y </td>
 								<td style="width: 45px;"><input type="text" name="attr_dexacbonus" title="dexacbonus" style="width: 45px;" value="@{armorclassdexmod}" disabled="true" />
 								<input type="hidden" name="attr_dexacpenalty" title="dexacpenalty" value="([[0-floor((0-@{dex-mod}-0.1)/(abs(0-@{dex-mod}-0.1)+0.001))*0 -floor((@{dex-mod}+0.1-0)/(abs(@{dex-mod}+0.1-0)+0.001))*@{dex-mod}]])" disabled="true" />
-								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{acitemdex}*(100-99*@{armorworn}))/10000000000)*@{acitemdex} - floor((@{dex-mod} -@{acitemdex}*(100-99*@{armorworn})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
+								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{dex-mod} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
 								<input type="hidden" name="attr_armorclassdexmod" title="armorclassdexmod (either dex-mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armordexmod}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armordexmod}-@{encumbrmaxdex}-1)/10000000000)*@{armordexmod})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;">Y </td>
@@ -1163,7 +1163,7 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac1bonus" title="abilityac1bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1capped" title="abilityac1capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac1bonus" title="cappedabilityac1bonus" style="width: 45px;" value="(@{abilityac1capped}*@{armorclassabilityac1mod} + (1-@{abilityac1capped})*@{abilityac1bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armorworn}))/10000000000)*@{acitemdex} - floor((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armorworn})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_armorclassabilityac1mod" title="armorclassabilityac1mod (either abilityac1bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac1}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac1}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac1})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1touchac" title="abilityac1touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -1176,7 +1176,7 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac2bonus" title="abilityac2bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2capped" title="abilityac2capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac2bonus" title="cappedabilityac2bonus" style="width: 45px;" value="(@{abilityac2capped}*@{armorclassabilityac2mod} + (1-@{abilityac2capped})*@{abilityac2bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armorworn}))/10000000000)*@{acitemdex} - floor((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armorworn})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_armorclassabilityac2mod" title="armorclassabilityac2mod (either abilityac2bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac2}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac2}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac2})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2touchac" title="abilityac2touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -1189,7 +1189,7 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac3bonus" title="abilityac3bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3capped" title="abilityac3capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac3bonus" title="cappedabilityac3bonus" style="width: 45px;" value="(@{abilityac3capped}*@{armorclassabilityac3mod} + (1-@{abilityac3capped})*@{abilityac3bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armorworn}))/10000000000)*@{acitemdex} - floor((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armorworn})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_armorclassabilityac3mod" title="armorclassabilityac3mod (either abilityac3bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac3}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac3}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac3})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3touchac" title="abilityac3touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -1200,7 +1200,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalarmorbonus" title="totalarmorbonus" style="width: 54px;" value="(@{armorworn}*@{armorbonus} +@{shieldworn}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
+				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalarmorbonus" title="totalarmorbonus" style="width: 54px;" value="(@{armureDurabilite}*@{armorbonus} +@{durabiliteBouclier}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-armorbonuscalc">
 					<div style="float: left">
 						<table>
@@ -1212,13 +1212,13 @@
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_armorworn" title="armorworn (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_armorbonusname" title="armorbonusname" style="width: 180px;" value="Armor" disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_armureDurabilite" title="armureDurabilite (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_armorbonusname" title="armorbonusname" style="width: 180px;" value="Armor" disabled="true" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_armorbonus" title="armorbonus" style="width: 54px;" value="(@{acitembonus})" disabled="true" /></td>
 								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_armorbonusnotes" title="armorbonusnotes" value="From Armor, above. " disabled="true" /></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_shieldworn" title="shieldworn (Check if this shield is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_shieldbonusname" title="shieldbonusname" style="width: 180px;" value="Shield" disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_durabiliteBouclier" title="durabiliteBouclier (Check if this shield is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_shieldbonusname" title="shieldbonusname" style="width: 180px;" value="Shield" disabled="true" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_shieldacbonus" title="shieldacbonus" style="width: 54px;" value="(@{shieldbonus})" disabled="true" /></td>
 								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_shieldbonusnotes" title="shieldbonusnotes" value="From Shield, above. " disabled="true" /></td>
 							</tr>
