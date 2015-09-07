@@ -245,8 +245,8 @@
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CAparademod" title="CAparademod" value="@{totalparadebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdivmod" title="CAdivmod" value="@{totaldivCAbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
-											<td valign="top"><input type="hidden" name="attr_penalitearmure" title="penalitearmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{armuredurabilite}*@{penaliteobjetCAcheck}+@{durabilitebouclier}*@{penaliteboucliercheck})" disabled="true"/>
-												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_penalitearmurecheck" title="penalitearmurecheck" value=" (ceil((@{penalitearmure}-@{encumbrcap})/10000000000)*@{encumbrcap} - floor((@{penalitearmure}-@{encumbrcap}-1)/10000000000)*@{penalitearmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
+											<td valign="top"><input type="hidden" name="attr_penaliteArmure" title="penaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/>
+												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_penaliteArmureCheck" title="penaliteArmureCheck" value=" (ceil((@{penaliteArmure}-@{encumbrCA})/10000000000)*@{encumbrCA} - floor((@{penaliteArmure}-@{encumbrCA}-1)/10000000000)*@{penaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
 										</tr>
 									</table>
 								</td>
@@ -256,7 +256,7 @@
 									<table>
 										<tr>
 											<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{armorclasssizemod} +@{acdodgemod} +@{acdeflectionmod} +@{totalmisctouchacbonus})" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_contactCA" title="contactCA" value="(10 + @{totalCaracContactCAbonus} + @{CAtaillemod} + @{CAesquivemod} + @{CAparademod} + @{totalDivContactCAbonus})" disabled="true" /> &nbsp; </td>
 											<td style="width: 70px;" class="sheet-statlabel">Pris au Dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{armorclassbonus} +@{armorclasssizemod} +@{acnaturalarmor} +@{acdeflectionmod} +@{totalmiscffacbonus}" disabled="true" /> &nbsp; </td>
 											<td style="width: 60px;" class="sheet-statlabel">Immobile<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
