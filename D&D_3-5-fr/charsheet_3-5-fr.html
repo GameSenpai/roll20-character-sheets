@@ -331,18 +331,18 @@
 												</div>
 												<div class="sheet-table-row">
 													<span class="sheet-table-row-name" style="width: 60px;">Volonté<br><div style="font-size: 0.65em;">(Sagesse)</div></span>
-													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_will" title="will" value="(@{willbase} +@{willability} +@{willepicsavemod} +@{willmagicmod} +@{willdivmod} +@{willtempmod} )" disabled="true"></span>
-													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_willbase" title="willbase" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willability" title="willability" value="floor(@{wis}/2-5) " disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willepicsavemod" title="willepicsavemod (Epic Level Save Bonus)" value="@{bonusepique}" disabled="true"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willmagicmod" title="willmagicmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willdivmod" title="willdivmod" value="0"></span>
-													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_willtempmod" title="willtempmod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="attr_willcheck" title='willcheck' value="@{willmacro}"></button></span>
+													<span class="sheet-table-data-center"><input type="text" style="width: 35px;" name="attr_Volonte" title="Volonte" value="(@{Volonte-base} +@{Volonte-carac} +@{VolonteEpique-mod} +@{VolonteMagique-mod} +@{VolonteDiv-mod} +@{VolonteTemp-mod} )" disabled="true"></span>
+													<span class="sheet-table-data-center">=<input type="text" style="width: 35px;" name="attr_Volonte-base" title="Volonte-base" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_Volonte-carac" title="Volonte-carac" value="floor(@{sag}/2-5) " disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteEpique-mod" title="VolonteEpique-mod (Bonus de Sauvegarde Epique)" value="@{bonusEpique}" disabled="true"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteMagique-mod" title="VolonteMagique-mod" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteDiv-mod" title="VolonteDiv-mod" value="0"></span>
+													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteTemp-mod" title="VolonteTemp-mod" value="0"></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Volonte-check" title='Volonte-check' value="@{Volonte-macro}"></button></span>
 												</div>											
 												<div class="sheet-pc-savemacros">
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_willnote" title="willnote (Enter a note for the notes field.)" placeholder="Note"></textarea></span>
-													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_willmacro" title="willmacro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tries to resist}} {{check=Will check:}} {{checkroll=[[1d20 + [[@{will}]] ]] }} {{notes=@{willnote} }}</textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Volonte-note" title="Volonte-note (Entrer une note)" placeholder="Note"></textarea></span>
+													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Volonte-macro" title="Volonte-macro">&{template:DnD35StdRoll} {{saveflag=true}} {{name=@{character_name} }} {{subtags=tente de résister}} {{check=Test de Volonté:}} {{checkroll=[[1d20 + [[@{Volonte}]] ]] }} {{notes=@{Volonte-note} }}</textarea></span>
 												</div>
 												<input type="checkbox" class="sheet-pc-savemacros-show sheet-arrow" title="savemacros-show" name="attr_savemacros-show" value="1" /><span style="text-align: left;">Montrer macros des JdS</span>
 											</td></tr> 
