@@ -245,7 +245,7 @@
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{totalparadebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdivmod" title="CAdivmod" value="@{totaldivCA-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
-											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{DurabiliteArmure}*@{PenaliteObjetCA-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
+											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PenaliteArmure-check" title="PenaliteArmure-check" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
 										</tr>
 									</table>
@@ -263,7 +263,7 @@
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblCA" title="immoblCA" value="10 +@{totalCaracImmoblCA-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totalDivImmoblCA-bonus}" disabled="true" /> &nbsp; </td>
 											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_reductionDommages" title="reductionDommages" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
-											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{PenaliteObjetCA-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
+											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
 										</tr>
 									</table>
@@ -380,26 +380,26 @@
 										<table>
 											<tr>
 												<td class="sheet-statlabel-big" style="width: 50px;">Mêlée<div style="font-size: 0.65em;">Bonus de base</div></td>
-												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_MeleeAttaque-bonus" title="MeleeAttaque-bonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{for-mod}+@{taille}+@{mabdiv-mod}+@{mabtemp-mod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
+												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_AttaqueMelee-bonus" title="AttaqueMelee-bonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{for-mod}+@{taille}+@{mabdiv-mod}+@{mabtemp-mod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
 												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_BBAmab" title="BBAmab (Bonus de base à l'attaque + Bonus d'Attaque Epique)" value="@{BBA} +@{AttaqueEpique-bonus} " disabled="true"><br><div style="font-size: 0.5em;">BBa <br>+ BAE</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_for-modmab" title="for-modmab" value="floor(@{for}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Force</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modmab" title="taille-modmab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabdiv-mod" title="mabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtemp-mod" title="mabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='roll_melee-check' title='melee-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{MeleeAttaque-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><button type='roll' name='roll_melee-check' title='melee-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{AttaqueMelee-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
 										<table>
 											<tr>
 												<td class="sheet-statlabel-big" style="width: 50px;">Distance<div style="font-size: 0.65em;">Bonus de base</div></td>
-												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_DistanceAttaque-bonus" title="DistanceAttaque-bonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{dex-modrab}+@{taille}+@{rabdiv-mod}+@{rabtemp-mod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
+												<td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_AttaqueDistance-bonus" title="AttaqueDistance-bonus" value="(@{BBA} +@{AttaqueEpique-bonus} +@{dex-modrab}+@{taille}+@{rabdiv-mod}+@{rabtemp-mod})" disabled="true"><br><div style="font-size: 0.5em;">Total<br>&nbsp;</div></td>
 												<td> =<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_BBArab" title="BBArab (Bonus de base à l'attaque + Bonus d'Attaque Epique)" value="@{BBA} +@{AttaqueEpique-bonus} " disabled="true"><br><div style="font-size: 0.5em;">BBA <br>+ BAE</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_dex-modrab" title="dex-modrab" value="floor(@{dex}/2-5) " disabled="true"><br><div style="font-size: 0.5em;">Dextérité</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modrab" title="taille-modrab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Taille<br>Modifier</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabdiv-mod" title="rabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtemp-mod" title="rabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='roll_DistanceAttaque-check' title='rangedattackcheck' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{DistanceAttaque-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><button type='roll' name='roll_AttaqueDistance-check' title='rangedattackcheck' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{AttaqueDistance-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
@@ -1058,7 +1058,7 @@
 				<td style="width: 70px;" class="sheet-statlabel">Immobilisé<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CA-Immobile" title="CA-Immobile" value="10 +@{TotalCaracCA-Immobile-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{TotalDivCA-Immobile-bonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_ReductionDommages" title="ReductionDommages" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Réduction des dommages</div></td-->
-				<td valign="top"> &nbsp;<input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (Maximum du test de pénalité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{PenaliteObjetCA-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/> &nbsp; 
+				<td valign="top"> &nbsp;<input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (Maximum du test de pénalité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/> &nbsp; 
 					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
 			</tr>
 		</table>
@@ -1073,7 +1073,7 @@
 				</table>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Teste si cette armure devient usagée.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 58px;">Type</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">DEX Max</td>
@@ -1084,15 +1084,15 @@
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 223px;" colspan="4">Propriétés spéciales</td>
 					</tr>
 					<tr>
-						<td colspan="3"><input class="sheet-inputbox" type="text" name="attr_acitem" title="acitem" style="height: 24px; width: 180px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitemtype" title="acitemtype" style="height: 24px; width: 58px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitembonus" title="acitembonus" style="height: 24px; width: 54px;" value="0"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitemdex" title="acitemdex" style="height: 24px; width: 54px;" value="20"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteObjetCA-check" title="PenaliteObjetCA-check" style="height: 24px; width: 54px;" value="0"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitemspellfailure" title="acitemspellfailure" style="height: 24px; width: 54px;" value="0"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitemspeed" title="acitemspeed" style="height: 24px; width: 70px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_acitemweight" title="acitemweight" value="0" style="height: 24px; width: 54px;" /></td>
-						<td colspan="4"><input class="sheet-inputbox" type="text" name="attr_acitemproperties" title="acitemproperties" style="height: 24px; width: 223px;" /></td>
+						<td colspan="3"><input class="sheet-inputbox" type="text" name="attr_ObjetCA" title="ObjetCA" style="height: 24px; width: 180px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-type" title="ObjetCA-type" style="height: 24px; width: 58px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-bonus" title="ObjetCA-bonus" style="height: 24px; width: 54px;" value="0"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-dex" title="ObjetCA-dex" style="height: 24px; width: 54px;" value="20"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Penalite-check" title="ObjetCA-Penalite-check" style="height: 24px; width: 54px;" value="0"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-EchecSorts" title="ObjetCA-EchecSorts" style="height: 24px; width: 54px;" value="0"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Vitesse" title="ObjetCA-Vitesse" style="height: 24px; width: 70px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Poids" title="ObjetCA-Poids" value="0" style="height: 24px; width: 54px;" /></td>
+						<td colspan="4"><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Proprietes" title="ObjetCA-Proprietes" style="height: 24px; width: 223px;" /></td>
 					</tr>
 				</table>
 				<br>
@@ -1153,7 +1153,7 @@
 								<td style="width: 25px;">Y </td>
 								<td style="width: 45px;"><input type="text" name="attr_dexacbonus" title="dexacbonus" style="width: 45px;" value="@{CA-Dex-mod}" disabled="true" />
 								<input type="hidden" name="attr_dexacpenalty" title="dexacpenalty" value="([[0-floor((0-@{dex-mod}-0.1)/(abs(0-@{dex-mod}-0.1)+0.001))*0 -floor((@{dex-mod}+0.1-0)/(abs(@{dex-mod}+0.1-0)+0.001))*@{dex-mod}]])" disabled="true" />
-								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{dex-mod} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
+								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{dex-mod} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
 								<input type="hidden" name="attr_CA-Dex-mod" title="CA-Dex-mod (either dex-mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armordexmod}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armordexmod}-@{encumbrmaxdex}-1)/10000000000)*@{armordexmod})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;">Y </td>
@@ -1166,7 +1166,7 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac1bonus" title="abilityac1bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1capped" title="abilityac1capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac1bonus" title="cappedabilityac1bonus" style="width: 45px;" value="(@{abilityac1capped}*@{CAabilityac1mod} + (1-@{abilityac1capped})*@{abilityac1bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{abilityac1bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{abilityac1bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_CAabilityac1mod" title="CAabilityac1mod (either abilityac1bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac1}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac1}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac1})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1CA-Contact" title="abilityac1CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -1179,7 +1179,7 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac2bonus" title="abilityac2bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2capped" title="abilityac2capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac2bonus" title="cappedabilityac2bonus" style="width: 45px;" value="(@{abilityac2capped}*@{CAabilityac2mod} + (1-@{abilityac2capped})*@{abilityac2bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{abilityac2bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{abilityac2bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_CAabilityac2mod" title="CAabilityac2mod (either abilityac2bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac2}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac2}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac2})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2CA-Contact" title="abilityac2CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -1192,7 +1192,7 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac3bonus" title="abilityac3bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3capped" title="abilityac3capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac3bonus" title="cappedabilityac3bonus" style="width: 45px;" value="(@{abilityac3capped}*@{CAabilityac3mod} + (1-@{abilityac3capped})*@{abilityac3bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{abilityac3bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{abilityac3bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_CAabilityac3mod" title="CAabilityac3mod (either abilityac3bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac3}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac3}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac3})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3CA-Contact" title="abilityac3CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -1216,7 +1216,7 @@
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
 								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_armorbonusname" title="armorbonusname" style="width: 180px;" value="Armor" disabled="true" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_armorbonus" title="armorbonus" style="width: 54px;" value="(@{acitembonus})" disabled="true" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_armorbonus" title="armorbonus" style="width: 54px;" value="(@{ObjetCA-bonus})" disabled="true" /></td>
 								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_armorbonusnotes" title="armorbonusnotes" value="From Armor, above. " disabled="true" /></td>
 							</tr>
 							<tr class="sheet-table-row">
