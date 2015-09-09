@@ -1041,9 +1041,9 @@
 		<table>
 			<tr>
 				<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td><input class="sheet-inputbox" type="text" name="attr_armorclass" title="armorclass" value="(10+@{CAbonus}+@{totalabilityacbonus}+@{CAtaillemod}+@{acdodgemod}+@{CAnat}+@{CAparademod}+@{acdivmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
+				<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CAbonus}+@{totalabilityacbonus}+@{CAtaillemod}+@{acdodgemod}+@{CAnat}+@{CAparademod}+@{acdivmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 				<td>=10<br><br></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_armorclassdexmod" title="armorclassdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CAbonus" title="CAbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CAtaillemod" title="CAtaillemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
@@ -1151,10 +1151,10 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_dexacbonusinuse" title="dexacbonusinuse (Uncheck if Dex is not used in your AC.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_dexacname" title="dexacname" style="width: 180px;" value="Dex Bonus" disabled="true" /></td>
 								<td style="width: 45px;"><input type="text" name="attr_dexbonus" title="dexbonus" style="width: 45px;" value="@{dex-mod}" disabled="true" /></td>
 								<td style="width: 25px;">Y </td>
-								<td style="width: 45px;"><input type="text" name="attr_dexacbonus" title="dexacbonus" style="width: 45px;" value="@{armorclassdexmod}" disabled="true" />
+								<td style="width: 45px;"><input type="text" name="attr_dexacbonus" title="dexacbonus" style="width: 45px;" value="@{CAdexmod}" disabled="true" />
 								<input type="hidden" name="attr_dexacpenalty" title="dexacpenalty" value="([[0-floor((0-@{dex-mod}-0.1)/(abs(0-@{dex-mod}-0.1)+0.001))*0 -floor((@{dex-mod}+0.1-0)/(abs(@{dex-mod}+0.1-0)+0.001))*@{dex-mod}]])" disabled="true" />
 								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{dex-mod} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
-								<input type="hidden" name="attr_armorclassdexmod" title="armorclassdexmod (either dex-mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armordexmod}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armordexmod}-@{encumbrmaxdex}-1)/10000000000)*@{armordexmod})" disabled="true" /></td>
+								<input type="hidden" name="attr_CAdexmod" title="CAdexmod (either dex-mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armordexmod}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armordexmod}-@{encumbrmaxdex}-1)/10000000000)*@{armordexmod})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;">Y </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_dexffac" title="dexffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span>* </td>
@@ -1165,9 +1165,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_abilityac1inuse" title="abilityac1inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_abilityac1name" title="abilityac1name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 45px;"><input type="text" name="attr_abilityac1bonus" title="abilityac1bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1capped" title="abilityac1capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac1bonus" title="cappedabilityac1bonus" style="width: 45px;" value="(@{abilityac1capped}*@{armorclassabilityac1mod} + (1-@{abilityac1capped})*@{abilityac1bonus})" disabled="true" />
+								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac1bonus" title="cappedabilityac1bonus" style="width: 45px;" value="(@{abilityac1capped}*@{CAabilityac1mod} + (1-@{abilityac1capped})*@{abilityac1bonus})" disabled="true" />
 								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
-								<input type="hidden" name="attr_armorclassabilityac1mod" title="armorclassabilityac1mod (either abilityac1bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac1}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac1}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac1})" disabled="true" /></td>
+								<input type="hidden" name="attr_CAabilityac1mod" title="CAabilityac1mod (either abilityac1bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac1}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac1}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac1})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1touchac" title="abilityac1touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1ffac" title="abilityac1ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
@@ -1178,9 +1178,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_abilityac2inuse" title="abilityac2inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_abilityac2name" title="abilityac2name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 45px;"><input type="text" name="attr_abilityac2bonus" title="abilityac2bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2capped" title="abilityac2capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac2bonus" title="cappedabilityac2bonus" style="width: 45px;" value="(@{abilityac2capped}*@{armorclassabilityac2mod} + (1-@{abilityac2capped})*@{abilityac2bonus})" disabled="true" />
+								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac2bonus" title="cappedabilityac2bonus" style="width: 45px;" value="(@{abilityac2capped}*@{CAabilityac2mod} + (1-@{abilityac2capped})*@{abilityac2bonus})" disabled="true" />
 								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
-								<input type="hidden" name="attr_armorclassabilityac2mod" title="armorclassabilityac2mod (either abilityac2bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac2}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac2}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac2})" disabled="true" /></td>
+								<input type="hidden" name="attr_CAabilityac2mod" title="CAabilityac2mod (either abilityac2bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac2}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac2}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac2})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2touchac" title="abilityac2touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2ffac" title="abilityac2ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
@@ -1191,9 +1191,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_abilityac3inuse" title="abilityac3inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_abilityac3name" title="abilityac3name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 45px;"><input type="text" name="attr_abilityac3bonus" title="abilityac3bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3capped" title="abilityac3capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac3bonus" title="cappedabilityac3bonus" style="width: 45px;" value="(@{abilityac3capped}*@{armorclassabilityac3mod} + (1-@{abilityac3capped})*@{abilityac3bonus})" disabled="true" />
+								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac3bonus" title="cappedabilityac3bonus" style="width: 45px;" value="(@{abilityac3capped}*@{CAabilityac3mod} + (1-@{abilityac3capped})*@{abilityac3bonus})" disabled="true" />
 								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
-								<input type="hidden" name="attr_armorclassabilityac3mod" title="armorclassabilityac3mod (either abilityac3bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac3}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac3}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac3})" disabled="true" /></td>
+								<input type="hidden" name="attr_CAabilityac3mod" title="CAabilityac3mod (either abilityac3bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac3}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac3}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac3})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3touchac" title="abilityac3touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3ffac" title="abilityac3ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
@@ -1264,9 +1264,9 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_armorclassnaturalarmor" title="armorclassnaturalarmor" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAnaturalarmor" title="CAnaturalarmor" value="0" /> <!--to prevent errors if it never existed before update--> </td>
 								<td style="width: 205px;"><input type="checkbox" name="attr_naturalarmor1inuse" title="naturalarmor1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_naturalarmor1name" title="naturalarmor1name" style="width: 180px;" placeholder="Name" value="Current Natural Armor Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_naturalarmor1bonus" title="naturalarmor1bonus" style="width: 54px;" value="@{armorclassnaturalarmor}" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_naturalarmor1bonus" title="naturalarmor1bonus" style="width: 54px;" value="@{CAnaturalarmor}" /></td>
 								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_naturalarmor1notes" title="naturalarmor1notes" >copied from original AC calc under stats/abilities; AC section if any </textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1302,9 +1302,9 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_armorclassdodgemod" title="armorclassdodgemod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAdodgemod" title="CAdodgemod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
 								<td style="width: 205px;"><input type="checkbox" name="attr_dodgebonus1inuse" title="dodgebonus1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_dodgebonus1name" title="dodgebonus1name" style="width: 180px;" placeholder="Name" value="Current Dodge Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_dodgebonus1bonus" title="dodgebonus1bonus" style="width: 54px;" value="@{armorclassdodgemod}" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_dodgebonus1bonus" title="dodgebonus1bonus" style="width: 54px;" value="@{CAdodgemod}" /></td>
 								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_dodgebonus1notes" title="dodgebonus1notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1340,9 +1340,9 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_armorclassdeflectionmod" title="armorclassdeflectionmod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAdeflectionmod" title="CAdeflectionmod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
 								<td style="width: 205px;"><input type="checkbox" name="attr_deflection1inuse" title="deflection1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_deflection1name" title="deflection1name" style="width: 180px;" placeholder="Name" value="Current Deflection Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_deflection1bonus" title="deflection1bonus" style="width: 54px;" value="@{armorclassdeflectionmod}" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_deflection1bonus" title="deflection1bonus" style="width: 54px;" value="@{CAdeflectionmod}" /></td>
 								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_deflection1notes" title="deflection1notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1386,9 +1386,9 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 390px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_armorclassdivmod" title="armorclassdivmod" value="0" /> <!--to prevent errors if it never existed before update--> </td> 
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAdivmod" title="CAdivmod" value="0" /> <!--to prevent errors if it never existed before update--> </td> 
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac1inuse" title="divac1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_divac1name" title="divac1name" style="width: 180px;" placeholder="Name" value="Current div AC Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_divac1bonus" title="divac1bonus" style="width: 54px;" value="@{armorclassdivmod}" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_divac1bonus" title="divac1bonus" style="width: 54px;" value="@{CAdivmod}" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1stdac" title="divac1stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1touchac" title="divac1touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1ffac" title="divac1ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
@@ -3239,7 +3239,7 @@
 											<span class="sheet-table-col">DD:<input style="width: 50px;" type="text" name="attr_summonhitdie" title="summonhitdie" placeholder="HD">(<input style="width: 30px;" type="text" name="attr_summonhitpoints" title="summonhitpoints" placeholder="Hit Points">) &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Init:<input style="width: 40px;" type="text" name="attr_summoninitiative" title="summoninitiative" placeholder="Initiative"> &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Vit:<input style="width: 70px;" type="text" name="attr_summonspeed" title="summonspeed" placeholder="Speed"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">CA:<input style="width: 30px;" type="text" name="attr_summonarmorclass" title="summonarmorclass" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summonarmorclassinfo" title="summonarmorclassinfo" placeholder="Armor Class Mod Info">), Contact:<input style="width: 30px;" type="text" name="attr_summontoucharmorclass" title="summontoucharmorclass" placeholder="T AC">, PaD:<input style="width: 30px;" type="text" name="attr_summonflatfootarmorclass" title="summonflatfootarmorclass" placeholder="FF AC"> &nbsp; &nbsp;</span>
+											<span class="sheet-table-col">CA:<input style="width: 30px;" type="text" name="attr_summonCA" title="summonCA" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summonCAinfo" title="summonCAinfo" placeholder="Armor Class Mod Info">), Contact:<input style="width: 30px;" type="text" name="attr_summontouchCA" title="summontouchCA" placeholder="T AC">, PaD:<input style="width: 30px;" type="text" name="attr_summonflatfootCA" title="summonflatfootCA" placeholder="FF AC"> &nbsp; &nbsp;</span>
 											<span class="sheet-table-col">BBa:<input style="width: 50px;" style="width: 30px;" type="text" name="attr_summonbaseatt" title="summonbaseatt" placeholder="Base Attack">/Gr:<input style="width: 30px;" type="text" name="attr_summongrapple" title="summongrapple" placeholder="Grapple"></span>
 										</div>
 										<div class="sheet-table-row">
@@ -3305,7 +3305,7 @@
 											<span class="sheet-table-col">DD:<input style="width: 50px;" type="text" name="attr_summon2hitdie" title="summon2hitdie" placeholder="HD">(<input style="width: 30px;" type="text" name="attr_summon2hitpoints" title="summon2hitpoints" placeholder="Hit Points">) &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Init:<input style="width: 40px;" type="text" name="attr_summon2initiative" title="summon2initiative" placeholder="Initiative"> &nbsp; &nbsp; </span>
 											<span class="sheet-table-col">Vit:<input style="width: 70px;" type="text" name="attr_summon2speed" title="summon2speed" placeholder="Speed"> &nbsp; &nbsp; </span>
-											<span class="sheet-table-col">CA:<input style="width: 30px;" type="text" name="attr_summon2armorclass" title="summon2armorclass" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summon2armorclassinfo" title="summon2armorclassinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 30px;" type="text" name="attr_summon2toucharmorclass" title="summon2toucharmorclass" placeholder="T AC">, FF:<input style="width: 30px;" type="text" name="attr_summon2flatfootarmorclass" title="summon2flatfootarmorclass" placeholder="FF AC"> &nbsp; &nbsp;</span>
+											<span class="sheet-table-col">CA:<input style="width: 30px;" type="text" name="attr_summon2CA" title="summon2CA" placeholder="AC">(<input style="width: 120px;" type="text" name="attr_summon2CAinfo" title="summon2CAinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 30px;" type="text" name="attr_summon2touchCA" title="summon2touchCA" placeholder="T AC">, FF:<input style="width: 30px;" type="text" name="attr_summon2flatfootCA" title="summon2flatfootCA" placeholder="FF AC"> &nbsp; &nbsp;</span>
 											<span class="sheet-table-col">BBa:<input style="width: 50px;" style="width: 30px;" type="text" name="attr_summon2baseatt" title="summon2baseatt" placeholder="Base Attack">/Gr:<input style="width: 30px;" type="text" name="attr_summon2grapple" title="summon2grapple" placeholder="Grapple"></span>
 										</div>
 										<div class="sheet-table-row">
@@ -3456,7 +3456,7 @@
 		</tr>
 		<tr>
 			<td class="sheet-table-header-right">Classe d'armure:</td>
-			<td class="sheet-table-left"><input style="width: 40px;" type="text" name="attr_npcarmorclass" title="npcarmorclass" placeholder="AC">(<input style="width: 290px;" type="text" name="attr_npcarmorclassinfo" title="npcarmorclassinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 40px;" type="text" name="attr_npctoucharmorclass" title="npctoucharmorclass" placeholder="T AC">, FF:<input style="width: 40px;" type="text" name="attr_npcflatfootarmorclass" title="npcflatfootarmorclass" placeholder="FF AC"></td>
+			<td class="sheet-table-left"><input style="width: 40px;" type="text" name="attr_npcCA" title="npcCA" placeholder="AC">(<input style="width: 290px;" type="text" name="attr_npcCAinfo" title="npcCAinfo" placeholder="Armor Class Mod Info">), Touch:<input style="width: 40px;" type="text" name="attr_npctouchCA" title="npctouchCA" placeholder="T AC">, FF:<input style="width: 40px;" type="text" name="attr_npcflatfootCA" title="npcflatfootCA" placeholder="FF AC"></td>
 		</tr>
 		<tr>
 			<td class="sheet-table-header-right">Attaque de base/Lutte:</td>
