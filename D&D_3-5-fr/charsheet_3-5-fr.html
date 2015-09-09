@@ -1188,16 +1188,16 @@
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_CA-Utilise-Carac3" title="CA-Utilise-Carac3 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_abilityac3name" title="abilityac3name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 45px;"><input type="text" name="attr_abilityac3bonus" title="abilityac3bonus" style="width: 45px;" value="0" /></td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3capped" title="abilityac3capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 45px;"><input type="text" name="attr_CA-MaxCarac3-bonus" title="CA-MaxCarac3-bonus" style="width: 45px;" value="(@{abilityac3capped}*@{CAabilityac3mod} + (1-@{abilityac3capped})*@{abilityac3bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{abilityac3bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
-								<input type="hidden" name="attr_CAabilityac3mod" title="CAabilityac3mod (either abilityac3bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac3}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{armorabilityac3}-@{Encombrement-maxdex}-1)/10000000000)*@{armorabilityac3})" disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_CA-Utilise-Carac3" title="CA-Utilise-Carac3 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_CA-Carac3-nom" title="CA-Carac3-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 45px;"><input type="text" name="attr_CA-Carac3-bonus" title="CA-Carac3-bonus" style="width: 45px;" value="0" /></td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA-MaxCarac3" title="CA-MaxCarac3 (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
+								<td style="width: 45px;"><input type="text" name="attr_CA-MaxCarac3-bonus" title="CA-MaxCarac3-bonus" style="width: 45px;" value="(@{CA-MaxCarac3}*@{CA-Carac3-mod} + (1-@{CA-MaxCarac3})*@{CA-Carac3-bonus})" disabled="true" />
+								<input type="hidden" name="attr_Armure-CA-Carac3" title="Armure-CA-Carac3 (either CA-Carac3-bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{CA-Carac3-bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{CA-Carac3-bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{CA-Carac3-bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_CA-Carac3-mod" title="CA-Carac3-mod (either CA-Carac3-bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA-Carac3}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{Armure-CA-Carac3}-@{Encombrement-maxdex}-1)/10000000000)*@{Armure-CA-Carac3})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA-Contact-Carac3" title="CA-Contact-Carac3 (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA-PaD-Carac3" title="CA-PaD-Carac3 (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_abilityac3notes" title="abilityac3notes" ></textarea></td>
+								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_CA-Carac3-notes" title="CA-Carac3-notes" ></textarea></td>
 							</tr>
 						</table>
 					</div>
