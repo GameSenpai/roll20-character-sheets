@@ -1106,12 +1106,12 @@
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 404px;" colspan="5">Propriétés spéciales</td>
 					</tr>
 					<tr>
-						<td><input class="sheet-inputbox" type="text" name="attr_shield" title="shield" style="height: 24px; width: 184px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_shieldbonus" title="shieldbonus" value="0" style="height: 24px; width: 54px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier" title="Bouclier" style="height: 24px; width: 184px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-bonus" title="Bouclier-bonus" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteBouclier-check" title="PenaliteBouclier-check" value="0" style="height: 24px; width: 54px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_shieldspellfailure" title="shieldspellfailure" value="0" style="height: 24px; width: 54px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_shieldweight" title="shieldweight" value="0" style="height: 24px; width: 54px;" /></td>
-						<td colspan="5"><input class="sheet-inputbox" type="text" name="attr_shieldproperties" title="shieldproperties" style="height: 24px; width: 404px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-EchecSorts" title="Bouclier-EchecSorts" value="0" style="height: 24px; width: 54px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-Poids" title="Bouclier-Poids" value="0" style="height: 24px; width: 54px;" /></td>
+						<td colspan="5"><input class="sheet-inputbox" type="text" name="attr_Bouclier-Proprietes" title="Bouclier-Proprietes" style="height: 24px; width: 404px;" /></td>
 					</tr>
 				</table>
 			</div>
@@ -1203,7 +1203,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalArmure-bonus" title="TotalArmure-bonus" style="width: 54px;" value="(@{DurabiliteArmure}*@{armorbonus} +@{DurabiliteBouclier}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
+				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalArmure-bonus" title="TotalArmure-bonus" style="width: 54px;" value="(@{DurabiliteArmure}*@{armorbonus} +@{DurabiliteBouclier}*@{Bouclieracbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-armorbonuscalc">
 					<div style="float: left">
 						<table>
@@ -1221,9 +1221,9 @@
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteBouclier" title="DurabiliteBouclier (Check if this shield is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_shieldbonusname" title="shieldbonusname" style="width: 180px;" value="Shield" disabled="true" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_shieldacbonus" title="shieldacbonus" style="width: 54px;" value="(@{shieldbonus})" disabled="true" /></td>
-								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_shieldbonusnotes" title="shieldbonusnotes" value="From Shield, above. " disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteBouclier" title="DurabiliteBouclier (Check if this Bouclier is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_Bouclier-bonusname" title="Bouclier-bonusname" style="width: 180px;" value="Bouclier" disabled="true" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_Bouclieracbonus" title="Bouclieracbonus" style="width: 54px;" value="(@{Bouclier-bonus})" disabled="true" /></td>
+								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_Bouclier-bonusnotes" title="Bouclier-bonusnotes" value="From Bouclier, above. " disabled="true" /></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
