@@ -1176,15 +1176,15 @@
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
 								<td style="width: 205px;"><input type="checkbox" name="attr_CA-Utilise-Carac2" title="CA-Utilise-Carac2 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_CA-Carac2-nom" title="CA-Carac2-nom" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 45px;"><input type="text" name="attr_abilityac2bonus" title="abilityac2bonus" style="width: 45px;" value="0" /></td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2capped" title="abilityac2capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 45px;"><input type="text" name="attr_CA-MaxCarac2-bonus" title="CA-MaxCarac2-bonus" style="width: 45px;" value="(@{abilityac2capped}*@{CAabilityac2mod} + (1-@{abilityac2capped})*@{abilityac2bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{abilityac2bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
-								<input type="hidden" name="attr_CAabilityac2mod" title="CAabilityac2mod (either abilityac2bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac2}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{armorabilityac2}-@{Encombrement-maxdex}-1)/10000000000)*@{armorabilityac2})" disabled="true" /></td>
+								<td style="width: 45px;"><input type="text" name="attr_CA-Carac2-bonus" title="CA-Carac2-bonus" style="width: 45px;" value="0" /></td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA-MaxCarac2" title="CA-MaxCarac2 (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
+								<td style="width: 45px;"><input type="text" name="attr_CA-MaxCarac2-bonus" title="CA-MaxCarac2-bonus" style="width: 45px;" value="(@{CA-MaxCarac2}*@{CA-Carac2-mod} + (1-@{CA-MaxCarac2})*@{CA-Carac2-bonus})" disabled="true" />
+								<input type="hidden" name="attr_Armure-CA-Carac2" title="Armure-CA-Carac2 (either CA-Carac2-bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{CA-Carac2-bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{ObjetCA-dex} - floor((@{CA-Carac2-bonus} -@{ObjetCA-dex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{CA-Carac2-bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_CA-Carac2-mod" title="CA-Carac2-mod (either CA-Carac2-bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA-Carac2}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{Armure-CA-Carac2}-@{Encombrement-maxdex}-1)/10000000000)*@{Armure-CA-Carac2})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA-Contact-Carac2" title="CA-Contact-Carac2 (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA-PaD-Carac2" title="CA-PaD-Carac2 (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
-								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_abilityac2notes" title="abilityac2notes" ></textarea></td>
+								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_CA-Carac2-notes" title="CA-Carac2-notes" ></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
