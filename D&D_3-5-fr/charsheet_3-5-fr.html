@@ -235,15 +235,15 @@
 									<table>
 										<tr>
 											<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'Armure</div></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CAbonus}+@{totalcaracCAbonus}+@{CAtaillemod}+@{CAesquivemod}+@{CAnat}+@{CAparademod}+@{CAdivmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CA-bonus}+@{totalcaracCA-bonus}+@{CA-Taille-mod}+@{CAesquivemod}+@{CA-ArmureNat-mod}+@{CA-Parade-mod}+@{CAdivmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 											<td>=10+<br><br></td>
-											<td><input class="sheet-inputbox" type="text" name="attr_CAbonus" title="CAbonus (à partir des CA ci-dessous)" value="(@{totalarmurebonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armure</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (voir la section des Bonus de Caractéristiques en CA pour comment cette valeur est calculée)" value="@{totalcaracCAbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_CAtaillemod" title="CAtaillemod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
+											<td><input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des CA ci-dessous)" value="(@{totalarmurebonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armure</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (voir la section des Bonus de Caractéristiques en CA pour comment cette valeur est calculée)" value="@{totalcaracCA-bonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CAesquivemod" title="CAesquivemod" value="@{totalesquivebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_CAnat" title="CAnat" value="@{totalarmurenaturellebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_CAparademod" title="CAparademod" value="@{totalparadebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdivmod" title="CAdivmod" value="@{totaldivCAbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{totalarmurenaturellebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{totalparadebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdivmod" title="CAdivmod" value="@{totaldivCA-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
 											<td valign="top"><input type="hidden" name="attr_penaliteArmure" title="penaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/>
 												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_penaliteArmureCheck" title="penaliteArmureCheck" value=" (ceil((@{penaliteArmure}-@{encumbrCA})/10000000000)*@{encumbrCA} - floor((@{penaliteArmure}-@{encumbrCA}-1)/10000000000)*@{penaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
@@ -256,11 +256,11 @@
 									<table>
 										<tr>
 											<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_contactCA" title="contactCA" value="(10 + @{totalCaracContactCAbonus} + @{CAtaillemod} + @{CAesquivemod} + @{CAparademod} + @{totalDivContactCAbonus})" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_contactCA" title="contactCA" value="(10 + @{totalCaracContactCA-bonus} + @{CA-Taille-mod} + @{CAesquivemod} + @{CA-Parade-mod} + @{totalDivContactCA-bonus})" disabled="true" /> &nbsp; </td>
 											<td style="width: 70px;" class="sheet-statlabel">Pris au Dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PaDCA" title="PaDCA" value="10 + @{totalCaracPaDCAbonus} +@{CAbonus} +@{CAtaillemod} +@{CAnat} +@{CAparademod} +@{totalDivPaDbonus}" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PaDCA" title="PaDCA" value="10 + @{totalCaracPaDCA-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totalDivPaDbonus}" disabled="true" /> &nbsp; </td>
 											<td style="width: 60px;" class="sheet-statlabel">Immobile<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblCA" title="immoblCA" value="10 +@{totalCaracImmoblCAbonus} +@{CAbonus} +@{CAtaillemod} +@{CAnat} +@{CAparademod} +@{totalDivImmoblCAbonus}" disabled="true" /> &nbsp; </td>
+											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblCA" title="immoblCA" value="10 +@{totalCaracImmoblCA-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totalDivImmoblCA-bonus}" disabled="true" /> &nbsp; </td>
 											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_reductionDommages" title="reductionDommages" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
 											<td valign="top"><input type="hidden" name="attr_penaliteArmure" title="penaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/>
@@ -1031,32 +1031,32 @@
 		<!--CA-->
 		<!--CA = 10 + Bonus Armure + Bonus Bouclier + Dex + Taille + Esquive + Armure Naturelle + Parade + Divers
 		<br>
-		CA touchée = 10 + Dex + Taille + Esquive + Parade + Divers
+		CA Touchée = 10 + Dex + Taille + Esquive + Parade + Divers
 		<br>
-		FF CA = 10 + Dex (penalités seulement) + Bonus Armure + Bonus Bouclier + Taille + Arumure Naturelle + Parade + Divers
+		CA Pris au Dépourvu = 10 + Dex (penalités seulement) + Bonus Armure + Bonus Bouclier + Taille + Arumure Naturelle + Parade + Divers
 		<br>
-		Taille + Parade + Divers  (CA, CA touchée, FF CA) <br>
-		Bonus Armure + Bonus Bouclier + Armure Naturelle (CA et FF CA, pas CA touchée) <br>
-		Dex + Esquive (CA et CA touchée, pas FF CA)<br> -->
+		Taille + Parade + Divers  (CA, CA touchée, CA PaD) <br>
+		Bonus Armure + Bonus Bouclier + Armure Naturelle (CA et CA PaD, pas CA touchée) <br>
+		Dex + Esquive (CA et CA touchée, pas CA PaD)<br> -->
 		<table>
 			<tr>
 				<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CAbonus}+@{totalabilityacbonus}+@{CAtaillemod}+@{acdodgemod}+@{CAnat}+@{CAparademod}+@{acdivmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
+				<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CA-bonus}+@{CA-TotalCaracbonus}+@{CA-Taille-mod}+@{CA-Esquive-mod}+@{CA-ArmureNat-mod}+@{CA-Parade-mod}+@{CA-Divers-mod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 				<td>=10<br><br></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{totalabilityacbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CAbonus" title="CAbonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CAtaillemod" title="CAtaillemod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_acdodgemod" title="acdodgemod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CAnat" title="CAnat" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CAparademod" title="CAparademod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_acdivmod" title="acdivmod" value="@{totaldivacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{CA-TotalCaracbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Divers-mod" title="CA-Divers-mod" value="@{totaldivacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 				<td> &nbsp; &nbsp; &nbsp; </td>
 				<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{CAtaillemod} +@{acdodgemod} +@{CAparademod} +@{totaldivtouchacbonus})" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
+				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{CA-Taille-mod} +@{CA-Esquive-mod} +@{CA-Parade-mod} +@{totaldivtouchacbonus})" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<td style="width: 70px;" class="sheet-statlabel">Pris au dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{CAbonus} +@{CAtaillemod} +@{CAnat} +@{CAparademod} +@{totaldivffacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
+				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totaldivffacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<td style="width: 70px;" class="sheet-statlabel">Immobilisé<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{CAbonus} +@{CAtaillemod} +@{CAnat} +@{CAparademod} +@{totaldivimmoblacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
+				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totaldivimmoblacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Damage Reduction</div></td-->
 				<td valign="top"> &nbsp;<input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/> &nbsp; 
 					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
@@ -1127,7 +1127,7 @@
 					</tr>
 				</table>
 				<input type="checkbox" class="sheet-pc-abilityaccalc-show sheet-arrow" title="abilityaccalc-show" name="attr_abilityaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Bonus de carac. &nbsp; &nbsp; &nbsp; </span>
-				<span> Bonus CA:<input type="text" name="attr_totalabilityacbonus" title="totalabilityacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span>
+				<span> Bonus CA:<input type="text" name="attr_CA-TotalCaracbonus" title="CA-TotalCaracbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span>
 				<span> CA Contact:<input type="text" name="attr_totalabilitytouchacbonus" title="totalabilitytouchacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1touchac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2touchac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3touchac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
 				<span> CA PaD:<input type="text" name="attr_totalabilityffacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty}*(1-@{dexffac}) +@{dexacbonusinuse}*@{dexffac}*@{dexacbonus} +@{abilityac1ffac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2ffac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3ffac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
 				<span> CA Immobilisation:<input type="text" name="attr_totalabilityimmoblacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty} )" disabled="true" /></span>
@@ -1264,9 +1264,9 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAnaturalarmor" title="CAnaturalarmor" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CA-ArmureNat-moduralarmor" title="CA-ArmureNat-moduralarmor" value="0" /> <!--to prevent errors if it never existed before update--> </td>
 								<td style="width: 205px;"><input type="checkbox" name="attr_naturalarmor1inuse" title="naturalarmor1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_naturalarmor1name" title="naturalarmor1name" style="width: 180px;" placeholder="Name" value="Current Natural Armor Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_naturalarmor1bonus" title="naturalarmor1bonus" style="width: 54px;" value="@{CAnaturalarmor}" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_naturalarmor1bonus" title="naturalarmor1bonus" style="width: 54px;" value="@{CA-ArmureNat-moduralarmor}" /></td>
 								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_naturalarmor1notes" title="naturalarmor1notes" >copied from original AC calc under stats/abilities; AC section if any </textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
