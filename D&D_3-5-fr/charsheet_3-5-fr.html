@@ -238,15 +238,15 @@
 											<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CA-bonus}+@{totalcaracCA-bonus}+@{CA-Taille-mod}+@{CAesquivemod}+@{CA-ArmureNat-mod}+@{CA-Parade-mod}+@{CAdivmod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 											<td>=10+<br><br></td>
 											<td><input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des CA ci-dessous)" value="(@{totalarmurebonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Armure</div></td>
-											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (voir la section des Bonus de Caractéristiques en CA pour comment cette valeur est calculée)" value="@{totalcaracCA-bonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
+											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Dex-mod" title="CA-Dex-mod (voir la section des Bonus de Caractéristiques en CA pour comment cette valeur est calculée)" value="@{totalcaracCA-bonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Dextérité</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CAesquivemod" title="CAesquivemod" value="@{totalesquivebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{totalarmurenaturellebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{totalparadebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CAdivmod" title="CAdivmod" value="@{totaldivCA-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
-											<td valign="top"><input type="hidden" name="attr_penaliteArmure" title="penaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/>
-												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_penaliteArmureCheck" title="penaliteArmureCheck" value=" (ceil((@{penaliteArmure}-@{encumbrCA})/10000000000)*@{encumbrCA} - floor((@{penaliteArmure}-@{encumbrCA}-1)/10000000000)*@{penaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
+											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{DurabiliteArmure}*@{PenaliteObjetCA-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
+												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PenaliteArmure-check" title="PenaliteArmure-check" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
 										</tr>
 									</table>
 								</td>
@@ -263,8 +263,8 @@
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblCA" title="immoblCA" value="10 +@{totalCaracImmoblCA-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totalDivImmoblCA-bonus}" disabled="true" /> &nbsp; </td>
 											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_reductionDommages" title="reductionDommages" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
-											<td valign="top"><input type="hidden" name="attr_penaliteArmure" title="penaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/>
-												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
+											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{PenaliteObjetCA-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
+												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
 										</tr>
 									</table>
 									<br>
@@ -1031,35 +1031,35 @@
 		<!--CA-->
 		<!--CA = 10 + Bonus Armure + Bonus Bouclier + Dex + Taille + Esquive + Armure Naturelle + Parade + Divers
 		<br>
-		CA Touchée = 10 + Dex + Taille + Esquive + Parade + Divers
+		CA au Contact = 10 + Dex + Taille + Esquive + Parade + Divers
 		<br>
 		CA Pris au Dépourvu = 10 + Dex (penalités seulement) + Bonus Armure + Bonus Bouclier + Taille + Arumure Naturelle + Parade + Divers
 		<br>
-		Taille + Parade + Divers  (CA, CA touchée, CA PaD) <br>
-		Bonus Armure + Bonus Bouclier + Armure Naturelle (CA et CA PaD, pas CA touchée) <br>
-		Dex + Esquive (CA et CA touchée, pas CA PaD)<br> -->
+		Taille + Parade + Divers  (CA, CA Contact, CA PaD) <br>
+		Bonus Armure + Bonus Bouclier + Armure Naturelle (CA et CA PaD, pas CA Contact) <br>
+		Dex + Esquive (CA et CA Contact, pas CA PaD)<br> -->
 		<table>
 			<tr>
 				<td style="width: 38px;" class="sheet-statlabel">CA<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CA-bonus}+@{CA-TotalCaracbonus}+@{CA-Taille-mod}+@{CA-Esquive-mod}+@{CA-ArmureNat-mod}+@{CA-Parade-mod}+@{CA-Divers-mod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
+				<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CA-bonus}+@{CA-TotalCarac-bonus}+@{CA-Taille-mod}+@{CA-Esquive-mod}+@{CA-ArmureNat-mod}+@{CA-Parade-mod}+@{CA-Divers-mod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 				<td>=10<br><br></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CAdexmod" title="CAdexmod (see Ability Bonus section in AC for how value is calculated)" value="@{CA-TotalCaracbonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (from AC items section below)" value="(@{totalarmorbonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{size}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{totaldodgebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{totalnaturalarmorbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{totaldeflectionbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Divers-mod" title="CA-Divers-mod" value="@{totaldivacbonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Dex-mod" title="CA-Dex-mod (voir la section des Bonus de caractéristique pour la CA pour savoir comment cette valeur est calculée)" value="@{CA-TotalCarac-bonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des objets ci-dessous)" value="(@{TotalArmure-bonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{TotalEsquive-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{TotalArmureNaturelle-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{TotalParade-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Divers-mod" title="CA-Divers-mod" value="@{TotalCAdiv-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 				<td> &nbsp; &nbsp; &nbsp; </td>
 				<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_touchac" title="touchac" value="(10+ @{totalabilitytouchacbonus} +@{CA-Taille-mod} +@{CA-Esquive-mod} +@{CA-Parade-mod} +@{totaldivtouchacbonus})" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
+				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CA-Contact" title="CA-Contact" value="(10+ @{TotalCaracCA-Contact-bonus} +@{CA-Taille-mod} +@{CA-Esquive-mod} +@{CA-Parade-mod} +@{TotalDivCA-Contact-bonus})" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<td style="width: 70px;" class="sheet-statlabel">Pris au dépourvu<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_flatac" title="flatac" value="10 +@{totalabilityffacbonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totaldivffacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
+				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CA-PaD" title="CA-PaD" value="10 +@{TotalCaracCA-PaD-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{TotalDivCA-PaD-bonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<td style="width: 70px;" class="sheet-statlabel">Immobilisé<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
-				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblac" title="immoblac" value="10 +@{totalabilityimmoblacbonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totaldivimmoblacbonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
-				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_damagereduction" title="damagereduction" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Damage Reduction</div></td-->
-				<td valign="top"> &nbsp;<input type="hidden" name="attr_armorpenalty" title="armorpenalty (max of armor check penalty and encumbrance check penalty)" value="(@{armureDurabilite}*@{penaliteObjetCAcheck}+@{durabiliteBouclier}*@{penaliteBouclierCheck})" disabled="true"/> &nbsp; 
-					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{armorpenalty}-@{encumbracp})/10000000000)*@{encumbracp} - floor((@{armorpenalty}-@{encumbracp}-1)/10000000000)*@{armorpenalty})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
+				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CA-Immobile" title="CA-Immobile" value="10 +@{TotalCaracCA-Immobile-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{TotalDivCA-Immobile-bonus}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
+				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_ReductionDommages" title="ReductionDommages" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Réduction des dommages</div></td-->
+				<td valign="top"> &nbsp;<input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (Maximum du test de pénalité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{PenaliteObjetCA-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/> &nbsp; 
+					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
 			</tr>
 		</table>
 		<hr/>
@@ -1073,7 +1073,7 @@
 				</table>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_armureDurabilite" title="armureDurabilite (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+						<td class="sheet-statlabel" style="font-size: 1em; width: 180px;" colspan="3"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Check if this armor is being worn.)" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Armure &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 58px;">Type</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">DEX Max</td>
@@ -1088,7 +1088,7 @@
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemtype" title="acitemtype" style="height: 24px; width: 58px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitembonus" title="acitembonus" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemdex" title="acitemdex" style="height: 24px; width: 54px;" value="20"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_penaliteObjetCAcheck" title="penaliteObjetCAcheck" style="height: 24px; width: 54px;" value="0"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteObjetCA-check" title="PenaliteObjetCA-check" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemspellfailure" title="acitemspellfailure" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemspeed" title="acitemspeed" style="height: 24px; width: 70px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_acitemweight" title="acitemweight" value="0" style="height: 24px; width: 54px;" /></td>
@@ -1098,7 +1098,7 @@
 				<br>
 				<table cellpadding="0" cellspacing="0">
 					<tr>
-					<td class="sheet-statlabel" style="font-size: 1em; width: 184px;"><input type="checkbox" name="attr_durabiliteBouclier" title="durabiliteBouclier" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bouclier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+					<td class="sheet-statlabel" style="font-size: 1em; width: 184px;"><input type="checkbox" name="attr_DurabiliteBouclier" title="DurabiliteBouclier" value="1" style="width: 8px;" checked /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bouclier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Bonus CA</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Pénalité</td>
 						<td class="sheet-statlabel" style="font-size: 0.65em; width: 54px;">Echec des sorts</td>
@@ -1108,7 +1108,7 @@
 					<tr>
 						<td><input class="sheet-inputbox" type="text" name="attr_shield" title="shield" style="height: 24px; width: 184px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_shieldbonus" title="shieldbonus" value="0" style="height: 24px; width: 54px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_penaliteBouclierCheck" title="penaliteBouclierCheck" value="0" style="height: 24px; width: 54px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteBouclier-check" title="PenaliteBouclier-check" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_shieldspellfailure" title="shieldspellfailure" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_shieldweight" title="shieldweight" value="0" style="height: 24px; width: 54px;" /></td>
 						<td colspan="5"><input class="sheet-inputbox" type="text" name="attr_shieldproperties" title="shieldproperties" style="height: 24px; width: 404px;" /></td>
@@ -1127,10 +1127,10 @@
 					</tr>
 				</table>
 				<input type="checkbox" class="sheet-pc-abilityaccalc-show sheet-arrow" title="abilityaccalc-show" name="attr_abilityaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Bonus de carac. &nbsp; &nbsp; &nbsp; </span>
-				<span> Bonus CA:<input type="text" name="attr_CA-TotalCaracbonus" title="CA-TotalCaracbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span>
-				<span> CA Contact:<input type="text" name="attr_totalabilitytouchacbonus" title="totalabilitytouchacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1touchac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2touchac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3touchac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
-				<span> CA PaD:<input type="text" name="attr_totalabilityffacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty}*(1-@{dexffac}) +@{dexacbonusinuse}*@{dexffac}*@{dexacbonus} +@{abilityac1ffac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2ffac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3ffac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
-				<span> CA Immobilisation:<input type="text" name="attr_totalabilityimmoblacbonus" title="totalabilityffacbonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty} )" disabled="true" /></span>
+				<span> Bonus CA:<input type="text" name="attr_CA-TotalCarac-bonus" title="CA-TotalCarac-bonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span>
+				<span> CA Contact:<input type="text" name="attr_TotalCaracCA-Contact-bonus" title="TotalCaracCA-Contact-bonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacbonus} +@{abilityac1CA-Contact}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2CA-Contact}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3CA-Contact}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
+				<span> CA PaD:<input type="text" name="attr_TotalCaracCA-PaD-bonus" title="TotalCaracCA-PaD-bonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty}*(1-@{dexffac}) +@{dexacbonusinuse}*@{dexffac}*@{dexacbonus} +@{abilityac1ffac}*@{abilityac1inuse}*@{cappedabilityac1bonus} +@{abilityac2ffac}*@{abilityac2inuse}*@{cappedabilityac2bonus} +@{abilityac3ffac}*@{abilityac3inuse}*@{cappedabilityac3bonus})" disabled="true" /></span> 
+				<span> CA Immobilisation:<input type="text" name="attr_TotalCaracCA-Immobile-bonus" title="TotalCaracCA-PaD-bonus" style="width: 29px;" value="(@{dexacbonusinuse}*@{dexacpenalty} )" disabled="true" /></span>
 				<br>
 				<span style="font-style: italic; font-size: .6em;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Basiquement: Une partie de la CA et de la CA au contact.  La pénalité s'applique à la CA quand PaD et immobilisé, le bonus non.  Capé par l'armure et la charge.</span>
 				<div class="sheet-pc-abilityaccalc">
@@ -1151,10 +1151,10 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_dexacbonusinuse" title="dexacbonusinuse (Uncheck if Dex is not used in your AC.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_dexacname" title="dexacname" style="width: 180px;" value="Dex Bonus" disabled="true" /></td>
 								<td style="width: 45px;"><input type="text" name="attr_dexbonus" title="dexbonus" style="width: 45px;" value="@{dex-mod}" disabled="true" /></td>
 								<td style="width: 25px;">Y </td>
-								<td style="width: 45px;"><input type="text" name="attr_dexacbonus" title="dexacbonus" style="width: 45px;" value="@{CAdexmod}" disabled="true" />
+								<td style="width: 45px;"><input type="text" name="attr_dexacbonus" title="dexacbonus" style="width: 45px;" value="@{CA-Dex-mod}" disabled="true" />
 								<input type="hidden" name="attr_dexacpenalty" title="dexacpenalty" value="([[0-floor((0-@{dex-mod}-0.1)/(abs(0-@{dex-mod}-0.1)+0.001))*0 -floor((@{dex-mod}+0.1-0)/(abs(@{dex-mod}+0.1-0)+0.001))*@{dex-mod}]])" disabled="true" />
-								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{dex-mod} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
-								<input type="hidden" name="attr_CAdexmod" title="CAdexmod (either dex-mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armordexmod}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armordexmod}-@{encumbrmaxdex}-1)/10000000000)*@{armordexmod})" disabled="true" /></td>
+								<input type="hidden" name="attr_armordexmod" title="armordexmod (either dex-mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{dex-mod} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{dex-mod} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{dex-mod} )" disabled="true"/> 
+								<input type="hidden" name="attr_CA-Dex-mod" title="CA-Dex-mod (either dex-mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armordexmod}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armordexmod}-@{encumbrmaxdex}-1)/10000000000)*@{armordexmod})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
 								<td style="width: 25px;">Y </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_dexffac" title="dexffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span>* </td>
@@ -1166,10 +1166,10 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac1bonus" title="abilityac1bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1capped" title="abilityac1capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac1bonus" title="cappedabilityac1bonus" style="width: 45px;" value="(@{abilityac1capped}*@{CAabilityac1mod} + (1-@{abilityac1capped})*@{abilityac1bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac1bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac1" title="armorabilityac1 (either abilityac1bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac1bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{abilityac1bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac1bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_CAabilityac1mod" title="CAabilityac1mod (either abilityac1bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac1}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac1}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac1})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1touchac" title="abilityac1touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1CA-Contact" title="abilityac1CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac1ffac" title="abilityac1ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_abilityac1notes" title="abilityac1notes" ></textarea></td>
 							</tr>
@@ -1179,10 +1179,10 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac2bonus" title="abilityac2bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2capped" title="abilityac2capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac2bonus" title="cappedabilityac2bonus" style="width: 45px;" value="(@{abilityac2capped}*@{CAabilityac2mod} + (1-@{abilityac2capped})*@{abilityac2bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac2bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac2" title="armorabilityac2 (either abilityac2bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac2bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{abilityac2bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac2bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_CAabilityac2mod" title="CAabilityac2mod (either abilityac2bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac2}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac2}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac2})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2touchac" title="abilityac2touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2CA-Contact" title="abilityac2CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac2ffac" title="abilityac2ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_abilityac2notes" title="abilityac2notes" ></textarea></td>
 							</tr>
@@ -1192,10 +1192,10 @@
 								<td style="width: 45px;"><input type="text" name="attr_abilityac3bonus" title="abilityac3bonus" style="width: 45px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3capped" title="abilityac3capped (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 45px;"><input type="text" name="attr_cappedabilityac3bonus" title="cappedabilityac3bonus" style="width: 45px;" value="(@{abilityac3capped}*@{CAabilityac3mod} + (1-@{abilityac3capped})*@{abilityac3bonus})" disabled="true" />
-								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armureDurabilite}))/10000000000)*@{acitemdex} - floor((@{abilityac3bonus} -@{acitemdex}*(100-99*@{armureDurabilite})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
+								<input type="hidden" name="attr_armorabilityac3" title="armorabilityac3 (either abilityac3bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{abilityac3bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure}))/10000000000)*@{acitemdex} - floor((@{abilityac3bonus} -@{acitemdex}*(100-99*@{DurabiliteArmure})-1)/10000000000)*@{abilityac3bonus} )" disabled="true"/> 
 								<input type="hidden" name="attr_CAabilityac3mod" title="CAabilityac3mod (either abilityac3bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{armorabilityac3}-@{encumbrmaxdex})/10000000000)*@{encumbrmaxdex} - floor((@{armorabilityac3}-@{encumbrmaxdex}-1)/10000000000)*@{armorabilityac3})" disabled="true" /></td>
 									<!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3touchac" title="abilityac3touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3CA-Contact" title="abilityac3CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_abilityac3ffac" title="abilityac3ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
 								<td style="width: 375px;"> <textarea rows="1" cols="55" style="float: left; height: 18px; width: 375px;" name="attr_abilityac3notes" title="abilityac3notes" ></textarea></td>
 							</tr>
@@ -1203,7 +1203,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalarmorbonus" title="totalarmorbonus" style="width: 54px;" value="(@{armureDurabilite}*@{armorbonus} +@{durabiliteBouclier}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
+				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalArmure-bonus" title="TotalArmure-bonus" style="width: 54px;" value="(@{DurabiliteArmure}*@{armorbonus} +@{DurabiliteBouclier}*@{shieldacbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-armorbonuscalc">
 					<div style="float: left">
 						<table>
@@ -1215,13 +1215,13 @@
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_armureDurabilite" title="armureDurabilite (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_armorbonusname" title="armorbonusname" style="width: 180px;" value="Armor" disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_armorbonusname" title="armorbonusname" style="width: 180px;" value="Armor" disabled="true" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_armorbonus" title="armorbonus" style="width: 54px;" value="(@{acitembonus})" disabled="true" /></td>
 								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_armorbonusnotes" title="armorbonusnotes" value="From Armor, above. " disabled="true" /></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_durabiliteBouclier" title="durabiliteBouclier (Check if this shield is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_shieldbonusname" title="shieldbonusname" style="width: 180px;" value="Shield" disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteBouclier" title="DurabiliteBouclier (Check if this shield is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_shieldbonusname" title="shieldbonusname" style="width: 180px;" value="Shield" disabled="true" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_shieldacbonus" title="shieldacbonus" style="width: 54px;" value="(@{shieldbonus})" disabled="true" /></td>
 								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_shieldbonusnotes" title="shieldbonusnotes" value="From Shield, above. " disabled="true" /></td>
 							</tr>
@@ -1253,7 +1253,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-naturalarmorcalc-show sheet-arrow" title="naturalarmorcalc-show" name="attr_naturalarmorcalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure Nat. &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totalnaturalarmorbonus" title="totalnaturalarmorbonus" style="width: 54px;" value="(@{naturalarmor1inuse}*@{naturalarmor1bonus} +@{naturalarmor2inuse}*@{naturalarmor2bonus} +@{naturalarmor3inuse}*@{naturalarmor3bonus} +@{naturalarmor4inuse}*@{naturalarmor4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
+				<input type="checkbox" class="sheet-pc-naturalarmorcalc-show sheet-arrow" title="naturalarmorcalc-show" name="attr_naturalarmorcalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure Nat. &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalArmureNaturelle-bonus" title="TotalArmureNaturelle-bonus" style="width: 54px;" value="(@{naturalarmor1inuse}*@{naturalarmor1bonus} +@{naturalarmor2inuse}*@{naturalarmor2bonus} +@{naturalarmor3inuse}*@{naturalarmor3bonus} +@{naturalarmor4inuse}*@{naturalarmor4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-naturalarmorcalc">
 					<div style="float: left">
 						<table>
@@ -1291,7 +1291,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-dodgecalc-show sheet-arrow" title="dodgecalc-show" name="attr_dodgecalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Esquive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Total:<input type="text" name="attr_totaldodgebonus" title="totaldodgebonus" style="width: 54px;" value="(@{dodgebonus1inuse}*@{dodgebonus1bonus} +@{dodgebonus2inuse}*@{dodgebonus2bonus} +@{dodgebonus3inuse}*@{dodgebonus3bonus} +@{dodgebonus4inuse}*@{dodgebonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact  </span>
+				<input type="checkbox" class="sheet-pc-dodgecalc-show sheet-arrow" title="dodgecalc-show" name="attr_dodgecalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Esquive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Total:<input type="text" name="attr_TotalEsquive-bonus" title="TotalEsquive-bonus" style="width: 54px;" value="(@{dodgebonus1inuse}*@{dodgebonus1bonus} +@{dodgebonus2inuse}*@{dodgebonus2bonus} +@{dodgebonus3inuse}*@{dodgebonus3bonus} +@{dodgebonus4inuse}*@{dodgebonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact  </span>
 				<div class="sheet-pc-dodgecalc">
 					<div style="float: left">
 						<table>
@@ -1329,7 +1329,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-deflectioncalc-show sheet-arrow" title="deflectioncalc-show" name="attr_deflectioncalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Déflexion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_totaldeflectionbonus" title="totaldeflectionbonus" style="width: 54px;" value="(@{deflection1inuse}*@{deflection1bonus} +@{deflection2inuse}*@{deflection2bonus} +@{deflection3inuse}*@{deflection3bonus} +@{deflection4inuse}*@{deflection4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD ainsi qu'au contact </span>
+				<input type="checkbox" class="sheet-pc-deflectioncalc-show sheet-arrow" title="deflectioncalc-show" name="attr_deflectioncalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Déflexion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalParade-bonus" title="TotalParade-bonus" style="width: 54px;" value="(@{deflection1inuse}*@{deflection1bonus} +@{deflection2inuse}*@{deflection2bonus} +@{deflection3inuse}*@{deflection3bonus} +@{deflection4inuse}*@{deflection4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD ainsi qu'au contact </span>
 				<div class="sheet-pc-deflectioncalc">
 					<div style="float: left">
 						<table>
@@ -1367,10 +1367,10 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-divaccalc-show sheet-arrow" title="divaccalc-show" name="attr_divaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Divers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Bonus for AC:<input type="text" name="attr_totaldivacbonus" title="totaldivacbonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1stdac}*@{divac1bonus}*@{divac1stdac} +@{divac2inuse}*@{divac2stdac}*@{divac2bonus} +@{divac3inuse}*@{divac3stdac}*@{divac3bonus} +@{divac4inuse}*@{divac4stdac}*@{divac4bonus} +@{divac5inuse}*@{divac5stdac}*@{divac5bonus} +@{divac6inuse}*@{divac6stdac}*@{divac6bonus})" disabled="true" /></span>
-				<span> CA au contact:<input type="text" name="attr_totaldivtouchacbonus" title="totaldivtouchacbonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1touchac}*@{divac1bonus} +@{divac2inuse}*@{divac2touchac}*@{divac2bonus} +@{divac3inuse}*@{divac3touchac}*@{divac3bonus} +@{divac4inuse}*@{divac4touchac}*@{divac4bonus} +@{divac5inuse}*@{divac5touchac}*@{divac5bonus} +@{divac6inuse}*@{divac6touchac}*@{divac6bonus})" disabled="true" /></span> 
-				<span> CA PaD:<input type="text" name="attr_totaldivffacbonus" title="totaldivffacbonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1ffac}*@{divac1bonus} +@{divac2inuse}*@{divac2ffac}*@{divac2bonus} +@{divac3inuse}*@{divac3ffac}*@{divac3bonus} +@{divac4inuse}*@{divac4ffac}*@{divac4bonus} +@{divac5inuse}*@{divac5ffac}*@{divac5bonus} +@{divac6inuse}*@{divac6ffac}*@{divac6bonus})" disabled="true" /></span> 
-				<span> CA Immobilisé:<input type="text" name="attr_totaldivimmoblacbonus" title="totaldivffacbonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1immoblac}*@{divac1bonus} +@{divac2inuse}*@{divac2immoblac}*@{divac2bonus} +@{divac3inuse}*@{divac3immoblac}*@{divac3bonus} +@{divac4inuse}*@{divac4immoblac}*@{divac4bonus} +@{divac5inuse}*@{divac5immoblac}*@{divac5bonus} +@{divac6inuse}*@{divac6immoblac}*@{divac6bonus})" disabled="true" /></span>
+				<input type="checkbox" class="sheet-pc-divaccalc-show sheet-arrow" title="divaccalc-show" name="attr_divaccalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Divers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Bonus for AC:<input type="text" name="attr_TotalCAdiv-bonus" title="TotalCAdiv-bonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1stdac}*@{divac1bonus}*@{divac1stdac} +@{divac2inuse}*@{divac2stdac}*@{divac2bonus} +@{divac3inuse}*@{divac3stdac}*@{divac3bonus} +@{divac4inuse}*@{divac4stdac}*@{divac4bonus} +@{divac5inuse}*@{divac5stdac}*@{divac5bonus} +@{divac6inuse}*@{divac6stdac}*@{divac6bonus})" disabled="true" /></span>
+				<span> CA au contact:<input type="text" name="attr_TotalDivCA-Contact-bonus" title="TotalDivCA-Contact-bonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1CA-Contact}*@{divac1bonus} +@{divac2inuse}*@{divac2CA-Contact}*@{divac2bonus} +@{divac3inuse}*@{divac3CA-Contact}*@{divac3bonus} +@{divac4inuse}*@{divac4CA-Contact}*@{divac4bonus} +@{divac5inuse}*@{divac5CA-Contact}*@{divac5bonus} +@{divac6inuse}*@{divac6CA-Contact}*@{divac6bonus})" disabled="true" /></span> 
+				<span> CA PaD:<input type="text" name="attr_TotalDivCA-PaD-bonus" title="TotalDivCA-PaD-bonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1ffac}*@{divac1bonus} +@{divac2inuse}*@{divac2ffac}*@{divac2bonus} +@{divac3inuse}*@{divac3ffac}*@{divac3bonus} +@{divac4inuse}*@{divac4ffac}*@{divac4bonus} +@{divac5inuse}*@{divac5ffac}*@{divac5bonus} +@{divac6inuse}*@{divac6ffac}*@{divac6bonus})" disabled="true" /></span> 
+				<span> CA Immobilisé:<input type="text" name="attr_TotalDivCA-Immobile-bonus" title="TotalDivCA-PaD-bonus" style="width: 29px;" value="(@{divac1inuse}*@{divac1CA-Immobile}*@{divac1bonus} +@{divac2inuse}*@{divac2CA-Immobile}*@{divac2bonus} +@{divac3inuse}*@{divac3CA-Immobile}*@{divac3bonus} +@{divac4inuse}*@{divac4CA-Immobile}*@{divac4bonus} +@{divac5inuse}*@{divac5CA-Immobile}*@{divac5bonus} +@{divac6inuse}*@{divac6CA-Immobile}*@{divac6bonus})" disabled="true" /></span>
 				<span style="font-style: italic; font-size: .6em;"> Composant potentiellement la CA, la CA PaD et la CA au contact. </span>
 				<div class="sheet-pc-divaccalc">
 					<div style="float: left">
@@ -1390,9 +1390,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac1inuse" title="divac1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_divac1name" title="divac1name" style="width: 180px;" placeholder="Name" value="Current div AC Bonus" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_divac1bonus" title="divac1bonus" style="width: 54px;" value="@{CAdivmod}" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1stdac" title="divac1stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1touchac" title="divac1touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1CA-Contact" title="divac1CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1ffac" title="divac1ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1immoblac" title="divac1immoblac (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac1CA-Immobile" title="divac1CA-Immobile (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 390px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 390px;" name="attr_divac1notes" title="divac1notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1400,9 +1400,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac2inuse" title="divac2inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_divac2name" title="divac2name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_divac2bonus" title="divac2bonus" style="width: 54px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac2stdac" title="divac2stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac2touchac" title="divac2touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac2CA-Contact" title="divac2CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac2ffac" title="divac2ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac2immoblac" title="divac2immoblac (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac2CA-Immobile" title="divac2CA-Immobile (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 390px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 390px;" name="attr_divac2notes" title="divac2notes" ></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1410,9 +1410,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac3inuse" title="divac3inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_divac3name" title="divac3name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_divac3bonus" title="divac3bonus" style="width: 54px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac3stdac" title="divac3stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac3touchac" title="divac3touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac3CA-Contact" title="divac3CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac3ffac" title="divac3ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac3immoblac" title="divac3immoblac (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac3CA-Immobile" title="divac3CA-Immobile (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 390px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 390px;" name="attr_divac3notes" title="divac3notes" ></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1420,9 +1420,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac4inuse" title="divac4inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_divac4name" title="divac4name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_divac4bonus" title="divac4bonus" style="width: 54px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac4stdac" title="divac4stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac4touchac" title="divac4touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac4CA-Contact" title="divac4CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac4ffac" title="divac4ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac4immoblac" title="divac4immoblac (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac4CA-Immobile" title="divac4CA-Immobile (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 390px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 390px;" name="attr_divac4notes" title="divac4notes" ></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1430,9 +1430,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac5inuse" title="divac5inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_divac5name" title="divac5name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_divac5bonus" title="divac5bonus" style="width: 54px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac5stdac" title="divac5stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac5touchac" title="divac5touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac5CA-Contact" title="divac5CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac5ffac" title="divac5ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac5immoblac" title="divac5immoblac (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac5CA-Immobile" title="divac5CA-Immobile (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 390px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 390px;" name="attr_divac5notes" title="divac5notes" ></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
@@ -1440,9 +1440,9 @@
 								<td style="width: 205px;"><input type="checkbox" name="attr_divac6inuse" title="divac6inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_divac6name" title="divac6name" style="width: 180px;" placeholder="Name" /></td>
 								<td style="width: 55px;"><input type="text" name="attr_divac6bonus" title="divac6bonus" style="width: 54px;" value="0" /></td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac6stdac" title="divac6stdac (Check if this component is part of AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac6touchac" title="divac6touchac (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac6CA-Contact" title="divac6CA-Contact (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac6ffac" title="divac6ffac (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
-								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac6immoblac" title="divac6immoblac (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
+								<td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_divac6CA-Immobile" title="divac6CA-Immobile (Check if this component is part of Immobilized AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
 								<td style="width: 390px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 390px;" name="attr_divac6notes" title="divac6notes" ></textarea></td>
 							</tr>
 						</table>
@@ -1552,7 +1552,7 @@
 								<option type="text" value="-6">Lourd</option>
 							</select></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_encumbrmaxdex" title="encumbrmaxdex" style="height: 24px; width: 45px;" value="floor(abs(9/(@{encumbrload})))" disabled="true" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_encumbracp" title="encumbracp" style="height: 24px; width: 45px;" value="floor(@{encumbrload})" disabled="true" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_CA-Encombrement" title="CA-Encombrement" style="height: 24px; width: 45px;" value="floor(@{encumbrload})" disabled="true" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_encumbrspeed30" title="encumbrspeed30" style="height: 24px; width: 45px;" value="30-floor(@{encumbrload})/(@{encumbrload})*10" disabled="true" />ft.</td>
 						<td><input class="sheet-inputbox" type="text" name="attr_encumbrspeed20" title="encumbrspeed20" style="height: 24px; width: 45px;" value="20-floor(@{encumbrload})/(@{encumbrload})*5" disabled="true" />ft.</td>
 						<td>x<input class="sheet-inputbox" type="text" name="attr_encumbrrun" title="encumbrrun" style="height: 24px; width: 45px;" value="4-floor((@{encumbrload}+3)/3*@{encumbrload})/6" disabled="true" /></td>
