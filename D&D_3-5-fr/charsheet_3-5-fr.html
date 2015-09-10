@@ -1046,7 +1046,7 @@
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Dex-mod" title="CA-Dex-mod (voir la section des Bonus de caractéristique pour la CA pour savoir comment cette valeur est calculée)" value="@{CA-TotalCarac-bonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des objets ci-dessous)" value="(@{TotalBonusArmure})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{TotalEsquive-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{TotalBonusEsquive}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{TotalBonusArmureNaturelle}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{TotalParade-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Divers-mod" title="CA-Divers-mod" value="@{TotalCAdiv-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
@@ -1291,7 +1291,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-dodgecalc-show sheet-arrow" title="dodgecalc-show" name="attr_dodgecalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Esquive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Total:<input type="text" name="attr_TotalEsquive-bonus" title="TotalEsquive-bonus" style="width: 54px;" value="(@{dodgebonus1inuse}*@{dodgebonus1bonus} +@{dodgebonus2inuse}*@{dodgebonus2bonus} +@{dodgebonus3inuse}*@{dodgebonus3bonus} +@{dodgebonus4inuse}*@{dodgebonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact  </span>
+				<input type="checkbox" class="sheet-pc-dodgecalc-show sheet-arrow" title="dodgecalc-show" name="attr_dodgecalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Esquive &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span> Total:<input type="text" name="attr_TotalBonusEsquive" title="TotalBonusEsquive" style="width: 54px;" value="(@{Utilise-BonusEsquive1}*@{BonusEsquive1} +@{Utilise-BonusEsquive2}*@{BonusEsquive2} +@{Utilise-BonusEsquive3}*@{BonusEsquive3} +@{Utilise-BonusEsquive4}*@{BonusEsquive4})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact  </span>
 				<div class="sheet-pc-dodgecalc">
 					<div style="float: left">
 						<table>
@@ -1302,28 +1302,28 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAdodgemod" title="CAdodgemod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_dodgebonus1inuse" title="dodgebonus1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_dodgebonus1name" title="dodgebonus1name" style="width: 180px;" placeholder="Name" value="Current Dodge Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_dodgebonus1bonus" title="dodgebonus1bonus" style="width: 54px;" value="@{CAdodgemod}" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_dodgebonus1notes" title="dodgebonus1notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusEsquive1" title="Utilise-BonusEsquive1 (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_BonusEsquive1-nom" title="BonusEsquive1-nom" style="width: 180px;" placeholder="Name" value="Current Dodge Bonus" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusEsquive1" title="BonusEsquive1" style="width: 54px;" value="@{CA-Esquive-mod}" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusEsquive1-notes" title="BonusEsquive1-notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_dodgebonus2inuse" title="dodgebonus2inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_dodgebonus2name" title="dodgebonus2name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_dodgebonus2bonus" title="dodgebonus2bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_dodgebonus2notes" title="dodgebonus2notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusEsquive2" title="Utilise-BonusEsquive2 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusEsquive2-nom" title="BonusEsquive2-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusEsquive2" title="BonusEsquive2" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusEsquive2-notes" title="BonusEsquive2-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_dodgebonus3inuse" title="dodgebonus3inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_dodgebonus3name" title="dodgebonus3name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_dodgebonus3bonus" title="dodgebonus3bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_dodgebonus3notes" title="dodgebonus3notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusEsquive3" title="Utilise-BonusEsquive3 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusEsquive3-nom" title="BonusEsquive3-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusEsquive3" title="BonusEsquive3" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusEsquive3-notes" title="BonusEsquive3-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_dodgebonus4inuse" title="dodgebonus4inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_dodgebonus4name" title="dodgebonus4name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_dodgebonus4bonus" title="dodgebonus4bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_dodgebonus4notes" title="dodgebonus4notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusEsquive4" title="Utilise-BonusEsquive4 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusEsquive4-nom" title="BonusEsquive4-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusEsquive4" title="BonusEsquive4" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusEsquive4-notes" title="BonusEsquive4-notes"></textarea></td>
 							</tr>
 						</table>
 					</div>
