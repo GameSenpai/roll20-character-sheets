@@ -1047,7 +1047,7 @@
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des objets ci-dessous)" value="(@{TotalBonusArmure})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{TotalEsquive-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{TotalArmureNaturelle-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{TotalBonusArmureNaturelle}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{TotalParade-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Divers-mod" title="CA-Divers-mod" value="@{TotalCAdiv-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 				<td> &nbsp; &nbsp; &nbsp; </td>
@@ -1253,7 +1253,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-naturalarmorcalc-show sheet-arrow" title="naturalarmorcalc-show" name="attr_naturalarmorcalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure Nat. &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalArmureNaturelle-bonus" title="TotalArmureNaturelle-bonus" style="width: 54px;" value="(@{naturalarmor1inuse}*@{naturalarmor1bonus} +@{naturalarmor2inuse}*@{naturalarmor2bonus} +@{naturalarmor3inuse}*@{naturalarmor3bonus} +@{naturalarmor4inuse}*@{naturalarmor4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
+				<input type="checkbox" class="sheet-pc-naturalarmorcalc-show sheet-arrow" title="naturalarmorcalc-show" name="attr_naturalarmorcalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure Nat. &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalBonusArmureNaturelle" title="TotalBonusArmureNaturelle" style="width: 54px;" value="(@{Utilise-ArmureNaturelle1}*@{ArmureNaturelle1-bonus} +@{Utilise-ArmureNaturelle2}*@{ArmureNaturelle2-bonus} +@{Utilise-ArmureNaturelle3}*@{ArmureNaturelle3-bonus} +@{Utilise-ArmureNaturelle4}*@{ArmureNaturelle4-bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-naturalarmorcalc">
 					<div style="float: left">
 						<table>
@@ -1264,28 +1264,28 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CA-ArmureNat-moduralarmor" title="CA-ArmureNat-moduralarmor" value="0" /> <!--to prevent errors if it never existed before update--> </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_naturalarmor1inuse" title="naturalarmor1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_naturalarmor1name" title="naturalarmor1name" style="width: 180px;" placeholder="Name" value="Current Natural Armor Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_naturalarmor1bonus" title="naturalarmor1bonus" style="width: 54px;" value="@{CA-ArmureNat-moduralarmor}" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_naturalarmor1notes" title="naturalarmor1notes" >copied from original AC calc under stats/abilities; AC section if any </textarea></td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-ArmureNaturelle1" title="Utilise-ArmureNaturelle1 (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_ArmureNaturelle1-nom" title="ArmureNaturelle1-nom" style="width: 180px;" placeholder="Name" value="Current Natural Armor Bonus" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_ArmureNaturelle1-bonus" title="ArmureNaturelle1-bonus" style="width: 54px;" value="@{CA-ArmureNat-mod}" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_ArmureNaturelle1-notes" title="ArmureNaturelle1-notes" >copied from original AC calc under stats/abilities; AC section if any </textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_naturalarmor2inuse" title="naturalarmor2inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_naturalarmor2name" title="naturalarmor2name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_naturalarmor2bonus" title="naturalarmor2bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_naturalarmor2notes" title="naturalarmor2notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-ArmureNaturelle2" title="Utilise-ArmureNaturelle2 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_ArmureNaturelle2-nom" title="ArmureNaturelle2-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_ArmureNaturelle2-bonus" title="ArmureNaturelle2-bonus" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_ArmureNaturelle2-notes" title="ArmureNaturelle2-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_naturalarmor3inuse" title="naturalarmor3inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_naturalarmor3name" title="naturalarmor3name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_naturalarmor3bonus" title="naturalarmor3bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_naturalarmor3notes" title="naturalarmor3notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-ArmureNaturelle3" title="Utilise-ArmureNaturelle3 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_ArmureNaturelle3-nom" title="ArmureNaturelle3-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_ArmureNaturelle3-bonus" title="ArmureNaturelle3-bonus" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_ArmureNaturelle3-notes" title="ArmureNaturelle3-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_naturalarmor4inuse" title="naturalarmor4inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_naturalarmor4name" title="naturalarmor4name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_naturalarmor4bonus" title="naturalarmor4bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_naturalarmor4notes" title="naturalarmor4notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-ArmureNaturelle4" title="Utilise-ArmureNaturelle4 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_ArmureNaturelle4-nom" title="ArmureNaturelle4-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_ArmureNaturelle4-bonus" title="ArmureNaturelle4-bonus" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_ArmureNaturelle4-notes" title="ArmureNaturelle4-notes"></textarea></td>
 							</tr>
 						</table>
 					</div>
