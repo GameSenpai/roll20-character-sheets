@@ -1048,7 +1048,7 @@
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{TotalBonusEsquive}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{TotalBonusArmureNaturelle}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{TotalParade-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{TotalBonusParade}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Déflexion</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Divers-mod" title="CA-Divers-mod" value="@{TotalCAdiv-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 				<td> &nbsp; &nbsp; &nbsp; </td>
 				<td style="width: 35px; height: 24px;" class="sheet-statlabel">Contact<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
@@ -1329,7 +1329,7 @@
 					</div>
 				</div>
 				<hr/>
-				<input type="checkbox" class="sheet-pc-deflectioncalc-show sheet-arrow" title="deflectioncalc-show" name="attr_deflectioncalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Déflexion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalParade-bonus" title="TotalParade-bonus" style="width: 54px;" value="(@{deflection1inuse}*@{deflection1bonus} +@{deflection2inuse}*@{deflection2bonus} +@{deflection3inuse}*@{deflection3bonus} +@{deflection4inuse}*@{deflection4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD ainsi qu'au contact </span>
+				<input type="checkbox" class="sheet-pc-deflectioncalc-show sheet-arrow" title="deflectioncalc-show" name="attr_deflectioncalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Déflexion &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalBonusParade" title="TotalBonusParade" style="width: 54px;" value="(@{Utilise-Parade1}*@{BonusParade1} +@{Utilise-Parade2}*@{BonusParade2} +@{Utilise-Parade3}*@{BonusParade3} +@{Utilise-Parade4}*@{BonusParade4})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD ainsi qu'au contact </span>
 				<div class="sheet-pc-deflectioncalc">
 					<div style="float: left">
 						<table>
@@ -1340,28 +1340,28 @@
 								<td class="sheet-table-header2" style="font-size: 0.65em; width: 500px;">Source/Notes</td>
 							</tr>
 							<tr class="sheet-table-row">
-								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CAdeflectionmod" title="CAdeflectionmod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_deflection1inuse" title="deflection1inuse (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_deflection1name" title="deflection1name" style="width: 180px;" placeholder="Name" value="Current Deflection Bonus" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_deflection1bonus" title="deflection1bonus" style="width: 54px;" value="@{CAdeflectionmod}" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_deflection1notes" title="deflection1notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
+								<td style="width: 20px;" > &nbsp; <input type="hidden" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="0" /> <!--to prevent errors if it never existed before update--> </td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-Parade1" title="Utilise-Parade1 (Check if this component is in use.)" value="1" style="width: 15px;" checked /> <input type="text" name="attr_BonusParade1-nom" title="BonusParade1-nom" style="width: 180px;" placeholder="Name" value="Current Deflection Bonus" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusParade1" title="BonusParade1" style="width: 54px;" value="@{CA-Parade-mod}" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusParade1-notes" title="BonusParade1-notes" >copied from original AC calc under stats/abilities; AC section if any</textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_deflection2inuse" title="deflection2inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_deflection2name" title="deflection2name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_deflection2bonus" title="deflection2bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_deflection2notes" title="deflection2notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-Parade2" title="Utilise-Parade2 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusParade2-nom" title="BonusParade2-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusParade2" title="BonusParade2" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusParade2-notes" title="BonusParade2-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_deflection3inuse" title="deflection3inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_deflection3name" title="deflection3name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_deflection3bonus" title="deflection3bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_deflection3notes" title="deflection3notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-Parade3" title="Utilise-Parade3 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusParade3-nom" title="BonusParade3-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusParade3" title="BonusParade3" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusParade3-notes" title="BonusParade3-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_deflection4inuse" title="deflection4inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_deflection4name" title="deflection4name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_deflection4bonus" title="deflection4bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_deflection4notes" title="deflection4notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-Parade4" title="Utilise-Parade4 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusParade4-nom" title="BonusParade4-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusParade4" title="BonusParade4" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusParade4-notes" title="BonusParade4-notes"></textarea></td>
 							</tr>
 						</table>
 					</div>
