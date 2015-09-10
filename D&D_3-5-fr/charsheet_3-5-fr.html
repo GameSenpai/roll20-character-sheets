@@ -1044,7 +1044,7 @@
 				<td><input class="sheet-inputbox" type="text" name="attr_CA" title="CA" value="(10+@{CA-bonus}+@{CA-TotalCarac-bonus}+@{CA-Taille-mod}+@{CA-Esquive-mod}+@{CA-ArmureNat-mod}+@{CA-Parade-mod}+@{CA-Divers-mod})" disabled="true" style="height: 24px; width: 35px;" /><br><div style="font-size: 0.5em;">Total</div></td>
 				<td>=10<br><br></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Dex-mod" title="CA-Dex-mod (voir la section des Bonus de caractéristique pour la CA pour savoir comment cette valeur est calculée)" value="@{CA-TotalCarac-bonus}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Modificateur</div></td>
-				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des objets ci-dessous)" value="(@{TotalArmure-bonus})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
+				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-bonus" title="CA-bonus (à partir des objets ci-dessous)" value="(@{TotalBonusArmure})" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Bonus d'armure</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Taille-mod" title="CA-Taille-mod" value="@{taille}" disabled="true" style="height: 24px; width: 28px;" /><br><div style="font-size: 0.5em;">Taille</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Esquive-mod" title="CA-Esquive-mod" value="@{TotalEsquive-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Esquive</div></td>
 				<td>+<input class="sheet-inputbox" type="text" name="attr_CA-ArmureNat-mod" title="CA-ArmureNat-mod" value="@{TotalArmureNaturelle-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Armure Nat.</div></td>
@@ -1107,7 +1107,7 @@
 					</tr>
 					<tr>
 						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier" title="Bouclier" style="height: 24px; width: 184px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-bonus" title="Bouclier-bonus" value="0" style="height: 24px; width: 54px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_BonusBouclier" title="BonusBouclier" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteBouclier-check" title="PenaliteBouclier-check" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-EchecSorts" title="Bouclier-EchecSorts" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-Poids" title="Bouclier-Poids" value="0" style="height: 24px; width: 54px;" /></td>
@@ -1203,10 +1203,7 @@
 					</div>
 				</div>
 				<hr/>
-
-				<!-- TODO TODO TODO TODO TODO TODO TODO TODO -->
-
-				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalArmure-bonus" title="TotalArmure-bonus" style="width: 54px;" value="(@{DurabiliteArmure}*@{armorbonus} +@{DurabiliteBouclier}*@{Bouclieracbonus} +@{armorbonus1inuse}*@{armorbonus1bonus} +@{armorbonus2inuse}*@{armorbonus2bonus} +@{armorbonus3inuse}*@{armorbonus3bonus} +@{armorbonus4inuse}*@{armorbonus4bonus})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
+				<input type="checkbox" class="sheet-pc-armorbonuscalc-show sheet-arrow" title="armorbonuscalc-show" name="attr_armorbonuscalc-show" value="1" checked /><span style="text-align: left; font-weight: bold;">Armure &nbsp; &nbsp; &nbsp; </span><span> Total:<input type="text" name="attr_TotalBonusArmure" title="TotalBonusArmure" style="width: 54px;" value="(@{DurabiliteArmure}*@{BonusArmure} +@{DurabiliteBouclier}*@{BonusBouclier-CA} +@{Utilise-BonusArmure1}*@{BonusArmure1} +@{Utilise-BonusArmure2}*@{BonusArmure2} +@{Utilise-BonusArmure3}*@{BonusArmure3} +@{Utilise-BonusArmure4}*@{BonusArmure4})" disabled="true" /></span> <span style="font-style: italic; font-size: .6em;"> Composant la CA et La CA PaD; Pas au contact </span>
 				<div class="sheet-pc-armorbonuscalc">
 					<div style="float: left">
 						<table>
@@ -1218,39 +1215,39 @@
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_armorbonusname" title="armorbonusname" style="width: 180px;" value="Armor" disabled="true" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_armorbonus" title="armorbonus" style="width: 54px;" value="(@{ObjetCA-bonus})" disabled="true" /></td>
-								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_armorbonusnotes" title="armorbonusnotes" value="From Armor, above. " disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteArmure" title="DurabiliteArmure (Check if this armor is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_BonusArmure-nom" title="BonusArmure-nom" style="width: 180px;" value="Armor" disabled="true" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusArmure" title="BonusArmure" style="width: 54px;" value="(@{ObjetCA-bonus})" disabled="true" /></td>
+								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_BonusArmure-notes" title="BonusArmure-notes" value="From Armor, above. " disabled="true" /></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteBouclier" title="DurabiliteBouclier (Check if this Bouclier is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_Bouclier-bonusname" title="Bouclier-bonusname" style="width: 180px;" value="Bouclier" disabled="true" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_Bouclieracbonus" title="Bouclieracbonus" style="width: 54px;" value="(@{Bouclier-bonus})" disabled="true" /></td>
-								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_Bouclier-bonusnotes" title="Bouclier-bonusnotes" value="From Bouclier, above. " disabled="true" /></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_DurabiliteBouclier" title="DurabiliteBouclier (Check if this Bouclier is being worn.)" value="1" style="width: 15px;" checked /><input type="text" name="attr_BonusBouclier-nom" title="BonusBouclier-nom" style="width: 180px;" value="Bouclier" disabled="true" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusBouclier-CA" title="BonusBouclier-CA" style="width: 54px;" value="(@{BonusBouclier})" disabled="true" /></td>
+								<td style="width: 500px;"><input type="text" style="float: left; width: 500px;" name="attr_BonusBouclier-notes" title="BonusBouclier-notes" value="From Bouclier, above. " disabled="true" /></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_armorbonus1inuse" title="armorbonus1inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_armorbonus1name" title="armorbonus1name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_armorbonus1bonus" title="armorbonus1bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_armorbonus1notes" title="armorbonus1notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusArmure1" title="Utilise-BonusArmure1 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusArmure1-nom" title="BonusArmure1-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusArmure1" title="BonusArmure1" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusArmure1-notes" title="BonusArmure1-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_armorbonus2inuse" title="armorbonus2inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_armorbonus2name" title="armorbonus2name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_armorbonus2bonus" title="armorbonus2bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_armorbonus2notes" title="armorbonus2notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusArmure2" title="Utilise-BonusArmure2 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusArmure2-nom" title="BonusArmure2-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusArmure2" title="BonusArmure2" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusArmure2-notes" title="BonusArmure2-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_armorbonus3inuse" title="armorbonus3inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_armorbonus3name" title="armorbonus3name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_armorbonus3bonus" title="armorbonus3bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_armorbonus3notes" title="armorbonus3notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusArmure3" title="Utilise-BonusArmure3 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusArmure3-nom" title="BonusArmure3-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusArmure3" title="BonusArmure3" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusArmure3-notes" title="BonusArmure3-notes"></textarea></td>
 							</tr>
 							<tr class="sheet-table-row">
 								<td style="width: 20px;" > &nbsp; </td>
-								<td style="width: 205px;"><input type="checkbox" name="attr_armorbonus4inuse" title="armorbonus4inuse (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_armorbonus4name" title="armorbonus4name" style="width: 180px;" placeholder="Name" /></td>
-								<td style="width: 55px;"><input type="text" name="attr_armorbonus4bonus" title="armorbonus4bonus" style="width: 54px;" value="0" /></td>
-								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_armorbonus4notes" title="armorbonus4notes"></textarea></td>
+								<td style="width: 205px;"><input type="checkbox" name="attr_Utilise-BonusArmure4" title="Utilise-BonusArmure4 (Check if this component is in use.)" value="1" style="width: 15px;" /> <input type="text" name="attr_BonusArmure4-nom" title="BonusArmure4-nom" style="width: 180px;" placeholder="Name" /></td>
+								<td style="width: 55px;"><input type="text" name="attr_BonusArmure4" title="BonusArmure4" style="width: 54px;" value="0" /></td>
+								<td style="width: 500px;"><textarea rows="1" cols="55" style="float: left; height: 18px; width: 500px;" name="attr_BonusArmure4-notes" title="BonusArmure4-notes"></textarea></td>
 							</tr>
 						</table>
 					</div>
