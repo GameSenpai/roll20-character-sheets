@@ -1454,7 +1454,7 @@
 	</div>
 
 	<div class="sheet-tab-content sheet-tab4 sheet-tab99">
-		<!--Equipment-->
+		<!--Equipement-->
 		<input type="checkbox" class="sheet-pc-encumbrance-show sheet-arrow" title="encumbrance-show" name="attr_encumbrance-show" value="1" checked /><span style="text-align: left;">Encombrement/Charge</span>
 		<div class="sheet-pc-encumbrance">
 			<div style="float: left">
@@ -1474,7 +1474,7 @@
 						<td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Pousser / Tirer </td>
 					</tr>
 					<tr>
-						<td><select class="sheet-inputbox" style="height: 24px; width: 45px; padding: 0px;" name="attr_encumbrstr" title="encumbrstr">
+						<td><select class="sheet-inputbox" style="height: 24px; width: 45px; padding: 0px;" name="attr_Encombrement-for" title="Encombrement-for">
 							<option type="text" value="10" selected>1</option>
 							<option type="text" value="20">2</option>
 							<option type="text" value="30">3</option>
@@ -1505,12 +1505,12 @@
 							<option type="text" value="1200">28</option>
 							<option type="text" value="1400">29</option>
 						</select></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_lightloadmax" title="lightloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(@{encumbrstr}/3)))"/>Kg ou moins</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_medloadmin" title="medloadmin" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(@{encumbrstr}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_medloadmax" title="medloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(2*@{encumbrstr}/3)))"/>Kg</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_heavyloadmin" title="heavyloadmin" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(floor(2*@{encumbrstr}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_heavyloadmax" title="heavyloadmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(@{encumbrstr}))"/>Kg</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_liftovermax" title="liftovermax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(@{encumbrstr}))"/>Kg ou moins</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_liftoffmax" title="liftoffmax" style="height: 24px; width: 50px;" disabled="true" value="floor(@{encumbrsize}*(2*(@{encumbrstr})))"/>Kg ou moins</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_pushdragmax" title="pushdragmax" style="height: 24px; width: 55px;" disabled="true" value="floor(@{encumbrsize}*(5*(@{encumbrstr})))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ChargementLeger-max" title="ChargementLeger-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(@{Encombrement-for}/3)))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ChargementMoyen-min" title="ChargementMoyen-min" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(@{Encombrement-for}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_ChargementMoyen-max" title="ChargementMoyen-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(2*@{Encombrement-for}/3)))"/>Kg</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ChargementLourd-min" title="ChargementLourd-min" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(2*@{Encombrement-for}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_ChargementLourd-max" title="ChargementLourd-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(@{Encombrement-for}))"/>Kg</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Lever-max" title="Lever-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(@{Encombrement-for}))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Soulever-max" title="Soulever-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(2*(@{Encombrement-for})))"/>Kg ou moins</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_PousserTirer-max" title="PousserTirer-max" style="height: 24px; width: 55px;" disabled="true" value="floor(@{Encombrement-taille}*(5*(@{Encombrement-for})))"/>Kg ou moins</td>
 					</tr>
 				</table>
 				<table cellpadding="0" cellspacing="0">
@@ -1526,7 +1526,7 @@
 					</tr>
 					<tr>
 						<td><input class="sheet-inputbox" type="text" name="attr_totalcarriedweight" title="totalcarriedweight" style="height: 24px; width: 75px;"></td>
-						<td><select style="height: 24px; width: 160px; padding: 0px;" name="attr_encumbrsize" title="encumbrsize">
+						<td><select style="height: 24px; width: 160px; padding: 0px;" name="attr_Encombrement-taille" title="Encombrement-taille">
 								<option value="16">Colossal</option>
 								<option value="8">Gigantesque</option>
 								<option value="4">Très Grand</option>
