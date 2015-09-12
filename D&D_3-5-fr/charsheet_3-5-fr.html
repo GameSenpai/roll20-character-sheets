@@ -245,8 +245,8 @@
 											<td>+<input class="sheet-inputbox" type="text" name="attr_CA-Parade-mod" title="CA-Parade-mod" value="@{totalparadebonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Parade</div></td>
 											<td>+<input class="sheet-inputbox" type="text" name="attr_DiversCA-mod" title="DiversCA-mod" value="@{totaldivCA-bonus}" style="height: 24px; width: 28px;" disabled="true" /><br><div style="font-size: 0.5em;">Divers</div></td>
 											<td> &nbsp; &nbsp; &nbsp; </td>
-											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
-												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PenaliteArmure-check" title="PenaliteArmure-check" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
+											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum de la pénalité d'armure et de l'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-test}+@{DurabiliteBouclier}*@{PenaliteBouclier-test})" disabled="true"/>
+												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PenaliteArmure-test" title="PenaliteArmure-test" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">Pénalité d'armure</div></td>
 										</tr>
 									</table>
 								</td>
@@ -263,8 +263,8 @@
 											<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_immoblCA" title="immoblCA" value="10 +@{totalCaracImmoblCA-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{totalDivImmoblCA-bonus}" disabled="true" /> &nbsp; </td>
 											<td valign="top"><input class="sheet-inputbox" type="text" name="attr_reductionDommages" title="reductionDommages" style="width: 120px;" /><br><div style="font-size: 0.65em;">Réduction des dommages</div></td>
 											<!--td>&nbsp;</td>
-											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/>
-												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
+											<td valign="top"><input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (maximum du test de durabilité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-test}+@{DurabiliteBouclier}*@{PenaliteBouclier-test})" disabled="true"/>
+												<input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_PenalitesArmure-test" title="PenalitesArmure-test" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" /><br><div style="font-size: 0.5em;">ACP</div></td-->
 										</tr>
 									</table>
 									<br>
@@ -308,7 +308,7 @@
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurMagique-mod" title="VigueurMagique-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurDiv-mod" title="VigueurDiv-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VigueurTempmod" title="VigueurTemp-mod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Vigueur-check" title='Vigueur-check' value="@{Vigueur-macro}"></button></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Vigueur-test" title='Vigueur-test' value="@{Vigueur-macro}"></button></span>
 												</div>
 												<div class="sheet-pc-savemacros">
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Vigueurnote" title="Vigueur-note (Entrer une note)" placeholder="Note"></textarea></span>
@@ -323,7 +323,7 @@
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesMagiques-mod" title="ReflexesMagiques-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesDiv-mod" title="ReflexesDiv-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_ReflexesTemp-mod" title="ReflexesTemp-mod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Reflexes-check" title='Reflexes-check' value="@{Reflexes-macro}"></button></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Reflexes-test" title='Reflexes-test' value="@{Reflexes-macro}"></button></span>
 												</div>											
 												<div class="sheet-pc-savemacros">
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Reflexes-note" title="Reflexes-note (Entrer une note)" placeholder="Note"></textarea></span>
@@ -338,7 +338,7 @@
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteMagique-mod" title="VolonteMagique-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteDiv-mod" title="VolonteDiv-mod" value="0"></span>
 													<span class="sheet-table-data-center">+<input type="text" style="width: 35px;" name="attr_VolonteTemp-mod" title="VolonteTemp-mod" value="0"></span>
-													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Volonte-check" title='Volonte-check' value="@{Volonte-macro}"></button></span>
+													<span class="sheet-table-data-center"><button type="roll" style="width:20px;" name="roll_Volonte-test" title='Volonte-test' value="@{Volonte-macro}"></button></span>
 												</div>											
 												<div class="sheet-pc-savemacros">
 													<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 175px; height: 20px;" name="attr_Volonte-note" title="Volonte-note (Entrer une note)" placeholder="Note"></textarea></span>
@@ -373,7 +373,7 @@
 												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_LutteFor-mod" title="LutteFor-mod" value="floor(@{for}/2-5) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">FOR</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_taille-mod" title="taille-mod" value="(floor((@{taille} + 50) / 58) + floor((@{taille} + 50) / 54) + floor((@{taille} + 50) / 52) + floor((@{taille} + 50) / 51) + floor((@{taille} + 50) / 50) + floor((@{taille} + 50) / 49) + floor((@{taille} + 50) / 47) + floor((@{taille} + 50) / 43) -4) * (-4) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Modif. Taille</div></td>
 												<td>+<input class="sheet-inputbox" type="text" name="attr_LutteDiv-mod" title="LutteDiv-mod" value="0" style="width: 50px;"><br><div style="font-size: 0.5em;">Divers</div></td>
-												<td><button type='roll' name='attr_Lutte-check' title='Lutte-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom} }} {{attack1=Test de Lutte:[[1d20 +[[@{Lutte}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br></div></td>
+												<td><button type='roll' name='attr_Lutte-test' title='Lutte-test' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom} }} {{attack1=Test de Lutte:[[1d20 +[[@{Lutte}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
@@ -386,7 +386,7 @@
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modmab" title="taille-modmab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabdiv-mod" title="mabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtemp-mod" title="mabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='roll_melee-check' title='melee-check' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{AttaqueMelee-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><button type='roll' name='roll_melee-test' title='melee-test' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{AttaqueMelee-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
@@ -399,7 +399,7 @@
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modrab" title="taille-modrab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Taille<br>Modifier</div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabdiv-mod" title="rabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
 												<td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtemp-mod" title="rabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-												<td><button type='roll' name='roll_AttaqueDistance-check' title='rangedattackcheck' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{AttaqueDistance-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+												<td><button type='roll' name='roll_AttaqueDistance-test' title='rangedattackcheck' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{personnage-nom}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{AttaqueDistance-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
 											</tr>
 										</table>
 										<br>
@@ -1058,8 +1058,8 @@
 				<td style="width: 70px;" class="sheet-statlabel">Immobilisé<br><div style="font-size: 0.65em;">Classe d'armure</div></td>
 				<td valign="top"><input class="sheet-inputbox" type="text" style="width: 35px;" name="attr_CA-Immobile" title="CA-Immobile" value="10 +@{TotalCaracCA-Immobile-bonus} +@{CA-bonus} +@{CA-Taille-mod} +@{CA-ArmureNat-mod} +@{CA-Parade-mod} +@{TotalDiversBonusCA-Immobile}" disabled="true" style="height: 24px; width: 35px;" /> &nbsp; </td>
 				<!--td valign="top"> &nbsp; &nbsp; <input class="sheet-inputbox" type="text" name="attr_ReductionDommages" title="ReductionDommages" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">&nbsp; &nbsp; Réduction des dommages</div></td-->
-				<td valign="top"> &nbsp;<input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (Maximum du test de pénalité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-check}+@{DurabiliteBouclier}*@{PenaliteBouclier-check})" disabled="true"/> &nbsp; 
-					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_armorcheckpenalty" title="armorcheckpenalty" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
+				<td valign="top"> &nbsp;<input type="hidden" name="attr_PenaliteArmure" title="PenaliteArmure (Maximum du test de pénalité d'armure et du test de pénalité d'encombrement)" value="(@{DurabiliteArmure}*@{ObjetCA-Penalite-test}+@{DurabiliteBouclier}*@{PenaliteBouclier-test})" disabled="true"/> &nbsp; 
+					<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_PenalitesArmure-test" title="PenalitesArmure-test" value=" (ceil((@{PenaliteArmure}-@{CA-Encombrement})/10000000000)*@{CA-Encombrement} - floor((@{PenaliteArmure}-@{CA-Encombrement}-1)/10000000000)*@{PenaliteArmure})" disabled="true" style="height: 24px; width: 80px;" /><br><div style="font-size: 0.65em;">Pénalité d'armure</div></td>
 			</tr>
 		</table>
 		<hr/>
@@ -1088,7 +1088,7 @@
 						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-type" title="ObjetCA-type" style="height: 24px; width: 58px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-bonus" title="ObjetCA-bonus" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-dex" title="ObjetCA-dex" style="height: 24px; width: 54px;" value="20"/></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Penalite-check" title="ObjetCA-Penalite-check" style="height: 24px; width: 54px;" value="0"/></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Penalite-test" title="ObjetCA-Penalite-test" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-EchecSorts" title="ObjetCA-EchecSorts" style="height: 24px; width: 54px;" value="0"/></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Vitesse" title="ObjetCA-Vitesse" style="height: 24px; width: 70px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_ObjetCA-Poids" title="ObjetCA-Poids" value="0" style="height: 24px; width: 54px;" /></td>
@@ -1108,7 +1108,7 @@
 					<tr>
 						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier" title="Bouclier" style="height: 24px; width: 184px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_BonusBouclier" title="BonusBouclier" value="0" style="height: 24px; width: 54px;" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteBouclier-check" title="PenaliteBouclier-check" value="0" style="height: 24px; width: 54px;" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_PenaliteBouclier-test" title="PenaliteBouclier-test" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-EchecSorts" title="Bouclier-EchecSorts" value="0" style="height: 24px; width: 54px;" /></td>
 						<td><input class="sheet-inputbox" type="text" name="attr_Bouclier-Poids" title="Bouclier-Poids" value="0" style="height: 24px; width: 54px;" /></td>
 						<td colspan="5"><input class="sheet-inputbox" type="text" name="attr_Bouclier-Proprietes" title="Bouclier-Proprietes" style="height: 24px; width: 404px;" /></td>
@@ -1668,7 +1668,7 @@
 					<tr>
 						<td colspan="9" class="sheet-statlabel-big-gray" style="height: 35px; width: 790px;"><b style="font-size: 1.5em;">Compétences</b></td>
 					</tr><tr>
-						<td colspan="9" class="sheet-statlabel-big" style="width: 790px;">Points de comp./Niv.=<input type="text" name="attr_skillpoints" title="skillpoints" value="@{skillpointsint}+@{skillpointsclass}" style="width: 40px; color: white;" disabled="true">=(<input type="text" name="attr_skillpointsint" value="(floor((@{int-base}) / 2) - 5)[base int bonus]" title="skillpointsint (Skill points/lvl from base int.)" style="width: 35px; color: white;" disabled="true">+<input type="text" name="attr_skillpointsclass" value="2" title="skillpointsclass (Skill points/lvl from class; humans add+1.)" style="width: 35px; color: white;">)</td>
+						<td colspan="9" class="sheet-statlabel-big" style="width: 790px;">Points de comp./Niv.=<input type="text" name="attr_PointsCompetence" title="PointsCompetence" value="@{PointsCompetence-int}+@{PointsCompetence-class}" style="width: 40px; color: white;" disabled="true">=(<input type="text" name="attr_PointsCompetence-int" value="(floor((@{int-base}) / 2) - 5)[base int bonus]" title="PointsCompetence-int (Skill points/lvl from base int.)" style="width: 35px; color: white;" disabled="true">+<input type="text" name="attr_PointsCompetence-class" value="2" title="PointsCompetence-class (Skill points/lvl from class; humans add+1.)" style="width: 35px; color: white;">)</td>
 					</tr>
 					<td>
 					<div class="sheet-table-row">
@@ -1684,30 +1684,30 @@
 						<span class="sheet-table-header2">Macro</span>
 					</div>
 					<div class="sheet-table-row">
-						<input type="checkbox" name="attr_appraiseclassskill" title="appraiseclassskill" value="1" style="width: 8px;">
+						<input type="checkbox" name="attr_Acrobaties-class" title="Acrobaties-class" value="1" style="width: 8px;">
 						<span class="sheet-table-header-left">Acrobaties</span>
-						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_appraise" title="appraise" value="(@{int-mod} +@{appraiseranks} +@{appraisedivmod} )" disabled="true"></span>
+						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_Acrobaties" title="Acrobaties" value="(@{dex-mod} +@{Acrobaties-rangs} +@{Acrobaties-divmod} )" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">= DEX</span>
-						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_intmod" title="intmod" value="@{int-mod} " disabled="true"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_appraiseranks" title="appraiseranks" value="0"></span>
+						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_Acrobaties-rangs" title="Acrobaties-rangs" value="0"></span>
 						<span class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_appraisedivmod" title="appraisedivmod" value="0"></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_appraisenote" title="appraisenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_appraisemacro" title="appraisemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Appraise](http://www.dandwiki.com/wiki/SRD:Appraise_Skill ) check:}} {{checkroll=[[1d20 + [[@{appraise}]] ]] {{notes=@{appraisenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_appraisecheck" title='appraisecheck' value="@{appraisemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_Acrobaties-divmod" title="Acrobaties-divmod" value="0"></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_Acrobaties-notes" title="Acrobaties-notes (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_Acrobaties-macro" title="Acrobaties-macro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test d'acrobaties :}} {{checkroll=[[1d20 + [[@{Acrobaties}]] ]] {{notes=@{Acrobaties-notes} }}</textarea></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_Acrobaties-test" title='Acrobaties-test' value="@{Acrobaties-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
-						<input type="checkbox" name="attr_balanceclassskill" title="balanceclassskill" value="1" style="width: 8px;">
+						<input type="checkbox" name="attr_ArtMagie-class" title="ArtMagie-class" value="1" style="width: 8px;">
 						<span class="sheet-table-header-left">Art de la magie</span>
-						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_balance" title="balance" value="(@{dex-mod} +@{balanceranks} +@{balancedivmod} +@{balancearmorcheckpen} )" disabled="true"></span>
+						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie" title="ArtMagie" value="(@{int-mod} +@{ArtMagie-ranks} +@{ArtMagie-divmod} +@{ArtMagie-penalites} )" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">= INT</span>
-						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_balanceranks" title="balanceranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_balancearmorcheckpen" title="balancearmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_balancedivmod" title="balancedivmod" value="0"></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_balancenote" title="balancenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_balancemacro" title="balancemacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Balance](http://www.dandwiki.com/wiki/SRD:Balance_Skill ) check:}} {{checkroll=[[1d20 + [[@{balance}]] ]] }} {{notes=@{balancenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_balancecheck" title='balancecheck' value="@{balancemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_intmod" title="intmod" value="@{int-mod} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-ranks" title="ArtMagie-ranks" value="0"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-penalites" title="ArtMagie-penalites" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-divmod" title="ArtMagie-divmod" value="0"></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_ArtMagie-note" title="ArtMagie-note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_ArtMagie-macro" title="ArtMagie-macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test des arts de la magie :}} {{checkroll=[[1d20 + [[@{ArtMagie}]] ]] }} {{notes=@{ArtMagie-note} }}</textarea></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_ArtMagie-check" title='ArtMagie-check' value="@{ArtMagie-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_bluffclassskill" title="bluffclassskill" value="1" style="width: 8px;">
@@ -1733,7 +1733,7 @@
 						<!--span class="sheet-table-data-center-sm">= Str</span-->
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_climbstatmod" title="climbstatmod" value="@{climbstat}" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_climbranks" title="climbranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_climbarmorcheckpen" title="climbarmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_climbarmorcheckpen" title="climbarmorcheckpen" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_climbdivmod" title="climbdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_climbnote" title="climbnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_climbmacro" title="climbmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Climb](http://www.dandwiki.com/wiki/SRD:Climb_Skill ) check:}} {{checkroll=[[1d20 + [[@{climb}]] ]] }} {{notes=@{climbnote} }}</textarea></span>
@@ -1850,7 +1850,7 @@
 						<span class="sheet-table-data-center-sm">= Dex</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_escapeartistranks" title="escapeartistranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_escapeartistarmorcheckpen" title="escapeartistarmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_escapeartistarmorcheckpen" title="escapeartistarmorcheckpen" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_escapeartistdivmod" title="escapeartistdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_escapeartistnote" title="escapeartistnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_escapeartistmacro" title="escapeartistmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Escape Artist](http://www.dandwiki.com/wiki/SRD:Escape_Artist_Skill ) check:}} {{checkroll=[[1d20 + [[@{escapeartist}]] ]] }} {{notes=@{escapeartistnote} }}</textarea></span>
@@ -1915,7 +1915,7 @@
 						<span class="sheet-table-data-center-sm">= Dex</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_hideranks" title="hideranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_hidearmorcheckpen" title="hidearmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_hidearmorcheckpen" title="hidearmorcheckpen" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_hidedivmod" title="hidedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_hidenote" title="hidenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_hidemacro" title="hidemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Hide](http://www.dandwiki.com/wiki/SRD:Hide_Skill ) check:}} {{checkroll=[[1d20 + [[@{hide}]] ]] }} {{notes=@{hidenote} }}</textarea></span>
@@ -1945,7 +1945,7 @@
 						<!--span class="sheet-table-data-center-sm">= Str</span-->
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_jumpstatmod" title="jumpstatmod" value="@{jumpstat}" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_jumpranks" title="jumpranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_jumparmorcheckpen" title="jumparmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_jumparmorcheckpen" title="jumparmorcheckpen" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_jumpdivmod" title="jumpdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_jumpnote" title="jumpnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_jumpmacro" title="jumpmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Jump](http://www.dandwiki.com/wiki/SRD:Jump_Skill ) check:}} {{checkroll=[[1d20 + [[@{jump}]] ]] }} {{notes=@{jumpnote} }}</textarea></span>
@@ -2101,7 +2101,7 @@
 						<span class="sheet-table-data-center-sm">= Dex</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_movesilentranks" title="movesilentranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_movesilentarmorcheckpen" title="movesilentarmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_movesilentarmorcheckpen" title="movesilentarmorcheckpen" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_movesilentdivmod" title="movesilentdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_movesilentnote" title="movesilentnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_movesilentmacro" title="movesilentmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Move Silently](http://www.dandwiki.com/wiki/SRD:Move_Silently_Skill ) check:}} {{checkroll=[[1d20 + [[@{movesilent}]] ]] }} {{notes=@{movesilentnote} }}</textarea></span>
@@ -2244,7 +2244,7 @@
 						<span class="sheet-table-data-center-sm">= Dex</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="number" class="sheet-table-data-center-skills" style="width: 28px;" name="attr_sleightofhandranks" title="sleightofhandranks" min="1" max="1000" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_sleightarmorcheckpen" title="sleightarmorcheckpen" style="width: 40px;" value="@{armorcheckpenalty} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_sleightarmorcheckpen" title="sleightarmorcheckpen" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_sleightofhanddivmod" title="sleightofhanddivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_sleightofhandnote" title="sleightofhandnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_sleightofhandmacro" title="sleightofhandmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Sleight of Hand](http://www.dandwiki.com/wiki/SRD:Sleight_of_Hand_Skill ) check:}} {{checkroll=[[1d20 + [[@{sleightofhand}]] ]] }} {{notes=@{sleightofhandnote} }}</textarea></span>
@@ -2296,7 +2296,7 @@
 						<span class="sheet-table-data-center-sm">= Str</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_strmod" title="strmod" value="@{str-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_swimranks" title="swimranks" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_swimarmorcheckpen" title="swimarmorcheckpen" style="width: 40px;" value="2*(@{armorcheckpenalty} )" disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_swimarmorcheckpen" title="swimarmorcheckpen" style="width: 40px;" value="2*(@{PenalitesArmure-test} )" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_swimdivmod" title="swimdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_swimnote" title="swimnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_swimmacro" title="swimmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Swim](http://www.dandwiki.com/wiki/SRD:Swim_Skill ) check:}} {{checkroll=[[1d20 + [[@{swim}]] ]] }} {{notes=@{swimnote} }}</textarea></span>
@@ -2309,7 +2309,7 @@
 						<span class="sheet-table-data-center-sm">= Dex</span>
 						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_dexmod" title="dexmod" value="@{dex-mod} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="number" class="sheet-table-data-center-skills" style="width: 28px;" name="attr_tumbleranks" title="tumbleranks" min="1" max="1000" value="0"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_tumblearmorcheckpen" title="tumblearmorcheckpen" style="width: 40px;" value="(@{armorcheckpenalty} )" disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_tumblearmorcheckpen" title="tumblearmorcheckpen" style="width: 40px;" value="(@{PenalitesArmure-test} )" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_tumbledivmod" title="tumbledivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_tumblenote" title="tumblenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_tumblemacro" title="tumblemacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Tumble](http://www.dandwiki.com/wiki/SRD:Tumble_Skill ) check:}} {{checkroll=[[1d20 + [[@{tumble}]] ]] }} {{notes=@{tumblenote} }}</textarea></span>
@@ -2382,8 +2382,8 @@
 						<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskillarmorcheckpen" value="0" title="Enter appropriate armor check penalty."></td>
 						<!--td class="sheet-table-data-center-sm">+<select class="sheet-table-data-center-sm" style="height: 24px; width: 40px; font-size: 0.75em;" name="attr_otherskillarmorcheckpen" title="Armor check Penalty for Skill">
 							<option type="text" value="0" selected>None</option>
-							<option type="text" value="@{armorcheckpenalty} ">=Armor check Penalty</option>
-							<option type="text"value="2*(@{armorcheckpenalty} )">=2x(Armor check Penalty)</option>
+							<option type="text" value="@{PenalitesArmure-test} ">=Armor check Penalty</option>
+							<option type="text"value="2*(@{PenalitesArmure-test} )">=2x(Armor check Penalty)</option>
 						</select></td-->
 						<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskilldivmod" value="0"></td>
 						<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_otherskillnote" title="otherskillnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></td>
@@ -3727,7 +3727,7 @@
 						<tr><td class="sheet-table-left" colspan="2">notes</td></tr>
 					</table>
 				</div> </span>
-				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleskill">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{skillflag=true}} {{check=Appraise check:}} {{checkroll=[[1d20 + [[@{appraise}]] ]] }}</textarea>
+				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleskill">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{skillflag=true}} {{check=Acrobaties check:}} {{checkroll=[[1d20 + [[@{Acrobaties}]] ]] }}</textarea>
 					<button type="roll" name="attr_exampleskillroll" title="exampleskillroll" value="@{exampleskill}"></button>
 					<br> The skillflag sets the name and double-arrow dividing line a darkish green.
 			</div>
@@ -3750,7 +3750,7 @@
 						<tr><td class="sheet-table-left" colspan="2">notes</td></tr>
 					</table>
 				</div> </span>
-				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleskillcat">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{skillcatflag=true}} {{check=Appraise check:}} {{checkroll=[[1d20 + [[@{appraise}]] ]] }}</textarea>
+				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleskillcat">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{skillcatflag=true}} {{check=Acrobaties check:}} {{checkroll=[[1d20 + [[@{Acrobaties}]] ]] }}</textarea>
 					<button type="roll" name="attr_exampleskillcatroll" title="exampleskillcatroll" value="@{exampleskillcat}"></button>
 					<br> The skillcatflag sets the dividing line to be an upward pointed arrow and both it and the name a teal color.
 			</div>
