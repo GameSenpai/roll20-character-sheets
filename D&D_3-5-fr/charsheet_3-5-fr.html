@@ -1705,22 +1705,22 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-ranks" title="ArtMagie-ranks" value="0"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-penalites" title="ArtMagie-penalites" style="width: 40px;" value="@{PenalitesArmure-test} " disabled="true"></span>
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-divmod" title="ArtMagie-divmod" value="0"></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_ArtMagie-note" title="ArtMagie-note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_ArtMagie-macro" title="ArtMagie-macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test des arts de la magie :}} {{checkroll=[[1d20 + [[@{ArtMagie}]] ]] }} {{notes=@{ArtMagie-note} }}</textarea></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_ArtMagie-notes" title="ArtMagie-notes (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_ArtMagie-macro" title="ArtMagie-macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test des arts de la magie :}} {{checkroll=[[1d20 + [[@{ArtMagie}]] ]] }} {{notes=@{ArtMagie-notes} }}</textarea></span>
 						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_ArtMagie-check" title='ArtMagie-check' value="@{ArtMagie-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
-						<input type="checkbox" name="attr_bluffclassskill" title="bluffclassskill" value="1" style="width: 8px;">
+						<input type="checkbox" name="attr_Artisanat-class" title="Artisanat-class" value="1" style="width: 8px;">
 						<span class="sheet-table-header-left">Artisanat</span>
-						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_bluff" title="bluff" value="(@{cha-mod} +@{bluffranks} +@{bluffdivmod} )" disabled="true"></span>
+						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_Artisanat" title="Artisanat" value="(@{int-mod} +@{Artisanat-ranks} +@{Artisanat-divmod} )" disabled="true"></span>
 						<span class="sheet-table-data-center-sm">= INT</span>
-						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_chamod" title="chamod" value="@{cha-mod} " disabled="true"></span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_bluffranks" title="bluffranks" value="0"></span>
+						<span class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_intmod" title="intmod" value="@{int-mod} " disabled="true"></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_Artisanat-ranks" title="Artisanat-ranks" value="0"></span>
 						<span class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </span>
-						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_bluffdivmod" title="bluffdivmod" value="0"></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_bluffnote" title="bluffnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
-						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_bluffmacro" title="bluffmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Bluff](http://www.dandwiki.com/wiki/SRD:Bluff_Skill ) check:}} {{checkroll=[[1d20 + [[@{bluff}]] ]] }} {{notes=@{bluffnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_bluffcheck" title='bluffcheck' value="@{bluffmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_Artisanat-divmod" title="Artisanat-divmod" value="0"></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_Artisanat-notes" title="Artisanat-notes (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
+						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_Artisanat-macro" title="Artisanat-macro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test d'artisanat :}} {{checkroll=[[1d20 + [[@{Artisanat}]] ]] }} {{notes=@{Artisanat-notes} }}</textarea></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_Artisanat-check" title='Artisanat-check' value="@{Artisanat-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_climbclassskill" title="climbclassskill" value="1" style="width: 8px;">
