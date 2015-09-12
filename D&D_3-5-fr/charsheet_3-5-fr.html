@@ -119,7 +119,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_for-div" value="0" title="for-div"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_for-temp" value="0" title="for-temp"></span>
 								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="for-macro (modifier pour modifier la macro)" name="attr_for-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{personnage-nom} }} {{check=Test de Force:}} {{checkroll=[[1d20 + [[@{for-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="roll_forcheck" title='forcheck' value="@{for-macro}"></button></span>
+								<span class="sheet-table-data-center"><button type="roll" name="roll_for-test" title='for-test' value="@{for-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">DEX</span>
@@ -129,7 +129,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-div" title="dex-div" value="0"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-temp" title="dex-temp" value="0"></span>
 								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="dex-macro (modifier pour modifier la macro)" name="attr_dex-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{personnage-nom} }} {{check=Test de Dextérité:}} {{checkroll=[[1d20 + [[@{dex-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="roll_dexcheck" title='dexcheck' value="@{dex-macro}"></button></span>
+								<span class="sheet-table-data-center"><button type="roll" name="roll_dex-test" title='dex-test' value="@{dex-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">CON</span>
@@ -139,7 +139,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_con-div" title="con-div" value="0"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_con-temp" title="con-temp" value="0"></span>
 								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="con-macro (modifier pour modifier la macro)" name="attr_con-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{personnage-nom} }} {{check=Test de Constitution:}} {{checkroll=[[1d20 + [[@{con-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="roll_concheck" title='concheck' value="@{con-macro}"></button></span>
+								<span class="sheet-table-data-center"><button type="roll" name="roll_con-test" title='con-test' value="@{con-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">INT</span>
@@ -149,7 +149,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_int-div" title="int-div" value="0"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_int-temp" title="int-temp" value="0"></span>
 								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="int-macro (modifier pour modifier la macro)" name="attr_int-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{personnage-nom} }} {{check=Test d'Intelligence:}} {{checkroll=[[1d20 + [[@{int-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="roll_intcheck" title='intcheck' value="@{int-macro}"></button></span>
+								<span class="sheet-table-data-center"><button type="roll" name="roll_int-test" title='int-test' value="@{int-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">SAG</span>
@@ -159,7 +159,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_sag-div" title="sag-div" value="0"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_sag-temp" title="sag-temp" value="0"></span>
 								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="sag-macro (modifier pour modifier la macro)" name="attr_sag-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{personnage-nom} }} {{check=Test de Sagesse:}} {{checkroll=[[1d20 + [[@{sag-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="roll_sagcheck" title='sagcheck' value="@{sag-macro}"></button></span>
+								<span class="sheet-table-data-center"><button type="roll" name="roll_sag-test" title='sag-test' value="@{sag-macro}"></button></span>
 							</div>
 							<div class="sheet-table-row">
 								<span class="sheet-table-row-name">CHA</span>
@@ -169,7 +169,7 @@
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_cha-div" title="cha-div" value="0"></span>
 								<span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_cha-temp" title="cha-temp" value="0"></span>
 								<span class="sheet-table-data-center"><textarea rows="1" cols="35" style="width: 35px; height: 18px;" title="cha-macro (modify to modify roll macro)" name="attr_cha-macro">&{template:DnD35StdRoll} {{abilityflag=true}} {{name=@{personnage-nom} }} {{check=Charisma check:}} {{checkroll=[[1d20 + [[@{cha-mod}]] ]] }}</textarea></span>
-								<span class="sheet-table-data-center"><button type="roll" name="roll_chacheck" title='chacheck' value="@{cha-macro}"></button></span>
+								<span class="sheet-table-data-center"><button type="roll" name="roll_cha-test" title='cha-test' value="@{cha-macro}"></button></span>
 							</div>
 						</div>
 					</td>
@@ -1694,7 +1694,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_Acrobaties-divmod" title="Acrobaties-divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_Acrobaties-notes" title="Acrobaties-notes (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_Acrobaties-macro" title="Acrobaties-macro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test d'acrobaties :}} {{checkroll=[[1d20 + [[@{Acrobaties}]] ]] {{notes=@{Acrobaties-notes} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_Acrobaties-test" title='Acrobaties-test' value="@{Acrobaties-macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_Acrobaties-test" title='Acrobaties-test' value="@{Acrobaties-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_ArtMagie-class" title="ArtMagie-class" value="1" style="width: 8px;">
@@ -1707,7 +1707,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ArtMagie-divmod" title="ArtMagie-divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_ArtMagie-notes" title="ArtMagie-notes (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_ArtMagie-macro" title="ArtMagie-macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test des arts de la magie :}} {{checkroll=[[1d20 + [[@{ArtMagie}]] ]] }} {{notes=@{ArtMagie-notes} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_ArtMagie-check" title='ArtMagie-check' value="@{ArtMagie-macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_ArtMagie-check" title='ArtMagie-check' value="@{ArtMagie-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_Artisanat-class" title="Artisanat-class" value="1" style="width: 8px;">
@@ -1720,7 +1720,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_Artisanat-divmod" title="Artisanat-divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_Artisanat-notes" title="Artisanat-notes (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_Artisanat-macro" title="Artisanat-macro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=Test d'artisanat :}} {{checkroll=[[1d20 + [[@{Artisanat}]] ]] }} {{notes=@{Artisanat-notes} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_Artisanat-check" title='Artisanat-check' value="@{Artisanat-macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_Artisanat-check" title='Artisanat-check' value="@{Artisanat-macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_climbclassskill" title="climbclassskill" value="1" style="width: 8px;">
@@ -1737,7 +1737,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_climbdivmod" title="climbdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_climbnote" title="climbnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_climbmacro" title="climbmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Climb](http://www.dandwiki.com/wiki/SRD:Climb_Skill ) check:}} {{checkroll=[[1d20 + [[@{climb}]] ]] }} {{notes=@{climbnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_climbcheck" title='climbcheck' value="@{climbmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_climbcheck" title='climbcheck' value="@{climbmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_concentrationclassskill" title="concentrationclassskill" value="1" style="width: 8px;">
@@ -1750,7 +1750,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_concentrationdivmod" title="concentrationdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_concentrationnote" title="concentrationnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_concentrationmacro" title="concentrationmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Concentration](http://www.dandwiki.com/wiki/SRD:Concentration_Skill ) check:}} {{checkroll=[[1d20 + [[@{concentration}]] ]] }} {{notes=@{concentrationnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_concentrationcheck" title='concentrationcheck' value="@{concentrationmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_concentrationcheck" title='concentrationcheck' value="@{concentrationmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_craft1classskill" title="craft1classskill" value="1" style="width: 8px;">
@@ -1763,7 +1763,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_craft1divmod" title="craft1divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_craft1note" title="craft1note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_craft1macro" title="craft1macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Craft](http://www.dandwiki.com/wiki/SRD:Craft_Skill ) (@{craft1name}) check:}} {{checkroll=[[1d20 + [[@{craft1}]] +(?{Artisan's Tools? (-1 for no, 0 for Normal, 1 for Masterwork)|0}*2)[Tool Circumstance Bonus] ]] }} {{notes=@{craft1note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_craft1check" title='craft1check' value="@{craft1macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_craft1check" title='craft1check' value="@{craft1macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_craft2classskill" title="craft2classskill" value="1" style="width: 8px;">
@@ -1776,7 +1776,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_craft2divmod" title="craft2divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_craft2note" title="craft2note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_craft2macro" title="craft2macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Craft](http://www.dandwiki.com/wiki/SRD:Craft_Skill ) (@{craft2name}) check:}} {{checkroll=[[1d20 + [[@{craft2}]] +(?{Artisan's Tools? (-1 for no, 0 for Normal, 1 for Masterwork)|0}*2)[Tool Circumstance Bonus] ]] }} {{notes=@{craft2note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_craft2check" title='craft2check' value="@{craft2macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_craft2check" title='craft2check' value="@{craft2macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_craft3classskill" title="craft3classskill" value="1" style="width: 8px;">
@@ -1789,7 +1789,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_craft3divmod" title="craft3divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_craft3note" title="craft3note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_craft3macro" title="craft3macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Craft](http://www.dandwiki.com/wiki/SRD:Craft_Skill ) (@{craft3name}) check:}} {{checkroll=[[1d20 + [[@{craft3}]] +(?{Artisan's Tools? (-1 for no, 0 for Normal, 1 for Masterwork)|0}*2)[Tool Circumstance Bonus] ]] }} {{notes=@{craft3note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_craft3check" title='craft3check' value="@{craft3macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_craft3check" title='craft3check' value="@{craft3macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_decipherscriptclassskill" title="decipherscriptclassskill" value="1" style="width: 8px;">
@@ -1802,7 +1802,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_decipherscriptdivmod" title="decipherscriptdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_decipherscriptnote" title="decipherscriptnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_decipherscriptmacro" title="decipherscriptmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Decipher Script](http://www.dandwiki.com/wiki/SRD:Decipher_Script_Skill ) check:}} {{checkroll=[[1d20 + [[@{decipherscript}]] ]] }} {{notes=If fail, [[(1d20 + [[@{wis-mod}]] )]] vs dc5 to avoid drawing a false conclusion. }} {{notes=@{decipherscriptnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_decipherscriptcheck" title='decipherscriptcheck' value="@{decipherscriptmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_decipherscriptcheck" title='decipherscriptcheck' value="@{decipherscriptmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_diplomacyclassskill" title="diplomacyclassskill" value="1" style="width: 8px;">
@@ -1815,7 +1815,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_diplomacydivmod" title="diplomacydivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_diplomacynote" title="diplomacynote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_diplomacymacro" title="diplomacymacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Diplomacy](http://www.dandwiki.com/wiki/SRD:Diplomacy_Skill ) check:}} {{checkroll=[[1d20 + [[@{diplomacy}]] ]] }} {{notes=@{diplomacynote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_diplomacycheck" title='diplomacycheck' value="@{diplomacymacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_diplomacycheck" title='diplomacycheck' value="@{diplomacymacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_disabledeviceclassskill" title="disabledeviceclassskill" value="1" style="width: 8px;">
@@ -1828,7 +1828,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_disabledevicedivmod" title="disabledevicedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_disabledevicenote" title="disabledevicenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_disabledevicemacro" title="disabledevicemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Disable Device](http://www.dandwiki.com/wiki/SRD:Disable_Device_Skill ) check:}} {{checkroll=[[1d20 + [[@{disabledevice}]] ]] }} {{notes=@{disabledevicenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_disabledevicecheck" title='disabledevicecheck' value="@{disabledevicemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_disabledevicecheck" title='disabledevicecheck' value="@{disabledevicemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_disguiseclassskill" title="disguiseclassskill" value="1" style="width: 8px;">
@@ -1841,7 +1841,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_disguisedivmod" title="disguisedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_disguisenote" title="disguisenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_disguisemacro" title="disguisemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Disguise](http://www.dandwiki.com/wiki/SRD:Disguise_Skill ) check:}} {{checkroll=[[1d20 + [[@{disguise}]] ]] }} {{notes=@{disguisenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_disguisecheck" title='disguisecheck' value="@{disguisemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_disguisecheck" title='disguisecheck' value="@{disguisemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_escapeartistclassskill" title="escapeartistclassskill" value="1" style="width: 8px;">
@@ -1854,7 +1854,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_escapeartistdivmod" title="escapeartistdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_escapeartistnote" title="escapeartistnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_escapeartistmacro" title="escapeartistmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Escape Artist](http://www.dandwiki.com/wiki/SRD:Escape_Artist_Skill ) check:}} {{checkroll=[[1d20 + [[@{escapeartist}]] ]] }} {{notes=@{escapeartistnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_escapeartistcheck" title='escapeartistcheck' value="@{escapeartistmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_escapeartistcheck" title='escapeartistcheck' value="@{escapeartistmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_forgeryclassskill" title="forgeryclassskill" value="1" style="width: 8px;">
@@ -1867,7 +1867,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_forgerydivmod" title="forgerydivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_forgerynote" title="forgerynote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_forgerymacro" title="forgerymacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Forgery](http://www.dandwiki.com/wiki/SRD:Forgery_Skill ) check:}} {{checkroll=[[1d20 + [[@{forgery}]] ]] }} {{notes=@{forgerynote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_forgerycheck" title='forgerycheck' value="@{forgerymacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_forgerycheck" title='forgerycheck' value="@{forgerymacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_gatherinformationclassskill" title="gatherinformationclassskill" value="1" style="width: 8px;">
@@ -1880,7 +1880,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_gatherinformationdivmod" title="gatherinformationdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_gatherinformationnote" title="gatherinformationnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_gatherinformationmacro" title="gatherinformationmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Gather Information](http://www.dandwiki.com/wiki/SRD:Gather_Information_Skill ) check:}} {{checkroll=[[1d20 + [[@{gatherinformation}]] ]] }} {{notes=@{gatherinformationnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_gatherinformationcheck" title='gatherinformationcheck' value="@{gatherinformationmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_gatherinformationcheck" title='gatherinformationcheck' value="@{gatherinformationmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_handleanimalclassskill" title="handleanimalclassskill" value="1" style="width: 8px;">
@@ -1893,7 +1893,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_handleanimaldivmod" title="handleanimaldivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_handleanimalnote" title="handleanimalnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_handleanimalmacro" title="handleanimalmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Handle Animal](http://www.dandwiki.com/wiki/SRD:Handle_Animal_Skill ) check:}} {{checkroll=[[1d20 + [[@{handleanimal}]] ]] }} {{notes=@{handleanimalnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_handleanimalcheck" title='handleanimalcheck' value="@{handleanimalmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_handleanimalcheck" title='handleanimalcheck' value="@{handleanimalmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_healclassskill" title="healclassskill" value="1" style="width: 8px;">
@@ -1906,7 +1906,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_healdivmod" title="healdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_healnote" title="healnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_healmacro" title="healmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Heal](http://www.dandwiki.com/wiki/SRD:Heal_Skill ) check:}} {{checkroll=[[1d20 + [[@{heal}]] +(?{Healer's Kit? (1 for yes)|0}*2)[Healer's Kit Circumstance Bonus] )]] }} {{notes=@{healnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_healcheck" title='healcheck' value="@{healmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_healcheck" title='healcheck' value="@{healmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_hideclassskill" title="hideclassskill" value="1" style="width: 8px;">
@@ -1919,7 +1919,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_hidedivmod" title="hidedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_hidenote" title="hidenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_hidemacro" title="hidemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Hide](http://www.dandwiki.com/wiki/SRD:Hide_Skill ) check:}} {{checkroll=[[1d20 + [[@{hide}]] ]] }} {{notes=@{hidenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_hidecheck" title='hidecheck' value="@{hidemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_hidecheck" title='hidecheck' value="@{hidemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_intimidateclassskill" title="intimidateclassskill" value="1" style="width: 8px;">
@@ -1932,7 +1932,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_intimidatedivmod" title="intimidatedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_intimidatenote" title="intimidatenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_intimidatemacro" title="intimidatemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Intimidate](http://www.dandwiki.com/wiki/SRD:Intimidate_Skill ) check:}} {{checkroll=[[1d20 + [[@{intimidate}]] ]] }} {{notes=@{intimidatenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_intimidatecheck" title='intimidatecheck' value="@{intimidatemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_intimidatecheck" title='intimidatecheck' value="@{intimidatemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_jumpclassskill" title="jumpclassskill" value="1" style="width: 8px;">
@@ -1949,7 +1949,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_jumpdivmod" title="jumpdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_jumpnote" title="jumpnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_jumpmacro" title="jumpmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Jump](http://www.dandwiki.com/wiki/SRD:Jump_Skill ) check:}} {{checkroll=[[1d20 + [[@{jump}]] ]] }} {{notes=@{jumpnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_jumpcheck" title='jumpcheck' value="@{jumpmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_jumpcheck" title='jumpcheck' value="@{jumpmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowarcanaclassskill" title="knowarcanaclassskill" value="1" style="width: 8px;">
@@ -1962,7 +1962,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowarcanadivmod" title="knowarcanadivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowarcananote" title="knowarcananote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowarcanamacro" title="knowarcanamacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Arcana) check:}} {{checkroll=[[1d20 + [[@{knowarcana}]] ]] }} {{notes=@{knowarcananote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowarcanacheck" title='knowarcanacheck' value="@{knowarcanamacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowarcanacheck" title='knowarcanacheck' value="@{knowarcanamacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowengineerclassskill" title="knowengineerclassskill" value="1" style="width: 8px;">
@@ -1975,7 +1975,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowengineerdivmod" title="knowengineerdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowengineernote" title="knowengineernote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowengineermacro" title="knowengineermacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Engineering) check:}} {{checkroll=[[1d20 + [[@{knowengineer}]] ]] }} {{notes=@{knowengineernote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowengineercheck" title='knowengineercheck' value="@{knowengineermacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowengineercheck" title='knowengineercheck' value="@{knowengineermacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowdungeonclassskill" title="knowdungeonclassskill" value="1" style="width: 8px;">
@@ -1988,7 +1988,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowdungeondivmod" title="knowdungeondivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowdungeonnote" title="knowdungeonnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowdungeonmacro" title="knowdungeonmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Dungeoneering) check:}} {{checkroll=[[1d20 + [[@{knowdungeon}]] ]] }} {{notes=@{knowdungeonnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowdungeoncheck" title='knowdungeoncheck' value="@{knowdungeonmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowdungeoncheck" title='knowdungeoncheck' value="@{knowdungeonmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowgeographyclassskill" title="knowgeographyclassskill" value="1" style="width: 8px;">
@@ -2001,7 +2001,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowgeographydivmod" title="knowgeographydivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowgeographynote" title="knowgeographynote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowgeographymacro" title="knowgeographymacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Geography) check:}} {{checkroll=[[1d20 + [[@{knowgeography}]] ]] }} {{notes=@{knowgeographynote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowgeographycheck" title='knowgeographycheck' value="@{knowgeographymacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowgeographycheck" title='knowgeographycheck' value="@{knowgeographymacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowhistoryclassskill" title="knowhistoryclassskill" value="1" style="width: 8px;">
@@ -2014,7 +2014,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowhistorydivmod" title="knowhistorydivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowhistorynote" title="knowhistorynote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowhistorymacro" title="knowhistorymacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (History) check:}} {{checkroll=[[1d20 + [[@{knowhistory}]] ]] }} {{notes=@{knowhistorynote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowhistorycheck" title='knowhistorycheck' value="@{knowhistorymacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowhistorycheck" title='knowhistorycheck' value="@{knowhistorymacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowlocalclassskill" title="knowlocalclassskill" value="1" style="width: 8px;">
@@ -2027,7 +2027,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowlocaldivmod" title="knowlocaldivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowlocalnote" title="knowlocalnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowlocalmacro" title="knowlocalmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Local) check:}} {{checkroll=[[1d20 + [[@{knowlocal}]] ]] }} {{notes=@{knowlocalnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowlocalcheck" title='knowlocalcheck' value="@{knowlocalmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowlocalcheck" title='knowlocalcheck' value="@{knowlocalmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knownatureclassskill" title="knownatureclassskill" value="1" style="width: 8px;">
@@ -2040,7 +2040,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knownaturedivmod" title="knownaturedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knownaturenote" title="knownaturenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knownaturemacro" title="knownaturemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Nature) check:}} {{checkroll=[[1d20 + [[@{knownature}]] ]] }} {{notes=@{knownaturenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knownaturecheck" title='knownaturecheck' value="@{knownaturemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knownaturecheck" title='knownaturecheck' value="@{knownaturemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knownobilityclassskill" title="knownobilityclassskill" value="1" style="width: 8px;">
@@ -2053,7 +2053,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knownobilitydivmod" title="knownobilitydivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knownobilitynote" title="knownobilitynote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knownobilitymacro" title="knownobilitymacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Nobility) check:}} {{checkroll=[[1d20 + [[@{knownobility}]] ]] }} {{notes=@{knownobilitynote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knownobilitycheck" title='knownobilitycheck' value="@{knownobilitymacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knownobilitycheck" title='knownobilitycheck' value="@{knownobilitymacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowreligionclassskill" title="knowreligionclassskill" value="1" style="width: 8px;">
@@ -2066,7 +2066,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowreligiondivmod" title="knowreligiondivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowreligionnote" title="knowreligionnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowreligionmacro" title="knowreligionmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Religion) check:}} {{checkroll=[[1d20 + [[@{knowreligion}]] ]] }} {{notes=@{knowreligionnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowreligioncheck" title='knowreligioncheck' value="@{knowreligionmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowreligioncheck" title='knowreligioncheck' value="@{knowreligionmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_knowplanesclassskill" title="knowplanesclassskill" value="1" style="width: 8px;">
@@ -2079,7 +2079,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowplanesdivmod" title="knowplanesdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_knowplanesnote" title="knowplanesnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_knowplanesmacro" title="knowplanesmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Planes) check:}} {{checkroll=[[1d20 + [[@{knowplanes}]] ]] }} {{notes=@{knowplanesnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_knowplanescheck" title='knowplanescheck' value="@{knowplanesmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_knowplanescheck" title='knowplanescheck' value="@{knowplanesmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_listenclassskill" title="listenclassskill" value="1" style="width: 8px;">
@@ -2092,7 +2092,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_listendivmod" title="listendivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_listennote" title="listennote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_listenmacro" title="listenmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Listen](http://www.dandwiki.com/wiki/SRD:Listen_Skill ) check:}} {{checkroll=[[1d20 + [[@{listen}]] ]] }} {{notes=@{listennote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_listencheck" title='listencheck' value="@{listenmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_listencheck" title='listencheck' value="@{listenmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_movesilentclassskill" title="movesilentclassskill" value="1" style="width: 8px;">
@@ -2105,7 +2105,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_movesilentdivmod" title="movesilentdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_movesilentnote" title="movesilentnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_movesilentmacro" title="movesilentmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Move Silently](http://www.dandwiki.com/wiki/SRD:Move_Silently_Skill ) check:}} {{checkroll=[[1d20 + [[@{movesilent}]] ]] }} {{notes=@{movesilentnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_movesilentcheck" title='movesilentcheck' value="@{movesilentmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_movesilentcheck" title='movesilentcheck' value="@{movesilentmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_openlockclassskill" title="openlockclassskill" value="1" style="width: 8px;">
@@ -2118,7 +2118,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_openlockdivmod" title="openlockdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_openlocknote" title="openlocknote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_openlockmacro" title="openlockmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Open Lock](http://www.dandwiki.com/wiki/SRD:Open_Lock_Skill ) check:}} {{checkroll=[[1d20 + [[@{openlock}]] +(?{Thieves' Tools? (-1 for no, 0 for Normal, 1 for Masterwork)|0}*2))[Tool Circumstance Bonus] ]] }} {{notes=@{openlocknote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_openlockcheck" title='openlockcheck' value="@{openlockmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_openlockcheck" title='openlockcheck' value="@{openlockmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_perform1classskill" title="perform1classskill" value="1" style="width: 8px;">
@@ -2131,7 +2131,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_perform1divmod" title="perform1divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_perform1note" title="perform1note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_perform1macro" title="perform1macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Perform](http://www.dandwiki.com/wiki/SRD:Perform_Skill ) (@{perform1name}) check:}} {{checkroll=[[1d20 + [[@{perform1}]] +(?{Masterwork Instrument? (1 for Yes)|0}*2)[Instrument Circumstance Bonus] ]] }} {{notes=@{perform1note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_perform1check" title='perform1check' value="@{perform1macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_perform1check" title='perform1check' value="@{perform1macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_perform2classskill" title="perform2classskill" value="1" style="width: 8px;">
@@ -2144,7 +2144,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_perform2divmod" title="perform2divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_perform2note" title="perform2note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_perform2macro" title="perform2macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Perform](http://www.dandwiki.com/wiki/SRD:Perform_Skill ) (@{perform2name}) check:}} {{checkroll=[[1d20 + [[@{perform2}]] +(?{Masterwork Instrument? (1 for Yes)|0}*2)[Instrument Circumstance Bonus] ]] }} {{notes=@{perform2note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_perform2check" title='perform2check' value="@{perform2macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_perform2check" title='perform2check' value="@{perform2macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_perform3classskill" title="perform3classskill" value="1" style="width: 8px;">
@@ -2157,7 +2157,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_perform3divmod" title="perform3divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_perform3note" title="perform3note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_perform3macro" title="perform3macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Perform](http://www.dandwiki.com/wiki/SRD:Perform_Skill ) (@{perform2name}) check:}} {{checkroll=[[1d20 + [[@{perform3}]] +(?{Masterwork Instrument? (1 for Yes)|0}*2)[Instrument Circumstance Bonus] ]] }} {{notes=@{perform3note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_perform3check" title='perform3check' value="@{perform3macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_perform3check" title='perform3check' value="@{perform3macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_profession1classskill" title="profession1classskill" value="1" style="width: 8px;">
@@ -2170,7 +2170,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_profession1divmod" title="profession1divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_profession1note" title="profession1note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_profession1macro" title="profession1macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Profession](http://www.dandwiki.com/wiki/SRD:Profession_Skill ) (@{profession1name}) check:}} {{checkroll=[[1d20 + [[@{profession1}]] ]] }} {{notes=@{profession1note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_profession1check" title='profession1check' value="@{profession1macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_profession1check" title='profession1check' value="@{profession1macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_profession2classskill" title="profession2classskill" value="1" style="width: 8px;">
@@ -2183,7 +2183,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_profession2divmod" title="profession2divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_profession2note" title="profession2note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_profession2macro" title="profession2macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Profession](http://www.dandwiki.com/wiki/SRD:Profession_Skill ) (@{profession2name}) check:}} {{checkroll=[[1d20 + [[@{profession2}]] ]] }} {{notes=@{profession2note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_profession2check" title='profession2check' value="@{profession2macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_profession2check" title='profession2check' value="@{profession2macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_profession3classskill" title="profession3classskill" value="1" style="width: 8px;">
@@ -2196,7 +2196,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_profession3divmod" title="profession3divmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_profession3note" title="profession3note (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_profession3macro" title="profession3macro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Profession](http://www.dandwiki.com/wiki/SRD:Profession_Skill ) (@{profession3name}) check:}} {{checkroll=[[1d20 + [[@{profession3}]] ]] }} {{notes=@{profession3note} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_profession3check" title='profession3check' value="@{profession3macro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_profession3check" title='profession3check' value="@{profession3macro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_rideclassskill" title="rideclassskill" value="1" style="width: 8px;">
@@ -2209,7 +2209,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_ridedivmod" title="ridedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_ridenote" title="ridenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_ridemacro" title="ridemacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Ride](http://www.dandwiki.com/wiki/SRD:Ride_Skill ) check:}} {{checkroll=[[1d20 + [[@{ride}]] ]] }} {{notes=@{ridenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_ridecheck" title='ridecheck' value="@{ridemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_ridecheck" title='ridecheck' value="@{ridemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_searchclassskill" title="searchclassskill" value="1" style="width: 8px;">
@@ -2222,7 +2222,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_searchdivmod" title="searchdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_searchnote" title="searchnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_searchmacro" title="searchmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Search](http://www.dandwiki.com/wiki/SRD:Search_Skill ) check:}} {{checkroll=[[1d20 + [[@{search}]] ]] }} {{notes=@{searchnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_searchcheck" title='searchcheck' value="@{searchmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_searchcheck" title='searchcheck' value="@{searchmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_sensemotiveclassskill" title="sensemotiveclassskill" value="1" style="width: 8px;">
@@ -2235,7 +2235,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_sensemotivedivmod" title="sensemotivedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_sensemotivenote" title="sensemotivenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_sensemotivemacro" title="sensemotivemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Sense Motive](http://www.dandwiki.com/wiki/SRD:Sense_Motive_Skill ) check:}} {{checkroll=[[1d20 + [[@{sensemotive}]] ]] }} {{notes=@{sensemotivenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_sensemotivecheck" title='sensemotivecheck' value="@{sensemotivemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_sensemotivecheck" title='sensemotivecheck' value="@{sensemotivemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_sleightofhandclassskill" title="sleightofhandclassskill" value="1" style="width: 8px;">
@@ -2248,7 +2248,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_sleightofhanddivmod" title="sleightofhanddivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_sleightofhandnote" title="sleightofhandnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_sleightofhandmacro" title="sleightofhandmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Sleight of Hand](http://www.dandwiki.com/wiki/SRD:Sleight_of_Hand_Skill ) check:}} {{checkroll=[[1d20 + [[@{sleightofhand}]] ]] }} {{notes=@{sleightofhandnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_sleightofhandcheck" title='sleightofhandcheck' value="@{sleightofhandmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_sleightofhandcheck" title='sleightofhandcheck' value="@{sleightofhandmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_spellcraftclassskill" title="spellcraftclassskill" value="1" style="width: 8px;">
@@ -2261,7 +2261,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_spellcraftdivmod" title="spellcraftdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_spellcraftnote" title="spellcraftnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_spellcraftmacro" title="spellcraftmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Spellcraft](http://www.dandwiki.com/wiki/SRD:Spellcraft_Skill ) check:}} {{checkroll=[[1d20 + [[@{spellcraft}]] ]] }} {{notes=@{spellcraftnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_spellcraftcheck" title='spellcraftcheck' value="@{spellcraftmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_spellcraftcheck" title='spellcraftcheck' value="@{spellcraftmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_spotclassskill" title="spotclassskill" value="1" style="width: 8px;">
@@ -2274,7 +2274,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_spotdivmod" title="spotdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_spotnote" title="spotnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_spotmacro" title="spotmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Spot](http://www.dandwiki.com/wiki/SRD:Spot_Skill ) check:}} {{checkroll=[[1d20 + [[@{spot}]] ]] }} {{notes=@{spotnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_spotcheck" title='spotcheck' value="@{spotmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_spotcheck" title='spotcheck' value="@{spotmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_survivalclassskill" title="survivalclassskill" value="1" style="width: 8px;">
@@ -2287,7 +2287,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_survivaldivmod" title="survivaldivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_survivalnote" title="survivalnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_survivalmacro" title="survivalmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Survival](http://www.dandwiki.com/wiki/SRD:Survival_Skill ) check:}} {{checkroll=[[1d20 + [[@{survival}]] ]] }} {{notes=@{survivalnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_survivalcheck" title='survivalcheck' value="@{survivalmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_survivalcheck" title='survivalcheck' value="@{survivalmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_swimclassskill" title="swimclassskill" value="1" style="width: 8px;">
@@ -2300,7 +2300,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_swimdivmod" title="swimdivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_swimnote" title="swimnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_swimmacro" title="swimmacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Swim](http://www.dandwiki.com/wiki/SRD:Swim_Skill ) check:}} {{checkroll=[[1d20 + [[@{swim}]] ]] }} {{notes=@{swimnote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_swimcheck" title='swimcheck' value="@{swimmacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_swimcheck" title='swimcheck' value="@{swimmacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_tumbleclassskill" title="tumbleclassskill" value="1" style="width: 8px;">
@@ -2313,7 +2313,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_tumbledivmod" title="tumbledivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_tumblenote" title="tumblenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_tumblemacro" title="tumblemacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Tumble](http://www.dandwiki.com/wiki/SRD:Tumble_Skill ) check:}} {{checkroll=[[1d20 + [[@{tumble}]] ]] }} {{notes=@{tumblenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_tumblecheck" title='tumblecheck' value="@{tumblemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_tumblecheck" title='tumblecheck' value="@{tumblemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_usemagicdeviceclassskill" title="usemagicdeviceclassskill" value="1" style="width: 8px;">
@@ -2326,7 +2326,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_usemagicdevicedivmod" title="usemagicdevicedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_usemagicdevicenote" title="usemagicdevicenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_usemagicdevicemacro" title="usemagicdevicemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Use Magic Device](http://www.dandwiki.com/wiki/SRD:Use_Magic_Device_Skill ) check:}} {{checkroll=[[1d20 + [[@{usemagicdevice}]] ]] }} {{notes=@{usemagicdevicenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_usemagicdevicecheck" title='usemagicdevicecheck' value="@{usemagicdevicemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_usemagicdevicecheck" title='usemagicdevicecheck' value="@{usemagicdevicemacro}" ></button></span>
 					</div>
 					<div class="sheet-table-row">
 						<input type="checkbox" name="attr_useropeclassskill" title="useropeclassskill" value="1" style="width: 8px;">
@@ -2339,7 +2339,7 @@
 						<span class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_useropedivmod" title="useropedivmod" value="0"></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_useropenote" title="useropenote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></span>
 						<span class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_useropemacro" title="useropemacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=[Use Rope](http://www.dandwiki.com/wiki/SRD:Use_Rope_Skill ) check:}} {{checkroll=[[1d20 + [[@{userope}]] ]] }} {{notes=@{useropenote} }}</textarea></span>
-						<span class="sheet-table-data-center-sm"><button type="roll" name="attr_useropecheck" title='useropecheck' value="@{useropemacro}" ></button></span>
+						<span class="sheet-table-data-center-sm"><button type="roll" name="roll_useropecheck" title='useropecheck' value="@{useropemacro}" ></button></span>
 					</div>
 					</td>
 				</table>
@@ -2388,7 +2388,7 @@
 						<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills-rep" name="attr_otherskilldivmod" value="0"></td>
 						<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 170px; height: 20px;" name="attr_otherskillnote" title="otherskillnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></td>
 						<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 190px; height: 20px;" name="attr_otherskillmacro" title="modify this macro to modify the skill check roll.">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{personnage-nom} }} {{check=@{otherskillname} check:}} {{checkroll=[[1d20 + [[@{otherskill}]] ]] }} {{notes=@{otherskillnote} }}</textarea></td>
-						<td class="sheet-table-data-center-sm"><button type="roll" name="attr_otherskillcheck" title='otherskillcheck' value="@{otherskillmacro}"></button></td>
+						<td class="sheet-table-data-center-sm"><button type="roll" name="roll_otherskillcheck" title='otherskillcheck' value="@{otherskillmacro}"></button></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -2506,7 +2506,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro01" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags=casts [Cure Minor Wounds](http://www.dandwiki.com/wiki/Cure_minor_wounds ).}} {{School:= Conj(Healing)}} {{Level:= Cleric 0}} {{Cmpnts:=V,S}} {{Casting Time:=1 std action}} {{Range:= Touch}} {{Target:= Creature touched}} {{Duration:= Instantaneous}} {{Saving Throw:= Will Save(half) when used vs Undead}} {{Spell Resist.:= Undead can use spell resistance}} {{  Caster level check: = [[1d20+@{casterlevel}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes= ?{Recipient's name|@{personnage-nom}} receives 1 heath (or 1 point of damage if an undead creature) }} </textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast01" text="Spell Cast01" title='repeating_spells01_x_spellcast01' value="@{spellmacro01}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast01" text="Spell Cast01" title='repeating_spells01_x_spellcast01' value="@{spellmacro01}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2536,7 +2536,7 @@
 										<td>
 										<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro02" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags=casts [Mending](http://www.dandwiki.com/wiki/SRD:Mending ).}} {{check=One object within 10 feet of up to 1 lb. is repaired of small breaks or tears.}} {{checkroll=broken metallic objects such as a ring, a chain link, a medallion, or a slender dagger, are welded providing but one break exists. }} {{notes=Ceramic or wooden objects with multiple breaks can be invisibly rejoined to be as strong as new. A hole in a leather sack or a wineskin is completely healed over by mending. The spell can repair a magic item, but the item’s magical abilities are not restored. The spell cannot mend broken magic rods, staffs, or wands, nor does it affect creatures (including constructs). }}</textarea>
 											</td>
-										<td><button type="roll" name="attr_spellcast02" text="Spell Cast02" title='repeating_spells02_x_spellcast02' value="@{spellmacro02}" style="height: 24px; width: 20px;" ></button>
+										<td><button type="roll" name="roll_spellcast02" text="Spell Cast02" title='repeating_spells02_x_spellcast02' value="@{spellmacro02}" style="height: 24px; width: 20px;" ></button>
 										</td>
 									</tr>
 								</table>
@@ -2573,7 +2573,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro11" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name= @{personnage-nom} casts Doom on @{target|token_name} }} {{School:=Necromancy (Fear, Mind affecting)}} {{Level: =Cleric 1}} {{Cmpnts:=V, S, DF}} {{Casting Time:= 1 std action}} {{Range:= Medium ([[100+10*@{casterlevel}]]ft)}} {{Target:= 1 living creature}} {{Duration:= [[@{casterlevel}]] min.}} {{Saving Throw:= Will negates (DC=[[@{spelldc1}]]) }} {{Spell Resist.:= Yes }} {{Caster level check: = [[1d20+@{casterlevel}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes=Target is filled with a feeling of horrible dread that causes it to become shaken (-2 on attack rolls, saves, skill checks, ability checks).}} </textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast11" text="Spell Cast11" title='repeating_spells11_x_spellcast11' value="@{spellmacro11}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast11" text="Spell Cast11" title='repeating_spells11_x_spellcast11' value="@{spellmacro11}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2603,7 +2603,7 @@
 										<td>
 										<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro12" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags=casts [Magic Missile!](http://www.dandwiki.com/wiki/SRD:Magic_Missile ).}} {{School:= Evo (Force)}} {{Level:= Sor/Wiz 1}} {{Cmpnts:=V,S}} {{Casting Time:=1 std action}} {{Range:= Medium ( [[100+10*@{casterlevel2}]] ft)}} {{Target:= Up to five creatures, no two of which can be more than 15 ft. apart }} {{Duration:= Instantaneous}} {{Saving Throw:= None}} {{Spell Resist.:= Yes}} {{Caster level check: = [[1d20+@{casterlevel2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{check= [[{(d1*((@{casterlevel2}-1-((@{casterlevel2}-1)%2))/2)+1),d1*5}dh1}]] missiles fly from the caster’s fingers,}} {{checkroll=hitting for [[1d4+1]]|[[1d4+1]]|[[1d4+1]]|[[1d4+1]]|[[1d4+1]] force damage.}} {{notes= The missile strikes unerringly, even if the target is in melee combat or has less than total cover or total concealment. Specific parts of a creature can’t be singled out. Inanimate objects are not damaged by the spell. If you shoot multiple missiles, you can have them strike a single creature or several creatures. A single missile can strike only one creature. You must designate targets before you check for spell resistance or roll damage.  }}</textarea>
 											</td>
-										<td><button type="roll" name="attr_spellcast12" text="Spell Cast12" title='repeating_spells12_x_spellcast12' value="@{spellmacro12}" style="height: 24px; width: 20px;" ></button>
+										<td><button type="roll" name="roll_spellcast12" text="Spell Cast12" title='repeating_spells12_x_spellcast12' value="@{spellmacro12}" style="height: 24px; width: 20px;" ></button>
 										</td>
 									</tr>
 								</table>
@@ -2640,7 +2640,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro21" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags=casts [Cure Moderate Wounds](http://www.dandwiki.com/wiki/SRD:Cure_Moderate_Wounds ).}} {{School:= Conj(Healing)}} {{Level:= Blg 2, Brd 2, Clr 2, Drd 3, Healing 2, Pal 3, Rgr 3 }} {{Cmpnts:=V,S}} {{Casting Time:=1 std action}} {{Range:= Touch}} {{Target:= Creature touched}} {{Duration:= Instantaneous}} {{Saving Throw:= Will Save(half) when used vs Undead}} {{Spell Resist.:= Undead can use spell resistance}} {{Caster level check: = [[1d20+@{casterlevel}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|17}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{check=@{target|token_name} receives }} {{checkroll= [[2d8+{@{casterlevel},10}dh1]] heath. }} {{notes=Undead creatures take damage instead of gaining healing. }}</textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast21" text="Spell Cast21" title='repeating_spells21_x_spellcast21' value="@{spellmacro21}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast21" text="Spell Cast21" title='repeating_spells21_x_spellcast21' value="@{spellmacro21}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2670,7 +2670,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro22" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags= grants ?{target|@{personnage-nom}} [Bear's Endurance](http://www.dandwiki.com/wiki/SRD:Bear%27s_Endurance )!}} {{School:= Transmutation}} {{Level:= Clr 2, Drd 2, Rgr 2, Sor/Wiz 2}} {{Cmpnts:=V, S, DF}} {{Casting Time:=1 std action}} {{Range:= Touch}} {{Target:= 1 creature touched }} {{Duration:= @{casterlevel2} mins.}} {{Saving Throw:= Will negates(harmless)}} {{Spell Resist.:= Yes}} {{Caster level check: = [[1d20+@{casterlevel2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{check= ?{target|@{personnage-nom}} gains greater vitality and stamina, }} {{checkroll= receiving a +4 enh bonus to Constitution with the usual benefits to hit points(these temp hit points go away when spell ends), Vigueur saves, constitution checks, etc. }}</textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast22" text="Spell Cast22" title='repeating_spells22_x_spellcast22' value="@{spellmacro22}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast22" text="Spell Cast22" title='repeating_spells22_x_spellcast22' value="@{spellmacro22}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2707,7 +2707,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro31" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast31" text="Spell Cast31" title='repeating_spells31_x_spellcast31' value="@{spellmacro31}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast31" text="Spell Cast31" title='repeating_spells31_x_spellcast31' value="@{spellmacro31}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2737,7 +2737,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro32" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast32" text="Spell Cast32" title='repeating_spells32_x_spellcast32' value="@{spellmacro32}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast32" text="Spell Cast32" title='repeating_spells32_x_spellcast32' value="@{spellmacro32}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2774,7 +2774,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro41" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast41" text="Spell Cast41" title='repeating_spells41_x_spellcast41' value="@{spellmacro41}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast41" text="Spell Cast41" title='repeating_spells41_x_spellcast41' value="@{spellmacro41}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2804,7 +2804,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro42" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast42" text="Spell Cast42" title='repeating_spells42_x_spellcast42' value="@{spellmacro42}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast42" text="Spell Cast42" title='repeating_spells42_x_spellcast42' value="@{spellmacro42}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2841,7 +2841,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro51" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast51" text="Spell Cast51" title='repeating_spells51_x_spellcast51' value="@{spellmacro51}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast51" text="Spell Cast51" title='repeating_spells51_x_spellcast51' value="@{spellmacro51}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2871,7 +2871,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro52" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast52" text="Spell Cast52" title='repeating_spells52_x_spellcast52' value="@{spellmacro52}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast52" text="Spell Cast52" title='repeating_spells52_x_spellcast52' value="@{spellmacro52}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2908,7 +2908,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro61" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast61" text="Spell Cast61" title='repeating_spells61_x_spellcast61' value="@{spellmacro61}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast61" text="Spell Cast61" title='repeating_spells61_x_spellcast61' value="@{spellmacro61}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2938,7 +2938,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro62" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast62" text="Spell Cast62" title='repeating_spells62_x_spellcast62' value="@{spellmacro62}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast62" text="Spell Cast62" title='repeating_spells62_x_spellcast62' value="@{spellmacro62}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -2974,7 +2974,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro71" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast71" text="Spell Cast71" title='repeating_spells71_x_spellcast71' value="@{spellmacro71}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast71" text="Spell Cast71" title='repeating_spells71_x_spellcast71' value="@{spellmacro71}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3004,7 +3004,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro72" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast72" text="Spell Cast72" title='repeating_spells72_x_spellcast72' value="@{spellmacro72}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast72" text="Spell Cast72" title='repeating_spells72_x_spellcast72' value="@{spellmacro72}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3040,7 +3040,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro81" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast81" text="Spell Cast81" title='repeating_spells81_x_spellcast81' value="@{spellmacro81}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast81" text="Spell Cast81" title='repeating_spells81_x_spellcast81' value="@{spellmacro81}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3070,7 +3070,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro82" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast82" text="Spell Cast82" title='repeating_spells82_x_spellcast82' value="@{spellmacro82}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast82" text="Spell Cast82" title='repeating_spells82_x_spellcast82' value="@{spellmacro82}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3106,7 +3106,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro91" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast91" text="Spell Cast91" title='repeating_spells91_x_spellcast91' value="@{spellmacro91}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast91" text="Spell Cast91" title='repeating_spells91_x_spellcast91' value="@{spellmacro91}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3136,7 +3136,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro92" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast92" text="Spell Cast92" title='repeating_spells92_x_spellcast92' value="@{spellmacro92}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast92" text="Spell Cast92" title='repeating_spells92_x_spellcast92' value="@{spellmacro92}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3172,7 +3172,7 @@
 											<td>
 											<textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro101" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast101" text="Spell Cast101" title='repeating_spells101_x_spellcast101' value="@{spellmacro101}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast101" text="Spell Cast101" title='repeating_spells101_x_spellcast101' value="@{spellmacro101}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3201,7 +3201,7 @@
 											<td style="width: 20px;"><input type="text" name="attr_spelllevel102" value="6"></td>
 											<td><textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro102" title="Edit this field to create the macro run by the roll button" placeholder="spell macro goes here"></textarea>
 												</td>
-											<td><button type="roll" name="attr_spellcast102" text="Spell Cast102" title='repeating_spells102_x_spellcast102' value="@{spellmacro102}" style="height: 24px; width: 20px;" ></button>
+											<td><button type="roll" name="roll_spellcast102" text="Spell Cast102" title='repeating_spells102_x_spellcast102' value="@{spellmacro102}" style="height: 24px; width: 20px;" ></button>
 											</td>
 										</tr>
 									</table>
@@ -3244,11 +3244,11 @@
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Att<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 750px;" name="attr_summonattack" title="summonattack" placeholder="Attack"></textarea>
-											<button type="roll" name="attr_summonattackbutton" title='summonattackbutton' placeholder="@{summonattack}" style="height: 24px; width: 20px;" ></button></span>
+											<button type="roll" name="roll_summonattackbutton" title='summonattackbutton' placeholder="@{summonattack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Att+<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 745px;" name="attr_summonfullattack" title="summonfullattack" placeholder="Full Attack"></textarea>
-											<button type="roll" name="attr_summonfullattackbutton" title='summonfullattackbutton' placeholder="@{summonfullattack}" style="height: 24px; width: 20px;" ></button></span>
+											<button type="roll" name="roll_summonfullattackbutton" title='summonfullattackbutton' placeholder="@{summonfullattack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Espace Occ./Allonge:<input style="width: 40px;" type="text" name="attr_summonspace" title="summonspace" placeholder="Space">/<input style="width: 40px;" type="text" name="attr_summonreach" title="summonreach" placeholder="Reach"> &nbsp; &nbsp;</span>
@@ -3310,11 +3310,11 @@
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Att<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 750px;" name="attr_summon2attack" title="summon2attack" placeholder="Attack"></textarea>
-											<button type="roll" name="attr_summon2attackbutton" title='summon2attackbutton' placeholder="@{summon2attack}" style="height: 24px; width: 20px;" ></button></span>
+											<button type="roll" name="roll_summon2attackbutton" title='summon2attackbutton' placeholder="@{summon2attack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Att+<textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 745px;" name="attr_summon2fullattack" title="summon2fullattack" placeholder="Full Attack"></textarea>
-											<button type="roll" name="attr_summon2fullattackbutton" title='summon2fullattackbutton' placeholder="@{summon2fullattack}" style="height: 24px; width: 20px;" ></button></span>
+											<button type="roll" name="roll_summon2fullattackbutton" title='summon2fullattackbutton' placeholder="@{summon2fullattack}" style="height: 24px; width: 20px;" ></button></span>
 										</div>
 										<div class="sheet-table-row">
 											<span class="sheet-table-col">Espace Occ./Allonge:<input style="width: 40px;" type="text" name="attr_summon2space" title="summon2space" placeholder="Space">/<input style="width: 40px;" type="text" name="attr_summon2reach" title="summon2reach" placeholder="Reach"> &nbsp; &nbsp;</span>
@@ -3468,7 +3468,7 @@
 		</tr>
 		<tr>
 			<td class="sheet-table-header-right"> &nbsp; </td>
-			<td class="sheet-table-left"><textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 615px;" name="attr_npcattackmacro" title="npcattackmacro" placeholder="Attack Macro"></textarea><button type="roll" name="attr_npcattackbutton" title='npcattackbutton' value="@{npcattackmacro}" style="height: 24px; width: 20px;" ></button></td>
+			<td class="sheet-table-left"><textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 615px;" name="attr_npcattackmacro" title="npcattackmacro" placeholder="Attack Macro"></textarea><button type="roll" name="roll_npcattackbutton" title='npcattackbutton' value="@{npcattackmacro}" style="height: 24px; width: 20px;" ></button></td>
 		</tr>
 		<tr>
 			<td class="sheet-table-header-right">Attaque complète:</td>
@@ -3476,7 +3476,7 @@
 		</tr>
 		<tr>
 			<td class="sheet-table-header-right"> &nbsp; </td>
-			<td class="sheet-table-left"><textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 615px;" name="attr_npcfullattackmacro" title="npcfullattackmacro" placeholder="Full Attack Macro"></textarea><button type="roll" name="attr_npcfullattackbutton" title='npcfullattackbutton' value="@{npcfullattackmacro}" style="height: 24px; width: 20px;" ></button></td>
+			<td class="sheet-table-left"><textarea input class="sheet-inputbox" rows="1" cols="55" style="width: 615px;" name="attr_npcfullattackmacro" title="npcfullattackmacro" placeholder="Full Attack Macro"></textarea><button type="roll" name="roll_npcfullattackbutton" title='npcfullattackbutton' value="@{npcfullattackmacro}" style="height: 24px; width: 20px;" ></button></td>
 		</tr>
 		<tr>
 			<td class="sheet-table-header-right">Espace Occ./Allonge:</td>
@@ -3591,7 +3591,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleattack">&{template:DnD35Attack} {{name=@{personnage-nom}}} {{subtags=swings a @{weapon1name} }} {{pcflag=true}} {{attack1=A1:[[@{weapon1attackcalc}]]}} {{critconfirm1=Crit!:[[@{weapon1attackcalc}]]}} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:[[@{weapon1damage}]]}} {{critdmg1=+[[@{weapon1crit}]]}} {{fullattackflag=[[?{Full Attack? (hit space for full attack else hit return) |0}d1]]}} {{attack2=A2:[[@{weapon1attackcalc}-5]]}} {{critconfirm2=Crit!:[[@{weapon1attackcalc}-5]]}} {{damage2=D2:[[@{weapon1damage}]]}} {{critdmg2=+[[@{weapon1crit}]]}} {{attack3=A3:[[@{weapon1attackcalc}-10]]}} {{critconfirm3=Crit!:[[@{weapon1attackcalc}-10]]}} {{damage3=D3:[[@{weapon1damage}]]}} {{critdmg3=+[[@{weapon1crit}]]}} {{attack4=A4:[[@{weapon1attackcalc}-15]]}} {{critconfirm4=Crit!:[[@{weapon1attackcalc}-15]]}} {{damage4=D4:[[@{weapon1damage}]]}} {{critdmg4=+[[@{weapon1crit}]]}}</textarea>
-					<button type="roll" name="attr_exampleattackroll" title="exampleattackroll" value="@{exampleattack}"></button>
+					<button type="roll" name="roll_exampleattackroll" title="exampleattackroll" value="@{exampleattack}"></button>
 					<br> The pcflag sets the name and dividing line to be red. For this flag, the arrow in the dividing line points to the right.
 			</div>
 			<br>	
@@ -3613,7 +3613,7 @@
 					</table>
 				</div></span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplenpcattack">/w gm &{template:DnD35Attack} {{name=@{selected|token_name}}} {{subtags=attacks @{target|token_name} }} {{npcflag=true}} {{fullattackflag=[[d1]]}} {{attack1=A1 (?{attack 1 name| claw} ):[[{d20cs>?{attack 1 crit range?|20}+?{attack 1 bonus|0}}>@{target|bar2}]]hit; }} {{critconfirm1=Crit!:[[{d20+?{attack 1 bonus|0}}>@{target|bar2}]] hit }} {{fumbleroll=Fumble:[[d20]]}} {{damage1=D1:?{attack 1 damage?|[[1d6+6]]} }} {{critdmg1=+?{attack 1 addt'l crit damage?|[[1d6+6]]} crit dmg }} {{attack2=A2 (?{attack 2 name| claw} ):[[{d20cs>?{attack 2 crit range?|20}+?{attack 2 bonus|0}}>@{target|bar2}]]hit; }} {{critconfirm2=Crit!:[[{d20+?{attack 2 bonus|0}}>@{target|bar2}]] hit }} {{fumbleroll=Fumble:[[d20]]}} {{damage2=D2:?{damage 2?|[[1d6+6]]} }} {{critdmg2=+?{addt'l crit damage 2?|[[1d6+6]]} crit dmg }} {{attack3=A3 (?{attack 3 name| bite} ):[[{d20cs>?{attack 3 crit range?|20}+?{attack 3 bonus|0}}>@{target|bar2}]]hit; }} {{critconfirm3=Crit!:[[{d20+?{attack 3 bonus|0}}>@{target|bar2}]] hit }} {{fumbleroll=Fumble:[[d20]]}} {{damage3=D3:?{damage 3?|[[1d8+3]] phys + [[1d6]] acid} }} {{critdmg3=+?{addt'l crit damage 3?|[[1d6]]} crit dmg }} {{notes= Note: if it hits with both claws, it latches on and tears the flesh, automatically doing an additional [[2d6+12]] damage}} </textarea>
-					<button type="roll" name="attr_examplenpcattackroll" title="examplenpcattackroll" value="@{examplenpcattack}"></button>
+					<button type="roll" name="roll_examplenpcattackroll" title="examplenpcattackroll" value="@{examplenpcattack}"></button>
 					<br> The npcflag sets the name and dividing line to be red. For this flag, the arrow in the dividing line points to the left.
 					<br> Example of DnD35Attack with {{npcflag=true}} set. Also set to whisper to the gm for the NPC's attacks. This example compares against an AC value stored in bar2 to report success (1 hit) or failure (0 hit) of the attack.
 			</div>
@@ -3629,7 +3629,7 @@
 					</table>
 				</div></span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleinit">&{template:DnD35Initiative} {{name=@{personnage-nom} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|init}]] + ([[(@{selected|init})]]/100) &{tracker}]] }}</textarea>
-					<button type="roll" name="attr_exampleinitroll" title="exampleinitroll" value="@{exampleinit}"></button>
+					<button type="roll" name="roll_exampleinitroll" title="exampleinitroll" value="@{exampleinit}"></button>
 					<br> The initflag used with DnD35StdRoll or DnD35Attack sets the name this same yellow and adds a thin solid yellow dividing line.
 			</div>
 			<br>
@@ -3659,7 +3659,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplespell">&{template:DnD35StdRoll} {{spellflag=true}} {{name= @{personnage-nom} casts Doom on @{target|token_name} }} {{School:=Necromancy (Fear, Mind affecting)}} {{Level: =Cleric 1}} {{Comp'nts:=V, S, DF}} {{Casting Time:= 1 std action}} {{Range:= Medium ([[100+10*@{casterlevel}]]ft)}} {{Target:= 1 living creature}} {{Duration:= [[@{casterlevel}]] min.}} {{Saving Throw:= Will negates (DC=[[@{spelldc1}]]) }} {{Spell Resist.:= Yes }} {{  Caster level check: = [[1d20+@{casterlevel2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes=Target is filled with a feeling of horrible dread that causes it to become shaken (-2 on attack rolls, saves, skill checks, ability checks).}} </textarea>
-					<button type="roll" name="attr_examplespellroll" title="examplespellroll" value="@{examplespell}"></button>
+					<button type="roll" name="roll_examplespellroll" title="examplespellroll" value="@{examplespell}"></button>
 					<br> The spellflag sets the dividing line to be a blue 4-pointed star pattern and the name to be blue.
 			</div>
 			<br>
@@ -3682,7 +3682,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleability">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{abilityflag=true}} {{check=Strength check:}} {{checkroll=[[1d20 + [[@{str-mod}]] ]] }}"</textarea>
-					<button type="roll" name="attr_exampleabilityroll" title="exampleabilityroll" value="@{exampleability}"></button>
+					<button type="roll" name="roll_exampleabilityroll" title="exampleabilityroll" value="@{exampleability}"></button>
 					<br> The abilityflag sets the name and dividing line brown.
 			</div>
 			<br>
@@ -3705,7 +3705,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplesave">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{saveflag=true}} {{subtags=braces against the attack}} {{check=Vigueur check:}} {{checkroll=[[1d20 + [[@{Vigueur}]] ]] }}</textarea>
-					<button type="roll" name="attr_examplesaveroll" title="examplesaveroll" value="@{examplesave}"></button>
+					<button type="roll" name="roll_examplesaveroll" title="examplesaveroll" value="@{examplesave}"></button>
 					<br> The saveflag sets the name and thick dividing line to be purple.
 			</div>
 				<br>
@@ -3728,7 +3728,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleskill">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{skillflag=true}} {{check=Acrobaties check:}} {{checkroll=[[1d20 + [[@{Acrobaties}]] ]] }}</textarea>
-					<button type="roll" name="attr_exampleskillroll" title="exampleskillroll" value="@{exampleskill}"></button>
+					<button type="roll" name="roll_exampleskillroll" title="exampleskillroll" value="@{exampleskill}"></button>
 					<br> The skillflag sets the name and double-arrow dividing line a darkish green.
 			</div>
 			<br>
@@ -3751,7 +3751,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_exampleskillcat">&{template:DnD35StdRoll} {{name=@{personnage-nom} }} {{skillcatflag=true}} {{check=Acrobaties check:}} {{checkroll=[[1d20 + [[@{Acrobaties}]] ]] }}</textarea>
-					<button type="roll" name="attr_exampleskillcatroll" title="exampleskillcatroll" value="@{exampleskillcat}"></button>
+					<button type="roll" name="roll_exampleskillcatroll" title="exampleskillcatroll" value="@{exampleskillcat}"></button>
 					<br> The skillcatflag sets the dividing line to be an upward pointed arrow and both it and the name a teal color.
 			</div>
 			<br>
@@ -3773,7 +3773,7 @@
 					</table>
 				</div> </span>
 				<span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplebasic">&{template:DnD35StdRoll} {{basicflag=true}} {{name=Test Roll}} {{subtags=swinging violently}} {{subtags2=at the kitchen sink.}} {{attack=[[1d20]]}} {{damage=[[1d8]]}} {{note= This is some note content}} {{Saving throw=[[@{will}]] Will save}} {{Attack1:[[d20cs>10+5]] *crit on 10+=Damage1:[[d6+2]]}} {{Confirm:[[d20+5]]=+[[d6+2]] ad'l dmg }} {{Attack2:[[d20+5]]=Damage2:[[d6+2]]}} {{Attack3:[[d20+5]]=Damage3:[[d6+2]]}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! The spell is cast!}} {{failcheck=Failure. :( }} {{notes=Additional notes under the notes tag will be at the bottom.}} </textarea>
-					<button type="roll" name="attr_examplebasicroll" title="examplebasicroll" value="@{examplebasic}"></button>
+					<button type="roll" name="roll_examplebasicroll" title="examplebasicroll" value="@{examplebasic}"></button>
 					<br> This basic grey and white appearance can be used with the various templates by setting {{basicflag=true}} . There is no dividing line with this appearance flag.
 			</div>
 		</td></tr>
