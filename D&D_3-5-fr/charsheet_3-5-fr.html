@@ -1525,7 +1525,7 @@
 						<td class="sheet-statlabel-encumbrance sheet-table-load"> Course </td>
 					</tr>
 					<tr>
-						<td><input class="sheet-inputbox" type="text" name="attr_totalcarriedweight" title="totalcarriedweight" style="height: 24px; width: 75px;"></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_TotalPoidsPorte" title="TotalPoidsPorte" style="height: 24px; width: 75px;"></td>
 						<td><select style="height: 24px; width: 160px; padding: 0px;" name="attr_Encombrement-taille" title="Encombrement-taille">
 								<option value="16">Colossal</option>
 								<option value="8">Gigantesque</option>
@@ -1546,16 +1546,16 @@
 								<option value=".500000001">Minuscule x 4</option>
 								<option value=".2500000001">Infime x 4</option>
 							</select></td>
-						<td><select style="height: 24px; width: 75px; padding: 0px;" name="attr_encumbrload" title="encumbrload (choose the category from above)">
+						<td><select style="height: 24px; width: 75px; padding: 0px;" name="attr_Encombrement-charge" title="Encombrement-charge (choose the category from above)">
 								<option type="text" value="0.1" selected>Léger</option>
 								<option type="text" value="-3">Moyen</option>
 								<option type="text" value="-6">Lourd</option>
 							</select></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_Encombrement-maxdex" title="Encombrement-maxdex" style="height: 24px; width: 45px;" value="floor(abs(9/(@{encumbrload})))" disabled="true" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_CA-Encombrement" title="CA-Encombrement" style="height: 24px; width: 45px;" value="floor(@{encumbrload})" disabled="true" /></td>
-						<td><input class="sheet-inputbox" type="text" name="attr_encumbrspeed30" title="encumbrspeed30" style="height: 24px; width: 45px;" value="30-floor(@{encumbrload})/(@{encumbrload})*10" disabled="true" />ft.</td>
-						<td><input class="sheet-inputbox" type="text" name="attr_encumbrspeed20" title="encumbrspeed20" style="height: 24px; width: 45px;" value="20-floor(@{encumbrload})/(@{encumbrload})*5" disabled="true" />ft.</td>
-						<td>x<input class="sheet-inputbox" type="text" name="attr_encumbrrun" title="encumbrrun" style="height: 24px; width: 45px;" value="4-floor((@{encumbrload}+3)/3*@{encumbrload})/6" disabled="true" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Encombrement-maxdex" title="Encombrement-maxdex" style="height: 24px; width: 45px;" value="floor(abs(9/(@{Encombrement-charge})))" disabled="true" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_CA-Encombrement" title="CA-Encombrement" style="height: 24px; width: 45px;" value="floor(@{Encombrement-charge})" disabled="true" /></td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Encombrement-vitesse30" title="Encombrement-vitesse30" style="height: 24px; width: 45px;" value="30-floor(@{Encombrement-charge})/(@{Encombrement-charge})*10" disabled="true" />ft.</td>
+						<td><input class="sheet-inputbox" type="text" name="attr_Encombrement-vitesse20" title="Encombrement-vitesse20" style="height: 24px; width: 45px;" value="20-floor(@{Encombrement-charge})/(@{Encombrement-charge})*5" disabled="true" />ft.</td>
+						<td>x<input class="sheet-inputbox" type="text" name="attr_encumbrrun" title="encumbrrun" style="height: 24px; width: 45px;" value="4-floor((@{Encombrement-charge}+3)/3*@{Encombrement-charge})/6" disabled="true" /></td>
 					</tr>
 				</table>
 			</div>
