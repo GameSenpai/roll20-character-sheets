@@ -2487,7 +2487,7 @@
                         <td style="vertical-align:top;">
                             <table>
                                 <tr class="sheet-table-header">
-                                    <td colspan="5"><input type="text" style="width: 395px;" name="attr_spellgroupname01" value="Level 0 Divine Spells"></td>
+                                    <td colspan="5"><input type="text" style="width: 395px;" name="attr_GroupeSorts01-nom" value="Sorts Divins - 1er Niveau"></td>
                                 </tr>
                             </table>
                             <table>
@@ -2501,13 +2501,13 @@
                             <fieldset class="repeating_spells01">
                                 <table style="width: 350px;" class="sheet-table-row">
                                     <tr>
-                                        <td><input type="text" style="width: 25px;" name="attr_spellused01">/<input type="text" style="width: 25px;" name="attr_spellprep01"></td>
-                                        <td><input type="text" style="width: 120px;" name="attr_spellname01" value="Cure Minor Wounds"></td>
-                                        <td><input type="text" style="width: 20px;" name="attr_spelllevel01" value="0"></td>
+                                        <td><input type="text" style="width: 25px;" name="attr_Sort01-lances">/<input type="text" style="width: 25px;" name="attr_Sort01-prep"></td>
+                                        <td><input type="text" style="width: 120px;" name="attr_Sort01-nom" value="Soin des blessures mineures"></td>
+                                        <td><input type="text" style="width: 20px;" name="attr_Sort01-niveau" value="0"></td>
                                         <td>
-                                            <textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro01" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags=casts [Cure Minor Wounds](http://www.dandwiki.com/wiki/Cure_minor_wounds ).}} {{School:= Conj(Healing)}} {{Level:= Cleric 0}} {{Cmpnts:=V,S}} {{Casting Time:=1 std action}} {{Range:= Touch}} {{Target:= Creature touched}} {{Duration:= Instantaneous}} {{Saving Throw:= Will Save(half) when used vs Undead}} {{Spell Resist.:= Undead can use spell resistance}} {{  Caster level check: = [[1d20+@{NiveauLanceur}+@{Sort-penalite}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes= ?{Recipient's name|@{personnage-nom}} receives 1 heath (or 1 point of damage if an undead creature) }} </textarea>
+                                            <textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_Sort01-macro" title="Editer pour créer la macro lancée par le bouton">&{template:DnD35StdRoll} {{spellflag=true}} {{name=@{personnage-nom} }} {{subtags=Utilise @{Sort01-nom}.}} {{Ecole:= Conj(Soin)}} {{Niveau:= Pretre 0}} {{Cmpnts:=V,S}} {{Temps d'utilisation:=1 tour d'action}} {{Portée:= au touché}} {{Cible:= @{target|personnage-nom}}} {{Durée:= Instantané}} {{Saving Throw:= Will Save(half) when used vs Undead}} {{Spell Resist.:= Undead can use spell resistance}} {{  Caster level check: = [[1d20+@{NiveauLanceur}+@{Sort-penalite}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes= ?{Recipient's name|@{target|personnage-nom}} receives 1 heath (or 1 point of damage if an undead creature) }} </textarea>
                                         </td>
-                                        <td><button type="roll" name="roll_spellcast01" text="Spell Cast01" title='repeating_spells01_x_spellcast01' value="@{spellmacro01}" style="height: 24px; width: 20px;" ></button>
+                                        <td><button type="roll" name="roll_Sort01-cast" text="Sort01 Cast" title='Sort01-cast' value="@{Sort01-macro}" style="height: 24px; width: 20px;" ></button>
                                         </td>
                                     </tr>
                                 </table>
