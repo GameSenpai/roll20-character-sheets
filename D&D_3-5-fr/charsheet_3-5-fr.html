@@ -2418,41 +2418,41 @@
                                     <input type="text" style="width: 25px;" name="attr_NiveauLanceur2" title="NiveauLanceur2" value="0" class="sheet-table-row-small">
                                 </td>
                                 <td class="sheet-table-header3" colspan="2" style="width: 90%;">Sorts/jour:<br>
-                                    &nbsp; &nbsp; &nbsp; &nbsp; 0:<input type="text" name="attr_spells0" title="spells0" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 1er:<input type="text" name="attr_spells1" title="spells1" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 2nd:<input type="text" name="attr_spells2" title="spells2" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 3e:<input type="text" name="attr_spells3" title="spells3" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 4e:<input type="text" name="attr_spells4" title="spells4" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 5e:<input type="text" name="attr_spells5" title="spells5" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 6e:<input type="text" name="attr_spells6" title="spells6" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 7e:<input type="text" name="attr_spells7" title="spells7" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 8e:<input type="text" name="attr_spells8" title="spells8" value="0" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 9e:<input type="text" name="attr_spells9" title="spells9" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; 0:<input type="text" name="attr_Sorts0" title="Sorts0" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 1er:<input type="text" name="attr_Sorts1" title="Sorts1" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 2nd:<input type="text" name="attr_Sorts2" title="Sorts2" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 3e:<input type="text" name="attr_Sorts3" title="Sorts3" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 4e:<input type="text" name="attr_Sorts4" title="Sorts4" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 5e:<input type="text" name="attr_Sorts5" title="Sorts5" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 6e:<input type="text" name="attr_Sorts6" title="Sorts6" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 7e:<input type="text" name="attr_Sorts7" title="Sorts7" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 8e:<input type="text" name="attr_Sorts8" title="Sorts8" value="0" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 9e:<input type="text" name="attr_Sorts9" title="Sorts9" value="0" class="sheet-table-row-small">
                                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                                 </td>
                             </tr>
                             <tr> 
                                 <td class="sheet-table-header3" style="width: 10%; border: 1px solid black;">Casting Stat:<br>
-                                    <select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_spellcastingstat" title="spellcastingstat">
-                                        <option type="text" style="width: 45px;" value="@{str-mod} ">FOR</option>
+                                    <select class="sheet-table-data-center" style="height: 24px; width: 64px;" name="attr_Sorts-carac" title="Sorts-carac">
+                                        <option type="text" style="width: 45px;" value="@{for-mod} ">FOR</option>
                                         <option type="text" style="width: 45px;" value="@{dex-mod} ">DEX</option>
                                         <option type="text" style="width: 45px;" value="@{con-mod} ">CON</option>
                                         <option type="text" style="width: 45px;" value="@{int-mod} " selected>INT</option>
-                                        <option type="text" style="width: 45px;" value="@{wis-mod} ">SAG</option>
+                                        <option type="text" style="width: 45px;" value="@{sag-mod} ">SAG</option>
                                         <option type="text" style="width: 45px;" value="@{cha-mod} ">CHA</option>
                                     </select>
                                 </td>
                                 <td class="sheet-table-header3" colspan="2" style="width: 90%;">DD de sort<br>
-                                    &nbsp; &nbsp; &nbsp; &nbsp; 0:<input type="text" name="attr_spelldc0" title="spelldc0" value="(10+0+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 1er:<input type="text" name="attr_spelldc1" title="spelldc1" value="(10+1+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 2nd:<input type="text" name="attr_spelldc2" title="spelldc2" value="(10+2+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 3e:<input type="text" name="attr_spelldc3" title="spelldc3" value="(10+3+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 4e:<input type="text" name="attr_spelldc4" title="spelldc4" value="(10+4+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 5e:<input type="text" name="attr_spelldc5" title="spelldc5" value="(10+5+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 6e:<input type="text" name="attr_spelldc6" title="spelldc6" value="(10+6+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 7e:<input type="text" name="attr_spelldc7" title="spelldc7" value="(10+7+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 8e:<input type="text" name="attr_spelldc8" title="spelldc8" value="(10+8+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
-                                    &nbsp; &nbsp; 9e:<input type="text" name="attr_spelldc9" title="spelldc9" value="(10+9+@{spellcastingstat})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; 0:<input type="text" name="attr_Sort0-DD" title="Sort0-DD" value="(10+0+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 1er:<input type="text" name="attr_Sort1-DD" title="Sort1-DD" value="(10+1+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 2nd:<input type="text" name="attr_Sort2-DD" title="Sort2-DD" value="(10+2+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 3e:<input type="text" name="attr_Sort3-DD" title="Sort3-DD" value="(10+3+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 4e:<input type="text" name="attr_Sort4-DD" title="Sort4-DD" value="(10+4+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 5e:<input type="text" name="attr_Sort5-DD" title="Sort5-DD" value="(10+5+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 6e:<input type="text" name="attr_Sort6-DD" title="Sort6-DD" value="(10+6+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 7e:<input type="text" name="attr_Sort7-DD" title="Sort7-DD" value="(10+7+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 8e:<input type="text" name="attr_Sort8-DD" title="Sort8-DD" value="(10+8+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
+                                    &nbsp; &nbsp; 9e:<input type="text" name="attr_Sort9-DD" title="Sort9-DD" value="(10+9+@{Sorts-carac})" disabled="true" class="sheet-table-row-small">
                                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                                 </td>
                             </tr>
@@ -2572,7 +2572,7 @@
                                         <td><input type="text" style="width: 120px;" name="attr_spellname11" value="Doom"></td>
                                         <td><input type="text" style="width: 20px;" name="attr_spelllevel11" value="1"></td>
                                         <td>
-                                            <textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro11" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name= @{personnage-nom} casts Doom on @{target|token_name} }} {{School:=Necromancy (Fear, Mind affecting)}} {{Level: =Cleric 1}} {{Cmpnts:=V, S, DF}} {{Casting Time:= 1 std action}} {{Range:= Medium ([[100+10*@{NiveauLanceur}]]ft)}} {{Target:= 1 living creature}} {{Duration:= [[@{NiveauLanceur}]] min.}} {{Saving Throw:= Will negates (DC=[[@{spelldc1}]]) }} {{Spell Resist.:= Yes }} {{Caster level check: = [[1d20+@{NiveauLanceur}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes=Target is filled with a feeling of horrible dread that causes it to become shaken (-2 on attack rolls, saves, skill checks, ability checks).}} </textarea>
+                                            <textarea input class="sheet-inputbox" rows="1" cols="55" style="height: 20px; width: 150px;" name="attr_spellmacro11" title="Edit this field to create the macro run by the roll button">&{template:DnD35StdRoll} {{spellflag=true}} {{name= @{personnage-nom} casts Doom on @{target|token_name} }} {{School:=Necromancy (Fear, Mind affecting)}} {{Level: =Cleric 1}} {{Cmpnts:=V, S, DF}} {{Casting Time:= 1 std action}} {{Range:= Medium ([[100+10*@{NiveauLanceur}]]ft)}} {{Target:= 1 living creature}} {{Duration:= [[@{NiveauLanceur}]] min.}} {{Saving Throw:= Will negates (DC=[[@{Sort1-DD}]]) }} {{Spell Resist.:= Yes }} {{Caster level check: = [[1d20+@{NiveauLanceur}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes=Target is filled with a feeling of horrible dread that causes it to become shaken (-2 on attack rolls, saves, skill checks, ability checks).}} </textarea>
                                         </td>
                                         <td><button type="roll" name="roll_spellcast11" text="Spell Cast11" title='repeating_spells11_x_spellcast11' value="@{spellmacro11}" style="height: 24px; width: 20px;" ></button>
                                         </td>
@@ -3659,7 +3659,7 @@
                                 <tr><td class="sheet-table-left" colspan="2">notes</td></tr>
                             </table>
                     </div> </span>
-                    <span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplespell">&{template:DnD35StdRoll} {{spellflag=true}} {{name= @{personnage-nom} casts Doom on @{target|token_name} }} {{School:=Necromancy (Fear, Mind affecting)}} {{Level: =Cleric 1}} {{Comp'nts:=V, S, DF}} {{Casting Time:= 1 std action}} {{Range:= Medium ([[100+10*@{NiveauLanceur}]]ft)}} {{Target:= 1 living creature}} {{Duration:= [[@{NiveauLanceur}]] min.}} {{Saving Throw:= Will negates (DC=[[@{spelldc1}]]) }} {{Spell Resist.:= Yes }} {{  Caster level check: = [[1d20+@{NiveauLanceur2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes=Target is filled with a feeling of horrible dread that causes it to become shaken (-2 on attack rolls, saves, skill checks, ability checks).}} </textarea>
+                    <span class="sheet-table-header-right" style="width: 117px;"> Example macro: </span><textarea input class="sheet-inputbox" rows="6" cols="55" style="height: 80px; width: 296px;" name="attr_examplespell">&{template:DnD35StdRoll} {{spellflag=true}} {{name= @{personnage-nom} casts Doom on @{target|token_name} }} {{School:=Necromancy (Fear, Mind affecting)}} {{Level: =Cleric 1}} {{Comp'nts:=V, S, DF}} {{Casting Time:= 1 std action}} {{Range:= Medium ([[100+10*@{NiveauLanceur}]]ft)}} {{Target:= 1 living creature}} {{Duration:= [[@{NiveauLanceur}]] min.}} {{Saving Throw:= Will negates (DC=[[@{Sort1-DD}]]) }} {{Spell Resist.:= Yes }} {{  Caster level check: = [[1d20+@{NiveauLanceur2}+@{spellpen}]] vs spell resistance.}} {{compcheck= Conc:[[{1d20 +[[@{concentration}]] }>?{Concentration DC=15+Spell Level or 10+Damage Received|16}]] }} {{succeedcheck=Success! She casts her spell!}} {{failcheck=She fails :( }} {{notes=Target is filled with a feeling of horrible dread that causes it to become shaken (-2 on attack rolls, saves, skill checks, ability checks).}} </textarea>
                     <button type="roll" name="roll_examplespellroll" title="examplespellroll" value="@{examplespell}"></button>
                     <br> The spellflag sets the dividing line to be a blue 4-pointed star pattern and the name to be blue.
                 </div>
