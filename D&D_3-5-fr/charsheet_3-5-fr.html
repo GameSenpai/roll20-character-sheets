@@ -181,9 +181,9 @@
                                     <table>
                                         <tr>
                                             <td class="sheet-statlabel-big" style="width: 70px;">PV<br><div style="font-size: 0.65em;">Points de vie</div></td>
-                                            <td><input class="sheet-inputbox" type="text" name="attr_dé-de-vie" title="dé-de-vie" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">PV actuels</div></td>
-                                            <td><input class="sheet-inputbox" type="text" name="attr_dé-de-vie_max" title="dé-de-vie_max; use hitpoints|max in macros" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">Max</div></td>
-                                            <td><input class="sheet-inputbox" type="text" name="attr_dégats_temporaires" title="dégats_temporaires" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;">Temporaires</div></td>
+                                            <td><input class="sheet-inputbox" type="text" name="attr_PV" title="PV" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">PV actuels</div></td>
+                                            <td><input class="sheet-inputbox" type="text" name="attr_PV_max" title="PV_max; use hitpoints|max in macros" style="height: 24px; width: 117px; text-align: center;"><br><div style="font-size: 0.5em;">Max</div></td>
+                                            <td><input class="sheet-inputbox" type="text" name="attr_dégats-temporaires" title="dégats-temporaires" style="height: 24px; width: 140px; text-align: center;"><br><div style="font-size: 0.5em;">Temporaires</div></td>
                                         </tr>
                                         <tr>
                                             <td class="sheet-statlabel-big" style="width: 70px;">INITIATIVE</td>
@@ -193,8 +193,8 @@
                                                         <td><input class="sheet-inputbox" type="text" name="attr_init" style="height: 24px; width: 30px;" title="init" value="(@{init-dexmod}+@{init-divmod})" disabled="true"> =<br><div style="font-size: 0.5em;">Total</div></td>
                                                         <td><input class="sheet-inputbox" type="text" name="attr_init-dexmod" title="init-dexmod" value="floor(@{dex}/2-5)" disabled="true" style="height: 24px; width: 30px;"> +<br><div style="font-size: 0.5em;">DEX</div></td>
                                                         <td><input class="sheet-inputbox" type="text" name="attr_init-divmod" title="init-divmod" value="0" style="height: 24px; width: 30px;"><br><div style="font-size: 0.5em;">Divers</div></td>
-                                                        <td><textarea rows="1" cols="40" style="width: 40px; height: 20px;" title="initmacro (modifier pour modifier la macro d'initiative)" name="attr_initmacro">&{template:DnD35Initiative} {{name=@{character_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{init}]] + ([[(@{init})]]/100) &{tracker}]] }}</textarea></td>
-                                                        <td><button class='tokenaction' type='roll' name='roll_initiative' title='initiative' value='@{initmacro}'></button> &nbsp; &nbsp;<br><div style="font-size: 0.5em;"> &nbsp; </div></td>
+                                                        <td><textarea rows="1" cols="40" style="width: 40px; height: 20px;" title="init-macro (modifier pour modifier la macro d'initiative)" name="attr_init-macro">&{template:DnD35Initiative} {{name=@{character_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{init}]] + ([[(@{init})]]/100) &{tracker}]] }}</textarea></td>
+                                                        <td><button class='tokenaction' type='roll' name='roll_initiative' title='initiative' value='@{init-macro}'></button> &nbsp; &nbsp;<br><div style="font-size: 0.5em;"> &nbsp; </div></td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -3449,7 +3449,7 @@
         </tr>
         <tr>
             <td class="sheet-table-header-right">Initiative:</td>
-            <td class="sheet-table-left"><input style="width: 40px;" type="text" name="attr_npcinit" title="npcinit" value="0"> <textarea rows="1" cols="40" style="width: 565px; height: 20px;" title="npcinitmacro (modify to modify npc's initiative roll macro)" name="attr_npcinitmacro">/w gm &{template:DnD35Initiative} {{name=@{selected|token_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|npcinit}]] + ([[(@{selected|npcinit})]]/100) &{tracker}]] }}</textarea><button type='roll' name='attr_npcinitiative' title='npcinitiative' value='@{npcinitmacro}'></button></td>
+            <td class="sheet-table-left"><input style="width: 40px;" type="text" name="attr_npcinit" title="npcinit" value="0"> <textarea rows="1" cols="40" style="width: 565px; height: 20px;" title="npcinit-macro (modify to modify npc's initiative roll macro)" name="attr_npcinit-macro">/w gm &{template:DnD35Initiative} {{name=@{selected|token_name} }} {{check=Initiative:}} {{checkroll=[[1d20 + [[@{selected|npcinit}]] + ([[(@{selected|npcinit})]]/100) &{tracker}]] }}</textarea><button type='roll' name='attr_npcinitiative' title='npcinitiative' value='@{npcinit-macro}'></button></td>
         </tr>
         <tr>
             <td class="sheet-table-header-right">Vitesse:</td>
