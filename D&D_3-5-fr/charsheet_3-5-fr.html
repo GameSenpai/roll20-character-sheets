@@ -369,12 +369,12 @@
                                             </tr>
                                             <tr>
                                                 <td class="sheet-statlabel-big" style="width: 80px;">Lutte</td>
-                                                <td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_Lutte" title="Lutte" value="(@{BBA} +@{AttaqueEpique-bonus} +@{LutteFOR_mod}+@{taille-mod}+@{LutteDiv-mod})" disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Total</div></td>
+                                                <td><input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_Lutte" title="Lutte" value="(@{BBA} +@{AttaqueEpique-bonus} +@{Lutte_FOR-mod}+@{taille-mod}+@{Lutte_Div-mod})" disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Total</div></td>
                                                 <td>=<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_LutteBBA" title="LutteBBA (Bonus de base à l'attaque + Bonus d'Attaque Epique)" style="height: 24px; width: 50px;" disabled="true" value="@{BBA} +@{AttaqueEpique-bonus} "><br><div style="font-size: 0.5em;">BBA + BAE</div></td>
-                                                <td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_LutteFOR_mod" title="LutteFOR_mod" value="floor(@{for}/2-5) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">FOR</div></td>
+                                                <td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_Lutte_FOR-mod" title="Lutte_FOR-mod" value="floor(@{FOR}/2-5) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">FOR</div></td>
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 45px;" name="attr_taille-mod" title="taille-mod" value="(floor((@{taille} + 50) / 58) + floor((@{taille} + 50) / 54) + floor((@{taille} + 50) / 52) + floor((@{taille} + 50) / 51) + floor((@{taille} + 50) / 50) + floor((@{taille} + 50) / 49) + floor((@{taille} + 50) / 47) + floor((@{taille} + 50) / 43) -4) * (-4) " disabled="true" style="height: 24px; width: 50px;"><br><div style="font-size: 0.5em;">Modif. Taille</div></td>
-                                                <td>+<input class="sheet-inputbox" type="text" name="attr_LutteDiv-mod" title="LutteDiv-mod" value="0" style="width: 50px;"><br><div style="font-size: 0.5em;">Divers</div></td>
-                                                <td><button type='roll' name='attr_Lutte-test' title='Lutte-test' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name} }} {{attack1=Test de Lutte:[[1d20 +[[@{Lutte}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br></div></td>
+                                                <td>+<input class="sheet-inputbox" type="text" name="attr_Lutte_Div-mod" title="Lutte_Div-mod" value="0" style="width: 50px;"><br><div style="font-size: 0.5em;">Divers</div></td>
+                                                <td><button type='roll' name='attr_Test_Lutte' title='Test_Lutte' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name} }} {{attack1=Test de Lutte:[[1d20 +[[@{Lutte}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br></div></td>
                                             </tr>
                                         </table>
                                         <br>
@@ -387,7 +387,7 @@
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modmab" title="taille-modmab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Modif.<br>Taille</div></td>
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabdiv-mod" title="mabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_mabtemp-mod" title="mabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-                                                <td><button type='roll' name='roll_melee-test' title='melee-test' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{AttaqueMelee-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+                                                <td><button type='roll' name='roll_Test_Melee' title='Test_Melee' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=tente une attaque de mêlée}} {{attack1=Test d'attaque : [[1d20 +[[@{AttaqueMelee-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
                                             </tr>
                                         </table>
                                         <br>
@@ -400,7 +400,7 @@
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_taille-modrab" title="taille-modrab" value="@{taille}" disabled="true"><br><div style="font-size: 0.5em;">Taille<br>Modifier</div></td>
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabdiv-mod" title="rabdiv-mod" value="0"><br><div style="font-size: 0.5em;">Divers<br></div></td>
                                                 <td>+<input class="sheet-inputbox" type="text" style="width: 43px;" name="attr_rabtemp-mod" title="rabtemp-mod" value="0"><br><div style="font-size: 0.5em;">Temporaire<br></div></td>
-                                                <td><button type='roll' name='roll_AttaqueDistance-test' title='rangedattackcheck' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{AttaqueDistance-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
+                                                <td><button type='roll' name='roll_Test_Attaque-Distance' title='Test_Attaque-Distance' value="&{template:DnD35Attack} {{pcflag=true}} {{name=@{character_name}}} {{subtags=tente une attaque à distance}} {{attack1=Test d'attaque [[1d20 +[[@{AttaqueDistance-bonus}]] ]]}}"></button><br><div style="font-size: 0.5em;">&nbsp;<br>&nbsp;<br></div></td>
                                             </tr>
                                         </table>
                                         <br>
