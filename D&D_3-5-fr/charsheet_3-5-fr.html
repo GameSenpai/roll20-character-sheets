@@ -1155,7 +1155,7 @@
                                 <td style="width: 45px;"><input type="text" name="attr_CA_Dex_Bonus" title="CA_Dex_Bonus" style="width: 45px;" value="@{CA_DEX-mod}" disabled="true" />
                                     <input type="hidden" name="attr_CA_DexPenalite" title="CA_DexPenalite" value="([[0-floor((0-@{DEX_mod}-0.1)/(abs(0-@{DEX_mod}-0.1)+0.001))*0 -floor((@{DEX_mod}+0.1-0)/(abs(@{DEX_mod}+0.1-0)+0.001))*@{DEX_mod}]])" disabled="true" />
                                     <input type="hidden" name="attr_Armure_Dex-mod" title="Armure_Dex-mod (either DEX_mod or max dex from AC items section below; whichever is lower)" value="(ceil((@{DEX_mod} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite}))/10000000000)*@{ObjetCA_dex} - floor((@{DEX_mod} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite})-1)/10000000000)*@{DEX_mod} )" disabled="true"/> 
-                                    <input type="hidden" name="attr_CA_DEX-mod" title="CA_DEX-mod (either DEX_mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure_Dex-mod}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{Armure_Dex-mod}-@{Encombrement-maxdex}-1)/10000000000)*@{Armure_Dex-mod})" disabled="true" /></td>
+                                    <input type="hidden" name="attr_CA_DEX-mod" title="CA_DEX-mod (either DEX_mod, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure_Dex-mod}-@{Encombrement_DEX_max})/10000000000)*@{Encombrement_DEX_max} - floor((@{Armure_Dex-mod}-@{Encombrement_DEX_max}-1)/10000000000)*@{Armure_Dex-mod})" disabled="true" /></td>
                                 <!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
                                 <td style="width: 25px;">Y </td>
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_PaD-dex" title="CA_PaD-dex (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span>* </td>
@@ -1168,7 +1168,7 @@
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_MaxCarac1" title="CA_MaxCarac1 (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
                                 <td style="width: 45px;"><input type="text" name="attr_CA_MaxCarac1_Bonus" title="CA_MaxCarac1_Bonus" style="width: 45px;" value="(@{CA_MaxCarac1}*@{CA_Carac1-mod} + (1-@{CA_MaxCarac1})*@{CA_Carac1_Bonus})" disabled="true" />
                                     <input type="hidden" name="attr_Armure-CA_Carac1" title="Armure-CA_Carac1 (either CA_Carac1_Bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{CA_Carac1_Bonus} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite}))/10000000000)*@{ObjetCA_dex} - floor((@{CA_Carac1_Bonus} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite})-1)/10000000000)*@{CA_Carac1_Bonus} )" disabled="true"/> 
-                                    <input type="hidden" name="attr_CA_Carac1-mod" title="CA_Carac1-mod (either CA_Carac1_Bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA_Carac1}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{Armure-CA_Carac1}-@{Encombrement-maxdex}-1)/10000000000)*@{Armure-CA_Carac1})" disabled="true" /></td>
+                                    <input type="hidden" name="attr_CA_Carac1-mod" title="CA_Carac1-mod (either CA_Carac1_Bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA_Carac1}-@{Encombrement_DEX_max})/10000000000)*@{Encombrement_DEX_max} - floor((@{Armure-CA_Carac1}-@{Encombrement_DEX_max}-1)/10000000000)*@{Armure-CA_Carac1})" disabled="true" /></td>
                                 <!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_Contact-Carac1" title="CA_Contact-Carac1 (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_PaD-Carac1" title="CA_PaD-Carac1 (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
@@ -1181,7 +1181,7 @@
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_MaxCarac2" title="CA_MaxCarac2 (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
                                 <td style="width: 45px;"><input type="text" name="attr_CA_MaxCarac2_Bonus" title="CA_MaxCarac2_Bonus" style="width: 45px;" value="(@{CA_MaxCarac2}*@{CA_Carac2-mod} + (1-@{CA_MaxCarac2})*@{CA_Carac2_Bonus})" disabled="true" />
                                     <input type="hidden" name="attr_Armure-CA_Carac2" title="Armure-CA_Carac2 (either CA_Carac2_Bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{CA_Carac2_Bonus} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite}))/10000000000)*@{ObjetCA_dex} - floor((@{CA_Carac2_Bonus} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite})-1)/10000000000)*@{CA_Carac2_Bonus} )" disabled="true"/> 
-                                    <input type="hidden" name="attr_CA_Carac2-mod" title="CA_Carac2-mod (either CA_Carac2_Bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA_Carac2}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{Armure-CA_Carac2}-@{Encombrement-maxdex}-1)/10000000000)*@{Armure-CA_Carac2})" disabled="true" /></td>
+                                    <input type="hidden" name="attr_CA_Carac2-mod" title="CA_Carac2-mod (either CA_Carac2_Bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA_Carac2}-@{Encombrement_DEX_max})/10000000000)*@{Encombrement_DEX_max} - floor((@{Armure-CA_Carac2}-@{Encombrement_DEX_max}-1)/10000000000)*@{Armure-CA_Carac2})" disabled="true" /></td>
                                 <!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_Contact-Carac2" title="CA_Contact-Carac2 (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_PaD-Carac2" title="CA_PaD-Carac2 (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
@@ -1194,7 +1194,7 @@
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_MaxCarac3" title="CA_MaxCarac3 (Check if this component is capped by armor and/or encumbrance.)" value="1" style="width: 15px;" /><span></span> </td>
                                 <td style="width: 45px;"><input type="text" name="attr_CA_MaxCarac3_Bonus" title="CA_MaxCarac3_Bonus" style="width: 45px;" value="(@{CA_MaxCarac3}*@{CA_Carac3-mod} + (1-@{CA_MaxCarac3})*@{CA_Carac3_Bonus})" disabled="true" />
                                     <input type="hidden" name="attr_Armure-CA_Carac3" title="Armure-CA_Carac3 (either CA_Carac3_Bonus or max dex from AC items section; whichever is lower)" value="(ceil((@{CA_Carac3_Bonus} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite}))/10000000000)*@{ObjetCA_dex} - floor((@{CA_Carac3_Bonus} -@{ObjetCA_dex}*(100-99*@{Armure_Durabilite})-1)/10000000000)*@{CA_Carac3_Bonus} )" disabled="true"/> 
-                                    <input type="hidden" name="attr_CA_Carac3-mod" title="CA_Carac3-mod (either CA_Carac3_Bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA_Carac3}-@{Encombrement-maxdex})/10000000000)*@{Encombrement-maxdex} - floor((@{Armure-CA_Carac3}-@{Encombrement-maxdex}-1)/10000000000)*@{Armure-CA_Carac3})" disabled="true" /></td>
+                                    <input type="hidden" name="attr_CA_Carac3-mod" title="CA_Carac3-mod (either CA_Carac3_Bonus, max dex from AC items section, or max dex from encumbrance; whichever is lower)" value="(ceil((@{Armure-CA_Carac3}-@{Encombrement_DEX_max})/10000000000)*@{Encombrement_DEX_max} - floor((@{Armure-CA_Carac3}-@{Encombrement_DEX_max}-1)/10000000000)*@{Armure-CA_Carac3})" disabled="true" /></td>
                                 <!--Special Thanks to Aaron I. for the dex/maxdex calculation!-->
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_Contact-Carac3" title="CA_Contact-Carac3 (Check if this component is part of Touch AC.)" value="1" style="width: 15px;" checked /><span></span> </td>
                                 <td style="width: 25px;"><input type="checkbox" class="sheet-yesno" name="attr_CA_PaD-Carac3" title="CA_PaD-Carac3 (Check if this component is part of Flat Footed AC.)" value="1" style="width: 15px;" /><span></span> </td>
@@ -1475,7 +1475,7 @@
                         <td class="sheet-statlabel-encumbrance sheet-table-encumbrance"> Pousser / Tirer </td>
                     </tr>
                     <tr>
-                        <td><select class="sheet-inputbox" style="height: 24px; width: 45px; padding: 0px;" name="attr_Encombrement-for" title="Encombrement-for">
+                        <td><select class="sheet-inputbox" style="height: 24px; width: 45px; padding: 0px;" name="attr_Encombrement_FOR" title="Encombrement_FOR">
                                 <option type="text" value="10" selected>1</option>
                                 <option type="text" value="20">2</option>
                                 <option type="text" value="30">3</option>
@@ -1506,12 +1506,12 @@
                                 <option type="text" value="1200">28</option>
                                 <option type="text" value="1400">29</option>
                         </select></td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_ChargementLeger-max" title="ChargementLeger-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(@{Encombrement-for}/3)))"/>Kg ou moins</td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_ChargementMoyen-min" title="ChargementMoyen-min" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(@{Encombrement-for}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_ChargementMoyen-max" title="ChargementMoyen-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(2*@{Encombrement-for}/3)))"/>Kg</td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_ChargementLourd-min" title="ChargementLourd-min" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(floor(2*@{Encombrement-for}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_ChargementLourd-max" title="ChargementLourd-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(@{Encombrement-for}))"/>Kg</td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_Lever-max" title="Lever-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(@{Encombrement-for}))"/>Kg ou moins</td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_Soulever-max" title="Soulever-max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement-taille}*(2*(@{Encombrement-for})))"/>Kg ou moins</td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_PousserTirer-max" title="PousserTirer-max" style="height: 24px; width: 55px;" disabled="true" value="floor(@{Encombrement-taille}*(5*(@{Encombrement-for})))"/>Kg ou moins</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Chargement_Leger_max" title="Chargement_Leger_max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(floor(@{Encombrement_FOR}/3)))"/>Kg ou moins</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Chargement_Moyen_min" title="Chargement_Moyen_min" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(floor(@{Encombrement_FOR}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_Chargement_Moyen_max" title="Chargement_Moyen_max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(floor(2*@{Encombrement_FOR}/3)))"/>Kg</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Chargement_Lourd_min" title="Chargement_Lourd_min" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(floor(2*@{Encombrement_FOR}/3))+1)"/>-<input class="sheet-inputbox" type="text" name="attr_Chargement_Lourd_max" title="Chargement_Lourd_max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(@{Encombrement_FOR}))"/>Kg</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Lever_max" title="Lever_max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(@{Encombrement_FOR}))"/>Kg ou moins</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Soulever_max" title="Soulever_max" style="height: 24px; width: 50px;" disabled="true" value="floor(@{Encombrement_Taille}*(2*(@{Encombrement_FOR})))"/>Kg ou moins</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_PousserTirer_max" title="PousserTirer_max" style="height: 24px; width: 55px;" disabled="true" value="floor(@{Encombrement_Taille}*(5*(@{Encombrement_FOR})))"/>Kg ou moins</td>
                     </tr>
                 </table>
                 <table cellpadding="0" cellspacing="0">
@@ -1527,7 +1527,7 @@
                     </tr>
                     <tr>
                         <td><input class="sheet-inputbox" type="text" name="attr_TotalPoidsPorte" title="TotalPoidsPorte" style="height: 24px; width: 75px;"></td>
-                        <td><select style="height: 24px; width: 160px; padding: 0px;" name="attr_Encombrement-taille" title="Encombrement-taille">
+                        <td><select style="height: 24px; width: 160px; padding: 0px;" name="attr_Encombrement_Taille" title="Encombrement_Taille">
                                 <option value="16">Colossal</option>
                                 <option value="8">Gigantesque</option>
                                 <option value="4">Très Grand</option>
@@ -1547,16 +1547,16 @@
                                 <option value=".500000001">Minuscule x 4</option>
                                 <option value=".2500000001">Infime x 4</option>
                         </select></td>
-                        <td><select style="height: 24px; width: 75px; padding: 0px;" name="attr_Encombrement-charge" title="Encombrement-charge (choose the category from above)">
+                        <td><select style="height: 24px; width: 75px; padding: 0px;" name="attr_Encombrement_Charge" title="Encombrement_Charge (choose the category from above)">
                                 <option type="text" value="0.1" selected>Léger</option>
                                 <option type="text" value="-3">Moyen</option>
                                 <option type="text" value="-6">Lourd</option>
                         </select></td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_Encombrement-maxdex" title="Encombrement-maxdex" style="height: 24px; width: 45px;" value="floor(abs(9/(@{Encombrement-charge})))" disabled="true" /></td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_CA_Encombrement" title="CA_Encombrement" style="height: 24px; width: 45px;" value="floor(@{Encombrement-charge})" disabled="true" /></td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_Encombrement-vitesse30" title="Encombrement-vitesse30" style="height: 24px; width: 45px;" value="30-floor(@{Encombrement-charge})/(@{Encombrement-charge})*10" disabled="true" />ft.</td>
-                        <td><input class="sheet-inputbox" type="text" name="attr_Encombrement-vitesse20" title="Encombrement-vitesse20" style="height: 24px; width: 45px;" value="20-floor(@{Encombrement-charge})/(@{Encombrement-charge})*5" disabled="true" />ft.</td>
-                        <td>x<input class="sheet-inputbox" type="text" name="attr_encumbrrun" title="encumbrrun" style="height: 24px; width: 45px;" value="4-floor((@{Encombrement-charge}+3)/3*@{Encombrement-charge})/6" disabled="true" /></td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Encombrement_DEX_max" title="Encombrement_DEX_max" style="height: 24px; width: 45px;" value="floor(abs(9/(@{Encombrement_Charge})))" disabled="true" /></td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_CA_Encombrement" title="CA_Encombrement" style="height: 24px; width: 45px;" value="floor(@{Encombrement_Charge})" disabled="true" /></td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Encombrement_Vitesse30" title="Encombrement_Vitesse30" style="height: 24px; width: 45px;" value="30-floor(@{Encombrement_Charge})/(@{Encombrement_Charge})*10" disabled="true" />ft.</td>
+                        <td><input class="sheet-inputbox" type="text" name="attr_Encombrement_vitesse20" title="Encombrement_vitesse20" style="height: 24px; width: 45px;" value="20-floor(@{Encombrement_Charge})/(@{Encombrement_Charge})*5" disabled="true" />ft.</td>
+                        <td>x<input class="sheet-inputbox" type="text" name="attr_Encombrement_Course" title="Encombrement_Course" style="height: 24px; width: 45px;" value="4-floor((@{Encombrement_Charge}+3)/3*@{Encombrement_Charge})/6" disabled="true" /></td>
                     </tr>
                 </table>
             </div>
